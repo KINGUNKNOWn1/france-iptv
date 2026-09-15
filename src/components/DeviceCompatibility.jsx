@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaTv, FaMobileAlt, FaTabletAlt, FaLaptop, FaCheckCircle, FaApple, FaAndroid, FaAmazon, FaWindows } from 'react-icons/fa';
 import { SiSamsung, SiLg, SiXiaomi } from 'react-icons/si';
@@ -9,49 +10,57 @@ const DeviceCompatibility = () => {
       icon: SiSamsung,
       name: 'Samsung TV',
       color: 'from-blue-500 to-brand-gold',
-      bgColor: 'bg-blue-50'
+      bgColor: 'bg-blue-50',
+      link: '/appareils/samsung-tv'
     },
     {
       icon: SiLg,
       name: 'LG Smart TV',
       color: 'from-red-500 to-red-600',
-      bgColor: 'bg-red-50'
+      bgColor: 'bg-red-50',
+      link: '/appareils/lg-tv'
     },
     {
       icon: FaAndroid,
       name: 'Android TV',
       color: 'from-green-500 to-green-600',
-      bgColor: 'bg-green-50'
+      bgColor: 'bg-green-50',
+      link: '/appareils/android-tv'
     },
     {
       icon: FaApple,
       name: 'iPhone & iPad',
       color: 'from-gray-600 to-gray-700',
-      bgColor: 'bg-gray-50'
+      bgColor: 'bg-gray-50',
+      link: '/appareils/iphone-ipad'
     },
     {
       icon: FaAmazon,
       name: 'Fire TV Stick',
       color: 'from-orange-500 to-orange-600',
-      bgColor: 'bg-orange-50'
+      bgColor: 'bg-orange-50',
+      link: '/appareils/fire-stick'
     },
     {
       icon: FaTabletAlt,
       name: 'Android Tablet',
       color: 'from-purple-500 to-purple-600',
-      bgColor: 'bg-purple-50'
+      bgColor: 'bg-purple-50',
+      link: '/appareils/android-tv'
     },
     {
       icon: FaLaptop,
       name: 'PC & Mac',
       color: 'from-indigo-500 to-indigo-600',
-      bgColor: 'bg-indigo-50'
+      bgColor: 'bg-indigo-50',
+      link: '/appareils/activer-code-iptv'
     },
     {
       icon: SiXiaomi,
       name: 'Xiaomi Mi Box',
       color: 'from-orange-400 to-red-500',
-      bgColor: 'bg-orange-50'
+      bgColor: 'bg-orange-50',
+      link: '/appareils/android-tv'
     }
   ];
 
@@ -124,14 +133,18 @@ const DeviceCompatibility = () => {
                     {/* Hover glow */}
                     <div className={`absolute inset-0 bg-gradient-to-br ${device.color} opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300 rounded-2xl`} />
 
-                    <div className="relative bg-white rounded-2xl p-5 border-2 border-gray-100 group-hover:border-transparent group-hover:shadow-xl transition-all duration-300">
+                    <Link
+                      to={device.link}
+                      aria-label={`Voir le guide d'installation pour ${device.name}`}
+                      className="relative block bg-white rounded-2xl p-5 border-2 border-gray-100 group-hover:border-transparent group-hover:shadow-xl transition-all duration-300"
+                    >
                       <div className={`w-14 h-14 mx-auto mb-3 rounded-xl bg-gradient-to-br ${device.color} flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300`}>
                         <device.icon className="text-white text-2xl" />
                       </div>
                       <p className="text-xs text-center text-gray-700 font-semibold group-hover:text-gray-900 transition-colors">
                         {device.name}
                       </p>
-                    </div>
+                    </Link>
                   </motion.div>
                 ))}
               </div>
