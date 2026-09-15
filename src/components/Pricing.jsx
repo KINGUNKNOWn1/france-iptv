@@ -53,7 +53,7 @@ const Pricing = () => {
     {
       name: 'IPTV Premium',
       duration: '3 mois',
-      price: '23',
+      price: '19,99',
       period: '/ 3 mois',
       popular: false,
       features: [
@@ -74,10 +74,10 @@ const Pricing = () => {
     {
       name: 'IPTV Premium',
       duration: '6 mois',
-      price: '32',
+      price: '30',
       period: '/ 6 mois',
       popular: false,
-      savings: 'Économisez 14 €',
+      savings: 'Économisez 10 €',
       features: [
         'HD - UHD - 4K',
         'Plus de 30 500 chaînes en direct',
@@ -95,10 +95,10 @@ const Pricing = () => {
     {
       name: 'IPTV Premium',
       duration: '12 mois',
-      price: '55',
+      price: '45',
       period: '/ 12 mois',
       popular: true,
-      savings: 'Économisez 37 € - Meilleure Offre !',
+      savings: 'Économisez 35 € - Meilleure Offre !',
       features: [
         'HD - UHD - 4K',
         'Plus de 30 500 chaînes en direct',

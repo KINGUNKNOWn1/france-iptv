@@ -181,7 +181,7 @@ const OverOns = () => {
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
                     <div className="text-brand-gray">
-                      <strong className="text-brand-black">Meilleur Prix :</strong> À partir de 4,58 € par mois. Aucun frais caché,
+                      <strong className="text-brand-black">Meilleur Prix :</strong> À partir de 3,75 € par mois. Aucun frais caché,
                       aucune reconduction automatique.
                     </div>
                   </li>

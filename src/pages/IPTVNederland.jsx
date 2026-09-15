@@ -252,7 +252,7 @@ const IPTVNederland = () => {
               Démarrez avec le Meilleur <span className="text-brand-gold">IPTV en France</span>
             </h2>
             <p className="text-xl text-brand-gray mb-8">
-              À partir de 4,58 € par mois. Toutes les chaînes françaises + 30 500+ chaînes internationales.
+              À partir de 3,75 € par mois. Toutes les chaînes françaises + 30 500+ chaînes internationales.
               Actif en 5 minutes.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">

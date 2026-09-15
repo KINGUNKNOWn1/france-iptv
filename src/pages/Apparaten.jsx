@@ -310,10 +310,14 @@ const Apparaten = () => {
               ))}
             </div>
 
-            <div className="text-center mt-10">
-              <p className="text-brand-gray mb-3">Un problème de lecture ou une erreur affichée ?</p>
-              <Link to="/appareils/erreur-lecture-iptv" className="text-brand-gold hover:text-[#2B4577] underline font-semibold">
+            <div className="text-center mt-10 space-y-2">
+              <p className="text-brand-gray mb-1">Un problème de lecture ou une erreur affichée ?</p>
+              <Link to="/appareils/erreur-lecture-iptv" className="text-brand-gold hover:text-[#2B4577] underline font-semibold block">
                 Consultez notre guide de dépannage IPTV →
+              </Link>
+              <p className="text-brand-gray mb-1 pt-4">Besoin d'aide pour entrer votre code d'activation ?</p>
+              <Link to="/appareils/activer-code-iptv" className="text-brand-gold hover:text-[#2B4577] underline font-semibold block">
+                Guide d'activation (Xtream Codes, M3U, MAC) →
               </Link>
             </div>
           </div>
@@ -436,7 +440,7 @@ const Apparaten = () => {
             <p className="text-xl text-brand-gray mb-8">
               Commencez dès aujourd'hui. Compatible avec votre{' '}
               <Link to="/appareils" className="text-purple-600 underline">Smart TV, smartphone, tablette et plus</Link>.
-              À partir de 4,58 € par mois.
+              À partir de 3,75 € par mois.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link

@@ -7,7 +7,7 @@ import SEO from '../../components/SEO';
 const IPTVKopenNederlandGids = () => {
   const seoData = {
     title: 'Acheter IPTV en France 2024 : Guide Complet + Meilleurs Fournisseurs',
-    description: "Guide complet pour acheter un IPTV en France en 2024. Découvrez les meilleurs fournisseurs, des prix dès 4,58€/mois, des conseils d'installation et tout ce qu'il faut savoir sur les abonnements IPTV.",
+    description: "Guide complet pour acheter un IPTV en France en 2024. Découvrez les meilleurs fournisseurs, des prix dès 3,75€/mois, des conseils d'installation et tout ce qu'il faut savoir sur les abonnements IPTV.",
     keywords: 'acheter iptv france, abonnement iptv france, meilleur fournisseur iptv, tarifs iptv, commander iptv',
     ogType: 'article',
     canonicalPath: '/blog/acheter-iptv-france-guide-complet'
@@ -25,7 +25,7 @@ const IPTVKopenNederlandGids = () => {
 
   const benefits = [
     { icon: <FaTv />, title: '30 500+ Chaînes', desc: 'La plus grande offre de France' },
-    { icon: <FaEuroSign />, title: 'Dès 4,58€/mois', desc: "Jusqu'à 10x moins cher que le câble" },
+    { icon: <FaEuroSign />, title: 'Dès 3,75€/mois', desc: "Jusqu'à 10x moins cher que le câble" },
     { icon: <FaPlayCircle />, title: '150 000+ VOD', desc: 'Films et séries à la demande' },
     { icon: <FaShieldAlt />, title: '99,9 % de Disponibilité', desc: 'Un service stable et fiable' }
   ];
@@ -34,7 +34,7 @@ const IPTVKopenNederlandGids = () => {
     {
       name: 'France IPTV',
       rating: '4.9/5',
-      price: '4,58€/mois',
+      price: '3,75€/mois',
       channels: '30 500+',
       quality: '4K/HD',
       trial: '1 mois dès 8€',
@@ -245,24 +245,24 @@ const IPTVKopenNederlandGids = () => {
                     </tr>
                     <tr className="border-t border-brand-gray-border">
                       <td className="p-4 text-brand-gray">3 mois</td>
-                      <td className="p-4 font-bold text-brand-gold">23 € (7,67 €/m)</td>
+                      <td className="p-4 font-bold text-brand-gold">19,99 € (6,66 €/m)</td>
                       <td className="p-4 text-brand-gray">75 €</td>
                       <td className="p-4 text-brand-gray">90 €</td>
-                      <td className="p-4 text-green-600">52-67 €</td>
+                      <td className="p-4 text-green-600">55-70 €</td>
                     </tr>
                     <tr className="border-t border-brand-gray-border">
                       <td className="p-4 text-brand-gray">6 mois</td>
-                      <td className="p-4 font-bold text-brand-gold">32 € (5,33 €/m)</td>
+                      <td className="p-4 font-bold text-brand-gold">30 € (5,00 €/m)</td>
                       <td className="p-4 text-brand-gray">150 €</td>
                       <td className="p-4 text-brand-gray">180 €</td>
-                      <td className="p-4 text-green-600">118-148 €</td>
+                      <td className="p-4 text-green-600">120-150 €</td>
                     </tr>
                     <tr className="border-t border-brand-gray-border bg-blue-50">
                       <td className="p-4 text-brand-gray">12 mois</td>
-                      <td className="p-4 font-bold text-brand-gold">55 € (4,58 €/m)</td>
+                      <td className="p-4 font-bold text-brand-gold">45 € (3,75 €/m)</td>
                       <td className="p-4 text-brand-gray">300 €</td>
                       <td className="p-4 text-brand-gray">360 €</td>
-                      <td className="p-4 text-green-600 font-bold">245-305 €</td>
+                      <td className="p-4 text-green-600 font-bold">255-315 €</td>
                     </tr>
                   </tbody>
                 </table>
@@ -363,7 +363,7 @@ const IPTVKopenNederlandGids = () => {
                 <div className="bg-brand-offwhite border border-brand-gray-border p-6 rounded-lg">
                   <h3 className="text-xl font-bold mb-2 text-brand-black">Quel est le meilleur fournisseur IPTV ?</h3>
                   <p className="text-brand-gray">
-                    <Link to="/" className="text-brand-gold underline">France IPTV</Link> est le meilleur choix avec 30 500+ chaînes, 99,9 % de disponibilité, un support francophone 24/7 et des prix dès 4,58€/mois.
+                    <Link to="/" className="text-brand-gold underline">France IPTV</Link> est le meilleur choix avec 30 500+ chaînes, 99,9 % de disponibilité, un support francophone 24/7 et des prix dès 3,75€/mois.
                   </p>
                 </div>
 
@@ -387,7 +387,7 @@ const IPTVKopenNederlandGids = () => {
             <section className="bg-gradient-to-br from-brand-gold to-purple-600 p-8 rounded-xl text-center text-white">
               <h2 className="text-3xl font-bold mb-4">Prêt à Commander un IPTV ?</h2>
               <p className="text-xl mb-6">
-                Démarrez dès aujourd'hui avec France IPTV et profitez de 30 500+ chaînes pour seulement 4,58€/mois !
+                Démarrez dès aujourd'hui avec France IPTV et profitez de 30 500+ chaînes pour seulement 3,75€/mois !
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link

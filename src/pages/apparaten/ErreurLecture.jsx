@@ -472,13 +472,14 @@ const ErreurLecture = () => {
             <p className="text-xl text-gray-300">Un problème spécifique à votre appareil ou opérateur ?</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
             {[
               { name: 'Freebox', url: '/appareils/freebox' },
               { name: 'Box Orange', url: '/appareils/orange' },
               { name: 'IPTV & SFR', url: '/appareils/sfr' },
               { name: 'Chromecast', url: '/appareils/chromecast-google-tv' },
-              { name: 'Samsung TV', url: '/appareils/samsung-tv' }
+              { name: 'Samsung TV', url: '/appareils/samsung-tv' },
+              { name: "Activer votre code", url: '/appareils/activer-code-iptv' }
             ].map((device, index) => (
               <motion.a
                 key={index}

@@ -21,7 +21,7 @@ const ComparisonTable = () => {
     { name: 'EPG (Guide Électronique des Programmes)', streamholland: true, competitor1: true, competitor2: false, competitor3: true },
     { name: 'Catch-up TV', streamholland: true, competitor1: false, competitor2: false, competitor3: false },
     { name: 'Support Multi-appareils', streamholland: 'Illimité', competitor1: '2 appareils', competitor2: '3 appareils', competitor3: '2 appareils' },
-    { name: 'Prix par an (à partir de)', streamholland: '55 €', competitor1: '80 €', competitor2: '120 €', competitor3: '95 €' },
+    { name: 'Prix par an (à partir de)', streamholland: '45 €', competitor1: '80 €', competitor2: '120 €', competitor3: '95 €' },
   ];
 
   const renderCell = (value, isFranceIPTV = false) => {
@@ -154,7 +154,7 @@ const ComparisonTable = () => {
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-brand-gold to-[#2B4577] text-white font-bold rounded-xl hover:from-[#2B4577] hover:to-[#2B4577] transition-all shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 text-lg"
           >
             <FaCrown />
-            Choisir Le Meilleur - À partir de 55 €/an
+            Choisir Le Meilleur - À partir de 45 €/an
           </a>
         </motion.div>
 

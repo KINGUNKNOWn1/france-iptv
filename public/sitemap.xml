@@ -125,6 +125,14 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Activation Code Guide -->
+  <url>
+    <loc>https://franceiptv.stream/appareils/activer-code-iptv</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- FAQ -->
   <url>
     <loc>https://franceiptv.stream/faq</loc>

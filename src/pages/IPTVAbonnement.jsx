@@ -38,22 +38,22 @@ const IPTVAbonnement = () => {
     },
     {
       duration: "3 Mois",
-      price: "23 €",
-      perMonth: "7,67 €/mois",
+      price: "19,99 €",
+      perMonth: "6,66 €/mois",
       popular: false
     },
     {
       duration: "6 Mois",
-      price: "32 €",
-      perMonth: "5,33 €/mois",
+      price: "30 €",
+      perMonth: "5,00 €/mois",
       popular: false
     },
     {
       duration: "12 Mois",
-      price: "55 €",
-      perMonth: "4,58 €/mois",
+      price: "45 €",
+      perMonth: "3,75 €/mois",
       popular: true,
-      savings: "Économisez 37 €"
+      savings: "Économisez 35 €"
     }
   ];
 
@@ -95,7 +95,7 @@ const IPTVAbonnement = () => {
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Le meilleur <strong>abonnement IPTV</strong> de France. 30 500+ chaînes, 150 000+ films et séries.
-                À partir de 4,58 € par mois. Aucune reconduction automatique.
+                À partir de 3,75 € par mois. Aucune reconduction automatique.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <a

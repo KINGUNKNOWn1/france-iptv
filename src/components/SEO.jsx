@@ -15,9 +15,9 @@ const productSchema = {
   brand: { '@type': 'Brand', name: 'France IPTV' },
   offers: [
     { '@type': 'Offer', name: 'Abonnement IPTV 1 Mois', price: '8', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: `${SITE_URL}/tarifs` },
-    { '@type': 'Offer', name: 'Abonnement IPTV 3 Mois', price: '23', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: `${SITE_URL}/tarifs` },
-    { '@type': 'Offer', name: 'Abonnement IPTV 6 Mois', price: '32', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: `${SITE_URL}/tarifs` },
-    { '@type': 'Offer', name: 'Abonnement IPTV 12 Mois - Meilleure Offre', price: '55', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: `${SITE_URL}/tarifs` }
+    { '@type': 'Offer', name: 'Abonnement IPTV 3 Mois', price: '19.99', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: `${SITE_URL}/tarifs` },
+    { '@type': 'Offer', name: 'Abonnement IPTV 6 Mois', price: '30', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: `${SITE_URL}/tarifs` },
+    { '@type': 'Offer', name: 'Abonnement IPTV 12 Mois - Meilleure Offre', price: '45', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: `${SITE_URL}/tarifs` }
   ],
   aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '2847' }
 };
