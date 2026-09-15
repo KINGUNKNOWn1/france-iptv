@@ -274,6 +274,51 @@ const Apparaten = () => {
           </div>
         </section>
 
+        {/* French ISP Boxes & Guides */}
+        <section className="py-20 bg-brand-offwhite">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4 text-brand-black">
+              Guides par <span className="text-brand-gold">Box Internet</span>
+            </h2>
+            <p className="text-center text-brand-gray mb-12 text-lg">
+              Un guide d'installation détaillé pour chaque box internet française
+            </p>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { name: 'Freebox', desc: 'Pop, Mini 4K, Ultra, Delta, Révolution', link: '/appareils/freebox' },
+                { name: 'Box Orange', desc: 'Installation et dépannage', link: '/appareils/orange' },
+                { name: 'Box SFR', desc: 'Solutions aux problèmes courants', link: '/appareils/sfr' },
+                { name: 'Chromecast / Google TV', desc: "Installation en quelques minutes", link: '/appareils/chromecast-google-tv' }
+              ].map((box, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <Link
+                    to={box.link}
+                    className="block bg-white border border-brand-gray-border rounded-xl p-6 h-full hover:border-brand-gold hover:shadow-lg transition-all"
+                  >
+                    <FaTv className="text-3xl text-brand-gold mb-3" />
+                    <h3 className="font-bold text-lg text-brand-black mb-1">{box.name}</h3>
+                    <p className="text-sm text-brand-gray">{box.desc}</p>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="text-center mt-10">
+              <p className="text-brand-gray mb-3">Un problème de lecture ou une erreur affichée ?</p>
+              <Link to="/appareils/erreur-lecture-iptv" className="text-brand-gold hover:text-[#2B4577] underline font-semibold">
+                Consultez notre guide de dépannage IPTV →
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Device Compatibility Component */}
         <DeviceCompatibility />
 

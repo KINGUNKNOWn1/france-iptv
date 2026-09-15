@@ -85,6 +85,46 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Freebox Device Page -->
+  <url>
+    <loc>https://franceiptv.stream/appareils/freebox</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Orange Box Device Page -->
+  <url>
+    <loc>https://franceiptv.stream/appareils/orange</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- SFR Box Device Page -->
+  <url>
+    <loc>https://franceiptv.stream/appareils/sfr</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Chromecast / Google TV Device Page -->
+  <url>
+    <loc>https://franceiptv.stream/appareils/chromecast-google-tv</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- IPTV Playback Error Troubleshooting Hub -->
+  <url>
+    <loc>https://franceiptv.stream/appareils/erreur-lecture-iptv</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- FAQ -->
   <url>
     <loc>https://franceiptv.stream/faq</loc>
@@ -110,13 +150,6 @@
   </url>
 
   <!-- Legal Pages -->
-  <url>
-    <loc>https://franceiptv.stream/mentions-legales</loc>
-    <lastmod>2026-09-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
   <url>
     <loc>https://franceiptv.stream/cgv</loc>
     <lastmod>2026-09-15</lastmod>

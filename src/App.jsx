@@ -25,6 +25,11 @@ const IPTVHolland = lazy(() => import('./pages/IPTVHolland'));
 
 // Lazy load device pages
 const SamsungTV = lazy(() => import('./pages/apparaten/SamsungTV'));
+const Freebox = lazy(() => import('./pages/apparaten/Freebox'));
+const Orange = lazy(() => import('./pages/apparaten/Orange'));
+const SFR = lazy(() => import('./pages/apparaten/SFR'));
+const Chromecast = lazy(() => import('./pages/apparaten/Chromecast'));
+const ErreurLecture = lazy(() => import('./pages/apparaten/ErreurLecture'));
 
 // Lazy load blog pages
 const IPTVKopenNederlandGids = lazy(() => import('./pages/blog/IPTVKopenNederlandGids'));
@@ -129,6 +134,11 @@ function AppContent() {
             <Route path="/chaines" element={<Kanalen />} />
             <Route path="/appareils" element={<Apparaten />} />
             <Route path="/appareils/samsung-tv" element={<SamsungTV />} />
+            <Route path="/appareils/freebox" element={<Freebox />} />
+            <Route path="/appareils/orange" element={<Orange />} />
+            <Route path="/appareils/sfr" element={<SFR />} />
+            <Route path="/appareils/chromecast-google-tv" element={<Chromecast />} />
+            <Route path="/appareils/erreur-lecture-iptv" element={<ErreurLecture />} />
             <Route path="/faq" element={<VeelgesteldeVragen />} />
             <Route path="/a-propos" element={<OverOns />} />
             {/* Blog Routes */}
