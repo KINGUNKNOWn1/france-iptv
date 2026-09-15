@@ -476,9 +476,14 @@ const ErreurLecture = () => {
             {[
               { name: 'Freebox', url: '/appareils/freebox' },
               { name: 'Box Orange', url: '/appareils/orange' },
+              { name: 'Bbox Bouygues', url: '/appareils/bbox-bouygues' },
               { name: 'IPTV & SFR', url: '/appareils/sfr' },
+              { name: 'Fire Stick', url: '/appareils/fire-stick' },
+              { name: 'Android TV', url: '/appareils/android-tv' },
               { name: 'Chromecast', url: '/appareils/chromecast-google-tv' },
               { name: 'Samsung TV', url: '/appareils/samsung-tv' },
+              { name: 'LG TV', url: '/appareils/lg-tv' },
+              { name: 'iPhone & iPad', url: '/appareils/iphone-ipad' },
               { name: "Activer votre code", url: '/appareils/activer-code-iptv' }
             ].map((device, index) => (
               <motion.a

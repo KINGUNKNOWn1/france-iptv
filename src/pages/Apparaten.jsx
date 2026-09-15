@@ -274,22 +274,28 @@ const Apparaten = () => {
           </div>
         </section>
 
-        {/* French ISP Boxes & Guides */}
+        {/* Device & Box Guides */}
         <section className="py-20 bg-brand-offwhite">
           <div className="container mx-auto px-4 max-w-6xl">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4 text-brand-black">
-              Guides par <span className="text-brand-gold">Box Internet</span>
+              Guides par <span className="text-brand-gold">Appareil</span>
             </h2>
             <p className="text-center text-brand-gray mb-12 text-lg">
-              Un guide d'installation détaillé pour chaque box internet française
+              Un guide d'installation détaillé pour chaque box et appareil
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 { name: 'Freebox', desc: 'Pop, Mini 4K, Ultra, Delta, Révolution', link: '/appareils/freebox' },
-                { name: 'Box Orange', desc: 'Installation et dépannage', link: '/appareils/orange' },
+                { name: 'Box Orange Livebox', desc: 'Installation et dépannage', link: '/appareils/orange' },
+                { name: 'Bbox Bouygues', desc: 'Miami, Must, Ultym', link: '/appareils/bbox-bouygues' },
                 { name: 'Box SFR', desc: 'Solutions aux problèmes courants', link: '/appareils/sfr' },
-                { name: 'Chromecast / Google TV', desc: "Installation en quelques minutes", link: '/appareils/chromecast-google-tv' }
+                { name: 'Amazon Fire Stick', desc: 'Lite, 4K, 4K Max', link: '/appareils/fire-stick' },
+                { name: 'Android TV et Box', desc: 'Nvidia Shield, Mi Box et autres', link: '/appareils/android-tv' },
+                { name: 'Chromecast / Google TV', desc: "Installation en quelques minutes", link: '/appareils/chromecast-google-tv' },
+                { name: 'Samsung Smart TV', desc: 'Tizen OS, tous modèles', link: '/appareils/samsung-tv' },
+                { name: 'LG Smart TV', desc: 'WebOS, OLED, NanoCell', link: '/appareils/lg-tv' },
+                { name: 'iPhone et iPad', desc: 'iOS 14 et supérieur', link: '/appareils/iphone-ipad' }
               ].map((box, index) => (
                 <motion.div
                   key={index}

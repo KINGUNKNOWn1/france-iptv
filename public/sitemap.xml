@@ -133,6 +133,46 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Amazon Fire Stick Device Page -->
+  <url>
+    <loc>https://franceiptv.stream/appareils/fire-stick</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Android TV Device Page -->
+  <url>
+    <loc>https://franceiptv.stream/appareils/android-tv</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- iPhone / iPad Device Page -->
+  <url>
+    <loc>https://franceiptv.stream/appareils/iphone-ipad</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Bbox Bouygues Device Page -->
+  <url>
+    <loc>https://franceiptv.stream/appareils/bbox-bouygues</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- LG Smart TV Device Page -->
+  <url>
+    <loc>https://franceiptv.stream/appareils/lg-tv</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- FAQ -->
   <url>
     <loc>https://franceiptv.stream/faq</loc>

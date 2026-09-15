@@ -31,6 +31,11 @@ const SFR = lazy(() => import('./pages/apparaten/SFR'));
 const Chromecast = lazy(() => import('./pages/apparaten/Chromecast'));
 const ErreurLecture = lazy(() => import('./pages/apparaten/ErreurLecture'));
 const ActivationCode = lazy(() => import('./pages/apparaten/ActivationCode'));
+const FireStick = lazy(() => import('./pages/apparaten/FireStick'));
+const AndroidTV = lazy(() => import('./pages/apparaten/AndroidTV'));
+const IphoneIpad = lazy(() => import('./pages/apparaten/IphoneIpad'));
+const BboxBouygues = lazy(() => import('./pages/apparaten/BboxBouygues'));
+const LGTV = lazy(() => import('./pages/apparaten/LGTV'));
 
 // Lazy load blog pages
 const IPTVKopenNederlandGids = lazy(() => import('./pages/blog/IPTVKopenNederlandGids'));
@@ -141,6 +146,11 @@ function AppContent() {
             <Route path="/appareils/chromecast-google-tv" element={<Chromecast />} />
             <Route path="/appareils/erreur-lecture-iptv" element={<ErreurLecture />} />
             <Route path="/appareils/activer-code-iptv" element={<ActivationCode />} />
+            <Route path="/appareils/fire-stick" element={<FireStick />} />
+            <Route path="/appareils/android-tv" element={<AndroidTV />} />
+            <Route path="/appareils/iphone-ipad" element={<IphoneIpad />} />
+            <Route path="/appareils/bbox-bouygues" element={<BboxBouygues />} />
+            <Route path="/appareils/lg-tv" element={<LGTV />} />
             <Route path="/faq" element={<VeelgesteldeVragen />} />
             <Route path="/a-propos" element={<OverOns />} />
             {/* Blog Routes */}
