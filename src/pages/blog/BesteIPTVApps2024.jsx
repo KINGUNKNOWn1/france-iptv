@@ -9,7 +9,8 @@ const BesteIPTVApps2024 = () => {
     title: 'Meilleures Applications IPTV 2024 : Top 10 pour Android, iOS & Smart TV',
     description: 'Découvrez les meilleures applications IPTV de 2024. Comparez IPTV Smarters, TiviMate, GSE Smart IPTV et plus. Téléchargements gratuits, conseils d\'installation et avis.',
     keywords: 'meilleure application iptv, iptv smarters, tivimate, gse smart iptv, application iptv android, application iptv ios',
-    ogType: 'article'
+    ogType: 'article',
+    canonicalPath: '/blog/meilleures-applications-iptv-2024'
   };
 
   const apps = [

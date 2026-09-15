@@ -9,7 +9,8 @@ const NederlandseIPTVKanalenLijst = () => {
     title: 'Liste des Chaînes IPTV Françaises 2024 : 80+ Chaînes FR',
     description: 'Liste complète des chaînes IPTV françaises 2024. TF1, France Télévisions, M6, chaînes régionales et sportives. Toutes les 80+ chaînes françaises en un coup d\'œil.',
     keywords: 'chaines iptv francaises, chaines tf1, france televisions iptv, m6 iptv, liste chaines francaises tv',
-    ogType: 'article'
+    ogType: 'article',
+    canonicalPath: '/blog/liste-chaines-francaises-iptv'
   };
 
   const channels = [

@@ -9,7 +9,8 @@ const IPTVKopenNederlandGids = () => {
     title: 'Acheter IPTV en France 2024 : Guide Complet + Meilleurs Fournisseurs',
     description: "Guide complet pour acheter un IPTV en France en 2024. Découvrez les meilleurs fournisseurs, des prix dès 4€/mois, des conseils d'installation et tout ce qu'il faut savoir sur les abonnements IPTV.",
     keywords: 'acheter iptv france, abonnement iptv france, meilleur fournisseur iptv, tarifs iptv, commander iptv',
-    ogType: 'article'
+    ogType: 'article',
+    canonicalPath: '/blog/acheter-iptv-france-guide-complet'
   };
 
   const tableOfContents = [

@@ -1,247 +1,85 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const SEO = () => {
-  const organizationSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'France IPTV - Meilleur Fournisseur IPTV en France',
-    url: 'https://franceiptv.stream',
-    logo: 'https://franceiptv.stream/logo.png',
-    description: 'France IPTV est le meilleur fournisseur IPTV en France. Acheter IPTV à partir de 8€. Abonnement IPTV légal avec 30 500+ chaînes et 150 000+ films et séries. IPTV français avec support 24/7.',
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'FR'
-    },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      contactType: 'Customer Service',
-      availableLanguage: ['French', 'Arabic', 'Turkish', 'English']
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '2847',
-      bestRating: '5',
-      worstRating: '1'
-    }
-  };
+const SITE_URL = 'https://franceiptv.stream';
+const DEFAULT_TITLE = 'France IPTV - Service de Streaming Premium | 30 500+ Chaînes dès 8€';
+const DEFAULT_DESCRIPTION = 'France IPTV - Service de streaming premium avec 30 500+ chaînes. Abonnement IPTV fiable dès 8€. Service francophone, légal et sécurisé. Actif en 5 min.';
+const DEFAULT_KEYWORDS = 'acheter iptv, acheter abonnement iptv, fournisseurs iptv, iptv france, meilleure application iptv, iptv français, fournisseur iptv, iptv légal, abonnement iptv, iptv 1 mois pas cher, ip tv';
+const DEFAULT_IMAGE = `${SITE_URL}/og-image.svg`;
 
-  const productSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: 'Abonnement Premium France IPTV',
-    description: '30 500+ chaînes en direct, 150 000+ titres VOD, qualité HD/UHD/4K, support francophone 24/7',
-    brand: {
-      '@type': 'Brand',
-      name: 'France IPTV'
-    },
-    offers: [
-      {
-        '@type': 'Offer',
-        name: 'Abonnement IPTV 3 Mois',
-        price: '23',
-        priceCurrency: 'EUR',
-        availability: 'https://schema.org/InStock',
-        url: 'https://franceiptv.stream/#pricing',
-        priceValidUntil: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
-      },
-      {
-        '@type': 'Offer',
-        name: 'Abonnement IPTV 6 Mois',
-        price: '32',
-        priceCurrency: 'EUR',
-        availability: 'https://schema.org/InStock',
-        url: 'https://franceiptv.stream/#pricing',
-        priceValidUntil: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
-      },
-      {
-        '@type': 'Offer',
-        name: 'Abonnement IPTV 12 Mois - Meilleure Offre',
-        price: '48',
-        priceCurrency: 'EUR',
-        availability: 'https://schema.org/InStock',
-        url: 'https://franceiptv.stream/#pricing',
-        priceValidUntil: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
-      }
-    ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '2847'
-    }
-  };
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Abonnement Premium France IPTV',
+  description: '30 500+ chaînes en direct, 150 000+ titres VOD, qualité HD/UHD/4K, support francophone 24/7',
+  brand: { '@type': 'Brand', name: 'France IPTV' },
+  offers: [
+    { '@type': 'Offer', name: 'Abonnement IPTV 1 Mois', price: '8', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: `${SITE_URL}/tarifs` },
+    { '@type': 'Offer', name: 'Abonnement IPTV 3 Mois', price: '23', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: `${SITE_URL}/tarifs` },
+    { '@type': 'Offer', name: 'Abonnement IPTV 6 Mois', price: '32', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: `${SITE_URL}/tarifs` },
+    { '@type': 'Offer', name: 'Abonnement IPTV 12 Mois - Meilleure Offre', price: '48', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: `${SITE_URL}/tarifs` }
+  ],
+  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '2847' }
+};
 
-  const serviceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    serviceType: 'IPTV Streaming Service',
-    provider: {
-      '@type': 'Organization',
-      name: 'France IPTV'
-    },
-    areaServed: {
-      '@type': 'Country',
-      name: 'France'
-    },
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Forfaits IPTV',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Abonnement IPTV 3 Mois'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Abonnement IPTV 6 Mois'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Abonnement IPTV 12 Mois'
-          }
-        }
-      ]
-    }
-  };
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Comment démarrer avec France IPTV ?', acceptedAnswer: { '@type': 'Answer', text: "C'est très simple ! Contactez-nous via WhatsApp, choisissez votre forfait, payez en toute sécurité par carte bancaire, PayPal ou virement SEPA, et recevez vos identifiants sous 5 minutes. Vous pouvez alors commencer à regarder immédiatement sur tous vos appareils." } },
+    { '@type': 'Question', name: "Sur combien d'appareils puis-je regarder en même temps ?", acceptedAnswer: { '@type': 'Answer', text: 'Avec tous nos forfaits, vous pouvez regarder sur 4 appareils maximum simultanément. Parfait pour toute la famille ! Chaque écran reçoit la même qualité élevée.' } },
+    { '@type': 'Question', name: 'Quelles chaînes sont disponibles ?', acceptedAnswer: { '@type': 'Answer', text: "Nous proposons plus de 30 500 chaînes en direct, dont des chaînes françaises, turques, arabes, anglaises et bien d'autres chaînes internationales. Vous avez également accès à plus de 150 000 films et séries à la demande." } },
+    { '@type': 'Question', name: 'Comment fonctionne le rattrapage ?', acceptedAnswer: { '@type': 'Answer', text: "Avec notre fonction de rattrapage sur 14 jours (Catch-Up TV), vous pouvez revoir les programmes manqués jusqu'à 14 jours en arrière. Les programmes manqués sont directement disponibles dans le guide EPG." } },
+    { '@type': 'Question', name: 'Quels moyens de paiement acceptez-vous ?', acceptedAnswer: { '@type': 'Answer', text: 'Nous acceptons la carte bancaire, PayPal et le virement SEPA pour des paiements sûrs et simples. Après paiement, vous recevez immédiatement vos identifiants via WhatsApp.' } },
+    { '@type': 'Question', name: "Puis-je tester avant de m'engager sur le long terme ?", acceptedAnswer: { '@type': 'Answer', text: "Oui ! Notre abonnement 1 mois à 8 € est fait pour ça : vous testez notre service sans engagement, puis passez à une formule plus longue (3, 6 ou 12 mois) si vous êtes satisfait. Contactez-nous via WhatsApp pour commander." } },
+    { '@type': 'Question', name: 'Que se passe-t-il à la fin de mon abonnement ?', acceptedAnswer: { '@type': 'Answer', text: "Nous ne pratiquons PAS la reconduction automatique. Votre abonnement s'arrête automatiquement à la fin de la période choisie. Vous recevez un rappel lorsque votre abonnement arrive à échéance, pour le renouveler si vous le souhaitez." } },
+    { '@type': 'Question', name: 'Ai-je un support francophone ?', acceptedAnswer: { '@type': 'Answer', text: 'Absolument ! Nous proposons un support francophone 24/7 via WhatsApp et e-mail. Notre équipe est toujours disponible pour vous.' } }
+  ]
+};
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Où peut-on acheter un abonnement IPTV en France ?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: "Vous pouvez acheter un abonnement IPTV en France chez France IPTV, le meilleur fournisseur IPTV. Nous proposons des abonnements IPTV à partir de 8€ avec plus de 30 500 chaînes. Vous pouvez commander directement en ligne et être actif en 5 minutes."
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'France IPTV est-il légal ?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: "France IPTV est un fournisseur IPTV légal. Nous fournissons un service fiable avec un contenu officiel et un support client complet. Acheter un IPTV légal, c'est choisir un fournisseur de confiance comme France IPTV."
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'Quelle est la meilleure application IPTV pour la France ?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: "La meilleure application IPTV pour les utilisateurs français est IPTV Smarters Pro et SS IPTV. Ces applications fonctionnent parfaitement avec votre abonnement France IPTV sur tous les appareils : Smart TV, Android, iOS, et plus."
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'Combien de chaînes propose France IPTV ?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'France IPTV propose plus de 30 500 chaînes en direct dans différentes langues, dont des chaînes françaises, arabes, turques et internationales. Nous proposons également plus de 150 000 films et séries à la demande.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'En combien de temps mon abonnement IPTV est-il actif ?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Votre abonnement France IPTV est actif en 5 minutes après le paiement par carte bancaire, PayPal ou virement SEPA. Vous recevez immédiatement vos identifiants par e-mail et pouvez commencer à regarder tout de suite.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: "Quel est le prix d'un abonnement IPTV chez France IPTV ?",
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: "L'abonnement IPTV chez France IPTV démarre à 8€ pour 1 mois, 23€ pour 3 mois, 32€ pour 6 mois, ou 48€ pour 12 mois. Aucun frais caché, aucune reconduction automatique."
-        }
-      },
-      {
-        '@type': 'Question',
-        name: "L'abonnement se renouvelle-t-il automatiquement ?",
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: "Non, chez France IPTV il n'y a aucune reconduction automatique. Vous gardez le contrôle total de votre abonnement. Cela fait de nous l'un des meilleurs fournisseurs IPTV en France."
-        }
-      }
-    ]
-  };
-
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Accueil',
-        item: 'https://franceiptv.stream'
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Tarifs',
-        item: 'https://franceiptv.stream/#pricing'
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: 'Comparatif',
-        item: 'https://franceiptv.stream/#comparison'
-      }
-    ]
-  };
+const SEO = ({
+  title = DEFAULT_TITLE,
+  description = DEFAULT_DESCRIPTION,
+  keywords = DEFAULT_KEYWORDS,
+  canonicalPath = '/',
+  ogImage = DEFAULT_IMAGE,
+  ogType = 'website',
+  includeHomeSchema = false,
+}) => {
+  const canonicalUrl = canonicalPath === '/' ? SITE_URL : `${SITE_URL}${canonicalPath}`;
 
   return (
     <Helmet>
       {/* Primary Meta Tags */}
-      <title>France IPTV - Service de Streaming Premium | 30 500+ Chaînes dès 8€</title>
-      <meta
-        name="description"
-        content="France IPTV - Service de streaming premium avec 30 500+ chaînes. Abonnement IPTV fiable dès 8€. Service francophone, légal et sécurisé. Actif en 5 min."
-      />
-      <meta
-        name="keywords"
-        content="acheter iptv, acheter abonnement iptv, fournisseurs iptv, iptv france, meilleure application iptv, iptv français, fournisseur iptv, iptv légal, abonnement iptv, iptv 1 mois pas cher, ip tv"
-      />
-      <link rel="canonical" href="https://franceiptv.stream" />
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <link rel="canonical" href={canonicalUrl} />
 
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://franceiptv.stream" />
-      <meta property="og:title" content="France IPTV - Service de Streaming Premium | 30 500+ Chaînes" />
-      <meta
-        property="og:description"
-        content="France IPTV - Service de streaming premium avec 30 500+ chaînes, légal et fiable. Abonnement dès 8€. Actif en 5 min. Support 24/7."
-      />
-      <meta property="og:image" content="https://franceiptv.stream/og-image.jpg" />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={ogImage} />
       <meta property="og:locale" content="fr_FR" />
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content="https://franceiptv.stream" />
-      <meta property="twitter:title" content="France IPTV - Service de Streaming Premium" />
-      <meta
-        property="twitter:description"
-        content="France IPTV - Service de streaming premium. Dès 8€. 30 500+ chaînes, légal et fiable."
-      />
-      <meta property="twitter:image" content="https://franceiptv.stream/twitter-image.jpg" />
+      <meta property="twitter:url" content={canonicalUrl} />
+      <meta property="twitter:title" content={title} />
+      <meta property="twitter:description" content={description} />
+      <meta property="twitter:image" content={ogImage} />
 
-      {/* Structured Data */}
-      <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
-      <script type="application/ld+json">{JSON.stringify(productSchema)}</script>
-      <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
-      <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+      {/* Structured Data — Organization ships statically in index.html on
+          every route. Product/FAQPage only apply to the homepage, where
+          the matching visible content (Pricing + FAQ sections) exists. */}
+      {includeHomeSchema && (
+        <>
+          <script type="application/ld+json">{JSON.stringify(productSchema)}</script>
+          <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        </>
+      )}
 
       {/* Additional SEO Tags */}
       <meta name="robots" content="index, follow" />

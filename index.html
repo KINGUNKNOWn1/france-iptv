@@ -4,16 +4,11 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="France IPTV - Service de streaming premium avec 30 500+ chaînes et 150 000+ films et séries. Disponibilité garantie à 99,9 %. Support francophone 24/7." />
-    <title>France IPTV - Service de Streaming Premium | 30 500+ Chaînes | Qualité 4K</title>
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://franceiptv.stream/" />
-
-    <!-- Alternate languages -->
-    <link rel="alternate" hreflang="fr" href="https://franceiptv.stream/" />
-    <link rel="alternate" hreflang="fr-FR" href="https://franceiptv.stream/" />
-    <link rel="alternate" hreflang="x-default" href="https://franceiptv.stream/" />
+    <!-- Title, meta description, canonical, hreflang, and Open Graph/Twitter
+         tags are intentionally NOT hardcoded here. Every route (including "/")
+         sets these itself via the <SEO> component (react-helmet-async), so
+         each page gets its own correct values instead of every route
+         duplicating this file's static tags alongside the real ones. -->
 
     <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
@@ -41,24 +36,27 @@
       gtag('config', 'G-XXXXXXXXXX');
     </script>
 
-    <!-- Google Search Console verification - Replace with your verification code -->
-    <meta name="google-site-verification" content="your-verification-code-here" />
-
-    <!-- Open Graph for social sharing -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://franceiptv.stream/" />
-    <meta property="og:title" content="France IPTV - Service de Streaming Premium | 30 500+ Chaînes" />
-    <meta property="og:description" content="France IPTV - Service de streaming premium avec 30 500+ chaînes et 150 000+ films et séries. Disponibilité garantie à 99,9 %. Support francophone 24/7." />
-    <meta property="og:image" content="https://franceiptv.stream/og-image.svg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content="fr_FR" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="France IPTV - Service de Streaming Premium | 30 500+ Chaînes" />
-    <meta name="twitter:description" content="France IPTV - Service de streaming premium avec 30 500+ chaînes et 150 000+ films et séries." />
-    <meta name="twitter:image" content="https://franceiptv.stream/og-image.svg" />
+    <!-- Structured Data: Organization is valid on every page (describes the
+         publisher, not page-specific content), so it's safe to ship
+         statically here. Product/FAQPage schemas are homepage-specific
+         (they must match visible content) and are added via <SEO> only on
+         the homepage instead. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "France IPTV",
+      "url": "https://franceiptv.stream",
+      "logo": "https://franceiptv.stream/logo.svg",
+      "description": "France IPTV est le meilleur fournisseur IPTV en France. Abonnement IPTV légal avec 30 500+ chaînes et 150 000+ films et séries.",
+      "address": { "@type": "PostalAddress", "addressCountry": "FR" },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "availableLanguage": ["French", "Arabic", "Turkish", "English"]
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

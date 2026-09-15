@@ -100,7 +100,12 @@ const Apparaten = () => {
 
   return (
     <>
-      <SEO />
+      <SEO
+        title="IPTV Compatible Tous Appareils | Smart TV, Android, iOS"
+        description="France IPTV fonctionne sur tous vos appareils : Smart TV, Android, iOS, Fire Stick, Samsung TV, Chromecast et plus. Installation simple et rapide."
+        keywords="iptv appareils compatibles, iptv smart tv, iptv android, iptv firestick"
+        canonicalPath="/appareils"
+      />
       <div className="min-h-screen bg-white text-brand-black pt-20">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-[#141311] via-[#241F19] to-[#141311] text-white">

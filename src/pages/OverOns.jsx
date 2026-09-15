@@ -48,7 +48,12 @@ const OverOns = () => {
 
   return (
     <>
-      <SEO />
+      <SEO
+        title="À Propos de France IPTV | Notre Histoire et Nos Valeurs"
+        description="Découvrez France IPTV, votre fournisseur IPTV de confiance en France. Support francophone 24/7, service centré client, des milliers de clients satisfaits."
+        keywords="à propos france iptv, qui sommes nous, fournisseur iptv fiable, histoire france iptv"
+        canonicalPath="/a-propos"
+      />
       <div className="min-h-screen bg-white text-brand-black pt-20">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-[#141311] via-[#201C18] to-[#141311] text-white">

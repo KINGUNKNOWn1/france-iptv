@@ -33,7 +33,7 @@ Allow: /
 Crawl-delay: 2
 
 # Sitemap location
-Sitemap: https://www.franceiptv.stream/sitemap.xml
+Sitemap: https://franceiptv.stream/sitemap.xml
 
 # Host (preferred domain)
-Host: https://www.franceiptv.stream
+Host: https://franceiptv.stream

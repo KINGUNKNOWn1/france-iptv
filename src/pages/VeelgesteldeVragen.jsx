@@ -151,7 +151,12 @@ const VeelgesteldeVragen = () => {
 
   return (
     <>
-      <SEO />
+      <SEO
+        title="Questions Fréquentes IPTV | FAQ - France IPTV"
+        description="Toutes les réponses à vos questions sur France IPTV : tarifs, installation, appareils compatibles, paiement et légalité de l'IPTV."
+        keywords="faq iptv, questions iptv, aide iptv, support iptv france"
+        canonicalPath="/faq"
+      />
       <div className="min-h-screen bg-white text-brand-black pt-20">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-[#141311] via-[#201C18] to-[#141311] text-white">

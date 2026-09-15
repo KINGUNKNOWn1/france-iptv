@@ -68,6 +68,7 @@ const IPTVKopen = () => {
         title="Acheter IPTV en France | Abonnement IPTV Premium dès 48€/an - France IPTV"
         description="Acheter IPTV en France ? Choisissez France IPTV pour 30 500+ chaînes, qualité 4K, support francophone 24/7. Aucune reconduction automatique. Commandez directement par CB."
         keywords="acheter iptv, acheter iptv france, acheter abonnement iptv, fournisseur iptv, iptv français"
+        canonicalPath="/acheter-iptv"
       />
 
       <div className="min-h-screen bg-white">

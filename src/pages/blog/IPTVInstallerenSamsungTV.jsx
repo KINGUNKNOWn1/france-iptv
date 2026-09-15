@@ -9,7 +9,8 @@ const IPTVInstallerenSamsungTV = () => {
     title: "Installer l'IPTV sur Samsung TV : Guide Complet 2024",
     description: "Apprenez à installer l'IPTV sur votre Samsung Smart TV en 5 minutes. Guide étape par étape pour Tizen OS, Smart Hub et tous les modèles Samsung TV.",
     keywords: 'iptv samsung tv, samsung smart tv iptv, installer iptv samsung, tizen iptv, smart hub iptv',
-    ogType: 'article'
+    ogType: 'article',
+    canonicalPath: '/blog/installer-iptv-samsung-tv'
   };
 
   const steps = [

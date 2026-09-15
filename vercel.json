@@ -60,6 +60,17 @@
       "source": "/home",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.franceiptv.stream"
+        }
+      ],
+      "destination": "https://franceiptv.stream/:path*",
+      "permanent": true
     }
   ]
 }

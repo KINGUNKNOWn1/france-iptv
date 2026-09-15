@@ -72,7 +72,12 @@ const IPTVAbonnement = () => {
 
   return (
     <>
-      <SEO />
+      <SEO
+        title="Abonnement IPTV France | 30 500+ Chaînes dès 8€"
+        description="Découvrez notre abonnement IPTV complet : 30 500+ chaînes en direct, 150 000+ films et séries, qualité 4K, support francophone 24/7. Dès 8€ sans engagement."
+        keywords="abonnement iptv, abonnement iptv france, meilleur abonnement iptv, iptv premium"
+        canonicalPath="/abonnement-iptv"
+      />
       <div className="min-h-screen bg-white text-brand-black pt-20">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-[#141311] via-[#201C18] to-[#141311] text-white">

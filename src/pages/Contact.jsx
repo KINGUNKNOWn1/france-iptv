@@ -63,6 +63,7 @@ const Contact = () => {
         title="Contact | Commander IPTV via WhatsApp - France IPTV"
         description="Contactez France IPTV via WhatsApp ou e-mail. Support francophone 24/7. Commandez votre abonnement IPTV et recevez vos identifiants sous 5 minutes."
         keywords="contact iptv, commander iptv whatsapp, contact fournisseur iptv, service client iptv"
+        canonicalPath="/contact"
       />
 
       <div className="min-h-screen bg-white pt-32">

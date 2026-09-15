@@ -9,7 +9,8 @@ const IsIPTVLegaalNederland = () => {
     title: "IPTV Légal en France 2024 ? Informations Juridiques & Réglementation",
     description: "L'IPTV est-il légal en France ? Découvrez la réglementation, les risques et comment utiliser l'IPTV en toute sécurité. Informations juridiques actualisées sur l'IPTV en 2024.",
     keywords: 'iptv legal, iptv legal france, reglementation iptv, iptv juridique, utiliser iptv en securite',
-    ogType: 'article'
+    ogType: 'article',
+    canonicalPath: '/blog/iptv-legal-en-france'
   };
 
   return (

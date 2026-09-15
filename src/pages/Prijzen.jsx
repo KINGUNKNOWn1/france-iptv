@@ -22,6 +22,7 @@ const Prijzen = () => {
         title="Tarifs IPTV France | Abonnement dès 48€/an - France IPTV"
         description="Tarifs de l'abonnement IPTV : 1 mois 8€, 3 mois 23€, 6 mois 32€, 12 mois 48€. Aucune reconduction automatique. Paiement CB, PayPal ou SEPA. 30 500+ chaînes. Commandez maintenant !"
         keywords="tarifs iptv, prix abonnement iptv, prix iptv, iptv pas cher, coût iptv"
+        canonicalPath="/tarifs"
       />
 
       <div className="min-h-screen bg-white pt-32">

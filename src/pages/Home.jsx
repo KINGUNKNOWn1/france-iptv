@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import SocialProof from '../components/SocialProof';
 import Interactive3DTV from '../components/Interactive3DTV';
@@ -19,6 +20,7 @@ import LightweightTV from '../components/LightweightTV';
 const Home = () => {
   return (
     <>
+      <SEO canonicalPath="/" includeHomeSchema />
       <Hero />
       <SocialProof />
 
