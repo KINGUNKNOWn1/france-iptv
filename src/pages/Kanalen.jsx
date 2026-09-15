@@ -283,7 +283,7 @@ const Kanalen = () => {
             </h2>
             <p className="text-xl text-brand-gray mb-8">
               Toutes les <Link to="/iptv-france" className="text-brand-gold underline">chaînes IPTV françaises</Link> +
-              divertissement mondial. À partir de 4 € par mois.
+              divertissement mondial. À partir de 4,58 € par mois.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link

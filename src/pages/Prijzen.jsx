@@ -19,8 +19,8 @@ const Prijzen = () => {
   return (
     <>
       <SEO
-        title="Tarifs IPTV France | Abonnement dès 48€/an - France IPTV"
-        description="Tarifs de l'abonnement IPTV : 1 mois 8€, 3 mois 23€, 6 mois 32€, 12 mois 48€. Aucune reconduction automatique. Paiement CB, PayPal ou SEPA. 30 500+ chaînes. Commandez maintenant !"
+        title="Tarifs IPTV France | Abonnement dès 55€/an - France IPTV"
+        description="Tarifs de l'abonnement IPTV : 1 mois 8€, 3 mois 23€, 6 mois 32€, 12 mois 55€. Aucune reconduction automatique. Paiement CB, PayPal ou SEPA. 30 500+ chaînes. Commandez maintenant !"
         keywords="tarifs iptv, prix abonnement iptv, prix iptv, iptv pas cher, coût iptv"
         canonicalPath="/tarifs"
       />
@@ -107,7 +107,7 @@ const Prijzen = () => {
                   Quelle est l'option la moins chère ?
                 </h3>
                 <p className="text-brand-gray">
-                  L'abonnement 12 mois est l'option la plus avantageuse : seulement 48 € par an (4 € par mois).
+                  L'abonnement 12 mois est l'option la plus avantageuse : seulement 55 € par an (4,58 € par mois).
                   C'est moins cher que la plupart des <Link to="/iptv-france" className="text-brand-gold hover:text-[#2B4577] underline">fournisseurs IPTV en France</Link>.
                 </p>
               </div>

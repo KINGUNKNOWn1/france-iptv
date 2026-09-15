@@ -57,7 +57,7 @@ const Hero = () => {
             <br />
             <span className="text-white">France IPTV</span>
             <br />
-            <span className="text-[#7B9FD9]">à partir de 48 € par an</span>
+            <span className="text-[#7B9FD9]">à partir de 55 € par an</span>
           </motion.h1>
 
           {/* Description */}

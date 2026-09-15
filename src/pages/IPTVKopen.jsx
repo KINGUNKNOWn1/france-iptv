@@ -65,7 +65,7 @@ const IPTVKopen = () => {
   return (
     <>
       <SEO
-        title="Acheter IPTV en France | Abonnement IPTV Premium dès 48€/an - France IPTV"
+        title="Acheter IPTV en France | Abonnement IPTV Premium dès 55€/an - France IPTV"
         description="Acheter IPTV en France ? Choisissez France IPTV pour 30 500+ chaînes, qualité 4K, support francophone 24/7. Aucune reconduction automatique. Commandez directement par CB."
         keywords="acheter iptv, acheter iptv france, acheter abonnement iptv, fournisseur iptv, iptv français"
         canonicalPath="/acheter-iptv"
@@ -289,7 +289,7 @@ const IPTVKopen = () => {
                 Prêt à acheter votre IPTV ?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Choisissez le <Link to="/abonnement-iptv" className="text-white underline font-semibold">meilleur abonnement IPTV pour la France</Link> et commencez à regarder sous 5 minutes. À partir de seulement 48 € par an.
+                Choisissez le <Link to="/abonnement-iptv" className="text-white underline font-semibold">meilleur abonnement IPTV pour la France</Link> et commencez à regarder sous 5 minutes. À partir de seulement 55 € par an.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link

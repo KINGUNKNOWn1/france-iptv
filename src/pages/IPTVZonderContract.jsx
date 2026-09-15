@@ -105,7 +105,7 @@ const IPTVZonderContract = () => {
     { feature: 'Paiement', streamHolland: 'Unique par CB/SEPA', traditional: 'Mensuel automatique' },
     { feature: 'Flexibilité', streamHolland: 'Maximale', traditional: 'Limitée' },
     { feature: 'Frais cachés', streamHolland: 'Aucun', traditional: 'Frais d\'activation, de gestion' },
-    { feature: 'Prix', streamHolland: 'Dès 4€/mois', traditional: '8-15€/mois' }
+    { feature: 'Prix', streamHolland: 'Dès 4,58€/mois', traditional: '8-15€/mois' }
   ];
 
   const pricingOptions = [
@@ -132,8 +132,8 @@ const IPTVZonderContract = () => {
     },
     {
       period: '12 Mois',
-      total: '48 €',
-      monthly: '4,00 €/mois',
+      total: '55 €',
+      monthly: '4,58 €/mois',
       description: 'Meilleure offre !',
       popular: true
     }
@@ -142,7 +142,7 @@ const IPTVZonderContract = () => {
   return (
     <>
       <Helmet>
-        <title>IPTV Sans Engagement - Aucune Obligation dès 4€/mois | France IPTV</title>
+        <title>IPTV Sans Engagement - Aucune Obligation dès 4,58€/mois | France IPTV</title>
         <meta
           name="description"
           content="IPTV sans engagement dès 8€. Aucune reconduction automatique, aucun préavis. Arrêtez quand vous voulez. 30 500+ chaînes, paiement CB. Commandez sans obligation ➜"
@@ -155,7 +155,7 @@ const IPTVZonderContract = () => {
 
         {/* Open Graph */}
         <meta property="og:title" content="IPTV Sans Engagement - Aucune Obligation | France IPTV" />
-        <meta property="og:description" content="IPTV sans engagement dès 4€/mois. Aucune reconduction automatique, aucun préavis. Commandez sans obligation." />
+        <meta property="og:description" content="IPTV sans engagement dès 4,58€/mois. Aucune reconduction automatique, aucun préavis. Commandez sans obligation." />
         <meta property="og:url" content="https://franceiptv.stream/iptv-sans-engagement" />
         <meta property="og:type" content="website" />
 
@@ -419,7 +419,7 @@ const IPTVZonderContract = () => {
 
             <div className="mt-12 text-center">
               <p className="text-brand-gray mb-4">
-                💡 <strong className="text-brand-black">Astuce :</strong> Choisissez 12 mois pour le meilleur prix (seulement 4€/mois), en sachant que même après 12 mois, vous n'êtes engagé à rien.
+                💡 <strong className="text-brand-black">Astuce :</strong> Choisissez 12 mois pour le meilleur prix (seulement 4,58€/mois), en sachant que même après 12 mois, vous n'êtes engagé à rien.
               </p>
             </div>
           </div>
