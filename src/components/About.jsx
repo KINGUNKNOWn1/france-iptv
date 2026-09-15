@@ -23,7 +23,7 @@ const About = () => {
     {
       icon: FaWhatsapp,
       title: 'Support Francophone',
-      description: 'Commande via WhatsApp. Paiement par CB, PayPal ou SEPA. Identifiants sous 5 minutes. Support francophone 24/7.'
+      description: 'Commande via WhatsApp. Paiement par Binance Pay ou PayPal. Identifiants sous 5 minutes. Support francophone 24/7.'
     }
   ];
 
@@ -34,7 +34,7 @@ const About = () => {
     'Politique de confidentialité publique',
     'Joignable personnellement via WhatsApp',
     'Disponibilité garantie de 99,9 %',
-    'Paiement par CB, PayPal ou SEPA',
+    'Paiement par Binance Pay ou PayPal',
     'Aucune reconduction automatique'
   ];
 

@@ -29,7 +29,7 @@ const IPTVKopen = () => {
   ];
 
   const features = [
-    'Acheter IPTV sans tracas - paiement par CB, PayPal ou SEPA',
+    'Acheter IPTV sans tracas - paiement par Binance Pay ou PayPal',
     'Aucune reconduction automatique ni frais caché',
     "Regardez sur un nombre illimité d'appareils à la fois",
     '150 000+ films et séries à la demande',
@@ -48,7 +48,7 @@ const IPTVKopen = () => {
     {
       number: '2',
       title: 'Payez en toute sécurité',
-      description: 'Payez simplement et en toute sécurité par carte bancaire, PayPal ou virement SEPA.'
+      description: 'Payez simplement et en toute sécurité par Binance Pay ou PayPal.'
     },
     {
       number: '3',
@@ -66,7 +66,7 @@ const IPTVKopen = () => {
     <>
       <SEO
         title="Acheter IPTV en France | Abonnement IPTV Premium dès 45€/an - France IPTV"
-        description="Acheter IPTV en France ? Choisissez France IPTV pour 30 500+ chaînes, qualité 4K, support francophone 24/7. Aucune reconduction automatique. Commandez directement par CB."
+        description="Acheter IPTV en France ? Choisissez France IPTV pour 30 500+ chaînes, qualité 4K, support francophone 24/7. Aucune reconduction automatique. Commandez directement via Binance Pay ou PayPal."
         keywords="acheter iptv, acheter iptv france, acheter abonnement iptv, fournisseur iptv, iptv français"
         canonicalPath="/acheter-iptv"
       />
@@ -98,7 +98,7 @@ const IPTVKopen = () => {
                 <span className="text-[#7B9FD9]">Fiable & Abordable</span>
               </h1>
               <p className="text-xl text-gray-200 leading-relaxed mb-8 max-w-3xl">
-                Vous cherchez où <strong>acheter IPTV</strong> en France ? France IPTV est LE fournisseur IPTV fiable avec 30 500+ chaînes, qualité 4K et support francophone. Aucune reconduction automatique, paiement par CB possible.
+                Vous cherchez où <strong>acheter IPTV</strong> en France ? France IPTV est LE fournisseur IPTV fiable avec 30 500+ chaînes, qualité 4K et support francophone. Aucune reconduction automatique, paiement par Binance Pay ou PayPal possible.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link

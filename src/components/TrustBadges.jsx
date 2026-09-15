@@ -19,7 +19,7 @@ const TrustBadges = () => {
     {
       icon: FaCreditCard,
       title: 'Paiement Sécurisé',
-      description: 'CB, PayPal & SEPA',
+      description: 'Binance Pay & PayPal',
       color: 'from-purple-500 to-purple-600'
     },
     {
@@ -90,26 +90,14 @@ const TrustBadges = () => {
         >
           <p className="text-gray-600 mb-4 font-semibold">Paiement sécurisé avec :</p>
           <div className="flex flex-wrap items-center justify-center gap-8">
-            {/* Virement SEPA */}
+            {/* Binance Pay */}
             <div className="bg-white px-6 py-3 rounded-lg shadow-md">
-              <span className="font-bold text-purple-600 text-xl">Virement SEPA</span>
-            </div>
-
-            {/* Carte Bancaire */}
-            <div className="bg-white px-6 py-3 rounded-lg shadow-md">
-              <span className="font-bold text-blue-600 text-xl">Carte Bancaire</span>
+              <span className="font-bold text-yellow-500 text-xl">Binance Pay</span>
             </div>
 
             {/* PayPal */}
             <div className="bg-white px-6 py-3 rounded-lg shadow-md">
               <span className="font-bold text-blue-700 text-xl">PayPal</span>
-            </div>
-
-            {/* Visa/Mastercard */}
-            <div className="bg-white px-6 py-3 rounded-lg shadow-md flex items-center gap-2">
-              <span className="font-bold text-blue-800">VISA</span>
-              <span className="text-gray-300">|</span>
-              <span className="font-bold text-red-600">Mastercard</span>
             </div>
           </div>
         </motion.div>

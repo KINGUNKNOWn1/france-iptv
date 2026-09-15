@@ -197,7 +197,7 @@ const Retourbeleid = () => {
                     </ul>
                     <div className="bg-white rounded-lg p-4 border border-brand-gray-border">
                       <p className="text-brand-gray text-sm">
-                        <strong className="text-brand-black">Attention :</strong> Les frais de transaction des prestataires de paiement (comme la carte bancaire ou PayPal) ne peuvent pas être remboursés, ces frais étant prélevés par la banque ou le prestataire de paiement.
+                        <strong className="text-brand-black">Attention :</strong> Les frais de transaction des prestataires de paiement (comme Binance Pay ou PayPal) ne peuvent pas être remboursés, ces frais étant prélevés par la banque ou le prestataire de paiement.
                       </p>
                     </div>
                   </div>

@@ -11,7 +11,7 @@ const ComparisonTable = () => {
     { name: 'Qualité 4K/UHD', streamholland: true, competitor1: true, competitor2: false, competitor3: false },
     { name: 'Qualité HD', streamholland: true, competitor1: true, competitor2: true, competitor3: true },
     { name: 'Support Francophone 24/7', streamholland: true, competitor1: false, competitor2: false, competitor3: true },
-    { name: 'Paiement CB / PayPal', streamholland: true, competitor1: false, competitor2: true, competitor3: false },
+    { name: 'Paiement Binance Pay / PayPal', streamholland: true, competitor1: false, competitor2: true, competitor3: false },
     { name: 'Sans Reconduction Automatique', streamholland: true, competitor1: false, competitor2: false, competitor3: false },
     { name: 'Disponibilité Garantie', streamholland: '99,9 %', competitor1: '99 %', competitor2: '98 %', competitor3: '97 %' },
     { name: 'Actif sous', streamholland: '5 minutes', competitor1: '24 heures', competitor2: '1-2 heures', competitor3: '12 heures' },

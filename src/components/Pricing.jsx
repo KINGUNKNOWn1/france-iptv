@@ -305,7 +305,7 @@ const Pricing = () => {
             </div>
             <div className="flex items-center gap-3">
               <FaCheckCircle className="text-green-500 text-2xl" />
-              <span className="text-brand-gray">CB, PayPal & SEPA</span>
+              <span className="text-brand-gray">Binance Pay & PayPal</span>
             </div>
             <div className="flex items-center gap-3">
               <FaCheckCircle className="text-green-500 text-2xl" />

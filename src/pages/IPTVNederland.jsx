@@ -21,7 +21,7 @@ const IPTVNederland = () => {
     "Support client francophone 24/7",
     "Serveurs optimisés pour la France (connexion la plus rapide)",
     "Compatible avec toutes les Smart TV vendues en France",
-    "Paiement par CB, PayPal ou virement SEPA",
+    "Paiement par Binance Pay ou PayPal",
     "Aucun VPN nécessaire - fonctionne directement en France"
   ];
 
@@ -222,7 +222,7 @@ const IPTVNederland = () => {
                 <div className="text-4xl mb-4">💳</div>
                 <h3 className="text-2xl font-bold mb-3 text-white">Paiement Sécurisé</h3>
                 <p className="text-white/90">
-                  Payez en toute sécurité par CB, PayPal ou virement SEPA, les moyens de paiement les plus utilisés en France
+                  Payez en toute sécurité par Binance Pay ou PayPal
                 </p>
               </div>
 

@@ -30,11 +30,11 @@ const VeelgesteldeVragen = () => {
       questions: [
         {
           q: "Comment puis-je acheter un IPTV ?",
-          a: "Vous pouvez acheter votre IPTV directement en ligne via WhatsApp ou notre site. Choisissez votre abonnement, payez par CB, PayPal ou SEPA, et vous êtes actif en 5 minutes. Sans tracas, sans attente."
+          a: "Vous pouvez acheter votre IPTV directement en ligne via WhatsApp ou notre site. Choisissez votre abonnement, payez par Binance Pay ou PayPal, et vous êtes actif en 5 minutes. Sans tracas, sans attente."
         },
         {
           q: "Quels moyens de paiement acceptez-vous ?",
-          a: "Nous acceptons la carte bancaire (la plus populaire), PayPal et le virement SEPA. Pour une activation la plus rapide possible, nous recommandons la carte bancaire."
+          a: "Nous acceptons Binance Pay et PayPal. Les deux méthodes permettent une activation rapide dès réception du paiement."
         },
         {
           q: "Combien coûte un abonnement IPTV ?",
@@ -51,7 +51,7 @@ const VeelgesteldeVragen = () => {
       questions: [
         {
           q: "En combien de temps mon abonnement IPTV est-il actif ?",
-          a: "Votre abonnement France IPTV est actif en 5 minutes après le paiement par CB, PayPal ou SEPA. Vous recevez immédiatement vos identifiants par e-mail et pouvez commencer à regarder tout de suite."
+          a: "Votre abonnement France IPTV est actif en 5 minutes après le paiement par Binance Pay ou PayPal. Vous recevez immédiatement vos identifiants par e-mail et pouvez commencer à regarder tout de suite."
         },
         {
           q: "Comment installer l'IPTV sur mon appareil ?",

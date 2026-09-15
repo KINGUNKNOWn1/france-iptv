@@ -172,7 +172,7 @@ const AlgemeneVoorwaarden = () => {
                       <strong className="text-brand-black">Prix :</strong> Tous les prix indiqués s'entendent <strong className="text-brand-black">TTC</strong> (toutes taxes comprises), sauf mention contraire.
                     </p>
                     <p className="text-brand-gray leading-relaxed mb-4">
-                      <strong className="text-brand-black">Paiement :</strong> Le paiement doit être effectué intégralement à l'avance via les moyens proposés (carte bancaire, PayPal, virement SEPA). Les abonnements ne sont activés qu'après réception du paiement.
+                      <strong className="text-brand-black">Paiement :</strong> Le paiement doit être effectué intégralement à l'avance via les moyens proposés (Binance Pay, PayPal). Les abonnements ne sont activés qu'après réception du paiement.
                     </p>
                     <div className="bg-white rounded-lg p-4 border border-brand-gray-border">
                       <p className="text-brand-gray">

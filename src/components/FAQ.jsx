@@ -8,7 +8,7 @@ const FAQ = () => {
   const faqs = [
     {
       question: 'Comment démarrer avec France IPTV ?',
-      answer: "C'est très simple ! Contactez-nous via WhatsApp, choisissez votre forfait, payez en toute sécurité par carte bancaire, PayPal ou virement SEPA, et recevez vos identifiants sous 5 minutes. Vous pouvez alors commencer à regarder immédiatement sur tous vos appareils.",
+      answer: "C'est très simple ! Contactez-nous via WhatsApp, choisissez votre forfait, payez en toute sécurité par Binance Pay ou PayPal, et recevez vos identifiants sous 5 minutes. Vous pouvez alors commencer à regarder immédiatement sur tous vos appareils.",
     },
     {
       question: 'Sur combien d\'appareils puis-je regarder en même temps ?',
@@ -24,7 +24,7 @@ const FAQ = () => {
     },
     {
       question: 'Quels moyens de paiement acceptez-vous ?',
-      answer: 'Nous acceptons la carte bancaire, PayPal et le virement SEPA pour des paiements sûrs et simples. Après paiement, vous recevez immédiatement vos identifiants via WhatsApp.',
+      answer: 'Nous acceptons Binance Pay et PayPal pour des paiements sûrs et simples. Après paiement, vous recevez immédiatement vos identifiants via WhatsApp.',
     },
     {
       question: "Puis-je tester avant de m'engager sur le long terme ?",

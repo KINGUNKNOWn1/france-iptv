@@ -62,7 +62,7 @@ const IPTVAbonnement = () => {
     "Aucune reconduction automatique - contrôle total",
     "Actif en 5 minutes après le paiement",
     "Garantie satisfait ou remboursé 14 jours",
-    "Paiement sécurisé par CB, PayPal ou SEPA",
+    "Paiement sécurisé par Binance Pay ou PayPal",
     "Disponibilité stable de 99,9 %",
     "Qualité HD, UHD et 4K",
     "Chaînes françaises, arabes, turques et internationales",
@@ -282,7 +282,7 @@ const IPTVAbonnement = () => {
                 </h3>
                 <p className="text-brand-gray">
                   Votre <Link to="/acheter-iptv" className="text-brand-gold hover:underline">abonnement IPTV</Link> est
-                  <strong> actif en 5 minutes</strong> après le paiement par CB, PayPal ou SEPA. Vous recevez immédiatement vos identifiants par e-mail.
+                  <strong> actif en 5 minutes</strong> après le paiement par Binance Pay ou PayPal. Vous recevez immédiatement vos identifiants par e-mail.
                 </p>
               </div>
 
@@ -328,7 +328,7 @@ const IPTVAbonnement = () => {
             </h2>
             <p className="text-xl text-brand-gray mb-8">
               Choisissez votre <Link to="/abonnement-iptv" className="text-brand-gold underline font-semibold">abonnement IPTV</Link>,
-              payez par CB, PayPal ou SEPA, et commencez à regarder sous 5 minutes.
+              payez par Binance Pay ou PayPal, et commencez à regarder sous 5 minutes.
             </p>
             <a
               href="https://wa.me/18653169315?text=Je%20souhaite%20commander%20un%20abonnement%20IPTV"

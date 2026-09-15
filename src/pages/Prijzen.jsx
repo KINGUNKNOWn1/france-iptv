@@ -9,7 +9,7 @@ import { FaCheckCircle, FaWhatsapp } from 'react-icons/fa';
 const Prijzen = () => {
   const guarantees = [
     "Aucune reconduction automatique - votre abonnement s'arrête automatiquement à la fin de la durée choisie",
-    'Paiement CB, PayPal ou SEPA - payez en toute sécurité avec les moyens de paiement les plus utilisés en France',
+    'Paiement Binance Pay ou PayPal - des moyens de paiement rapides et sécurisés',
     'Actif immédiatement - recevez vos identifiants dans les 5 minutes suivant le paiement',
     '30 500+ chaînes - accès à toutes les chaînes françaises et internationales',
     '99,9 % de disponibilité garantie - un service fiable sans coupures',
@@ -20,7 +20,7 @@ const Prijzen = () => {
     <>
       <SEO
         title="Tarifs IPTV France | Abonnement dès 45€/an - France IPTV"
-        description="Tarifs de l'abonnement IPTV : 1 mois 8€, 3 mois 19,99€, 6 mois 30€, 12 mois 45€. Aucune reconduction automatique. Paiement CB, PayPal ou SEPA. 30 500+ chaînes. Commandez maintenant !"
+        description="Tarifs de l'abonnement IPTV : 1 mois 8€, 3 mois 19,99€, 6 mois 30€, 12 mois 45€. Aucune reconduction automatique. Paiement Binance Pay ou PayPal. 30 500+ chaînes. Commandez maintenant !"
         keywords="tarifs iptv, prix abonnement iptv, prix iptv, iptv pas cher, coût iptv"
         canonicalPath="/tarifs"
       />
@@ -114,10 +114,10 @@ const Prijzen = () => {
 
               <div className="bg-brand-offwhite border border-brand-gray-border rounded-xl p-6">
                 <h3 className="text-xl font-bold text-brand-black mb-2">
-                  Puis-je payer par carte bancaire ?
+                  Puis-je payer par Binance Pay ou PayPal ?
                 </h3>
                 <p className="text-brand-gray">
-                  Oui, nous acceptons la carte bancaire, PayPal et le virement SEPA. Ce sont les moyens de paiement les plus sûrs et les plus utilisés en France.
+                  Oui, nous acceptons Binance Pay et PayPal. Ce sont des moyens de paiement rapides et sécurisés.
                   Contactez-nous par <Link to="/contact" className="text-brand-gold hover:text-[#2B4577] underline">contact</Link> via WhatsApp pour commander.
                 </p>
               </div>

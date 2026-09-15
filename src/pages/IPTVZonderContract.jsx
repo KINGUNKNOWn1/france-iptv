@@ -11,7 +11,7 @@ const IPTVZonderContract = () => {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'IPTV Sans Engagement - Flexible & Sans Obligation',
-    description: "IPTV sans engagement dès 8€. Aucune reconduction automatique, aucun préavis. Arrêtez quand vous voulez. Paiement CB. Commandez sans obligation.",
+    description: "IPTV sans engagement dès 8€. Aucune reconduction automatique, aucun préavis. Arrêtez quand vous voulez. Paiement Binance Pay ou PayPal. Commandez sans obligation.",
     url: 'https://franceiptv.stream/iptv-sans-engagement',
     provider: {
       '@type': 'Organization',
@@ -88,7 +88,7 @@ const IPTVZonderContract = () => {
     {
       icon: <FiDollarSign className="w-8 h-8" />,
       title: 'Payez Seulement Ce Que Vous Utilisez',
-      description: 'Paiement unique par CB, PayPal ou SEPA. Aucun prélèvement mensuel, aucun frais caché.'
+      description: 'Paiement unique par Binance Pay ou PayPal. Aucun prélèvement mensuel, aucun frais caché.'
     },
     {
       icon: <FiHeart className="w-8 h-8" />,
@@ -102,7 +102,7 @@ const IPTVZonderContract = () => {
     { feature: 'Reconduction automatique', streamHolland: 'Non, jamais', traditional: 'Oui, par défaut' },
     { feature: 'Préavis', streamHolland: 'Non nécessaire', traditional: '1 mois à l\'avance' },
     { feature: 'Oublié de résilier ?', streamHolland: 'Aucun problème !', traditional: 'Encore un an de bloqué' },
-    { feature: 'Paiement', streamHolland: 'Unique par CB/SEPA', traditional: 'Mensuel automatique' },
+    { feature: 'Paiement', streamHolland: 'Unique par Binance Pay/PayPal', traditional: 'Mensuel automatique' },
     { feature: 'Flexibilité', streamHolland: 'Maximale', traditional: 'Limitée' },
     { feature: 'Frais cachés', streamHolland: 'Aucun', traditional: 'Frais d\'activation, de gestion' },
     { feature: 'Prix', streamHolland: 'Dès 3,75€/mois', traditional: '8-15€/mois' }
@@ -145,7 +145,7 @@ const IPTVZonderContract = () => {
         <title>IPTV Sans Engagement - Aucune Obligation dès 3,75€/mois | France IPTV</title>
         <meta
           name="description"
-          content="IPTV sans engagement dès 8€. Aucune reconduction automatique, aucun préavis. Arrêtez quand vous voulez. 30 500+ chaînes, paiement CB. Commandez sans obligation ➜"
+          content="IPTV sans engagement dès 8€. Aucune reconduction automatique, aucun préavis. Arrêtez quand vous voulez. 30 500+ chaînes, paiement Binance Pay ou PayPal. Commandez sans obligation ➜"
         />
         <meta
           name="keywords"
@@ -218,7 +218,7 @@ const IPTVZonderContract = () => {
                 </div>
                 <div className="flex items-center gap-2 text-green-300">
                   <FiCheck className="w-5 h-5" />
-                  <span>Paiement CB, PayPal ou SEPA</span>
+                  <span>Paiement Binance Pay ou PayPal</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-300">
                   <FiCheck className="w-5 h-5" />
@@ -274,7 +274,7 @@ const IPTVZonderContract = () => {
                 {
                   step: '2',
                   title: 'Payez en Une Seule Fois',
-                  description: 'Paiement sécurisé par CB, PayPal ou SEPA. Une seule fois, et c\'est réglé. Aucun prélèvement automatique, aucun débit mensuel.'
+                  description: 'Paiement sécurisé par Binance Pay ou PayPal. Une seule fois, et c\'est réglé. Aucun prélèvement automatique, aucun débit mensuel.'
                 },
                 {
                   step: '3',

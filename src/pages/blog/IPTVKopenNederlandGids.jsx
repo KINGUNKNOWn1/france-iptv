@@ -308,7 +308,7 @@ const IPTVKopenNederlandGids = () => {
                     <h3 className="text-xl font-bold text-brand-black">Payez en Toute Sécurité</h3>
                   </div>
                   <p className="text-brand-gray">
-                    Payez en toute sécurité par carte bancaire, PayPal ou virement SEPA. Dès le paiement effectué, vous recevez vos identifiants.
+                    Payez en toute sécurité par Binance Pay ou PayPal. Dès le paiement effectué, vous recevez vos identifiants.
                   </p>
                 </div>
 

@@ -211,7 +211,7 @@ const SocialProof = () => {
             className="mt-16 flex flex-wrap items-center justify-center gap-6"
           >
             {[
-              { text: 'Paiement CB & PayPal', icon: '💳', gradient: 'from-pink-500 to-rose-500' },
+              { text: 'Paiement Binance Pay & PayPal', icon: '💳', gradient: 'from-pink-500 to-rose-500' },
               { text: 'Sans Reconduction Auto', icon: '🔒', gradient: 'from-green-500 to-emerald-500' },
               { text: '14 Jours de Garantie', icon: '✓', gradient: 'from-blue-500 to-cyan-500' },
               { text: 'Sécurisé SSL', icon: '🛡️', gradient: 'from-purple-500 to-indigo-500' },

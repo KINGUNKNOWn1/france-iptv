@@ -176,7 +176,7 @@ const IsIPTVLegaalNederland = () => {
                     <FaCheckCircle className="text-green-600 mt-1 flex-shrink-0" />
                     <div>
                       <strong className="text-brand-black">Moyens de Paiement :</strong>
-                      <p className="text-brand-gray">Moyens de paiement officiels comme la CB ou PayPal, pas de cryptomonnaie anonyme exigée</p>
+                      <p className="text-brand-gray">Moyens de paiement traçables et reconnus (PayPal, Binance Pay), avec une confirmation de paiement claire</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -204,7 +204,7 @@ const IsIPTVLegaalNederland = () => {
                     <li>✓ Informations d'entreprise transparentes</li>
                     <li>✓ Service client francophone 24/7</li>
                     <li>✓ Prix et conditions transparents</li>
-                    <li>✓ Moyens de paiement sécurisés (CB, PayPal, SEPA)</li>
+                    <li>✓ Moyens de paiement sécurisés (Binance Pay, PayPal)</li>
                     <li>✓ 99,9 % de disponibilité garantie</li>
                     <li>✓ Confidentialité conforme au RGPD</li>
                   </ul>
@@ -258,7 +258,7 @@ const IsIPTVLegaalNederland = () => {
                   <li>✅ Choisir des fournisseurs avec des informations d'entreprise transparentes</li>
                   <li>✅ Vérifier l'existence d'un service client francophone</li>
                   <li>✅ Éviter les offres extrêmement bon marché « trop belles pour être vraies »</li>
-                  <li>✅ Payer par des moyens officiels (CB, PayPal, virement SEPA)</li>
+                  <li>✅ Payer par des moyens officiels (Binance Pay, PayPal)</li>
                   <li>✅ Lire les avis d'autres utilisateurs</li>
                 </ul>
                 <p className="text-brand-gray">

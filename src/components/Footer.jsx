@@ -111,7 +111,7 @@ const Footer = () => {
             <div className="flex items-center gap-4">
               <div className="glass-effect px-4 py-2 rounded-full text-sm">
                 <span className="text-brand-gray">Paiement sécurisé par</span>
-                <span className="ml-2 font-semibold text-primary-600">CB, PayPal & SEPA</span>
+                <span className="ml-2 font-semibold text-primary-600">Binance Pay & PayPal</span>
               </div>
             </div>
           </div>

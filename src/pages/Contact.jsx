@@ -43,7 +43,7 @@ const Contact = () => {
   const orderSteps = [
     'Contactez-nous via WhatsApp',
     'Choisissez votre abonnement souhaité (3, 6 ou 12 mois)',
-    'Payez en toute sécurité par CB, PayPal ou SEPA',
+    'Payez en toute sécurité par Binance Pay ou PayPal',
     'Recevez vos identifiants sous 5 minutes',
     "Installez l'application et commencez à regarder"
   ];

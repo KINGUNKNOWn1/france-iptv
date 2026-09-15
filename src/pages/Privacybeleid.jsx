@@ -200,7 +200,7 @@ const Privacybeleid = () => {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold mt-1">•</span>
-                    <span>Prestataires de paiement (carte bancaire, PayPal, virement SEPA)</span>
+                    <span>Prestataires de paiement (Binance Pay, PayPal)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold mt-1">•</span>
