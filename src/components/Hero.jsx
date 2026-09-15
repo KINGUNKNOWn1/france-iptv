@@ -22,7 +22,7 @@ const Hero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=1600"
+          src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=65&w=1200"
           alt="Arrière-plan de sport en direct"
           className="w-full h-full object-cover"
           fetchpriority="high"

@@ -76,7 +76,7 @@ const IPTVKopen = () => {
         <section className="relative min-h-[60vh] flex items-center overflow-hidden pt-32 pb-20">
           <div className="absolute inset-0 z-0">
             <img
-              src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80&w=1600"
+              src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=65&w=1200"
               alt="Acheter IPTV en France"
               className="w-full h-full object-cover"
               fetchpriority="high"
