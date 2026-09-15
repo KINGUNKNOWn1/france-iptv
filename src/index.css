@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-white text-brand-black antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  /* Ensure focus states are visible for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2;
+  }
+
+  /* Support reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .gradient-border {
+    @apply relative overflow-hidden;
+  }
+
+  .gradient-border::before {
+    content: '';
+    @apply absolute inset-0 rounded-lg bg-gradient-to-r from-brand-gold to-[#2B4577];
+    @apply -z-10;
+  }
+
+  .glass-effect {
+    @apply bg-white/80 backdrop-blur-xl border border-brand-gray-border/60 shadow-lg;
+  }
+
+  .btn-primary {
+    @apply px-8 py-3 bg-brand-gold text-white font-semibold rounded-lg
+    hover:bg-[#2B4577] transition-all duration-200
+    cursor-pointer focus-visible:ring-2 focus-visible:ring-brand-gold;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-3 bg-transparent border-2 border-brand-black/15 text-brand-black font-semibold rounded-lg
+    hover:bg-brand-black/5 transition-all duration-200
+    cursor-pointer focus-visible:ring-2 focus-visible:ring-brand-gold;
+  }
+
+  .btn-accent {
+    @apply px-6 py-3 bg-gradient-to-r from-brand-gold to-[#2B4577] text-white font-semibold rounded-xl
+    hover:from-[#2B4577] hover:to-brand-gold transition-all duration-200
+    hover:shadow-xl hover:shadow-brand-gold/30 hover:scale-105 active:scale-95
+    cursor-pointer focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-32 px-4 md:px-8;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .card-elevated {
+    @apply bg-brand-offwhite rounded-2xl shadow-xl border border-brand-gray-border
+    hover:shadow-2xl hover:scale-[1.02] transition-all duration-300;
+  }
+
+  .block-pattern {
+    @apply relative overflow-hidden rounded-2xl p-8;
+  }
+
+  .block-pattern::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-brand-gold/10 to-[#2B4577]/10 -z-10;
+  }
+}
+
+/* Keep anchored sections clear of the fixed 80px navigation bar */
+[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+/* Skip layout/paint work for offscreen sections on these long pages — the
+   browser only does full work once a section nears the viewport, which is
+   the single biggest lever for scroll smoothness here. contain-intrinsic-size
+   keeps scrollbar/anchor positions stable before a section is ever measured;
+   "auto" makes it remember each section's real height after first paint. */
+section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}

@@ -1,0 +1,86 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- SEO Metadata -->
+  <title>France IPTV - Service de Streaming Premium | 30 500+ Chaînes | Qualité 4K</title>
+  <desc>France IPTV propose des abonnements IPTV premium en France avec 30 500+ chaînes en direct, 150 000+ films et séries en qualité 4K UHD. Service fiable avec 99,9% de disponibilité, support francophone 24/7, compatible avec tous les appareils.</desc>
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description>
+        <dc:title>France IPTV - Service de Streaming Premium</dc:title>
+        <dc:description>Service de streaming IPTV premium en France avec 30 500+ chaînes et 150 000+ films</dc:description>
+        <dc:subject>IPTV France, abonnement IPTV, acheter IPTV, IPTV français, IPTV premium, IPTV streaming, 4K IPTV, IPTV sans engagement, meilleur IPTV France, IPTV pas cher, chaînes françaises, chaînes internationales, chaînes sportives, VOD IPTV, catch-up TV, EPG IPTV, IPTV légal</dc:subject>
+        <dc:publisher>France IPTV</dc:publisher>
+        <dc:language>fr-FR</dc:language>
+        <dc:format>image/svg+xml</dc:format>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#131211;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1C1B19;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#131211;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7B9FD9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#33518C;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="150" fill="#33518C" opacity="0.12"/>
+  <circle cx="1100" cy="530" r="200" fill="#33518C" opacity="0.12"/>
+
+  <!-- Logo (tricolore signal bars) -->
+  <g transform="translate(100, 180)">
+    <rect x="0" y="0" width="80" height="80" rx="16" fill="#1C1B19"/>
+    <rect x="20" y="42" width="10" height="24" rx="2" fill="#33518C"/>
+    <rect x="35" y="20" width="10" height="46" rx="2" fill="#FDFCF9"/>
+    <rect x="50" y="32" width="10" height="34" rx="2" fill="#B8433A"/>
+  </g>
+
+  <!-- Brand Name -->
+  <text x="200" y="230" font-family="'Space Grotesk', Arial, sans-serif" font-size="52" font-weight="700" letter-spacing="-1" fill="#FDFCF9">
+    France IPTV
+  </text>
+
+  <!-- Tagline -->
+  <text x="100" y="320" font-family="Arial, sans-serif" font-size="36" font-weight="600" fill="url(#goldGradient)">
+    Service de Streaming Premium
+  </text>
+
+  <!-- Features -->
+  <g transform="translate(100, 380)">
+    <!-- Feature 1 -->
+    <circle cx="10" cy="10" r="8" fill="#33518C"/>
+    <text x="30" y="18" font-family="Arial, sans-serif" font-size="28" fill="#D8D5CD">
+      30 500+ Chaînes en Direct
+    </text>
+
+    <!-- Feature 2 -->
+    <circle cx="10" cy="60" r="8" fill="#33518C"/>
+    <text x="30" y="68" font-family="Arial, sans-serif" font-size="28" fill="#D8D5CD">
+      150 000+ Films &amp; Séries
+    </text>
+
+    <!-- Feature 3 -->
+    <circle cx="10" cy="110" r="8" fill="#33518C"/>
+    <text x="30" y="118" font-family="Arial, sans-serif" font-size="28" fill="#D8D5CD">
+      Qualité 4K UHD | 99,9% de Disponibilité
+    </text>
+  </g>
+
+  <!-- CTA Badge -->
+  <rect x="850" y="450" width="280" height="100" rx="20" fill="url(#goldGradient)"/>
+  <text x="990" y="490" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1C1B19" text-anchor="middle">
+    Dès 23 €
+  </text>
+  <text x="990" y="525" font-family="Arial, sans-serif" font-size="18" fill="#1C1B19" text-anchor="middle">
+    3 mois
+  </text>
+</svg>
