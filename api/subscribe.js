@@ -1,6 +1,6 @@
-// Vercel Serverless Function - Email marketing capture (Brevo)
-// Adds/updates a contact in Brevo so it can receive campaigns and automations.
-// Requires BREVO_API_KEY and BREVO_LIST_ID env vars (set in Vercel project settings).
+// Vercel Serverless Function - Email marketing capture (Resend)
+// Adds a contact to a Resend Audience so it can receive broadcasts.
+// Requires RESEND_API_KEY and RESEND_AUDIENCE_ID env vars (set in Vercel project settings).
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -15,43 +15,38 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { email, source, plan } = req.body || {};
+  const { email } = req.body || {};
 
   const isValidEmail = typeof email === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   if (!isValidEmail) {
     return res.status(400).json({ error: 'Valid email is required' });
   }
 
-  const apiKey = process.env.BREVO_API_KEY;
-  const listId = process.env.BREVO_LIST_ID;
+  const apiKey = process.env.RESEND_API_KEY;
+  const audienceId = process.env.RESEND_AUDIENCE_ID;
 
-  if (!apiKey || !listId) {
-    console.error('Brevo not configured: missing BREVO_API_KEY or BREVO_LIST_ID');
+  if (!apiKey || !audienceId) {
+    console.error('Resend not configured: missing RESEND_API_KEY or RESEND_AUDIENCE_ID');
     return res.status(503).json({ error: 'Email service not configured yet' });
   }
 
   try {
-    const brevoRes = await fetch('https://api.brevo.com/v3/contacts', {
+    const resendRes = await fetch(`https://api.resend.com/audiences/${audienceId}/contacts`, {
       method: 'POST',
       headers: {
-        'api-key': apiKey,
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         email,
-        listIds: [Number(listId)],
-        updateEnabled: true,
-        attributes: {
-          SOURCE: source || 'website',
-          PLAN: plan || undefined
-        }
+        unsubscribed: false
       })
     });
 
-    if (!brevoRes.ok && brevoRes.status !== 204) {
-      const errBody = await brevoRes.json().catch(() => ({}));
-      console.error('Brevo error:', brevoRes.status, errBody);
+    // Resend returns 409 if the contact already exists - treat as success.
+    if (!resendRes.ok && resendRes.status !== 409) {
+      const errBody = await resendRes.json().catch(() => ({}));
+      console.error('Resend error:', resendRes.status, errBody);
       return res.status(502).json({ error: 'Failed to save contact' });
     }
 
