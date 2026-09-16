@@ -5,6 +5,7 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import StickyWhatsAppCTA from './components/StickyWhatsAppCTA';
 import CookieConsent from './components/CookieConsent';
+import ExitIntentModal from './components/ExitIntentModal';
 import PageTransition from './components/PageTransition';
 import LoadingScreen from './components/LoadingScreen';
 import SmoothScroll from './components/SmoothScroll';
@@ -175,6 +176,7 @@ function AppContent() {
       <Footer />
       <StickyWhatsAppCTA />
       <CookieConsent />
+      <ExitIntentModal />
     </div>
   );
 }

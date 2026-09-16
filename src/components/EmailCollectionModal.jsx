@@ -25,50 +25,22 @@ const EmailCollectionModal = ({ isOpen, onClose, onSubmit, planName }) => {
     const newLead = {
       email,
       plan: planName,
-      source: 'pricing_page',
-      visitorId: localStorage.getItem('visitor_id') || null
+      source: 'checkout_pricing_page'
     };
 
-    // Send to backend database
+    // Send to Brevo (email marketing list) - failure here must never block checkout
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3002';
-      const response = await fetch(`${apiUrl}/api/leads`, {
+      await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newLead)
       });
-
-      if (!response.ok) {
-        throw new Error('Failed to save lead');
-      }
-
-      const data = await response.json();
-      console.log('Lead saved to database:', data);
-
-      // Also keep local backup
-      const existingEmails = JSON.parse(localStorage.getItem('streamholland_leads') || '[]');
-      existingEmails.push({
-        ...newLead,
-        timestamp: new Date().toISOString()
-      });
-      localStorage.setItem('streamholland_leads', JSON.stringify(existingEmails));
-
-      setIsSubmitting(false);
-      onSubmit(email);
     } catch (error) {
       console.error('Error saving lead:', error);
-
-      // If backend fails, still save locally and continue
-      const existingEmails = JSON.parse(localStorage.getItem('streamholland_leads') || '[]');
-      existingEmails.push({
-        ...newLead,
-        timestamp: new Date().toISOString()
-      });
-      localStorage.setItem('streamholland_leads', JSON.stringify(existingEmails));
-
-      setIsSubmitting(false);
-      onSubmit(email);
     }
+
+    setIsSubmitting(false);
+    onSubmit(email);
   };
 
   return (
