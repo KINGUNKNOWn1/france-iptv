@@ -1,6 +1,6 @@
-// Vercel Serverless Function - Email marketing capture (Resend)
-// Adds a contact to a Resend Audience so it can receive broadcasts.
-// Requires RESEND_API_KEY and RESEND_AUDIENCE_ID env vars (set in Vercel project settings).
+// Vercel Serverless Function - Email marketing capture (MailerLite)
+// Adds/updates a subscriber in a MailerLite group so it can receive campaigns.
+// Requires MAILERLITE_API_KEY and MAILERLITE_GROUP_ID env vars (set in Vercel project settings).
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -22,31 +22,31 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Valid email is required' });
   }
 
-  const apiKey = process.env.RESEND_API_KEY;
-  const audienceId = process.env.RESEND_AUDIENCE_ID;
+  const apiKey = process.env.MAILERLITE_API_KEY;
+  const groupId = process.env.MAILERLITE_GROUP_ID;
 
-  if (!apiKey || !audienceId) {
-    console.error('Resend not configured: missing RESEND_API_KEY or RESEND_AUDIENCE_ID');
+  if (!apiKey || !groupId) {
+    console.error('MailerLite not configured: missing MAILERLITE_API_KEY or MAILERLITE_GROUP_ID');
     return res.status(503).json({ error: 'Email service not configured yet' });
   }
 
   try {
-    const resendRes = await fetch(`https://api.resend.com/audiences/${audienceId}/contacts`, {
+    const mlRes = await fetch('https://connect.mailerlite.com/api/subscribers', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${apiKey}`,
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
       },
       body: JSON.stringify({
         email,
-        unsubscribed: false
+        groups: [groupId]
       })
     });
 
-    // Resend returns 409 if the contact already exists - treat as success.
-    if (!resendRes.ok && resendRes.status !== 409) {
-      const errBody = await resendRes.json().catch(() => ({}));
-      console.error('Resend error:', resendRes.status, errBody);
+    if (!mlRes.ok) {
+      const errBody = await mlRes.json().catch(() => ({}));
+      console.error('MailerLite error:', mlRes.status, errBody);
       return res.status(502).json({ error: 'Failed to save contact' });
     }
 
