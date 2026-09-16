@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaArrowRight, FaClock, FaUser } from 'react-icons/fa';
 
@@ -6,63 +7,58 @@ const Blog = () => {
   const posts = [
     {
       id: 1,
-      title: 'Acheter IPTV en France : Guide Complet 2026',
-      excerpt: "Tout ce que vous devez savoir sur l'achat d'IPTV en France. De la comparaison des fournisseurs aux conseils d'installation.",
+      title: 'Acheter IPTV en France : Guide Complet + Meilleurs Fournisseurs',
+      excerpt: "Guide complet pour acheter un IPTV en France. Meilleurs fournisseurs, prix, conseils d'installation et tout ce qu'il faut savoir sur les abonnements IPTV.",
       image: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=800&q=80',
       author: 'Équipe France IPTV',
       date: '5 mars 2026',
       readTime: '8 min',
-      category: 'Guide'
+      category: 'Guide',
+      link: '/blog/acheter-iptv-france-guide-complet'
     },
     {
       id: 2,
-      title: 'Top 10 des Chaînes Sportives IPTV en 2026',
-      excerpt: 'Découvrez les chaînes sportives à ne surtout pas manquer avec votre abonnement IPTV.',
+      title: 'Meilleures Applications IPTV : Top 10 pour Android, iOS & Smart TV',
+      excerpt: "Comparatif des meilleures applications IPTV : IPTV Smarters, TiviMate, GSE Smart IPTV et plus. Conseils d'installation et avis.",
       image: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80',
       author: 'Équipe France IPTV',
       date: '1 mars 2026',
       readTime: '6 min',
-      category: 'Sport'
+      category: 'Applications',
+      link: '/blog/meilleures-applications-iptv-2024'
     },
     {
       id: 3,
-      title: "Installer l'IPTV sur Samsung Smart TV",
-      excerpt: "Guide étape par étape pour installer l'IPTV sur votre Samsung Smart TV.",
+      title: "Installer l'IPTV sur Samsung TV : Guide Complet",
+      excerpt: "Apprenez à installer l'IPTV sur votre Samsung Smart TV en 5 minutes. Guide étape par étape pour Tizen OS et Smart Hub.",
       image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=800&q=80',
       author: 'Équipe France IPTV',
       date: '25 février 2026',
       readTime: '5 min',
-      category: 'Tutoriel'
+      category: 'Tutoriel',
+      link: '/blog/installer-iptv-samsung-tv'
     },
     {
       id: 4,
-      title: 'Regarder les Chaînes Françaises via IPTV',
-      excerpt: 'Toutes les chaînes françaises réunies. TF1, France 2, M6 et bien plus via IPTV.',
+      title: 'Liste des Chaînes IPTV Françaises : 80+ Chaînes FR',
+      excerpt: 'Liste complète des chaînes IPTV françaises. TF1, France Télévisions, M6, chaînes régionales et sportives.',
       image: 'https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=800&q=80',
       author: 'Équipe France IPTV',
       date: '20 février 2026',
       readTime: '7 min',
-      category: 'Chaînes'
+      category: 'Chaînes',
+      link: '/blog/liste-chaines-francaises-iptv'
     },
     {
       id: 5,
-      title: "IPTV 4K : L'Upgrade en Vaut-elle la Peine ?",
-      excerpt: 'Tout sur le streaming IPTV en 4K. Avantages, inconvénients et ce dont vous avez besoin.',
+      title: 'IPTV Légal en France ? Informations Juridiques & Réglementation',
+      excerpt: "L'IPTV est-il légal en France ? Réglementation, risques et comment utiliser l'IPTV en toute sécurité.",
       image: 'https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=800&q=80',
       author: 'Équipe France IPTV',
       date: '15 février 2026',
       readTime: '6 min',
-      category: 'Technologie'
-    },
-    {
-      id: 6,
-      title: 'IPTV vs Câble : Lequel Choisir en 2026 ?',
-      excerpt: "Comparaison entre l'IPTV et la télévision par câble traditionnelle. Coûts, chaînes et qualité.",
-      image: 'https://images.unsplash.com/photo-1560169897-fc0cdbdfa4d5?w=800&q=80',
-      author: 'Équipe France IPTV',
-      date: '10 février 2026',
-      readTime: '9 min',
-      category: 'Comparatif'
+      category: 'Juridique',
+      link: '/blog/iptv-legal-en-france'
     }
   ];
 
@@ -96,6 +92,7 @@ const Blog = () => {
               whileHover={{ y: -10 }}
               className="group bg-[#201C18] rounded-2xl overflow-hidden border border-slate-700 hover:border-brand-gold transition-all duration-300"
             >
+            <Link to={post.link} className="block">
               {/* Image */}
               <div className="relative h-48 overflow-hidden">
                 <img
@@ -140,34 +137,16 @@ loading="lazy" decoding="async"                   src={post.image}
                 {/* Footer */}
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-400">{post.date}</span>
-                  <a
-                    href="#"
-                    className="flex items-center gap-2 text-blue-400 hover:text-white font-semibold text-sm group-hover:gap-3 transition-all"
-                  >
+                  <span className="flex items-center gap-2 text-blue-400 group-hover:text-white font-semibold text-sm group-hover:gap-3 transition-all">
                     Lire la suite
                     <FaArrowRight className="text-xs" />
-                  </a>
+                  </span>
                 </div>
               </div>
+            </Link>
             </motion.article>
           ))}
         </div>
-
-        {/* View All CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#201C18] hover:bg-slate-700 text-white font-bold rounded-xl transition-all border border-slate-700 hover:border-brand-gold"
-          >
-            Voir Tous les Articles
-            <FaArrowRight />
-          </a>
-        </motion.div>
       </div>
     </section>
   );
