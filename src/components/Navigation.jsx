@@ -36,9 +36,7 @@ const Navigation = () => {
       <div className="container-custom px-4 md:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center">
-            <Logo textColor={scrolled ? 'black' : 'white'} size="sm" showTagline={false} />
-          </a>
+          <Logo textColor={scrolled ? 'black' : 'white'} size="sm" showTagline={false} />
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
