@@ -8,6 +8,7 @@ import CookieConsent from './components/CookieConsent';
 import PageTransition from './components/PageTransition';
 import LoadingScreen from './components/LoadingScreen';
 import SmoothScroll from './components/SmoothScroll';
+import ErrorBoundary from './components/ErrorBoundary';
 
 // Lazy load pages for better performance
 const Home = lazy(() => import('./pages/Home'));
@@ -126,6 +127,7 @@ function AppContent() {
       <Navigation />
       <ScrollToTop />
       <SmoothScroll />
+      <ErrorBoundary>
       <Suspense fallback={<LoadingScreen />}>
         <PageTransition>
           <Routes>
@@ -169,6 +171,7 @@ function AppContent() {
           </Routes>
         </PageTransition>
       </Suspense>
+      </ErrorBoundary>
       <Footer />
       <StickyWhatsAppCTA />
       <CookieConsent />
