@@ -24,7 +24,7 @@ const Apparaten = () => {
       color: "from-green-500 to-green-600",
       brands: ["iPhone", "Samsung", "Huawei", "Xiaomi", "OnePlus"],
       apps: ["IPTV Smarters Pro", "GSE Smart IPTV", "Perfect Player"],
-      link: "#",
+      link: "/appareils/activer-code-iptv",
       description: "Regardez partout, tout le temps sur votre téléphone"
     },
     {
@@ -34,7 +34,7 @@ const Apparaten = () => {
       color: "from-purple-500 to-purple-600",
       brands: ["iPad", "Samsung Tab", "Huawei Pad", "Lenovo Tab"],
       apps: ["IPTV Smarters Pro", "GSE Smart IPTV"],
-      link: "#",
+      link: "/appareils/iphone-ipad",
       description: "Format parfait pour la maison et les déplacements"
     },
     {
@@ -44,7 +44,7 @@ const Apparaten = () => {
       color: "from-orange-500 to-orange-600",
       brands: ["MAG", "Formuler", "Dreambox", "Android TV Box"],
       apps: ["Applications natives", "IPTV Smarters", "TiviMate"],
-      link: "#",
+      link: "/appareils/android-tv",
       description: "Une expérience IPTV dédiée"
     },
     {
@@ -54,7 +54,7 @@ const Apparaten = () => {
       color: "from-red-500 to-red-600",
       brands: ["PC Windows", "MacBook", "Linux"],
       apps: ["VLC Player", "Kodi", "MyIPTV Player"],
-      link: "#",
+      link: "/appareils/activer-code-iptv",
       description: "Streamez sur votre ordinateur de bureau ou portable"
     },
     {
@@ -64,7 +64,7 @@ const Apparaten = () => {
       color: "from-indigo-500 to-indigo-600",
       brands: ["Apple TV 4K", "Apple TV HD"],
       apps: ["IPTV Smarters Pro", "GSE Smart IPTV"],
-      link: "#",
+      link: "/appareils/iphone-ipad",
       description: "IPTV premium sur Apple TV"
     }
   ];
