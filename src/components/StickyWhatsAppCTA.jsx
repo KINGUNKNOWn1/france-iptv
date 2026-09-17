@@ -78,7 +78,7 @@ const StickyWhatsAppCTA = () => {
                     </div>
 
                     <p className="text-sm text-gray-700 mb-3">
-                      👋 Bonjour ! Des questions sur notre service IPTV ? Discutez avec nous directement sur WhatsApp !
+                      👋 Bonjour ! Des questions sur notre service IPTV ? 🎁 Profitez d'1 jour d'essai gratuit, contactez-nous directement sur WhatsApp !
                     </p>
 
                     <button

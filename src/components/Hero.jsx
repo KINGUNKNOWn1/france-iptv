@@ -6,6 +6,7 @@ import LightweightBackground from './LightweightBackground';
 
 const Hero = () => {
   const badges = [
+    '1 jour d\'essai gratuit',
     '1 mois dès 8 €',
     '30 500+ chaînes en direct',
     'Qualité HD, UHD et 4K',
@@ -67,7 +68,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-lg text-gray-200 leading-relaxed mb-8 max-w-2xl"
           >
-            France IPTV est un fournisseur IPTV fiable au service de tout le territoire. Notre abonnement 1 mois à 8 € vous permet de juger de la qualité par vous-même, sans engagement ! Nous livrons un abonnement IPTV aux clients dans toute la France : de Paris à Marseille, de Lyon à Toulouse. Chaînes françaises, chaînes sportives, chaînes arabes et turques, le tout dans un seul abonnement. Aucune reconduction automatique, paiement par Binance Pay ou PayPal.
+            France IPTV est un fournisseur IPTV fiable au service de tout le territoire. Profitez d'un jour d'essai gratuit pour juger de la qualité par vous-même, sans engagement ! Nous livrons un abonnement IPTV aux clients dans toute la France : de Paris à Marseille, de Lyon à Toulouse. Chaînes françaises, chaînes sportives, chaînes arabes et turques, le tout dans un seul abonnement. Aucune reconduction automatique, paiement par Binance Pay ou PayPal.
           </motion.p>
 
           {/* Feature Badges */}
@@ -110,6 +111,14 @@ const Hero = () => {
             >
               Commander via WhatsApp
             </Link>
+            <a
+              href="https://wa.me/18653169315?text=Bonjour%20!%20Je%20souhaite%20profiter%20de%20l%27essai%20gratuit%20de%201%20jour%20pour%20France%20IPTV"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-200 text-center"
+            >
+              🎁 Essai Gratuit 24h
+            </a>
           </motion.div>
         </div>
       </div>

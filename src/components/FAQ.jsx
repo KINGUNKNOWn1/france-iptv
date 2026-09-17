@@ -27,8 +27,8 @@ const FAQ = () => {
       answer: 'Nous acceptons Binance Pay et PayPal pour des paiements sûrs et simples. Après paiement, vous recevez immédiatement vos identifiants via WhatsApp.',
     },
     {
-      question: "Puis-je tester avant de m'engager sur le long terme ?",
-      answer: "Oui ! Notre abonnement 1 mois à 8 € est fait pour ça : vous testez notre service sans engagement, puis passez à une formule plus longue (3, 6 ou 12 mois) si vous êtes satisfait. Contactez-nous via WhatsApp pour commander.",
+      question: "Proposez-vous un essai gratuit ?",
+      answer: "Oui ! Nous offrons 1 jour d'essai gratuit pour que vous puissiez juger de la qualité de notre service avant de vous engager. Contactez-nous simplement via WhatsApp pour en profiter. Si vous êtes satisfait, notre abonnement 1 mois à 8 € vous permet ensuite de continuer sans engagement, puis de passer à une formule plus longue (3, 6 ou 12 mois) si vous le souhaitez.",
     },
     {
       question: "Que se passe-t-il à la fin de mon abonnement ?",

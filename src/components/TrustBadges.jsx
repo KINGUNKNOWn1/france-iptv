@@ -36,8 +36,8 @@ const TrustBadges = () => {
     },
     {
       icon: FaAward,
-      title: '1 Mois dès 8 €',
-      description: 'Sans engagement',
+      title: 'Essai Gratuit 24h',
+      description: 'Sur simple demande',
       color: 'from-yellow-500 to-yellow-600'
     }
   ];
