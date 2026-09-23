@@ -35,7 +35,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="container-custom section-padding relative z-10 pt-32 w-full">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl mx-auto">
           {/* Location Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
