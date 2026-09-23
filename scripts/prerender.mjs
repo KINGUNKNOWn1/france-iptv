@@ -2,8 +2,9 @@
 // writes the resulting HTML to dist/<route>/index.html so crawlers get real
 // titles, meta tags, JSON-LD and body content without executing JavaScript.
 //
-// Skips (exit 0) when no Chrome is available, so remote builds never fail.
-// For a prerendered deploy: `vercel build --prod && vercel deploy --prebuilt --prod`.
+// Uses local Chrome when present (dev machines); on Vercel's build image it
+// falls back to the bundled @sparticuz/chromium binary, so git-push deploys
+// ship prerendered HTML too. Elsewhere with no Chrome it skips (exit 0).
 import fs from 'node:fs';
 import path from 'node:path';
 import http from 'node:http';
@@ -20,13 +21,26 @@ const CHROME_CANDIDATES = [
   '/usr/bin/chromium',
   '/usr/bin/chromium-browser',
 ].filter(Boolean);
-const executablePath = CHROME_CANDIDATES.find((p) => fs.existsSync(p));
-if (!executablePath) {
+const { default: puppeteer } = await import('puppeteer-core');
+
+let launchOptions;
+const localChrome = CHROME_CANDIDATES.find((p) => fs.existsSync(p));
+if (localChrome) {
+  launchOptions = { executablePath: localChrome, headless: 'new', args: ['--no-sandbox'] };
+} else if (process.env.VERCEL) {
+  // Never skip on Vercel: failing the build keeps the previous (prerendered)
+  // deployment live instead of shipping an empty client-rendered shell.
+  const { default: chromium } = await import('@sparticuz/chromium');
+  launchOptions = {
+    executablePath: await chromium.executablePath(),
+    headless: 'shell',
+    args: await puppeteer.defaultArgs({ args: chromium.args, headless: 'shell' }),
+  };
+  console.log('[prerender] Using @sparticuz/chromium');
+} else {
   console.warn('[prerender] No Chrome found — skipping (site stays client-rendered).');
   process.exit(0);
 }
-
-const { default: puppeteer } = await import('puppeteer-core');
 
 const sitemap = fs.readFileSync(path.join(root, 'public/sitemap.xml'), 'utf8');
 const routes = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => new URL(m[1]).pathname);
@@ -47,7 +61,7 @@ const server = http.createServer((req, res) => {
 await new Promise((r) => server.listen(0, r));
 const origin = `http://localhost:${server.address().port}`;
 
-const browser = await puppeteer.launch({ executablePath, headless: 'new', args: ['--no-sandbox'] });
+const browser = await puppeteer.launch(launchOptions);
 let failed = 0;
 
 for (const route of routes) {

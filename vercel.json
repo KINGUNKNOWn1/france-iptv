@@ -83,8 +83,5 @@
       "destination": "https://franceiptv.stream/:path*",
       "permanent": true
     }
-  ],
-  "git": {
-    "deploymentEnabled": false
-  }
+  ]
 }
