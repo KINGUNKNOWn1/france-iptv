@@ -20,6 +20,17 @@ document.head
   )
   .forEach((el) => el.remove());
 
+// Sales happen on WhatsApp, so a click on any wa.me link is our conversion.
+// One delegated listener covers every WhatsApp button on the site and tells
+// Meta (and GA4, once configured) which visits turned into a contact.
+document.addEventListener('click', (event) => {
+  const link = event.target.closest('a[href*="wa.me/"]');
+  if (!link) return;
+  const page = window.location.pathname;
+  window.fbq?.('track', 'Contact', { content_name: page });
+  window.gtag?.('event', 'generate_lead', { method: 'whatsapp', page_path: page });
+});
+
 // Initialize Web Vitals monitoring
 initWebVitals();
 
