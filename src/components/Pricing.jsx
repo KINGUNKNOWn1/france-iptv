@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaWhatsapp, FaCheckCircle, FaStar, FaCreditCard, FaHeadset, FaTrophy } from 'react-icons/fa';
 import EmailCollectionModal from './EmailCollectionModal';
+import { openWhatsApp } from '../utils/tracking';
 
 const Pricing = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -13,16 +14,8 @@ const Pricing = () => {
 
   const handleEmailSubmit = (email) => {
     if (selectedPlan) {
-      // Get WhatsApp number from environment variable (without + prefix for wa.me URL)
-      const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '18653169315';
-
       // Redirect to WhatsApp with email included in message
-      const message = `${selectedPlan.whatsapp}\n\nE-mail: ${email}`;
-      window.open(
-        `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
-        '_blank',
-        'noopener,noreferrer'
-      );
+      openWhatsApp(`${selectedPlan.whatsapp}\n\nE-mail: ${email}`);
     }
     setIsModalOpen(false);
     setSelectedPlan(null);

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaClock, FaCheckCircle } from 'react-icons/fa';
 import SEO from '../components/SEO';
+import { trackWhatsAppContact } from '../utils/tracking';
 
 const Contact = () => {
   const contactMethods = [
@@ -99,7 +100,11 @@ const Contact = () => {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   className={`bg-brand-offwhite border ${method.primary ? 'border-brand-gold' : 'border-brand-gray-border'} rounded-xl p-6 ${method.link ? 'hover:border-brand-gold cursor-pointer' : ''} transition-all group`}
-                  onClick={() => method.link && window.open(method.link, '_blank')}
+                  onClick={() => {
+                    if (!method.link) return;
+                    if (method.link.includes('wa.me/')) trackWhatsAppContact();
+                    window.open(method.link, '_blank');
+                  }}
                 >
                   <div className={`w-14 h-14 rounded-xl ${method.primary ? 'bg-gradient-to-br from-green-600 to-green-700' : 'bg-gradient-to-br from-brand-gold to-[#2B4577]'} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                     <method.icon className="text-white text-2xl" />

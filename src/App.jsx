@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import StickyWhatsAppCTA from './components/StickyWhatsAppCTA';
 import CookieConsent from './components/CookieConsent';
 import ExitIntentModal from './components/ExitIntentModal';
+import TrialPopup from './components/TrialPopup';
 import PageTransition from './components/PageTransition';
 import LoadingScreen from './components/LoadingScreen';
 import SmoothScroll from './components/SmoothScroll';
@@ -183,6 +184,7 @@ function AppContent() {
       <StickyWhatsAppCTA />
       <CookieConsent />
       <ExitIntentModal />
+      <TrialPopup />
     </div>
   );
 }

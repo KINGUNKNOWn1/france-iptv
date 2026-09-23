@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaWhatsapp, FaTimes } from 'react-icons/fa';
+import TrialEmailForm from './TrialEmailForm';
+import { hasCapturedLead, openWhatsApp } from '../utils/tracking';
 
 const StickyWhatsAppCTA = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -29,10 +31,7 @@ const StickyWhatsAppCTA = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent(
-      'Bonjour ! Je suis intéressé(e) par un abonnement France IPTV. Puis-je avoir plus d\'informations ?'
-    );
-    window.open(`https://wa.me/18653169315?text=${message}`, '_blank');
+    openWhatsApp("Bonjour ! Je suis intéressé(e) par un abonnement France IPTV. Puis-je avoir plus d'informations ?");
   };
 
   return (
@@ -51,7 +50,7 @@ const StickyWhatsAppCTA = () => {
                 initial={{ opacity: 0, x: 20, y: 10 }}
                 animate={{ opacity: 1, x: 0, y: 0 }}
                 exit={{ opacity: 0, x: 20, y: 10 }}
-                className="absolute bottom-full right-0 mb-4 w-72"
+                className="absolute bottom-full right-0 mb-4 w-80"
               >
                 <div className="bg-white rounded-2xl shadow-2xl p-4 border border-gray-200 relative">
                   {/* Close button */}
@@ -91,6 +90,15 @@ const StickyWhatsAppCTA = () => {
                     <p className="text-xs text-gray-500 text-center mt-2">
                       Réponse sous 2 minutes
                     </p>
+
+                    {!hasCapturedLead() && (
+                      <div className="mt-3 pt-3 border-t border-gray-200">
+                        <p className="text-xs font-semibold text-gray-700 mb-2">
+                          🎁 Ou recevez votre essai gratuit par e-mail :
+                        </p>
+                        <TrialEmailForm source="whatsapp_bubble" />
+                      </div>
+                    )}
                   </div>
 
                   {/* Tail */}

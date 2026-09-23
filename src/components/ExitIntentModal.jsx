@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaTimes, FaGift, FaWhatsapp, FaEnvelope, FaCopy, FaCheckCircle } from 'react-icons/fa';
+import { hasCapturedLead, openWhatsApp, subscribeEmail } from '../utils/tracking';
 
 const DISCOUNT_CODE = 'BIENVENUE10';
 
@@ -17,7 +18,7 @@ const ExitIntentModal = () => {
 
   useEffect(() => {
     const handleMouseLeave = (e) => {
-      if (e.clientY <= 0 && !hasShown) {
+      if (e.clientY <= 0 && !hasShown && !hasCapturedLead()) {
         setIsOpen(true);
         setHasShown(true);
       }
@@ -47,15 +48,7 @@ const ExitIntentModal = () => {
 
     setIsSubmitting(true);
 
-    try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'exit_intent_10_percent' })
-      });
-    } catch (error) {
-      console.error('Error saving lead:', error);
-    }
+    await subscribeEmail(email, 'exit_intent_10_percent');
 
     setIsSubmitting(false);
     setStep('success');
@@ -69,10 +62,9 @@ const ExitIntentModal = () => {
   };
 
   const handleWhatsApp = () => {
-    const message = encodeURIComponent(
+    openWhatsApp(
       `Bonjour, je souhaite profiter de la réduction de 10% (code ${DISCOUNT_CODE}) sur mon premier abonnement IPTV. Mon e-mail : ${email}`
     );
-    window.open(`https://wa.me/18653169315?text=${message}`, '_blank');
     setIsOpen(false);
   };
 

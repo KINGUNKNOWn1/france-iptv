@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaEnvelope, FaTimes, FaWhatsapp } from 'react-icons/fa';
+import { subscribeEmail } from '../utils/tracking';
 
 const EmailCollectionModal = ({ isOpen, onClose, onSubmit, planName }) => {
   const [email, setEmail] = useState('');
@@ -22,22 +23,8 @@ const EmailCollectionModal = ({ isOpen, onClose, onSubmit, planName }) => {
 
     setIsSubmitting(true);
 
-    const newLead = {
-      email,
-      plan: planName,
-      source: 'checkout_pricing_page'
-    };
-
-    // Send to Brevo (email marketing list) - failure here must never block checkout
-    try {
-      await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(newLead)
-      });
-    } catch (error) {
-      console.error('Error saving lead:', error);
-    }
+    // Failure here never blocks checkout (subscribeEmail doesn't throw)
+    await subscribeEmail(email, 'checkout_pricing_page');
 
     setIsSubmitting(false);
     onSubmit(email);
