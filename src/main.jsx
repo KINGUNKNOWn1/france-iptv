@@ -4,7 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import App from './App';
 import './index.css';
 import { initWebVitals } from './utils/webVitals';
-import { trackWhatsAppContact } from './utils/tracking';
+import { rememberAdSource, trackWhatsAppContact, withSourceTag } from './utils/tracking';
 import './utils/exportLeads'; // Make lead export functions available in console
 
 // After a new deploy, old chunk URLs disappear; reload instead of showing a blank page
@@ -24,8 +24,13 @@ document.head
 // Sales happen on WhatsApp, so a click on any wa.me link is our conversion.
 // One delegated listener covers every WhatsApp button on the site and tells
 // Meta (and GA4, once configured) which visits turned into a contact.
+// It also tags the prefilled message with where the visitor came from.
+rememberAdSource();
 document.addEventListener('click', (event) => {
-  if (event.target.closest('a[href*="wa.me/"]')) trackWhatsAppContact();
+  const link = event.target.closest('a[href*="wa.me/"]');
+  if (!link) return;
+  link.href = withSourceTag(link.href);
+  trackWhatsAppContact();
 });
 
 // Initialize Web Vitals monitoring

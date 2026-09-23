@@ -4,6 +4,42 @@
 
 export const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || '18653169315';
 
+// Remember for the whole visit whether it started from an ad click, so the
+// WhatsApp message can say where the customer came from.
+export const rememberAdSource = () => {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const utm = (params.get('utm_source') || '').toLowerCase();
+    let source = null;
+    if (params.has('fbclid') || ['facebook', 'fb', 'instagram', 'ig', 'meta'].includes(utm)) source = 'FB';
+    else if (params.has('gclid') || params.has('gbraid') || params.has('wbraid') || utm === 'google') source = 'GG';
+    else if (params.has('ttclid') || utm === 'tiktok') source = 'TT';
+    if (source) sessionStorage.setItem('adSource', source);
+  } catch { /* storage blocked */ }
+};
+
+// Tag appended to WhatsApp messages, e.g. "[FB-tarifs]" or "[freebox]":
+// ad source (if any) + the page the visitor clicked from.
+export const sourceTag = () => {
+  let ad = null;
+  try { ad = sessionStorage.getItem('adSource'); } catch { /* storage blocked */ }
+  const page = window.location.pathname.split('/').filter(Boolean).pop() || 'accueil';
+  return `[${ad ? `${ad}-` : ''}${page}]`;
+};
+
+// Adds the source tag to a wa.me URL's prefilled text (once).
+export const withSourceTag = (url) => {
+  try {
+    const u = new URL(url);
+    const text = u.searchParams.get('text') || '';
+    if (/\[[A-Za-z0-9-]+\]$/.test(text.trim())) return url;
+    u.searchParams.set('text', `${text.trim() || 'Bonjour !'} ${sourceTag()}`);
+    return u.toString();
+  } catch {
+    return url;
+  }
+};
+
 // A WhatsApp click is our main conversion (sales happen in the chat).
 export const trackWhatsAppContact = () => {
   const page = window.location.pathname;
@@ -19,7 +55,7 @@ export const trackWhatsAppContact = () => {
 // hand straight to the WhatsApp app; the short delay lets tracking beacons leave.
 export const openWhatsApp = (text) => {
   trackWhatsAppContact();
-  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+  const url = withSourceTag(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`);
   if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
     setTimeout(() => { window.location.href = url; }, 150);
   } else {
