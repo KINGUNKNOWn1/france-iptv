@@ -15,12 +15,17 @@ const DEVICES = [
 
 const TrialDialog = () => {
   const dialog = useRef(null);
+  // Only a tap that STARTS on the backdrop closes the dialog. On iPhone the
+  // tap that opened it (menu button) can finish on the fresh backdrop and
+  // would otherwise close it instantly.
+  const pressStartedOnBackdrop = useRef(false);
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState(1);
   const [device, setDevice] = useState(0);
 
   useEffect(() => {
-    const onOpen = () => { setStep(1); setOpen(true); };
+    // Next tick: let the tap that triggered it (and the closing menu) settle first.
+    const onOpen = () => { setStep(1); setTimeout(() => setOpen(true), 60); };
     window.addEventListener('open-trial', onOpen);
     return () => window.removeEventListener('open-trial', onOpen);
   }, []);
@@ -39,7 +44,11 @@ const TrialDialog = () => {
     <dialog
       ref={dialog}
       onClose={close}
-      onClick={(e) => { if (e.target === dialog.current) close(); }}
+      onPointerDown={(e) => { pressStartedOnBackdrop.current = e.target === dialog.current; }}
+      onClick={(e) => {
+        if (e.target === dialog.current && pressStartedOnBackdrop.current) close();
+        pressStartedOnBackdrop.current = false;
+      }}
       aria-label="Essai gratuit de 24 heures"
       className="bg-surface text-brand-black border border-white/15 rounded-2xl w-[min(560px,calc(100%-28px))] max-h-[90dvh] p-6 md:p-10 shadow-2xl backdrop:bg-black/70 backdrop:backdrop-blur-sm"
     >

@@ -37,7 +37,8 @@ const Navigation = () => {
 
   const openTrial = () => {
     setIsOpen(false);
-    window.dispatchEvent(new CustomEvent('open-trial'));
+    // Open after the menu has closed so the same tap can't land on the dialog.
+    setTimeout(() => window.dispatchEvent(new CustomEvent('open-trial')), 0);
   };
 
   return (
