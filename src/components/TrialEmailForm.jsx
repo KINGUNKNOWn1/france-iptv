@@ -6,7 +6,7 @@ import { openWhatsApp, subscribeEmail } from '../utils/tracking';
 // Email capture for the free 24h trial. The email goes to MailerLite, then the
 // visitor activates the trial on WhatsApp (where trials are delivered), with
 // their email prefilled so the conversation can be matched to the lead.
-const TrialEmailForm = ({ source, dark = false }) => {
+const TrialEmailForm = ({ source, dark = false, large = false }) => {
   const [email, setEmail] = useState('');
   const [isValid, setIsValid] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -28,6 +28,7 @@ const TrialEmailForm = ({ source, dark = false }) => {
     openWhatsApp(`Bonjour ! Je souhaite activer mon essai gratuit de 24h. Mon e-mail : ${email}`);
 
   const text = dark ? 'text-gray-300' : 'text-gray-600';
+  const size = large ? 'py-3.5 text-base' : 'py-2.5 text-sm';
 
   if (submitted) {
     return (
@@ -39,7 +40,7 @@ const TrialEmailForm = ({ source, dark = false }) => {
         <button
           type="button"
           onClick={activateOnWhatsApp}
-          className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors text-sm"
+          className={`w-full flex items-center justify-center gap-2 px-4 ${size} bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors`}
         >
           <FaWhatsapp /> Activer mon essai gratuit
         </button>
@@ -59,14 +60,14 @@ const TrialEmailForm = ({ source, dark = false }) => {
           value={email}
           onChange={(e) => { setEmail(e.target.value); setIsValid(true); }}
           placeholder="vous@email.fr"
-          className={`min-w-0 flex-1 px-3 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 focus:ring-green-500 ${
+          className={`min-w-0 flex-1 px-3 ${size} rounded-lg border focus:outline-none focus:ring-2 focus:ring-green-500 ${
             dark ? 'bg-white/10 text-white placeholder-gray-400' : 'bg-white text-gray-900 placeholder-gray-400'
           } ${isValid ? (dark ? 'border-white/20' : 'border-gray-300') : 'border-red-500'}`}
         />
         <button
           type="submit"
           disabled={isSubmitting}
-          className="px-4 py-2.5 bg-brand-gold hover:bg-[#2B4577] disabled:opacity-60 text-white font-semibold rounded-lg transition-colors text-sm whitespace-nowrap"
+          className={`px-4 ${size} ${dark ? 'bg-green-600 hover:bg-green-700' : 'bg-brand-gold hover:bg-[#2B4577]'} disabled:opacity-60 text-white font-semibold rounded-lg transition-colors whitespace-nowrap`}
         >
           {isSubmitting ? '…' : "Obtenir l'essai"}
         </button>

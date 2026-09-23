@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaCheckCircle } from 'react-icons/fa';
 import LightweightBackground from './LightweightBackground';
+import TrialEmailForm from './TrialEmailForm';
 
 const Hero = () => {
   const badges = [
@@ -34,7 +34,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container-custom section-padding relative z-10 pt-32">
+      <div className="container-custom section-padding relative z-10 pt-32 w-full">
         <div className="max-w-3xl">
           {/* Location Badge */}
           <motion.div
@@ -92,33 +92,17 @@ const Hero = () => {
             ))}
           </motion.div>
 
-          {/* CTA Buttons */}
+          {/* Free trial email capture */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.2 }}
-            className="flex flex-col sm:flex-row gap-4"
+            className="max-w-xl bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5"
           >
-            <Link
-              to="/tarifs"
-              className="btn-primary text-center"
-            >
-              Voir les tarifs de l'abonnement IPTV
-            </Link>
-            <Link
-              to="/contact"
-              className="px-8 py-3 bg-transparent border-2 border-white/40 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-200 text-center"
-            >
-              Commander via WhatsApp
-            </Link>
-            <a
-              href="https://wa.me/18653169315?text=Bonjour%20!%20Je%20souhaite%20profiter%20de%20l%27essai%20gratuit%20de%201%20jour%20pour%20France%20IPTV"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-200 text-center"
-            >
-              🎁 Essai Gratuit 24h
-            </a>
+            <p className="text-white font-semibold text-lg mb-3">
+              🎁 Essai gratuit 24h : entrez votre e‑mail
+            </p>
+            <TrialEmailForm source="hero" dark large />
           </motion.div>
         </div>
       </div>
