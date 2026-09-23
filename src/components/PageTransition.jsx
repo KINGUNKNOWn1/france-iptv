@@ -1,51 +1,8 @@
-import React, { useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useLocation } from 'react-router-dom';
+import React from 'react';
 
-const PageTransition = ({ children }) => {
-  const location = useLocation();
-  // Skip the fade-in on the first page: that content is already on screen
-  // (prerendered HTML), so animating it from opacity 0 only delays it.
-  const isFirstPage = useRef(true);
-  const initial = isFirstPage.current ? false : 'initial';
-  isFirstPage.current = false;
-
-  const pageVariants = {
-    initial: {
-      opacity: 0,
-      y: 20
-    },
-    animate: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.4,
-        ease: [0.6, 0.05, 0.01, 0.9]
-      }
-    },
-    exit: {
-      opacity: 0,
-      y: -20,
-      transition: {
-        duration: 0.3,
-        ease: [0.6, 0.05, 0.01, 0.9]
-      }
-    }
-  };
-
-  return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={location.pathname}
-        initial={initial}
-        animate="animate"
-        exit="exit"
-        variants={pageVariants}
-      >
-        {children}
-      </motion.div>
-    </AnimatePresence>
-  );
-};
+// Pages render without an enter/exit animation. The previous framer-motion
+// fade (AnimatePresence mode="wait") could leave the new page stuck at
+// opacity 0 after client-side navigation, i.e. a blank page.
+const PageTransition = ({ children }) => <div>{children}</div>;
 
 export default PageTransition;
