@@ -234,7 +234,7 @@ const Contact = () => {
               </p>
               <Link
                 to="/faq"
-                className="text-brand-gold hover:text-[#C4FF86] underline text-lg"
+                className="inline-block py-2.5 text-brand-gold hover:text-[#C4FF86] underline text-lg"
               >
                 Questions Fréquentes →
               </Link>

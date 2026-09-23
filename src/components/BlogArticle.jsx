@@ -35,7 +35,7 @@ const BlogArticle = ({ link, seoTitle, description, keywords, quickAnswer, child
               <Link to="/blog" className="hover:text-brand-gold">Blog</Link> <span className="mx-1">/</span>
               <span className="text-brand-black">{post.shortTitle}</span>
             </nav>
-            <p className="flex items-center gap-4 text-[10px] tracking-[0.3em] font-medium text-brand-black mb-5">
+            <p className="flex items-center gap-4 text-[11px] tracking-[0.28em] font-medium text-brand-black mb-5">
               <span className="inline-block w-10 h-px bg-brand-gold" /> {post.category.toUpperCase()}
             </p>
             <h1 className="text-4xl md:text-5xl font-bold text-brand-black leading-tight mb-5">{post.title}</h1>

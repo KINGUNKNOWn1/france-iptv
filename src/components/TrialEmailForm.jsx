@@ -73,7 +73,7 @@ const TrialEmailForm = ({ source, dark = false, large = false, message = "Bonjou
         </button>
       </div>
       {!isValid && <p className="text-red-500 text-xs mt-1">Veuillez saisir une adresse e-mail valide.</p>}
-      <p className={`text-[11px] leading-snug mt-2 ${dark ? 'text-gray-400' : 'text-gray-500'}`}>
+      <p className={`text-xs leading-snug mt-2 ${dark ? 'text-gray-400' : 'text-gray-500'}`}>
         Vous recevrez nos offres par e-mail. Désinscription en 1 clic.{' '}
         <Link to="/politique-de-confidentialite" className="underline">Confidentialité</Link>
       </p>

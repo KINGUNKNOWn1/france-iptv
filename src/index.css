@@ -161,5 +161,15 @@ article .text-brand-gray p, article .text-brand-gray li { color: #D1D4D0; }
 .blog-body a { @apply text-brand-gold underline; text-underline-offset: 3px; }
 .blog-body strong { @apply text-brand-black; }
 .blog-body table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.95rem; }
+@media (max-width: 640px) { .blog-body table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; } .blog-body th, .blog-body td { min-width: 8.5rem; } }
 .blog-body th, .blog-body td { @apply border border-brand-gray-border; padding: 0.6rem 0.8rem; text-align: left; vertical-align: top; }
 .blog-body th { @apply bg-brand-offwhite text-brand-black; }
+
+/* Mobile tap targets: standalone text links ("Voir les appareils →" etc.)
+   get a ~44px touch area; links inside running text are left alone. */
+@media (max-width: 767px) {
+  a.inline-flex, a.inline-block { min-height: 44px; align-items: center; }
+  a.inline-block { display: inline-flex; }
+  p a.inline-flex, p a.inline-block, li a.inline-flex, li a.inline-block,
+  .blog-body a { min-height: 0; display: inline; }
+}

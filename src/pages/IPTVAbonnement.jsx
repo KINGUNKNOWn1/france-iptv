@@ -367,7 +367,7 @@ const IPTVAbonnement = () => {
                 <div key={cat.title} className="bg-brand-offwhite border border-brand-gray-border p-6 rounded-lg">
                   <h3 className="text-xl font-semibold mb-2 text-brand-black">{cat.title}</h3>
                   <p className="text-brand-gray mb-3">{cat.text}</p>
-                  <Link to={cat.link} className="text-brand-gold font-semibold hover:underline">{cat.linkText} →</Link>
+                  <Link to={cat.link} className="inline-block py-2.5 text-brand-gold font-semibold hover:underline">{cat.linkText} →</Link>
                 </div>
               ))}
             </div>
@@ -568,7 +568,7 @@ const IPTVAbonnement = () => {
               <p className="text-brand-gray mb-4">D'autres questions sur les abonnements IPTV ?</p>
               <Link
                 to="/faq"
-                className="text-brand-gold hover:text-[#C4FF86] font-semibold underline"
+                className="inline-block py-2.5 text-brand-gold hover:text-[#C4FF86] font-semibold underline"
               >
                 Voir toutes les questions fréquentes →
               </Link>

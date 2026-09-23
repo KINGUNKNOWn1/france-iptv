@@ -229,7 +229,7 @@ const Prijzen = () => {
             <div className="text-center mt-12">
               <Link
                 to="/faq"
-                className="text-brand-gold hover:text-[#C4FF86] underline text-lg"
+                className="inline-block py-2.5 text-brand-gold hover:text-[#C4FF86] underline text-lg"
               >
                 Voir toutes les questions fréquentes →
               </Link>

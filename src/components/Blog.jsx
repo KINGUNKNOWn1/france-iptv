@@ -84,7 +84,7 @@ loading="lazy" decoding="async"                   src={post.image}
 
         {showAllLink && (
           <div className="text-center mt-12">
-            <Link to="/blog" className="inline-flex items-center gap-2 text-blue-400 hover:text-white font-semibold">
+            <Link to="/blog" className="inline-flex items-center gap-2 py-3 text-blue-400 hover:text-white font-semibold">
               Voir tous les articles du blog IPTV
               <FaArrowRight className="text-xs" />
             </Link>

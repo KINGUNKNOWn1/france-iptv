@@ -48,7 +48,7 @@ const PLANS = [
 ].map((plan) => ({ ...plan, message: `Bonjour ! Je souhaite l'abonnement IPTV ${plan.name} à ${plan.price}.` }));
 
 const Eyebrow = ({ children, centered = false }) => (
-  <p className={`flex items-center gap-4 text-[10px] md:text-[11px] tracking-[0.3em] font-medium text-white mb-5 ${centered ? 'justify-center' : ''}`}>
+  <p className={`flex items-center gap-4 text-[11px] tracking-[0.28em] font-medium text-white mb-5 ${centered ? 'justify-center' : ''}`}>
     <span className="inline-block w-10 h-px bg-lime" /> {children}
   </p>
 );
@@ -98,14 +98,14 @@ const Home = () => {
             </div>
 
             <div className="flex flex-wrap items-center gap-x-6 gap-y-3 mt-5">
-              <a href="#offres" className="inline-flex items-center gap-2 text-white hover:text-lime font-semibold">
+              <a href="#offres" className="inline-flex items-center gap-2 py-2.5 text-white hover:text-lime font-semibold">
                 Voir les offres <ArrowRight size={18} />
               </a>
               <a
                 href="https://wa.me/18653169315?text=Bonjour%20!%20J%27ai%20une%20question%20sur%20l%27abonnement%20France%20IPTV."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 font-semibold"
+                className="inline-flex items-center gap-2 py-2.5 text-green-400 hover:text-green-300 font-semibold"
               >
                 <FaWhatsapp size={20} /> Une question ? WhatsApp
               </a>
@@ -128,7 +128,7 @@ const Home = () => {
               <Icon size={30} strokeWidth={1.3} className="flex-shrink-0" />
               <span className="text-sm leading-tight">
                 {name}
-                <span className="block text-[11px] text-brand-gray mt-1">{detail}</span>
+                <span className="block text-xs text-brand-gray mt-1">{detail}</span>
               </span>
             </Link>
           ))}
@@ -148,8 +148,8 @@ const Home = () => {
               className={`flex flex-col p-6 rounded-xl border ${plan.featured ? 'border-lime/60 bg-lime/[0.04]' : 'border-white/10 bg-white/[0.02]'}`}
             >
               <div className="flex items-center justify-between min-h-[28px] mb-3 gap-2">
-                <span className="text-[9px] tracking-[0.2em] text-brand-gray">{plan.label}</span>
-                {plan.badge && <span className="text-[10px] font-semibold bg-lime text-lime-on px-2.5 py-1 rounded-full whitespace-nowrap">{plan.badge}</span>}
+                <span className="text-[11px] tracking-[0.15em] text-brand-gray">{plan.label}</span>
+                {plan.badge && <span className="text-[11px] font-semibold bg-lime text-lime-on px-2.5 py-1 rounded-full whitespace-nowrap">{plan.badge}</span>}
               </div>
               <h3 className="text-2xl text-white mb-1">{plan.name}</h3>
               <p className="text-4xl font-semibold tracking-tight text-white">{plan.price}</p>
@@ -170,7 +170,7 @@ const Home = () => {
               >
                 Choisir {plan.name} <ArrowRight size={18} />
               </button>
-              <p className="text-[11px] text-brand-gray text-center mt-2.5">{plan.payment}</p>
+              <p className="text-xs text-brand-gray text-center mt-2.5">{plan.payment}</p>
             </article>
           ))}
         </div>
@@ -179,7 +179,7 @@ const Home = () => {
           Même contenu dans toutes les formules : seule la durée change.{' '}
           <Link to="/tarifs" className="text-lime hover:underline">Comparer les formules</Link>
         </p>
-        <a href="#appareils" className="inline-flex items-center gap-3 text-sm text-gray-300 hover:text-lime mt-4">
+        <a href="#appareils" className="inline-flex items-center gap-3 py-3 text-sm text-gray-300 hover:text-lime mt-2">
           <Wrench size={18} /> Besoin d'aide pour l'installation ? <ArrowRight size={18} />
         </a>
       </section>
@@ -247,13 +247,13 @@ const Home = () => {
           </div>
 
           <div className="flex flex-wrap gap-x-8 gap-y-3">
-            <Link to={current.guide} className="inline-flex items-center gap-2 text-sm text-white hover:text-lime">
+            <Link to={current.guide} className="inline-flex items-center gap-2 py-3 text-sm text-white hover:text-lime">
               Guide complet : IPTV sur {current.name} <ArrowRight size={18} />
             </Link>
             <button
               type="button"
               onClick={() => openWhatsApp(`Bonjour, pouvez-vous m'aider à installer France IPTV sur ${current.name} ?`)}
-              className="inline-flex items-center gap-2 text-sm text-green-400 hover:text-green-300"
+              className="inline-flex items-center gap-2 py-3 text-sm text-green-400 hover:text-green-300"
             >
               <FaWhatsapp size={18} /> Être accompagné sur {current.name}
             </button>
@@ -299,7 +299,7 @@ const Home = () => {
             <button
               type="button"
               onClick={() => openWhatsApp("Bonjour, j'ai une question sur France IPTV.")}
-              className="inline-flex items-center gap-2 text-sm text-white hover:text-lime"
+              className="inline-flex items-center gap-2 py-3 text-sm text-white hover:text-lime"
             >
               <FaWhatsapp size={20} /> Nous écrire sur WhatsApp <ArrowRight size={16} />
             </button>

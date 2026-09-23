@@ -74,7 +74,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-2xl text-white"
+            className="lg:hidden text-2xl text-white p-2.5 -mr-2.5"
             aria-label={isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
           >
             {isOpen ? <FaTimes /> : <FaBars />}

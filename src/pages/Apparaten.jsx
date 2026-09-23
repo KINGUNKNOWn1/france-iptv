@@ -318,11 +318,11 @@ const Apparaten = () => {
 
             <div className="text-center mt-10 space-y-2">
               <p className="text-brand-gray mb-1">Un problème de lecture ou une erreur affichée ?</p>
-              <Link to="/appareils/erreur-lecture-iptv" className="text-brand-gold hover:text-[#C4FF86] underline font-semibold block">
+              <Link to="/appareils/erreur-lecture-iptv" className="text-brand-gold hover:text-[#C4FF86] underline font-semibold block py-2.5">
                 Consultez notre guide de dépannage IPTV →
               </Link>
               <p className="text-brand-gray mb-1 pt-4">Besoin d'aide pour entrer votre code d'activation ?</p>
-              <Link to="/appareils/activer-code-iptv" className="text-brand-gold hover:text-[#C4FF86] underline font-semibold block">
+              <Link to="/appareils/activer-code-iptv" className="text-brand-gold hover:text-[#C4FF86] underline font-semibold block py-2.5">
                 Guide d'activation (Xtream Codes, M3U, MAC) →
               </Link>
             </div>

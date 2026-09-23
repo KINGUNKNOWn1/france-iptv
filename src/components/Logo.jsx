@@ -27,7 +27,7 @@ const Logo = ({ className = "", textColor = "black", size = "md", showTagline = 
   return (
     <Link
       to="/"
-      className={`flex items-center gap-3 ${className} cursor-pointer transition-opacity hover:opacity-80`}
+      className={`flex items-center gap-3 py-1.5 ${className} cursor-pointer transition-opacity hover:opacity-80`}
       aria-label="Aller à la page d'accueil"
     >
       {/* Tricolore signal-bars mark */}

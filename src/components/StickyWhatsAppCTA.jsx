@@ -30,7 +30,7 @@ const StickyWhatsAppCTA = () => {
       initial={{ opacity: 0, scale: 0, y: 100 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0, y: 100 }}
-      className="fixed bottom-6 right-6 z-40"
+      className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-40"
     >
       {/* Expanded Message Card */}
       <AnimatePresence>
@@ -108,14 +108,14 @@ const StickyWhatsAppCTA = () => {
         className="relative group"
       >
         {/* Pulse Animation */}
-        <div className="absolute inset-0 rounded-full bg-green-600 animate-ping opacity-75" />
+        <div className="hidden md:block absolute inset-0 rounded-full bg-green-600 animate-ping opacity-75" />
 
         {/* Button */}
-        <div className="relative w-16 h-16 rounded-full bg-gradient-to-br from-green-600 to-green-700 shadow-2xl flex items-center justify-center hover:shadow-green-600/50 transition-shadow">
-          <FaWhatsapp className="text-white text-3xl" />
+        <div className="relative w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-green-600 to-green-700 shadow-2xl flex items-center justify-center hover:shadow-green-600/50 transition-shadow">
+          <FaWhatsapp className="text-white text-[26px] md:text-3xl" />
 
           {/* Unread Badge */}
-          <div className="absolute -top-1 -right-1 w-6 h-6 bg-red-600 rounded-full border-2 border-white flex items-center justify-center">
+          <div className="absolute -top-1 -right-1 w-5 h-5 md:w-6 md:h-6 bg-red-600 rounded-full border-2 border-white flex items-center justify-center">
             <span className="text-white text-xs font-bold">1</span>
           </div>
         </div>
