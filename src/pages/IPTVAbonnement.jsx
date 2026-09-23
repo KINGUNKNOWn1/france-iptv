@@ -1,4 +1,5 @@
 import React from 'react';
+import SeoGuideSection from '../components/SeoGuideSection';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
@@ -440,6 +441,64 @@ const IPTVAbonnement = () => {
             </p>
           </div>
         </section>
+
+        <SeoGuideSection title="IPTV abonnement : 1, 3, 6 ou 12 mois, quelle durée choisir ?">
+          <p>
+            Tous nos <strong>abonnements IPTV</strong> donnent accès exactement au même contenu : 30 500+ chaînes, 150 000+ films et
+            séries, 4 écrans simultanés et le support francophone. Seule la durée change, et avec elle le prix par mois. Le bon choix
+            dépend de votre usage.
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-base border border-brand-gray-border">
+              <thead>
+                <tr className="bg-brand-offwhite">
+                  <th className="p-3 border border-brand-gray-border text-brand-black">Durée</th>
+                  <th className="p-3 border border-brand-gray-border text-brand-black">Prix</th>
+                  <th className="p-3 border border-brand-gray-border text-brand-black">Prix par mois</th>
+                  <th className="p-3 border border-brand-gray-border text-brand-black">Idéal pour</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td className="p-3 border border-brand-gray-border">1 mois</td><td className="p-3 border border-brand-gray-border">8 €</td><td className="p-3 border border-brand-gray-border">8 €</td><td className="p-3 border border-brand-gray-border">Découvrir le service après l'essai gratuit, un événement sportif précis</td></tr>
+                <tr><td className="p-3 border border-brand-gray-border">3 mois</td><td className="p-3 border border-brand-gray-border">19,99 €</td><td className="p-3 border border-brand-gray-border">6,66 €</td><td className="p-3 border border-brand-gray-border">Une saison de séries, tester la stabilité sur la durée</td></tr>
+                <tr><td className="p-3 border border-brand-gray-border">6 mois</td><td className="p-3 border border-brand-gray-border">30 €</td><td className="p-3 border border-brand-gray-border">5 €</td><td className="p-3 border border-brand-gray-border">Une demi-saison de football, un usage régulier</td></tr>
+                <tr><td className="p-3 border border-brand-gray-border">12 mois</td><td className="p-3 border border-brand-gray-border">45 €</td><td className="p-3 border border-brand-gray-border">3,75 €</td><td className="p-3 border border-brand-gray-border">Le meilleur prix : toute la famille, toute l'année</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            Notre conseil : commencez par l'<strong>essai gratuit de 24 heures</strong> pour vérifier la qualité sur votre appareil et
+            votre connexion, puis prenez directement la formule 12 mois si tout vous convient. Aucune formule n'est reconduite
+            automatiquement : à la fin de la période, vous décidez librement de renouveler ou non.
+          </p>
+
+          <h3>Abonnement IPTV pas cher : les 5 pièges à éviter</h3>
+          <ul>
+            <li><strong>Les prix anormalement bas</strong> (5 à 15 € pour un an) : ces offres disparaissent souvent sans préavis et sans remboursement.</li>
+            <li><strong>Pas d'essai possible</strong> : un fournisseur sérieux vous laisse tester avant de payer.</li>
+            <li><strong>La reconduction cachée</strong> : vérifiez que l'abonnement s'arrête à la fin de la période choisie.</li>
+            <li><strong>Un support injoignable</strong> : écrivez-leur avant d'acheter ; la réactivité avant la vente annonce celle d'après.</li>
+            <li><strong>Des paiements sans trace</strong> : privilégiez des moyens de paiement qui vous donnent une preuve de transaction.</li>
+          </ul>
+          <p>
+            Pour aller plus loin : nos guides <a href="/blog/meilleur-iptv-france">comment choisir un fournisseur IPTV</a> et{' '}
+            <a href="/blog/prix-iptv-france">prix IPTV en France</a>.
+          </p>
+
+          <h3>Un abonnement IPTV pour chaque usage</h3>
+          <p>
+            <strong>Pour le sport</strong> : championnats de football, Ligue des champions, Formule 1, tennis et sports de combat, en HD
+            et en 4K selon les chaînes. <strong>Pour le cinéma et les séries</strong> : plus de 150 000 titres à la demande, mis à jour
+            régulièrement. <strong>Pour toute la famille</strong> : 4 écrans en même temps, chaînes jeunesse, chaînes internationales
+            (arabes, turques, portugaises, anglaises…) et contrôle parental dans l'application.
+          </p>
+          <p>
+            L'abonnement fonctionne sur la plupart des écrans : <a href="/appareils/samsung-tv">Smart TV Samsung</a>,{' '}
+            <a href="/appareils/lg-tv">LG</a>, <a href="/appareils/freebox">Freebox</a>, <a href="/appareils/fire-stick">Fire Stick</a>,{' '}
+            <a href="/appareils/android-tv">Android TV</a>, <a href="/appareils/iphone-ipad">iPhone et iPad</a>. Consultez les{' '}
+            <a href="/tarifs">tarifs détaillés</a> ou la <a href="/chaines">liste des chaînes</a>.
+          </p>
+        </SeoGuideSection>
 
         {/* Benefits Section */}
         <section className="py-20 bg-brand-offwhite">

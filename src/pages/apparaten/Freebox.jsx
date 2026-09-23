@@ -1,4 +1,5 @@
 import React, { useState, Suspense } from 'react';
+import SeoGuideSection from '../../components/SeoGuideSection';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import {
@@ -274,7 +275,7 @@ const Freebox = () => {
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Installer l'IPTV sur
+              Installer l'IPTV sur{' '}
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mt-2">
                 Freebox
               </span>
@@ -539,6 +540,36 @@ const Freebox = () => {
           </motion.div>
         </div>
       </section>
+
+      <SeoGuideSection title="IPTV Freebox : quelle méthode pour votre modèle ?">
+        <p>
+          Installer l'<strong>IPTV sur Freebox</strong> dépend surtout du player que vous avez. Les players récents tournent sous
+          Android TV et donnent accès au Play Store ; les anciens n'en ont pas et demandent un petit appareil HDMI en complément.
+          Voici la méthode la plus simple pour chaque modèle.
+        </p>
+        <h3>IPTV sur Freebox Pop, Mini 4K et Ultra</h3>
+        <p>
+          Ces players fonctionnent sous <strong>Android TV</strong>. Ouvrez le Google Play Store, installez un lecteur IPTV comme
+          IPTV Smarters Pro ou TiviMate, puis saisissez vos accès. C'est la configuration la plus rapide : comptez environ 5 minutes.
+        </p>
+        <h3>IPTV sur Freebox Delta</h3>
+        <p>
+          Avec le <strong>player Devialet de la Freebox Delta</strong>, il n'y a pas de Play Store. La solution la plus fiable est de
+          brancher un <a href="/appareils/fire-stick">Amazon Fire TV Stick</a> ou une <a href="/appareils/android-tv">box Android TV</a>{' '}
+          sur un port HDMI libre du téléviseur. Si vous avez associé un player Pop à votre Delta, suivez simplement la méthode
+          Android TV ci-dessus.
+        </p>
+        <h3>IPTV sur Freebox Révolution</h3>
+        <p>
+          Le player de la <strong>Freebox Révolution</strong> est trop ancien pour les applications IPTV actuelles. Là encore, un
+          stick HDMI ou une box Android TV branché sur la télévision est la méthode la plus simple et la plus stable.
+        </p>
+        <p>
+          Dans tous les cas, votre connexion Freebox reste la même : seul l'appareil qui lit la vidéo change. Pour comparer les
+          appareils, voir notre guide <a href="/blog/meilleure-box-iptv">quelle box IPTV choisir</a>, et les{' '}
+          <a href="/tarifs">tarifs de l'abonnement IPTV</a>.
+        </p>
+      </SeoGuideSection>
 
       {/* FAQ */}
       <section className="py-20 bg-white">

@@ -8,7 +8,7 @@
   <!-- Homepage - Highest Priority -->
   <url>
     <loc>https://franceiptv.stream/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -24,7 +24,7 @@
   <!-- Pricing Page -->
   <url>
     <loc>https://franceiptv.stream/tarifs</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -32,7 +32,7 @@
   <!-- Abonnement IPTV -->
   <url>
     <loc>https://franceiptv.stream/abonnement-iptv</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -80,7 +80,7 @@
   <!-- Samsung TV Device Page -->
   <url>
     <loc>https://franceiptv.stream/appareils/samsung-tv</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -88,7 +88,7 @@
   <!-- Freebox Device Page -->
   <url>
     <loc>https://franceiptv.stream/appareils/freebox</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -96,7 +96,7 @@
   <!-- Orange Box Device Page -->
   <url>
     <loc>https://franceiptv.stream/appareils/orange</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -104,7 +104,7 @@
   <!-- SFR Box Device Page -->
   <url>
     <loc>https://franceiptv.stream/appareils/sfr</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -112,7 +112,7 @@
   <!-- Chromecast / Google TV Device Page -->
   <url>
     <loc>https://franceiptv.stream/appareils/chromecast-google-tv</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -120,7 +120,7 @@
   <!-- IPTV Playback Error Troubleshooting Hub -->
   <url>
     <loc>https://franceiptv.stream/appareils/erreur-lecture-iptv</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -226,6 +226,35 @@
     <priority>0.3</priority>
   </url>
 
+  <!-- New blog posts -->
+  <url>
+    <loc>https://franceiptv.stream/blog/iptv-smarters-pro</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://franceiptv.stream/blog/m3u-xtream-codes-mac</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://franceiptv.stream/blog/meilleure-box-iptv</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://franceiptv.stream/blog/iptv-qui-coupe</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Blog index -->
   <url>
     <loc>https://franceiptv.stream/blog</loc>
@@ -279,7 +308,7 @@
 
   <url>
     <loc>https://franceiptv.stream/blog/iptv-ne-fonctionne-plus</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

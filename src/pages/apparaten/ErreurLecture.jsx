@@ -1,4 +1,5 @@
 import React, { useState, Suspense } from 'react';
+import SeoGuideSection from '../../components/SeoGuideSection';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import {
@@ -232,7 +233,7 @@ const ErreurLecture = () => {
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Erreur de Lecture
+              Erreur de Lecture{' '}
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mt-2">
                 IPTV ?
               </span>
@@ -403,6 +404,25 @@ const ErreurLecture = () => {
           </motion.div>
         </div>
       </section>
+
+      <SeoGuideSection title="« Playback error » : l'erreur de lecture IPTV expliquée">
+        <p>
+          Beaucoup d'applications IPTV sont en anglais : l'<strong>erreur de lecture</strong> s'y affiche comme{' '}
+          <strong>« Playback error »</strong>, « Unable to play stream » ou « Source error ». Le message change, mais la cause est la
+          même : l'application n'arrive pas à charger le flux vidéo de la chaîne.
+        </p>
+        <h3>Les 4 causes les plus fréquentes d'un playback error IPTV</h3>
+        <ul>
+          <li><strong>La chaîne est temporairement indisponible</strong> : si une seule chaîne est concernée, testez-en une autre.</li>
+          <li><strong>Le lecteur vidéo de l'application</strong> : changez de lecteur dans les réglages (lecteur intégré ou VLC).</li>
+          <li><strong>La connexion</strong> : Wi-Fi faible ou débit instable, surtout pour la HD et la 4K.</li>
+          <li><strong>Les accès</strong> : abonnement expiré ou identifiants mal saisis, auquel cas toutes les chaînes échouent.</li>
+        </ul>
+        <p>
+          Si <strong>mon IPTV ne fonctionne plus</strong> sur toutes les chaînes et tous les appareils, consultez le guide complet{' '}
+          <a href="/blog/iptv-ne-fonctionne-plus">IPTV ne fonctionne plus</a>.
+        </p>
+      </SeoGuideSection>
 
       {/* FAQ */}
       <section className="py-20 bg-brand-offwhite">

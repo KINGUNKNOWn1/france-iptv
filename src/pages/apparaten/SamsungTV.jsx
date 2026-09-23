@@ -1,4 +1,5 @@
 import React, { useState, Suspense, lazy } from 'react';
+import SeoGuideSection from '../../components/SeoGuideSection';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -414,7 +415,7 @@ const SamsungTV = () => {
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Installer l'IPTV sur
+              Installer l'IPTV sur{' '}
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mt-2">
                 Samsung Smart TV
               </span>
@@ -777,6 +778,30 @@ const SamsungTV = () => {
           </motion.div>
         </div>
       </section>
+
+      <SeoGuideSection title="IPTV Smarters Pro ne fonctionne plus sur TV Samsung : que faire ?">
+        <p>
+          C'est l'une des questions les plus posées : <strong>IPTV Smarters Pro ne fonctionne plus sur TV Samsung</strong>, l'application
+          ne s'ouvre plus, n'apparaît plus dans le magasin ou affiche une erreur de connexion. Voici les causes et les solutions, de la
+          plus simple à la plus radicale.
+        </p>
+        <h3>1. Mettre à jour le téléviseur et l'application</h3>
+        <p>Paramètres → Assistance → Mise à jour du logiciel. Relancez ensuite l'application, ou désinstallez-la puis réinstallez-la.</p>
+        <h3>2. Vérifier vos accès</h3>
+        <p>
+          Un message « Invalid credentials » ou une liste vide vient souvent d'une faute de frappe dans l'URL du serveur ou d'un
+          abonnement expiré. Recopiez vos accès exactement, avec <em>http://</em> et le port.
+        </p>
+        <h3>3. L'application n'est plus disponible sur votre modèle</h3>
+        <p>
+          Selon le modèle et l'année de votre Samsung, IPTV Smarters Pro peut ne plus être proposé dans le magasin d'applications
+          ou ne plus recevoir de mises à jour. Dans ce cas, utilisez un autre lecteur IPTV disponible sur votre TV (activation par
+          adresse MAC, voir <a href="/blog/m3u-xtream-codes-mac">M3U, Xtream Codes ou MAC</a>), ou branchez un{' '}
+          <a href="/appareils/fire-stick">Fire TV Stick</a> sur la télévision.
+        </p>
+        <h3>4. Redémarrage complet</h3>
+        <p>Débranchez la TV 1 minute (un simple arrêt à la télécommande ne vide pas la mémoire), puis relancez.</p>
+      </SeoGuideSection>
 
       {/* FAQ Section */}
       <section className="py-20 bg-white">

@@ -4,6 +4,50 @@ export const SITE_URL = 'https://franceiptv.stream';
 
 export const blogPosts = [
   {
+    title: 'IPTV Smarters Pro : Installation et Configuration (Guide 2026)',
+    shortTitle: 'IPTV Smarters Pro',
+    excerpt: "Installer et configurer IPTV Smarters Pro sur Android, iPhone, Smart TV et Fire Stick, avec Xtream Codes ou M3U, et régler les erreurs courantes.",
+    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=800&q=80',
+    datePublished: '2026-09-23',
+    dateModified: '2026-09-23',
+    readTime: '7 min',
+    category: 'Tutoriel',
+    link: '/blog/iptv-smarters-pro'
+  },
+  {
+    title: 'M3U, Xtream Codes ou Adresse MAC : Quelle Différence en IPTV ?',
+    shortTitle: 'M3U, Xtream Codes ou MAC',
+    excerpt: 'Les trois façons de connecter une application IPTV à votre abonnement, leurs avantages et lequel choisir selon votre appareil.',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80',
+    datePublished: '2026-09-23',
+    dateModified: '2026-09-23',
+    readTime: '6 min',
+    category: 'Guide',
+    link: '/blog/m3u-xtream-codes-mac'
+  },
+  {
+    title: 'Meilleure Box IPTV 2026 : Fire Stick, Android TV, Freebox…',
+    shortTitle: 'Meilleure box IPTV',
+    excerpt: 'Fire TV Stick, box Android TV, Nvidia Shield, Freebox ou boîtier dédié : les critères pour choisir la bonne box IPTV.',
+    image: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=800&q=80',
+    datePublished: '2026-09-23',
+    dateModified: '2026-09-23',
+    readTime: '7 min',
+    category: 'Comparatif',
+    link: '/blog/meilleure-box-iptv'
+  },
+  {
+    title: 'IPTV qui Coupe ou qui Freeze : 8 Solutions Efficaces',
+    shortTitle: 'IPTV qui coupe',
+    excerpt: 'Image figée, chargement en boucle, coupures pendant les matchs : les 8 causes les plus fréquentes et comment les régler.',
+    image: 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&q=80',
+    datePublished: '2026-09-23',
+    dateModified: '2026-09-23',
+    readTime: '7 min',
+    category: 'Dépannage',
+    link: '/blog/iptv-qui-coupe'
+  },
+  {
     title: 'Acheter IPTV en France : Guide Complet + Meilleurs Fournisseurs',
     shortTitle: 'Acheter IPTV en France',
     excerpt: "Guide complet pour acheter un IPTV en France. Meilleurs fournisseurs, prix, conseils d'installation et tout ce qu'il faut savoir sur les abonnements IPTV.",

@@ -186,7 +186,7 @@ const IPTVZonderContract = () => {
                 ✓ 100% Sans Obligation
               </span>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                IPTV Sans Engagement
+                IPTV Sans Engagement{' '}
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-500 mt-2">
                   Flexible & Sans Obligation
                 </span>

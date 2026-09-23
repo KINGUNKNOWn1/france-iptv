@@ -1,4 +1,5 @@
 import React, { useState, Suspense } from 'react';
+import SeoGuideSection from '../../components/SeoGuideSection';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import {
@@ -93,7 +94,7 @@ const Orange = () => {
         name: "Mon IPTV ne fonctionne plus sur Orange, que faire ?",
         acceptedAnswer: {
           '@type': 'Answer',
-          text: "1) Redémarrez votre Livebox et votre boîtier IPTV. 2) Testez votre débit internet (10 Mbps minimum pour la HD). 3) Passez en connexion Ethernet plutôt qu'en WiFi. 4) Changez le DNS de votre appareil pour 1.1.1.1 (Cloudflare) ou 8.8.8.8 (Google) dans les paramètres réseau. 5) Si le problème persiste, contactez notre support via WhatsApp : nous diagnostiquons en quelques minutes."
+          text: "1) Redémarrez votre Livebox et votre boîtier IPTV. 2) Testez votre débit internet (10 Mbps minimum pour la HD). 3) Passez en connexion Ethernet plutôt qu'en WiFi. 4) Mettez à jour votre application IPTV et testez sur un autre appareil. 5) Si le problème persiste, contactez notre support via WhatsApp : nous diagnostiquons en quelques minutes."
         }
       },
       {
@@ -197,7 +198,7 @@ const Orange = () => {
     },
     {
       problem: "L'IPTV fonctionnait puis a cessé de fonctionner sur Orange",
-      solution: "Changez le DNS de votre boîtier pour 1.1.1.1 (Cloudflare) ou 8.8.8.8 (Google) dans les paramètres réseau avancés. Certaines configurations DNS par défaut de la Livebox peuvent ralentir la résolution des flux IPTV.",
+      solution: "Redémarrez la Livebox (30 secondes débranchée), mettez à jour votre application IPTV et vérifiez que votre abonnement est toujours actif. Si le service fait l'objet d'un blocage décidé par la justice, aucune manipulation n'est à tenter : le problème vient du service.",
       icon: Zap
     },
     {
@@ -273,7 +274,7 @@ const Orange = () => {
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Installer l'IPTV sur
+              Installer l'IPTV sur{' '}
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mt-2">
                 Box Orange
               </span>
@@ -538,6 +539,33 @@ const Orange = () => {
           </motion.div>
         </div>
       </section>
+
+      <SeoGuideSection title="IPTV Orange : installation et pourquoi l'IPTV coupe avec Orange">
+        <p>
+          La <strong>Livebox</strong> est votre accès internet : elle ne lit pas l'IPTV elle-même. Pour regarder l'<strong>IPTV avec
+          une box Orange</strong>, on installe un lecteur IPTV sur un appareil relié à la Livebox : une Smart TV, un Fire TV Stick,
+          une box Android TV, un téléphone ou un ordinateur. Le décodeur TV Orange, lui, n'accepte pas d'applications tierces.
+        </p>
+        <h3>Installer l'IPTV sur une box Orange en 3 étapes</h3>
+        <ol>
+          <li>Reliez votre téléviseur ou votre stick à la Livebox, idéalement en câble Ethernet.</li>
+          <li>Installez un lecteur IPTV (IPTV Smarters Pro, TiviMate…) depuis le magasin d'applications de l'appareil.</li>
+          <li>Saisissez vos accès Xtream Codes ou votre lien M3U, puis lancez une chaîne.</li>
+        </ol>
+        <h3>Orange bloque l'IPTV ? Pourquoi l'IPTV ne fonctionne plus avec Orange</h3>
+        <p>
+          Quand l'<strong>IPTV ne fonctionne plus avec Orange</strong>, la cause est le plus souvent technique : Wi-Fi faible entre
+          la Livebox et la TV, saturation du réseau le soir, Livebox à redémarrer ou application à mettre à jour. Redémarrez la
+          Livebox (30 secondes débranchée), passez en Ethernet et testez sur un autre appareil : si tout revient, le problème était
+          local.
+        </p>
+        <p>
+          En France, les fournisseurs d'accès peuvent aussi être obligés <strong>par décision de justice</strong> de bloquer
+          certains services. Si votre service est concerné, le problème vient du service lui-même : aucune manipulation sur votre
+          box ne doit être tentée. Choisissez un fournisseur transparent et joignable, et consultez notre guide{' '}
+          <a href="/blog/iptv-ne-fonctionne-plus">IPTV ne fonctionne plus</a> pour le diagnostic complet.
+        </p>
+      </SeoGuideSection>
 
       {/* FAQ */}
       <section className="py-20 bg-white">
