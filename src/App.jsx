@@ -43,8 +43,11 @@ const LGTV = lazy(() => import('./pages/apparaten/LGTV'));
 const IPTVKopenNederlandGids = lazy(() => import('./pages/blog/IPTVKopenNederlandGids'));
 const BesteIPTVApps2024 = lazy(() => import('./pages/blog/BesteIPTVApps2024'));
 const IsIPTVLegaalNederland = lazy(() => import('./pages/blog/IsIPTVLegaalNederland'));
-const IPTVInstallerenSamsungTV = lazy(() => import('./pages/blog/IPTVInstallerenSamsungTV'));
 const NederlandseIPTVKanalenLijst = lazy(() => import('./pages/blog/NederlandseIPTVKanalenLijst'));
+const BlogIndex = lazy(() => import('./pages/BlogIndex'));
+const PrixIPTVFrance = lazy(() => import('./pages/blog/PrixIPTVFrance'));
+const MeilleurIPTVFrance = lazy(() => import('./pages/blog/MeilleurIPTVFrance'));
+const IPTVNeFonctionnePlus = lazy(() => import('./pages/blog/IPTVNeFonctionnePlus'));
 
 // Lazy load legal pages
 const Privacybeleid = lazy(() => import('./pages/Privacybeleid'));
@@ -157,11 +160,14 @@ function AppContent() {
             <Route path="/faq" element={<VeelgesteldeVragen />} />
             <Route path="/a-propos" element={<OverOns />} />
             {/* Blog Routes */}
+            <Route path="/blog" element={<BlogIndex />} />
             <Route path="/blog/acheter-iptv-france-guide-complet" element={<IPTVKopenNederlandGids />} />
-            <Route path="/blog/meilleures-applications-iptv-2024" element={<BesteIPTVApps2024 />} />
+            <Route path="/blog/meilleures-applications-iptv" element={<BesteIPTVApps2024 />} />
             <Route path="/blog/iptv-legal-en-france" element={<IsIPTVLegaalNederland />} />
-            <Route path="/blog/installer-iptv-samsung-tv" element={<IPTVInstallerenSamsungTV />} />
             <Route path="/blog/liste-chaines-francaises-iptv" element={<NederlandseIPTVKanalenLijst />} />
+            <Route path="/blog/prix-iptv-france" element={<PrixIPTVFrance />} />
+            <Route path="/blog/meilleur-iptv-france" element={<MeilleurIPTVFrance />} />
+            <Route path="/blog/iptv-ne-fonctionne-plus" element={<IPTVNeFonctionnePlus />} />
             {/* Legal Routes */}
             <Route path="/politique-de-confidentialite" element={<Privacybeleid />} />
             <Route path="/cgv" element={<AlgemeneVoorwaarden />} />

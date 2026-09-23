@@ -2,10 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const SITE_URL = 'https://franceiptv.stream';
-const DEFAULT_TITLE = 'France IPTV - Service de Streaming Premium | 30 500+ Chaînes dès 8€';
-const DEFAULT_DESCRIPTION = 'France IPTV - Service de streaming premium avec 30 500+ chaînes. Abonnement IPTV fiable dès 8€. Service francophone, légal et sécurisé. Actif en 5 min.';
+const DEFAULT_TITLE = 'IPTV France : Abonnement IPTV Premium dès 8€ | France IPTV';
+const DEFAULT_DESCRIPTION = 'Abonnement IPTV France : 30 500+ chaînes, films et séries en HD/4K dès 8€/mois. Sans reconduction automatique, support francophone, actif en 5 min.';
 const DEFAULT_KEYWORDS = 'acheter iptv, acheter abonnement iptv, fournisseurs iptv, iptv france, meilleure application iptv, iptv français, fournisseur iptv, iptv légal, abonnement iptv, iptv 1 mois pas cher, ip tv';
-const DEFAULT_IMAGE = `${SITE_URL}/og-image.svg`;
+const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`;
 
 const productSchema = {
   '@context': 'https://schema.org',
@@ -18,8 +18,7 @@ const productSchema = {
     { '@type': 'Offer', name: 'Abonnement IPTV 3 Mois', price: '19.99', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: `${SITE_URL}/tarifs` },
     { '@type': 'Offer', name: 'Abonnement IPTV 6 Mois', price: '30', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: `${SITE_URL}/tarifs` },
     { '@type': 'Offer', name: 'Abonnement IPTV 12 Mois - Meilleure Offre', price: '45', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: `${SITE_URL}/tarifs` }
-  ],
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '2847' }
+  ]
 };
 
 const faqSchema = {
@@ -45,28 +44,32 @@ const SEO = ({
   ogImage = DEFAULT_IMAGE,
   ogType = 'website',
   includeHomeSchema = false,
+  noindex = false,
 }) => {
-  const canonicalUrl = canonicalPath === '/' ? SITE_URL : `${SITE_URL}${canonicalPath}`;
+  // canonicalPath={null} (e.g. the 404 page) omits the canonical and og:url tags.
+  const canonicalUrl = canonicalPath == null ? null : canonicalPath === '/' ? SITE_URL : `${SITE_URL}${canonicalPath}`;
 
   return (
     <Helmet>
       {/* Primary Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={canonicalUrl} />
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl} />
+      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:site_name" content="France IPTV" />
       <meta property="og:locale" content="fr_FR" />
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={canonicalUrl} />
+      {canonicalUrl && <meta property="twitter:url" content={canonicalUrl} />}
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={ogImage} />
@@ -82,9 +85,8 @@ const SEO = ({
       )}
 
       {/* Additional SEO Tags */}
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1'} />
       <meta name="language" content="French" />
-      <meta name="revisit-after" content="7 days" />
       <meta name="author" content="France IPTV" />
 
       {/* Geo Tags for France */}

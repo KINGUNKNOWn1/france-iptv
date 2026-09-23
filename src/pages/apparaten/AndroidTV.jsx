@@ -145,7 +145,7 @@ const AndroidTV = () => {
   return (
     <>
       <Helmet>
-        <title>Installer l'IPTV sur Android TV et Boîtiers Android 2026 | France IPTV</title>
+        <title>Installer l'IPTV sur Android TV et Box Android | France IPTV</title>
         <meta name="description" content="Installer l'IPTV sur Android TV, Nvidia Shield, Xiaomi Mi Box ou tout boîtier Android en 5 minutes ✓ Guide étape par étape ✓ Support francophone." />
         <meta name="keywords" content="iptv android tv, iptv nvidia shield, iptv mi box, installer iptv boitier android" />
         <link rel="canonical" href="https://franceiptv.stream/appareils/android-tv" />
@@ -336,7 +336,7 @@ const AndroidTV = () => {
                   <h3 className="font-bold text-lg pr-4 text-brand-black">{faq.name}</h3>
                   {openFaq === index ? <ChevronUp className="w-6 h-6 text-blue-500 flex-shrink-0" /> : <ChevronDown className="w-6 h-6 text-brand-gray flex-shrink-0" />}
                 </button>
-                {openFaq === index && (<div className="px-6 pb-6 pt-0"><p className="text-brand-gray leading-relaxed">{faq.acceptedAnswer.text}</p></div>)}
+                <div hidden={openFaq !== index} className="px-6 pb-6 pt-0"><p className="text-brand-gray leading-relaxed">{faq.acceptedAnswer.text}</p></div>
               </motion.div>
             ))}
           </div>

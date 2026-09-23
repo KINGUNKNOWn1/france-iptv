@@ -1,10 +1,59 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import SEO from '../components/SEO';
 import Pricing from '../components/Pricing';
 import ComparisonTable from '../components/ComparisonTable';
+import RelatedGuides from '../components/RelatedGuides';
 import { FaCheckCircle, FaWhatsapp } from 'react-icons/fa';
+
+const SITE_URL = 'https://franceiptv.stream';
+
+const tarifsFaq = [
+  { q: "Quelle est l'option la moins chère ?", a: "L'abonnement 12 mois est l'option la plus avantageuse : seulement 45 € par an (3,75 € par mois). C'est moins cher que la plupart des fournisseurs IPTV en France." },
+  { q: 'Puis-je payer par Binance Pay ou PayPal ?', a: 'Oui, nous acceptons Binance Pay et PayPal. Ce sont des moyens de paiement rapides et sécurisés. Contactez-nous via WhatsApp pour commander.' },
+  { q: 'Mon abonnement se renouvelle-t-il automatiquement ?', a: "Non, absolument pas. Votre abonnement s'arrête automatiquement à la fin de la durée choisie. Aucune surprise, aucune reconduction non désirée." },
+  { q: "Sur combien d'appareils puis-je regarder ?", a: "Vous pouvez regarder sur 4 appareils simultanément avec tous les forfaits : Smart TV, téléphone, tablette ou ordinateur, avec la même qualité sur chaque écran." }
+];
+
+const offer = (name, price) => ({ '@type': 'Offer', name, price, priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: `${SITE_URL}/tarifs` });
+
+const tarifsSchemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: 'Abonnement IPTV France IPTV',
+    description: "Abonnement IPTV : 30 500+ chaînes, films et séries à la demande, HD/4K, support francophone. Sans reconduction automatique.",
+    brand: { '@type': 'Brand', name: 'France IPTV' },
+    offers: {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'EUR',
+      lowPrice: '8',
+      highPrice: '45',
+      offerCount: '4',
+      offers: [
+        offer('Abonnement IPTV 1 mois', '8'),
+        offer('Abonnement IPTV 3 mois', '19.99'),
+        offer('Abonnement IPTV 6 mois', '30'),
+        offer('Abonnement IPTV 12 mois', '45')
+      ]
+    }
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: tarifsFaq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } }))
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Accueil', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Tarifs IPTV', item: `${SITE_URL}/tarifs` }
+    ]
+  }
+];
 
 const Prijzen = () => {
   const guarantees = [
@@ -19,11 +68,16 @@ const Prijzen = () => {
   return (
     <>
       <SEO
-        title="Tarifs IPTV France | Abonnement dès 45€/an - France IPTV"
-        description="Tarifs de l'abonnement IPTV : 1 mois 8€, 3 mois 19,99€, 6 mois 30€, 12 mois 45€. Aucune reconduction automatique. Paiement Binance Pay ou PayPal. 30 500+ chaînes. Commandez maintenant !"
+        title="Prix IPTV 2026 : Tarifs Abonnement dès 8€/mois | France IPTV"
+        description="Prix IPTV en France : 1 mois 8€, 3 mois 19,99€, 6 mois 30€, 12 mois 45€. Sans reconduction automatique. Binance Pay ou PayPal. 30 500+ chaînes."
         keywords="tarifs iptv, prix abonnement iptv, prix iptv, iptv pas cher, coût iptv"
         canonicalPath="/tarifs"
       />
+      <Helmet>
+        {tarifsSchemas.map((schema, i) => (
+          <script key={i} type="application/ld+json">{JSON.stringify(schema)}</script>
+        ))}
+      </Helmet>
 
       <div className="min-h-screen bg-white pt-32">
         {/* Header */}
@@ -36,7 +90,7 @@ const Prijzen = () => {
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl md:text-6xl font-bold text-brand-black mb-6">
-                Tarifs de l'Abonnement IPTV
+                Prix et Tarifs de l'Abonnement IPTV en France
               </h1>
               <p className="text-xl text-brand-gray leading-relaxed">
                 Des prix transparents, sans frais cachés. Choisissez la durée qui vous convient.
@@ -62,7 +116,7 @@ const Prijzen = () => {
               className="text-center mb-12"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-brand-black mb-4">
-                Que recevez-vous avec chaque abonnement IPTV ?
+                Tarif IPTV : que recevez-vous avec chaque abonnement ?
               </h2>
               <p className="text-xl text-brand-gray max-w-3xl mx-auto">
                 Quel que soit l'<Link to="/abonnement-iptv" className="text-brand-gold hover:text-[#2B4577] underline">abonnement IPTV</Link> que vous choisissez, vous avez toujours accès à notre offre complète
@@ -97,7 +151,7 @@ const Prijzen = () => {
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-brand-black mb-4">
-                Questions fréquentes sur les tarifs
+                Questions fréquentes sur le prix de l'IPTV
               </h2>
             </motion.div>
 
@@ -136,8 +190,8 @@ const Prijzen = () => {
                   Sur combien d'appareils puis-je regarder ?
                 </h3>
                 <p className="text-brand-gray">
-                  Vous pouvez regarder sur un nombre illimité d'<Link to="/appareils" className="text-brand-gold hover:text-[#2B4577] underline">appareils</Link> à la fois.
-                  Smart TV, téléphone, tablette, ordinateur portable - aucune limite.
+                  Vous pouvez regarder sur 4 <Link to="/appareils" className="text-brand-gold hover:text-[#2B4577] underline">appareils</Link> simultanément avec tous les forfaits :
+                  Smart TV, téléphone, tablette ou ordinateur, avec la même qualité sur chaque écran.
                 </p>
               </div>
             </div>
@@ -152,6 +206,8 @@ const Prijzen = () => {
             </div>
           </div>
         </section>
+
+        <RelatedGuides />
 
         {/* CTA */}
         <section className="py-20 bg-gradient-to-b from-white to-brand-offwhite">

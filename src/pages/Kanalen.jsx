@@ -85,7 +85,7 @@ const Kanalen = () => {
   return (
     <>
       <SEO
-        title="Liste des Chaînes IPTV | 30 500+ Chaînes Françaises et Internationales"
+        title="Liste des Chaînes IPTV : 30 500+ Chaînes en Direct"
         description="Découvrez notre catalogue de plus de 30 500 chaînes en direct : chaînes françaises, sportives, cinéma, internationales, arabes et turques. Qualité HD/4K garantie."
         keywords="liste chaînes iptv, chaînes françaises iptv, chaînes sportives iptv, catalogue iptv"
         canonicalPath="/chaines"

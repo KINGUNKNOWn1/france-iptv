@@ -2,15 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaCheckCircle, FaMobileAlt, FaTv, FaStar, FaAndroid, FaApple, FaWhatsapp } from 'react-icons/fa';
+import { Helmet } from 'react-helmet-async';
 import SEO from '../../components/SEO';
+import { blogPostSchemas } from '../../data/blogPosts';
 
 const BesteIPTVApps2024 = () => {
   const seoData = {
-    title: 'Meilleures Applications IPTV 2024 : Top 10 pour Android, iOS & Smart TV',
-    description: 'Découvrez les meilleures applications IPTV de 2024. Comparez IPTV Smarters, TiviMate, GSE Smart IPTV et plus. Téléchargements gratuits, conseils d\'installation et avis.',
+    title: 'Meilleures Applications IPTV 2026 : Top 10 Android, iOS, TV',
+    description: 'Les meilleures applications IPTV en 2026 : IPTV Smarters, TiviMate, GSE Smart IPTV et plus. Comparatif Android, iOS et Smart TV, avis et installation.',
     keywords: 'meilleure application iptv, iptv smarters, tivimate, gse smart iptv, application iptv android, application iptv ios',
     ogType: 'article',
-    canonicalPath: '/blog/meilleures-applications-iptv-2024'
+    canonicalPath: '/blog/meilleures-applications-iptv'
   };
 
   const apps = [
@@ -59,13 +61,18 @@ const BesteIPTVApps2024 = () => {
   return (
     <>
       <SEO {...seoData} />
+      <Helmet>
+        {blogPostSchemas('/blog/meilleures-applications-iptv').map((schema, i) => (
+          <script key={i} type="application/ld+json">{JSON.stringify(schema)}</script>
+        ))}
+      </Helmet>
       <div className="min-h-screen bg-white text-brand-black pt-20">
         {/* Hero */}
         <section className="py-16 bg-gradient-to-br from-[#141311] via-[#241F19] to-[#141311] text-white">
           <div className="container mx-auto px-4 max-w-4xl">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center">
               <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6">
-                Meilleures Applications IPTV <span className="text-purple-400">2024</span>
+                Meilleures Applications IPTV <span className="text-purple-400">2026</span>
               </h1>
               <p className="text-xl text-gray-300 mb-4">
                 Comparez les meilleures applications IPTV pour Android, iOS, Fire Stick et Smart TV. Avis détaillés et instructions d'installation.
@@ -92,7 +99,7 @@ const BesteIPTVApps2024 = () => {
 
             {/* Top Apps */}
             <section className="mb-12">
-              <h2 className="text-3xl font-heading font-bold mb-6 text-purple-600">Top 10 des Applications IPTV 2024</h2>
+              <h2 className="text-3xl font-heading font-bold mb-6 text-purple-600">Top 10 des Applications IPTV 2026</h2>
               <div className="space-y-6">
                 {apps.map((app, index) => (
                   <div key={index} className={`bg-brand-offwhite p-6 rounded-lg border-2 ${app.recommended ? 'border-purple-500' : 'border-brand-gray-border'}`}>
@@ -258,7 +265,7 @@ const BesteIPTVApps2024 = () => {
                 <h3 className="font-bold mb-2 text-brand-black">Guide Complet Acheter IPTV en France</h3>
                 <p className="text-sm text-brand-gray">Tout savoir sur l'achat d'IPTV en France →</p>
               </Link>
-              <Link to="/blog/installer-iptv-samsung-tv" className="bg-white border border-brand-gray-border p-4 rounded-lg hover:border-brand-gold transition-colors">
+              <Link to="/appareils/samsung-tv" className="bg-white border border-brand-gray-border p-4 rounded-lg hover:border-brand-gold transition-colors">
                 <h3 className="font-bold mb-2 text-brand-black">Installer l'IPTV sur Samsung TV</h3>
                 <p className="text-sm text-brand-gray">Guide étape par étape →</p>
               </Link>

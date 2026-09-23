@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { FaChevronDown, FaCheckCircle } from 'react-icons/fa';
+import { Helmet } from 'react-helmet-async';
 import SEO from '../components/SEO';
 
 const VeelgesteldeVragen = () => {
@@ -59,7 +60,7 @@ const VeelgesteldeVragen = () => {
         },
         {
           q: "Sur combien d'appareils puis-je regarder ?",
-          a: "Avec un seul abonnement France IPTV, vous pouvez regarder sur un nombre illimité d'appareils à la fois. Parfait pour les familles ! Aucun frais supplémentaire pour des appareils en plus."
+          a: "Avec un seul abonnement France IPTV, vous pouvez regarder sur 4 appareils simultanément. Parfait pour les familles ! Aucun frais supplémentaire jusqu'à 4 écrans."
         },
         {
           q: "L'IPTV fonctionne-t-il sur ma Smart TV ?",
@@ -145,6 +146,17 @@ const VeelgesteldeVragen = () => {
     }
   ];
 
+  // The legality answer is left out of structured data on purpose: it is a
+  // claim we don't want amplified in rich results.
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs
+      .flatMap((category) => category.questions)
+      .filter((faq) => !/légal/i.test(faq.q))
+      .map((faq) => ({ '@type': 'Question', name: faq.q, acceptedAnswer: { '@type': 'Answer', text: faq.a } }))
+  };
+
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
@@ -157,6 +169,9 @@ const VeelgesteldeVragen = () => {
         keywords="faq iptv, questions iptv, aide iptv, support iptv france"
         canonicalPath="/faq"
       />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Helmet>
       <div className="min-h-screen bg-white text-brand-black pt-20">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-[#141311] via-[#201C18] to-[#141311] text-white">
@@ -221,20 +236,17 @@ const VeelgesteldeVragen = () => {
                           </motion.div>
                         </button>
 
-                        <AnimatePresence>
-                          {isOpen && (
-                            <motion.div
-                              initial={{ height: 0, opacity: 0 }}
-                              animate={{ height: "auto", opacity: 1 }}
-                              exit={{ height: 0, opacity: 0 }}
-                              transition={{ duration: 0.3 }}
-                            >
-                              <div className="px-6 pb-4 text-brand-gray border-t border-brand-gray-border pt-4">
-                                {faq.a}
-                              </div>
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
+                        {/* Always rendered (collapsed to 0 height) so answers are in the HTML crawlers see. */}
+                        <motion.div
+                          initial={false}
+                          animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="px-6 pb-4 text-brand-gray border-t border-brand-gray-border pt-4">
+                            {faq.a}
+                          </div>
+                        </motion.div>
                       </motion.div>
                     );
                   })}

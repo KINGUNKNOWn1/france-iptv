@@ -337,7 +337,7 @@ const FireStick = () => {
                   <h3 className="font-bold text-lg pr-4 text-brand-black">{faq.name}</h3>
                   {openFaq === index ? <ChevronUp className="w-6 h-6 text-blue-500 flex-shrink-0" /> : <ChevronDown className="w-6 h-6 text-brand-gray flex-shrink-0" />}
                 </button>
-                {openFaq === index && (<div className="px-6 pb-6 pt-0"><p className="text-brand-gray leading-relaxed">{faq.acceptedAnswer.text}</p></div>)}
+                <div hidden={openFaq !== index} className="px-6 pb-6 pt-0"><p className="text-brand-gray leading-relaxed">{faq.acceptedAnswer.text}</p></div>
               </motion.div>
             ))}
           </div>

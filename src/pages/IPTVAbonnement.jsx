@@ -1,9 +1,102 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaCheckCircle, FaCrown, FaPlay, FaTv, FaUsers, FaHeadset } from 'react-icons/fa';
+import { Helmet } from 'react-helmet-async';
+import { FaCheckCircle, FaCrown, FaPlay, FaTv, FaUsers, FaHeadset, FaTimesCircle } from 'react-icons/fa';
 import SEO from '../components/SEO';
 import Pricing from '../components/Pricing';
+import RelatedGuides from '../components/RelatedGuides';
+
+const SITE_URL = 'https://franceiptv.stream';
+
+const faqItems = [
+  {
+    q: "Qu'est-ce qu'un abonnement IPTV ?",
+    a: "Un abonnement IPTV (Internet Protocol Television) vous donne accès à des chaînes de télévision en direct, des films et des séries diffusés via votre connexion internet, au lieu du satellite, du câble ou de la TNT. Vous regardez sur votre Smart TV, box, téléphone ou ordinateur grâce à une application IPTV."
+  },
+  {
+    q: 'Quelle est la différence entre les abonnements ?',
+    a: 'Tous les abonnements incluent exactement la même offre : 30 500+ chaînes et 150 000+ titres VOD. La seule différence est la durée. Les abonnements plus longs sont moins chers par mois : de 8 € pour 1 mois à 45 € pour 12 mois, soit 3,75 € par mois.'
+  },
+  {
+    q: 'Mon abonnement IPTV se renouvelle-t-il automatiquement ?',
+    a: "Non. Chez France IPTV, il n'y a aucune reconduction automatique. Nous vous envoyons un rappel avant l'expiration de votre abonnement, et vous décidez vous-même si vous souhaitez le renouveler."
+  },
+  {
+    q: 'En combien de temps mon abonnement IPTV est-il actif ?',
+    a: "Votre abonnement IPTV est actif en 5 minutes après le paiement par Binance Pay ou PayPal. Vous recevez vos identifiants par WhatsApp ou par e-mail."
+  },
+  {
+    q: 'Puis-je tester avant de payer ?',
+    a: "Oui. Nous proposons 1 jour d'essai gratuit pour vérifier la qualité des chaînes et la compatibilité avec vos appareils avant de choisir un abonnement. Demandez votre essai via WhatsApp."
+  },
+  {
+    q: 'Puis-je annuler mon abonnement IPTV ?',
+    a: "Durant les 14 premiers jours, nous offrons une garantie satisfait ou remboursé. Ensuite, votre abonnement arrive automatiquement à échéance à la fin de la période choisie, sans reconduction."
+  },
+  {
+    q: "Sur combien d'appareils puis-je regarder ?",
+    a: "Vous pouvez regarder sur 4 appareils simultanément avec tous les forfaits : Smart TV, box, téléphone, tablette ou ordinateur, avec la même qualité sur chaque écran."
+  },
+  {
+    q: 'Quel débit internet faut-il pour un abonnement IPTV ?',
+    a: "Comptez au minimum 10 Mbit/s pour la HD et 25 Mbit/s pour la 4K par écran. Une connexion fibre ou un câble Ethernet donne les meilleurs résultats ; en Wi-Fi, placez la box au plus près de la TV."
+  }
+];
+
+const abonnementSchemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } }))
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Accueil', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Abonnement IPTV', item: `${SITE_URL}/abonnement-iptv` }
+    ]
+  }
+];
+
+const steps = [
+  { title: 'Choisissez votre durée', text: "1, 3, 6 ou 12 mois : le contenu est identique, seul le prix mensuel change. Pas sûr ? Commencez par l'essai gratuit de 1 jour." },
+  { title: 'Payez en toute sécurité', text: 'Réglez par Binance Pay ou PayPal, deux moyens de paiement traçables qui vous donnent une preuve de transaction.' },
+  { title: 'Recevez vos identifiants', text: 'En moins de 5 minutes, vous recevez vos accès (identifiants Xtream Codes, lien M3U ou activation par adresse MAC) par WhatsApp.' },
+  { title: "Installez l'application", text: "Installez une application IPTV sur votre appareil (IPTV Smarters Pro, TiviMate, Smart IPTV…) et saisissez vos accès. Nos guides pas à pas couvrent chaque appareil." }
+];
+
+const contentCategories = [
+  { title: 'Chaînes françaises', text: 'TF1, France 2, France 3, M6, Arte, les chaînes TNT, les chaînes info et les chaînes régionales, en HD et en direct.', link: '/chaines', linkText: 'Voir la liste des chaînes' },
+  { title: 'Sport en direct', text: 'Football, Ligue 1, championnats européens, F1, tennis, rugby et sports de combat, avec les chaînes sport françaises et internationales.', link: '/chaines', linkText: 'Chaînes sport incluses' },
+  { title: 'Films et séries (VOD)', text: "Plus de 150 000 films et séries à la demande, mis à jour régulièrement, avec les nouveautés cinéma et les séries du moment.", link: '/blog/meilleures-applications-iptv', linkText: 'Meilleures applications pour la VOD' },
+  { title: 'Chaînes internationales', text: 'Chaînes belges, suisses, arabes, turques, maghrébines, anglaises, portugaises et bien d\'autres, pour toute la famille.', link: '/iptv-belgique', linkText: 'IPTV Belgique' }
+];
+
+const deviceGuides = [
+  { name: 'Freebox', link: '/appareils/freebox' },
+  { name: 'Box Orange', link: '/appareils/orange' },
+  { name: 'Box SFR', link: '/appareils/sfr' },
+  { name: 'Bbox Bouygues', link: '/appareils/bbox-bouygues' },
+  { name: 'Samsung Smart TV', link: '/appareils/samsung-tv' },
+  { name: 'LG Smart TV', link: '/appareils/lg-tv' },
+  { name: 'Amazon Fire Stick', link: '/appareils/fire-stick' },
+  { name: 'Android TV et box', link: '/appareils/android-tv' },
+  { name: 'Chromecast / Google TV', link: '/appareils/chromecast-google-tv' },
+  { name: 'iPhone et iPad', link: '/appareils/iphone-ipad' },
+  { name: 'Activer un code IPTV', link: '/appareils/activer-code-iptv' },
+  { name: 'Erreur de lecture IPTV', link: '/appareils/erreur-lecture-iptv' }
+];
+
+const comparisonRows = [
+  { label: 'Prix mensuel', iptv: 'Dès 3,75 €/mois', classic: 'Souvent 20 à 60 €/mois selon les options' },
+  { label: 'Engagement', iptv: 'Aucun, sans reconduction automatique', classic: 'Engagement de 12 à 24 mois fréquent' },
+  { label: 'Chaînes', iptv: '30 500+ chaînes françaises et internationales', classic: 'Bouquet limité, options payantes en plus' },
+  { label: 'Films et séries', iptv: '150 000+ titres VOD inclus', classic: 'Abonnements streaming séparés' },
+  { label: 'Appareils', iptv: 'TV, box, téléphone, tablette, PC (4 écrans)', classic: 'Souvent limité au décodeur de la box' },
+  { label: 'Mise en service', iptv: '5 minutes', classic: 'Plusieurs jours (installation, décodeur)' }
+];
 
 const IPTVAbonnement = () => {
   const features = [
@@ -20,7 +113,7 @@ const IPTVAbonnement = () => {
     {
       icon: <FaUsers className="text-4xl text-purple-500" />,
       title: "Multi-appareils",
-      description: "Regardez sur un nombre illimité d'appareils à la fois"
+      description: "Regardez sur 4 appareils simultanément"
     },
     {
       icon: <FaHeadset className="text-4xl text-orange-500" />,
@@ -73,11 +166,16 @@ const IPTVAbonnement = () => {
   return (
     <>
       <SEO
-        title="Abonnement IPTV France | 30 500+ Chaînes dès 8€"
-        description="Découvrez notre abonnement IPTV complet : 30 500+ chaînes en direct, 150 000+ films et séries, qualité 4K, support francophone 24/7. Dès 8€ sans engagement."
+        title="Abonnement IPTV 2026 : 30 500+ Chaînes dès 8€ | France IPTV"
+        description="Abonnement IPTV en France : 30 500+ chaînes, 150 000+ films et séries en HD/4K, 4 écrans, sans engagement. Dès 3,75€/mois, essai gratuit 1 jour."
         keywords="abonnement iptv, abonnement iptv france, meilleur abonnement iptv, iptv premium"
         canonicalPath="/abonnement-iptv"
       />
+      <Helmet>
+        {abonnementSchemas.map((schema, i) => (
+          <script key={i} type="application/ld+json">{JSON.stringify(schema)}</script>
+        ))}
+      </Helmet>
       <div className="min-h-screen bg-white text-brand-black pt-20">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-[#141311] via-[#201C18] to-[#141311] text-white">
@@ -90,12 +188,12 @@ const IPTVAbonnement = () => {
             >
               <h1 className="text-5xl md:text-6xl font-heading font-bold mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-                  Acheter un Abonnement IPTV
+                  Abonnement IPTV France
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Le meilleur <strong>abonnement IPTV</strong> de France. 30 500+ chaînes, 150 000+ films et séries.
-                À partir de 3,75 € par mois. Aucune reconduction automatique.
+                Un <strong>abonnement IPTV</strong> complet : 30 500+ chaînes, 150 000+ films et séries en HD/4K.
+                À partir de 3,75 € par mois, sans engagement, avec 1 jour d'essai gratuit.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <a
@@ -112,6 +210,36 @@ const IPTVAbonnement = () => {
                 </a>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* What is it */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-brand-black">
+              Qu'est-ce qu'un <span className="text-brand-gold">abonnement IPTV</span> ?
+            </h2>
+            <div className="space-y-4 text-lg text-brand-gray leading-relaxed">
+              <p>
+                L'IPTV (Internet Protocol Television) diffuse la télévision par votre connexion internet au lieu du
+                satellite, du câble ou de l'antenne TNT. Un <strong>abonnement IPTV</strong> vous donne des accès
+                personnels (identifiants Xtream Codes, lien M3U ou activation par adresse MAC) que vous saisissez
+                dans une application IPTV. Vous retrouvez alors les chaînes en direct, le guide des programmes (EPG),
+                le replay et un catalogue de films et séries à la demande.
+              </p>
+              <p>
+                Concrètement, plus besoin de décodeur ni de parabole : une Smart TV, une box internet (Freebox, Livebox,
+                Bbox, box SFR), un Fire Stick, un téléphone ou un ordinateur suffit. Le même abonnement fonctionne sur
+                4 écrans à la fois, à la maison comme en déplacement.
+              </p>
+              <p>
+                Avant de vous abonner, deux points comptent plus que tout : la <strong>stabilité du service</strong>{' '}
+                et la <strong>transparence du fournisseur</strong> (prix affichés, paiement traçable, support joignable,
+                pas de reconduction cachée). Notre guide{' '}
+                <Link to="/blog/meilleur-iptv-france" className="text-brand-gold underline">pour choisir le meilleur IPTV en France</Link>{' '}
+                détaille les 7 critères à vérifier.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -200,6 +328,119 @@ const IPTVAbonnement = () => {
           </div>
         </section>
 
+        {/* How it works */}
+        <section className="py-20 bg-brand-offwhite">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4 text-brand-black">
+              Comment Fonctionne l'<span className="text-brand-gold">Abonnement IPTV</span> ?
+            </h2>
+            <p className="text-center text-brand-gray mb-12 text-lg max-w-3xl mx-auto">
+              De la commande à la première chaîne, comptez environ 10 minutes.
+            </p>
+            <ol className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {steps.map((step, index) => (
+                <li key={step.title} className="bg-white border border-brand-gray-border p-6 rounded-lg">
+                  <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-gold text-white font-bold mb-4">
+                    {index + 1}
+                  </span>
+                  <h3 className="text-xl font-semibold mb-2 text-brand-black">{step.title}</h3>
+                  <p className="text-brand-gray">{step.text}</p>
+                </li>
+              ))}
+            </ol>
+            <p className="text-center text-brand-gray mt-8">
+              Vous avez déjà un code ? Suivez notre guide pour{' '}
+              <Link to="/appareils/activer-code-iptv" className="text-brand-gold underline">activer votre code IPTV</Link>.
+            </p>
+          </div>
+        </section>
+
+        {/* Content included */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-12 text-brand-black">
+              Chaînes et Contenus Inclus dans l'<span className="text-brand-gold">Abonnement</span>
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {contentCategories.map((cat) => (
+                <div key={cat.title} className="bg-brand-offwhite border border-brand-gray-border p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-2 text-brand-black">{cat.title}</h3>
+                  <p className="text-brand-gray mb-3">{cat.text}</p>
+                  <Link to={cat.link} className="text-brand-gold font-semibold hover:underline">{cat.linkText} →</Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Comparison */}
+        <section className="py-20 bg-brand-offwhite">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4 text-brand-black">
+              Abonnement IPTV ou Bouquet TV Classique ?
+            </h2>
+            <p className="text-center text-brand-gray mb-10 text-lg max-w-3xl mx-auto">
+              Ce qui change concrètement par rapport à un bouquet TV d'opérateur ou satellite.
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full bg-white border border-brand-gray-border rounded-lg text-left">
+                <thead>
+                  <tr className="border-b border-brand-gray-border">
+                    <th scope="col" className="p-4 text-brand-black">Critère</th>
+                    <th scope="col" className="p-4 text-brand-gold">Abonnement France IPTV</th>
+                    <th scope="col" className="p-4 text-brand-black">Bouquet TV classique</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonRows.map((row) => (
+                    <tr key={row.label} className="border-b border-brand-gray-border last:border-0">
+                      <th scope="row" className="p-4 font-semibold text-brand-black">{row.label}</th>
+                      <td className="p-4 text-brand-gray">
+                        <FaCheckCircle className="inline text-green-500 mr-2" />{row.iptv}
+                      </td>
+                      <td className="p-4 text-brand-gray">
+                        <FaTimesCircle className="inline text-red-400 mr-2" />{row.classic}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-center text-brand-gray mt-6">
+              Le détail des prix du marché est dans notre guide{' '}
+              <Link to="/blog/prix-iptv-france" className="text-brand-gold underline">prix IPTV France 2026</Link>.
+            </p>
+          </div>
+        </section>
+
+        {/* Devices hub */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4 text-brand-black">
+              Compatible avec Tous Vos <span className="text-brand-gold">Appareils</span>
+            </h2>
+            <p className="text-center text-brand-gray mb-10 text-lg max-w-3xl mx-auto">
+              Un guide d'installation pas à pas pour chaque box, TV et appareil. Voir aussi{' '}
+              <Link to="/appareils" className="text-brand-gold underline">tous les appareils compatibles</Link>.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {deviceGuides.map((device) => (
+                <Link
+                  key={device.link}
+                  to={device.link}
+                  className="bg-brand-offwhite border border-brand-gray-border p-4 rounded-lg hover:border-brand-gold transition-colors font-semibold text-brand-black"
+                >
+                  IPTV {device.name} →
+                </Link>
+              ))}
+            </div>
+            <p className="text-center text-brand-gray mt-8">
+              Un problème de lecture ou de coupures ? Consultez{' '}
+              <Link to="/blog/iptv-ne-fonctionne-plus" className="text-brand-gold underline">IPTV ne fonctionne plus : les solutions</Link>.
+            </p>
+          </div>
+        </section>
+
         {/* Benefits Section */}
         <section className="py-20 bg-brand-offwhite">
           <div className="container mx-auto px-4 max-w-6xl">
@@ -256,56 +497,12 @@ const IPTVAbonnement = () => {
             </h2>
 
             <div className="space-y-6">
-              <div className="bg-brand-offwhite border border-brand-gray-border p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-3 text-brand-gold">
-                  Quelle est la différence entre les abonnements ?
-                </h3>
-                <p className="text-brand-gray">
-                  Tous les abonnements incluent exactement la même offre : 30 500+ chaînes et 150 000+ titres VOD.
-                  La seule différence est la durée. Les abonnements plus longs sont moins chers par mois.
-                </p>
-              </div>
-
-              <div className="bg-brand-offwhite border border-brand-gray-border p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-3 text-brand-gold">
-                  Mon abonnement IPTV se renouvelle-t-il automatiquement ?
-                </h3>
-                <p className="text-brand-gray">
-                  Non ! Chez France IPTV, il n'y a <strong>aucune reconduction automatique</strong>. Vous gardez le contrôle total.
-                  Nous vous envoyons un rappel avant l'expiration de votre abonnement, et vous décidez ensuite vous-même si vous souhaitez le renouveler.
-                </p>
-              </div>
-
-              <div className="bg-brand-offwhite border border-brand-gray-border p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-3 text-brand-gold">
-                  En combien de temps mon abonnement IPTV est-il actif ?
-                </h3>
-                <p className="text-brand-gray">
-                  Votre <Link to="/acheter-iptv" className="text-brand-gold hover:underline">abonnement IPTV</Link> est
-                  <strong> actif en 5 minutes</strong> après le paiement par Binance Pay ou PayPal. Vous recevez immédiatement vos identifiants par e-mail.
-                </p>
-              </div>
-
-              <div className="bg-brand-offwhite border border-brand-gray-border p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-3 text-brand-gold">
-                  Puis-je annuler mon abonnement IPTV ?
-                </h3>
-                <p className="text-brand-gray">
-                  Durant les 14 premiers jours, nous offrons une <strong>garantie satisfait ou remboursé</strong>. Ensuite, votre abonnement
-                  arrive automatiquement à échéance à la fin de la période choisie, sans reconduction.
-                </p>
-              </div>
-
-              <div className="bg-brand-offwhite border border-brand-gray-border p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-3 text-brand-gold">
-                  Sur combien d'appareils puis-je regarder ?
-                </h3>
-                <p className="text-brand-gray">
-                  Avec un seul abonnement France IPTV, vous pouvez regarder sur un <strong>nombre illimité d'appareils à la fois</strong>.
-                  Parfait pour les familles ! Découvrez tous les{' '}
-                  <Link to="/appareils" className="text-brand-gold hover:underline">appareils pris en charge</Link>.
-                </p>
-              </div>
+              {faqItems.map((item) => (
+                <div key={item.q} className="bg-brand-offwhite border border-brand-gray-border p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-3 text-brand-gold">{item.q}</h3>
+                  <p className="text-brand-gray">{item.a}</p>
+                </div>
+              ))}
             </div>
 
             <div className="mt-12 text-center">
@@ -320,6 +517,8 @@ const IPTVAbonnement = () => {
           </div>
         </section>
 
+        <RelatedGuides />
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-br from-brand-offwhite to-white">
           <div className="container mx-auto px-4 max-w-4xl text-center">
@@ -327,7 +526,7 @@ const IPTVAbonnement = () => {
               Prêt à Commencer avec l'IPTV ?
             </h2>
             <p className="text-xl text-brand-gray mb-8">
-              Choisissez votre <Link to="/abonnement-iptv" className="text-brand-gold underline font-semibold">abonnement IPTV</Link>,
+              Choisissez votre formule sur la page <Link to="/tarifs" className="text-brand-gold underline font-semibold">tarifs IPTV</Link>,
               payez par Binance Pay ou PayPal, et commencez à regarder sous 5 minutes.
             </p>
             <a

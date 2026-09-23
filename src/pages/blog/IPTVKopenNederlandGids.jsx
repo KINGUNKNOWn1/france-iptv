@@ -2,12 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaCheckCircle, FaShieldAlt, FaTv, FaEuroSign, FaWhatsapp, FaPlayCircle } from 'react-icons/fa';
+import { Helmet } from 'react-helmet-async';
 import SEO from '../../components/SEO';
+import { blogPostSchemas } from '../../data/blogPosts';
 
 const IPTVKopenNederlandGids = () => {
   const seoData = {
-    title: 'Acheter IPTV en France 2024 : Guide Complet + Meilleurs Fournisseurs',
-    description: "Guide complet pour acheter un IPTV en France en 2024. Découvrez les meilleurs fournisseurs, des prix dès 3,75€/mois, des conseils d'installation et tout ce qu'il faut savoir sur les abonnements IPTV.",
+    title: 'Acheter IPTV en France 2026 : Guide et Meilleurs Fournisseurs',
+    description: "Guide complet pour acheter un IPTV en France en 2026 : meilleurs fournisseurs, prix dès 3,75€/mois, installation et conseils.",
     keywords: 'acheter iptv france, abonnement iptv france, meilleur fournisseur iptv, tarifs iptv, commander iptv',
     ogType: 'article',
     canonicalPath: '/blog/acheter-iptv-france-guide-complet'
@@ -16,7 +18,7 @@ const IPTVKopenNederlandGids = () => {
   const tableOfContents = [
     { title: "Qu'est-ce que l'IPTV ?", id: 'wat-is-iptv' },
     { title: 'Pourquoi Acheter un IPTV ?', id: 'waarom-iptv' },
-    { title: 'Meilleurs Fournisseurs IPTV 2024', id: 'beste-aanbieders' },
+    { title: 'Meilleurs Fournisseurs IPTV 2026', id: 'beste-aanbieders' },
     { title: 'Comparer les Tarifs IPTV', id: 'prijzen' },
     { title: 'Comment Commander un IPTV ?', id: 'bestellen' },
     { title: 'Points de Vigilance', id: 'waar-op-letten' },
@@ -66,6 +68,11 @@ const IPTVKopenNederlandGids = () => {
   return (
     <>
       <SEO {...seoData} />
+      <Helmet>
+        {blogPostSchemas('/blog/acheter-iptv-france-guide-complet').map((schema, i) => (
+          <script key={i} type="application/ld+json">{JSON.stringify(schema)}</script>
+        ))}
+      </Helmet>
       <div className="min-h-screen bg-white text-brand-black pt-20">
         {/* Hero */}
         <section className="py-16 bg-gradient-to-br from-[#141311] via-[#201C18] to-[#141311] text-white">
@@ -76,7 +83,7 @@ const IPTVKopenNederlandGids = () => {
               className="text-center"
             >
               <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6">
-                Acheter IPTV en France 2024 : <span className="text-[#7B9FD9]">Guide Complet</span>
+                Acheter IPTV en France 2026 : <span className="text-[#7B9FD9]">Guide Complet</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8">
                 Tout ce qu'il faut savoir sur l'achat d'un IPTV en France. Meilleurs fournisseurs, tarifs, conseils et plus.
@@ -156,7 +163,7 @@ const IPTVKopenNederlandGids = () => {
 
             {/* Beste Aanbieders */}
             <section id="beste-aanbieders" className="mb-16">
-              <h2 className="text-3xl font-heading font-bold mb-6 text-brand-gold">Meilleurs Fournisseurs IPTV France 2024</h2>
+              <h2 className="text-3xl font-heading font-bold mb-6 text-brand-gold">Meilleurs Fournisseurs IPTV France 2026</h2>
               <p className="text-brand-gray mb-8">
                 Nous avons testé et comparé les meilleurs fournisseurs IPTV en France selon le prix, l'offre de chaînes, la qualité et le service client :
               </p>
@@ -412,15 +419,15 @@ const IPTVKopenNederlandGids = () => {
           <div className="container mx-auto px-4 max-w-4xl">
             <h2 className="text-2xl font-bold mb-6 text-brand-black">📖 Articles Similaires</h2>
             <div className="grid md:grid-cols-2 gap-4">
-              <Link to="/blog/meilleures-applications-iptv-2024" className="bg-white border border-brand-gray-border p-4 rounded-lg hover:border-brand-gold transition-colors">
-                <h3 className="font-bold mb-2 text-brand-black">Meilleures Applications IPTV 2024</h3>
+              <Link to="/blog/meilleures-applications-iptv" className="bg-white border border-brand-gray-border p-4 rounded-lg hover:border-brand-gold transition-colors">
+                <h3 className="font-bold mb-2 text-brand-black">Meilleures Applications IPTV 2026</h3>
                 <p className="text-sm text-brand-gray">Découvrez les applications qui fonctionnent le mieux →</p>
               </Link>
               <Link to="/blog/iptv-legal-en-france" className="bg-white border border-brand-gray-border p-4 rounded-lg hover:border-brand-gold transition-colors">
                 <h3 className="font-bold mb-2 text-brand-black">L'IPTV est-il Légal en France ?</h3>
                 <p className="text-sm text-brand-gray">Tout sur la légalité de l'IPTV →</p>
               </Link>
-              <Link to="/blog/installer-iptv-samsung-tv" className="bg-white border border-brand-gray-border p-4 rounded-lg hover:border-brand-gold transition-colors">
+              <Link to="/appareils/samsung-tv" className="bg-white border border-brand-gray-border p-4 rounded-lg hover:border-brand-gold transition-colors">
                 <h3 className="font-bold mb-2 text-brand-black">Installer l'IPTV sur Samsung TV</h3>
                 <p className="text-sm text-brand-gray">Guide d'installation étape par étape →</p>
               </Link>

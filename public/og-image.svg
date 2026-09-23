@@ -1,6 +1,6 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
   <!-- SEO Metadata -->
-  <title>France IPTV - Service de Streaming Premium | 30 500+ Chaînes | Qualité 4K</title>
+  <title>IPTV France - Abonnement IPTV Premium | 30 500+ Chaînes | Qualité 4K</title>
   <desc>France IPTV propose des abonnements IPTV premium en France avec 30 500+ chaînes en direct, 150 000+ films et séries en qualité 4K UHD. Service fiable avec 99,9% de disponibilité, support francophone 24/7, compatible avec tous les appareils.</desc>
   <metadata>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -78,9 +78,9 @@
   <!-- CTA Badge -->
   <rect x="850" y="450" width="280" height="100" rx="20" fill="url(#goldGradient)"/>
   <text x="990" y="490" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1C1B19" text-anchor="middle">
-    Dès 23 €
+    Dès 8 €
   </text>
   <text x="990" y="525" font-family="Arial, sans-serif" font-size="18" fill="#1C1B19" text-anchor="middle">
-    3 mois
+    par mois
   </text>
 </svg>

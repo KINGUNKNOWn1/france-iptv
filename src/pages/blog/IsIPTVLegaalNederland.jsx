@@ -2,12 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaCheckCircle, FaShieldAlt, FaBalanceScale, FaExclamationTriangle, FaWhatsapp } from 'react-icons/fa';
+import { Helmet } from 'react-helmet-async';
 import SEO from '../../components/SEO';
+import { blogPostSchemas } from '../../data/blogPosts';
 
 const IsIPTVLegaalNederland = () => {
   const seoData = {
-    title: "IPTV Légal en France 2024 ? Informations Juridiques & Réglementation",
-    description: "L'IPTV est-il légal en France ? Découvrez la réglementation, les risques et comment utiliser l'IPTV en toute sécurité. Informations juridiques actualisées sur l'IPTV en 2024.",
+    title: "IPTV Légal en France 2026 ? Réglementation et Risques",
+    description: "L'IPTV est-il légal en France ? Réglementation, risques et bonnes pratiques pour utiliser l'IPTV en toute sécurité en 2026.",
     keywords: 'iptv legal, iptv legal france, reglementation iptv, iptv juridique, utiliser iptv en securite',
     ogType: 'article',
     canonicalPath: '/blog/iptv-legal-en-france'
@@ -16,6 +18,11 @@ const IsIPTVLegaalNederland = () => {
   return (
     <>
       <SEO {...seoData} />
+      <Helmet>
+        {blogPostSchemas('/blog/iptv-legal-en-france').map((schema, i) => (
+          <script key={i} type="application/ld+json">{JSON.stringify(schema)}</script>
+        ))}
+      </Helmet>
       <div className="min-h-screen bg-white text-brand-black pt-20">
         <section className="py-16 bg-gradient-to-br from-[#141311] via-[#141311] to-[#141311] text-white">
           <div className="container mx-auto px-4 max-w-4xl">
@@ -294,8 +301,8 @@ const IsIPTVLegaalNederland = () => {
                 <h3 className="font-bold mb-2 text-brand-black">Guide Complet Acheter IPTV en France</h3>
                 <p className="text-sm text-brand-gray">Tout savoir sur l'achat d'IPTV en France →</p>
               </Link>
-              <Link to="/blog/meilleures-applications-iptv-2024" className="bg-white border border-brand-gray-border p-4 rounded-lg hover:border-brand-gold transition-colors">
-                <h3 className="font-bold mb-2 text-brand-black">Meilleures Applications IPTV 2024</h3>
+              <Link to="/blog/meilleures-applications-iptv" className="bg-white border border-brand-gray-border p-4 rounded-lg hover:border-brand-gold transition-colors">
+                <h3 className="font-bold mb-2 text-brand-black">Meilleures Applications IPTV 2026</h3>
                 <p className="text-sm text-brand-gray">Top applications pour l'IPTV →</p>
               </Link>
             </div>

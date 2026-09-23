@@ -2,12 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaTv, FaFootballBall, FaFilm, FaNewspaper, FaChild, FaMusic, FaWhatsapp } from 'react-icons/fa';
+import { Helmet } from 'react-helmet-async';
 import SEO from '../../components/SEO';
+import { blogPostSchemas } from '../../data/blogPosts';
 
 const NederlandseIPTVKanalenLijst = () => {
   const seoData = {
-    title: 'Liste des Chaînes IPTV Françaises 2024 : 80+ Chaînes FR',
-    description: 'Liste complète des chaînes IPTV françaises 2024. TF1, France Télévisions, M6, chaînes régionales et sportives. Toutes les 80+ chaînes françaises en un coup d\'œil.',
+    title: 'Liste des Chaînes IPTV Françaises 2026 : 80+ Chaînes FR',
+    description: 'Liste complète des chaînes IPTV françaises 2026. TF1, France Télévisions, M6, chaînes régionales et sportives. Toutes les 80+ chaînes françaises en un coup d\'œil.',
     keywords: 'chaines iptv francaises, chaines tf1, france televisions iptv, m6 iptv, liste chaines francaises tv',
     ogType: 'article',
     canonicalPath: '/blog/liste-chaines-francaises-iptv'
@@ -59,12 +61,17 @@ const NederlandseIPTVKanalenLijst = () => {
   return (
     <>
       <SEO {...seoData} />
+      <Helmet>
+        {blogPostSchemas('/blog/liste-chaines-francaises-iptv').map((schema, i) => (
+          <script key={i} type="application/ld+json">{JSON.stringify(schema)}</script>
+        ))}
+      </Helmet>
       <div className="min-h-screen bg-white text-brand-black pt-20">
         <section className="py-16 bg-gradient-to-br from-[#141311] via-[#201C18] to-[#141311] text-white">
           <div className="container mx-auto px-4 max-w-4xl">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center">
               <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6">
-                🇫🇷 Liste des <span className="text-[#7B9FD9]">Chaînes IPTV Françaises</span> 2024
+                🇫🇷 Liste des <span className="text-[#7B9FD9]">Chaînes IPTV Françaises</span> 2026
               </h1>
               <p className="text-xl text-gray-300 mb-4">Vue d'ensemble complète des 80+ chaînes françaises disponibles via IPTV</p>
               <p className="text-sm text-gray-400">📅 Septembre 2026 • 📺 80+ Chaînes</p>
@@ -138,7 +145,7 @@ const NederlandseIPTVKanalenLijst = () => {
             <h2 className="text-2xl font-bold mb-6 text-brand-black">📖 Articles Similaires</h2>
             <div className="grid md:grid-cols-2 gap-4">
               <Link to="/blog/acheter-iptv-france-guide-complet" className="bg-white border border-brand-gray-border p-4 rounded-lg hover:border-brand-gold"><h3 className="font-bold mb-2 text-brand-black">Acheter IPTV en France</h3><p className="text-sm text-brand-gray">Guide complet →</p></Link>
-              <Link to="/blog/meilleures-applications-iptv-2024" className="bg-white border border-brand-gray-border p-4 rounded-lg hover:border-brand-gold"><h3 className="font-bold mb-2 text-brand-black">Meilleures Applications IPTV</h3><p className="text-sm text-brand-gray">Avis sur les applications →</p></Link>
+              <Link to="/blog/meilleures-applications-iptv" className="bg-white border border-brand-gray-border p-4 rounded-lg hover:border-brand-gold"><h3 className="font-bold mb-2 text-brand-black">Meilleures Applications IPTV</h3><p className="text-sm text-brand-gray">Avis sur les applications →</p></Link>
             </div>
           </div>
         </section>

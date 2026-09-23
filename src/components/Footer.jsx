@@ -13,6 +13,17 @@ const Footer = () => {
     { name: 'Appareils', href: '/appareils' },
     { name: 'À Propos', href: '/a-propos' },
     { name: 'FAQ', href: '/faq' },
+    { name: 'Contact', href: '/contact' },
+  ];
+
+  const guideLinks = [
+    { name: 'Abonnement IPTV', href: '/abonnement-iptv' },
+    { name: 'IPTV France', href: '/iptv-france' },
+    { name: 'IPTV sans engagement', href: '/iptv-sans-engagement' },
+    { name: 'IPTV Belgique', href: '/iptv-belgique' },
+    { name: 'IPTV sur Freebox', href: '/appareils/freebox' },
+    { name: 'IPTV ne fonctionne plus', href: '/blog/iptv-ne-fonctionne-plus' },
+    { name: 'Blog IPTV', href: '/blog' },
   ];
 
   const legalLinks = [
@@ -26,7 +37,7 @@ const Footer = () => {
     <footer className="bg-brand-offwhite border-t border-brand-gray-border">
       <div className="container-custom section-padding">
         {/* Main Footer Content */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-2 mb-4">
@@ -46,6 +57,24 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
+                  <Link
+                    to={link.href}
+                    className="text-brand-gray hover:text-primary-600 transition-colors flex items-center gap-2"
+                  >
+                    <span className="w-1.5 h-1.5 bg-primary-500 rounded-full"></span>
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Guides */}
+          <div>
+            <h3 className="text-xl font-bold mb-4 text-brand-black">Guides IPTV</h3>
+            <ul className="space-y-3">
+              {guideLinks.map((link) => (
+                <li key={link.href}>
                   <Link
                     to={link.href}
                     className="text-brand-gray hover:text-primary-600 transition-colors flex items-center gap-2"

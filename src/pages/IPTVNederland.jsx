@@ -36,8 +36,8 @@ const IPTVNederland = () => {
   return (
     <>
       <SEO
-        title="IPTV en France | Fournisseur IPTV Fiable dans Tout le Pays"
-        description="France IPTV livre un abonnement IPTV fiable partout en France : de Paris à Marseille, de Lyon à Toulouse. 30 500+ chaînes dès 8€, actif en 5 minutes."
+        title="IPTV France 2026 : Fournisseur IPTV Fiable dès 8€ | France IPTV"
+        description="IPTV France : abonnement IPTV fiable partout en France, de Paris à Marseille, de Lyon à Toulouse. 30 500+ chaînes, HD/4K, dès 8€/mois, actif en 5 minutes."
         keywords="iptv france, fournisseur iptv france, iptv français, meilleur iptv france"
         canonicalPath="/iptv-france"
       />

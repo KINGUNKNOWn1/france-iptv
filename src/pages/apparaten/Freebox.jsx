@@ -220,7 +220,7 @@ const Freebox = () => {
   return (
     <>
       <Helmet>
-        <title>Installer l'IPTV sur Freebox (Pop, Delta, Révolution) 2026 | France IPTV</title>
+        <title>Installer l'IPTV sur Freebox (Pop, Delta, Ultra) | France IPTV</title>
         <meta
           name="description"
           content="Installer l'IPTV sur Freebox Pop, Mini 4K, Ultra, Delta ou Révolution en 5 minutes ✓ Guide étape par étape ✓ Tous modèles ✓ Support francophone."
@@ -572,11 +572,9 @@ const Freebox = () => {
                   <h3 className="font-bold text-lg pr-4 text-brand-black">{faq.name}</h3>
                   {openFaq === index ? <ChevronUp className="w-6 h-6 text-blue-500 flex-shrink-0" /> : <ChevronDown className="w-6 h-6 text-brand-gray flex-shrink-0" />}
                 </button>
-                {openFaq === index && (
-                  <div className="px-6 pb-6 pt-0">
+                <div hidden={openFaq !== index} className="px-6 pb-6 pt-0">
                     <p className="text-brand-gray leading-relaxed">{faq.acceptedAnswer.text}</p>
                   </div>
-                )}
               </motion.div>
             ))}
           </div>

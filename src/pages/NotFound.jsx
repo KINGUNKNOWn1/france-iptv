@@ -2,9 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Home, Search, ArrowLeft, Tv } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const NotFound = () => {
   return (
+    <>
+    <SEO
+      title="Page introuvable (404) | France IPTV"
+      description="Cette page n'existe pas ou a été déplacée. Retrouvez nos abonnements IPTV, tarifs et guides d'installation."
+      canonicalPath={null}
+      noindex
+    />
     <div className="min-h-screen bg-white flex items-center justify-center px-4">
       <div className="max-w-2xl w-full text-center">
         {/* Animated 404 */}
@@ -143,6 +151,7 @@ const NotFound = () => {
         </motion.div>
       </div>
     </div>
+    </>
   );
 };
 

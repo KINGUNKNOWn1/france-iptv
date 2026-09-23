@@ -89,7 +89,7 @@ const IPTVHolland = () => {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'IPTV Belgique - Fournisseur IPTV Francophone | France IPTV',
-    description: "IPTV Belgique : 15 000+ clients francophones ✓ Chaînes belges ✓ Paiement Bancontact ✓ Serveurs en Europe ✓ Support francophone. Dès 4€/mois.",
+    description: "IPTV Belgique : 15 000+ clients francophones ✓ Chaînes belges ✓ Paiement Bancontact ✓ Serveurs en Europe ✓ Support francophone.",
     url: 'https://franceiptv.stream/iptv-belgique'
   };
 
@@ -247,10 +247,10 @@ const IPTVHolland = () => {
   return (
     <>
       <Helmet>
-        <title>IPTV Belgique - Fournisseur IPTV Francophone dès 4€/mois | France IPTV</title>
+        <title>IPTV Belgique : Fournisseur IPTV Francophone | France IPTV</title>
         <meta
           name="description"
-          content="IPTV Belgique : 15 000+ clients francophones ✓ Chaînes belges (La Une, RTL-TVI, Club RTL) ✓ Paiement Bancontact ✓ Serveurs en Europe ✓ Support francophone. Dès 4€/mois."
+          content="IPTV Belgique : 15 000+ clients francophones ✓ Chaînes belges (La Une, RTL-TVI, Club RTL) ✓ Paiement Bancontact ✓ Serveurs en Europe ✓ Support francophone."
         />
         <meta
           name="keywords"

@@ -1,5 +1,6 @@
 import React, { useState, Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   Tv,
@@ -267,6 +268,16 @@ const SamsungTV = () => {
       problem: "L'application plante ou se ferme automatiquement",
       solution: "Mettez à jour le firmware de votre Samsung TV : Paramètres > Assistance > Mise à jour logicielle > Mettre à jour maintenant. Supprimez complètement l'application IPTV et réinstallez-la. Videz le cache via Paramètres > Applications > Application IPTV > Stockage.",
       icon: Zap
+    },
+    {
+      problem: "IPTV Smarters Pro ne fonctionne plus sur ma TV Samsung",
+      solution: "Après une mise à jour du firmware, l'application peut cesser de s'ouvrir ou afficher un écran noir. Supprimez-la puis réinstallez-la depuis le Smart Hub, vérifiez que la date et l'heure de la TV sont en mode automatique (Paramètres > Général > Gestionnaire système > Heure), puis relancez la TV en la débranchant 30 secondes. Si l'application n'est plus proposée pour votre modèle, utilisez une autre application compatible Tizen (voir la liste plus haut) avec le même abonnement.",
+      icon: Zap
+    },
+    {
+      problem: "Smarters Pro affiche « échec de connexion » ou « identifiants incorrects »",
+      solution: "Ressaisissez avec soin le nom d'utilisateur, le mot de passe et l'URL du serveur reçus par WhatsApp, sans espace au début ni à la fin (le clavier de la TV en ajoute facilement). Vérifiez que votre abonnement est actif et que vous n'utilisez pas plus de 4 écrans en même temps. Si le message persiste, envoyez-nous une capture d'écran via WhatsApp.",
+      icon: Shield
     }
   ];
 
@@ -334,7 +345,7 @@ const SamsungTV = () => {
         <title>Installer l'IPTV sur Samsung TV - Guide 2026 | France IPTV</title>
         <meta
           name="description"
-          content="Installer l'IPTV sur Samsung Smart TV en 5 minutes ✓ Guide étape par étape ✓ Tous modèles Samsung depuis 2016 ✓ Prise en charge 4K ✓ Support francophone. Fonctionne à coup sûr !"
+          content="Installer l'IPTV sur Samsung Smart TV en 5 minutes ✓ Guide étape par étape ✓ Tous modèles Samsung depuis 2016 ✓ Prise en charge 4K ✓ Support francophone."
         />
         <meta
           name="keywords"
@@ -708,13 +719,13 @@ const SamsungTV = () => {
 
             {/* Main title "Oplossen" */}
             <div className="relative z-10">
-              <h2 className="text-5xl md:text-7xl font-bold mb-4">
+              <h2 className="text-4xl md:text-6xl font-bold mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-blue-600">
-                  Solutions
+                  IPTV Samsung TV ne fonctionne plus : solutions
                 </span>
               </h2>
               <p className="text-xl text-brand-gray max-w-2xl mx-auto">
-                Problèmes courants et leurs solutions
+                Smarters Pro qui ne s'ouvre plus, écran noir, échec de connexion, images saccadées : les pannes IPTV les plus courantes sur Samsung TV. Pour un diagnostic général, consultez aussi notre guide <Link to="/blog/iptv-ne-fonctionne-plus" className="underline text-brand-gold">IPTV ne fonctionne plus</Link>.
               </p>
             </div>
           </motion.div>
@@ -805,13 +816,11 @@ const SamsungTV = () => {
                     <ChevronDown className="w-6 h-6 text-brand-gray flex-shrink-0" />
                   )}
                 </button>
-                {openFaq === index && (
-                  <div className="px-6 pb-6 pt-0">
+                <div hidden={openFaq !== index} className="px-6 pb-6 pt-0">
                     <p className="text-brand-gray leading-relaxed">
                       {faq.acceptedAnswer.text}
                     </p>
                   </div>
-                )}
               </motion.div>
             ))}
           </div>

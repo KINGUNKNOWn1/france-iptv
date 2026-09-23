@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { FaChevronDown, FaWhatsapp } from 'react-icons/fa';
 
 const FAQ = () => {
@@ -99,21 +99,17 @@ const FAQ = () => {
                 </motion.div>
               </button>
 
-              <AnimatePresence>
-                {openIndex === index && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="overflow-hidden"
-                  >
-                    <div className="px-6 pb-6 text-brand-gray leading-relaxed">
-                      {faq.answer}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              {/* Always rendered (collapsed to 0 height) so answers are in the HTML crawlers see. */}
+              <motion.div
+                initial={false}
+                animate={{ height: openIndex === index ? 'auto' : 0, opacity: openIndex === index ? 1 : 0 }}
+                transition={{ duration: 0.3 }}
+                className="overflow-hidden"
+              >
+                <div className="px-6 pb-6 text-brand-gray leading-relaxed">
+                  {faq.answer}
+                </div>
+              </motion.div>
             </motion.div>
           ))}
         </div>

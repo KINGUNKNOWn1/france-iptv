@@ -2,66 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaArrowRight, FaClock, FaUser } from 'react-icons/fa';
+import { blogPosts as posts, formatPostDate } from '../data/blogPosts';
 
-const Blog = () => {
-  const posts = [
-    {
-      id: 1,
-      title: 'Acheter IPTV en France : Guide Complet + Meilleurs Fournisseurs',
-      excerpt: "Guide complet pour acheter un IPTV en France. Meilleurs fournisseurs, prix, conseils d'installation et tout ce qu'il faut savoir sur les abonnements IPTV.",
-      image: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=800&q=80',
-      author: 'Équipe France IPTV',
-      date: '5 mars 2026',
-      readTime: '8 min',
-      category: 'Guide',
-      link: '/blog/acheter-iptv-france-guide-complet'
-    },
-    {
-      id: 2,
-      title: 'Meilleures Applications IPTV : Top 10 pour Android, iOS & Smart TV',
-      excerpt: "Comparatif des meilleures applications IPTV : IPTV Smarters, TiviMate, GSE Smart IPTV et plus. Conseils d'installation et avis.",
-      image: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80',
-      author: 'Équipe France IPTV',
-      date: '1 mars 2026',
-      readTime: '6 min',
-      category: 'Applications',
-      link: '/blog/meilleures-applications-iptv-2024'
-    },
-    {
-      id: 3,
-      title: "Installer l'IPTV sur Samsung TV : Guide Complet",
-      excerpt: "Apprenez à installer l'IPTV sur votre Samsung Smart TV en 5 minutes. Guide étape par étape pour Tizen OS et Smart Hub.",
-      image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=800&q=80',
-      author: 'Équipe France IPTV',
-      date: '25 février 2026',
-      readTime: '5 min',
-      category: 'Tutoriel',
-      link: '/blog/installer-iptv-samsung-tv'
-    },
-    {
-      id: 4,
-      title: 'Liste des Chaînes IPTV Françaises : 80+ Chaînes FR',
-      excerpt: 'Liste complète des chaînes IPTV françaises. TF1, France Télévisions, M6, chaînes régionales et sportives.',
-      image: 'https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=800&q=80',
-      author: 'Équipe France IPTV',
-      date: '20 février 2026',
-      readTime: '7 min',
-      category: 'Chaînes',
-      link: '/blog/liste-chaines-francaises-iptv'
-    },
-    {
-      id: 5,
-      title: 'IPTV Légal en France ? Informations Juridiques & Réglementation',
-      excerpt: "L'IPTV est-il légal en France ? Réglementation, risques et comment utiliser l'IPTV en toute sécurité.",
-      image: 'https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=800&q=80',
-      author: 'Équipe France IPTV',
-      date: '15 février 2026',
-      readTime: '6 min',
-      category: 'Juridique',
-      link: '/blog/iptv-legal-en-france'
-    }
-  ];
-
+const Blog = ({ showAllLink = true }) => {
   return (
     <section id="blog" className="py-20 bg-gradient-to-b from-[#141311] via-[#201C18] to-[#141311]">
       <div className="container-custom">
@@ -84,7 +27,7 @@ const Blog = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map((post, index) => (
             <motion.article
-              key={post.id}
+              key={post.link}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -120,7 +63,7 @@ loading="lazy" decoding="async"                   src={post.image}
                   </div>
                   <div className="flex items-center gap-1">
                     <FaUser className="text-xs" />
-                    <span>{post.author}</span>
+                    <span>Équipe France IPTV</span>
                   </div>
                 </div>
 
@@ -136,7 +79,7 @@ loading="lazy" decoding="async"                   src={post.image}
 
                 {/* Footer */}
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-400">{post.date}</span>
+                  <span className="text-sm text-gray-400">{formatPostDate(post.datePublished)}</span>
                   <span className="flex items-center gap-2 text-blue-400 group-hover:text-white font-semibold text-sm group-hover:gap-3 transition-all">
                     Lire la suite
                     <FaArrowRight className="text-xs" />
@@ -147,6 +90,15 @@ loading="lazy" decoding="async"                   src={post.image}
             </motion.article>
           ))}
         </div>
+
+        {showAllLink && (
+          <div className="text-center mt-12">
+            <Link to="/blog" className="inline-flex items-center gap-2 text-blue-400 hover:text-white font-semibold">
+              Voir tous les articles du blog IPTV
+              <FaArrowRight className="text-xs" />
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

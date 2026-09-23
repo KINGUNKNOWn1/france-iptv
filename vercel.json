@@ -4,6 +4,7 @@
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "framework": "vite",
+  "trailingSlash": false,
   "rewrites": [
     {
       "source": "/(.*)",
@@ -62,6 +63,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/meilleures-applications-iptv-2024",
+      "destination": "/blog/meilleures-applications-iptv",
+      "permanent": true
+    },
+    {
+      "source": "/blog/installer-iptv-samsung-tv",
+      "destination": "/appareils/samsung-tv",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
@@ -72,5 +83,8 @@
       "destination": "https://franceiptv.stream/:path*",
       "permanent": true
     }
-  ]
+  ],
+  "git": {
+    "deploymentEnabled": false
+  }
 }

@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Logo from './Logo';
+
+// Hash links to homepage sections need a full <a>; real pages use client-side routing.
+const NavLink = ({ href, ...props }) =>
+  href.includes('#') ? <a href={href} {...props} /> : <Link to={href} {...props} />;
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,13 +20,15 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Real page URLs (not homepage #anchors) so crawlers follow the menu to
+  // the hub pages; only sections without their own page keep an anchor.
   const navItems = [
-    { name: 'Chaînes', href: '/#features' },
-    { name: 'Tarifs', href: '/#pricing' },
-    { name: 'Blog', href: '/#blog' },
-    { name: 'Comparatif IPTV', href: '/#comparison' },
+    { name: 'Chaînes', href: '/chaines' },
+    { name: 'Tarifs', href: '/tarifs' },
+    { name: 'Appareils', href: '/appareils' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Avis clients', href: '/#reviews' },
-    { name: 'À propos', href: '/#about' },
+    { name: 'À propos', href: '/a-propos' },
   ];
 
   const linkColor = scrolled ? 'text-brand-gray hover:text-brand-black' : 'text-white/90 hover:text-white';
@@ -41,13 +48,13 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
-              <a
+              <NavLink
                 key={item.name}
                 href={item.href}
                 className={`${linkColor} transition-colors duration-200 text-sm font-medium`}
               >
                 {item.name}
-              </a>
+              </NavLink>
             ))}
             <a
               href="/#pricing"
@@ -72,14 +79,14 @@ const Navigation = () => {
           <div className="lg:hidden pb-4 bg-white/95 backdrop-blur-lg rounded-b-xl shadow-md">
             <div className="flex flex-col gap-4 px-2 pt-2">
               {navItems.map((item) => (
-                <a
+                <NavLink
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
                   className="text-brand-gray hover:text-brand-black transition-colors duration-200 py-2"
                 >
                   {item.name}
-                </a>
+                </NavLink>
               ))}
               <a
                 href="/#pricing"

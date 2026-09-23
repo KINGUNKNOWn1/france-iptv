@@ -38,6 +38,21 @@
       gtag('config', 'G-XXXXXXXXXX');
     </script>
 
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1123048390387673');
+    fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+
     <!-- Structured Data: Organization is valid on every page (describes the
          publisher, not page-specific content), so it's safe to ship
          statically here. Product/FAQPage schemas are homepage-specific
@@ -50,7 +65,7 @@
       "name": "France IPTV",
       "url": "https://franceiptv.stream",
       "logo": "https://franceiptv.stream/logo.svg",
-      "description": "France IPTV est le meilleur fournisseur IPTV en France. Abonnement IPTV légal avec 30 500+ chaînes et 150 000+ films et séries.",
+      "description": "France IPTV : abonnement IPTV en France avec 30 500+ chaînes, films et séries en HD/4K et support francophone.",
       "address": { "@type": "PostalAddress", "addressCountry": "FR" },
       "contactPoint": {
         "@type": "ContactPoint",
@@ -59,8 +74,22 @@
       }
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "France IPTV",
+      "url": "https://franceiptv.stream",
+      "inLanguage": "fr-FR",
+      "publisher": { "@type": "Organization", "name": "France IPTV", "url": "https://franceiptv.stream" }
+    }
+    </script>
   </head>
   <body>
+    <!-- Meta Pixel no-JS fallback: must live in <body>; an <img> in <head> ends the head early. -->
+    <noscript><img height="1" width="1" alt="" style="display:none"
+    src="https://www.facebook.com/tr?id=1123048390387673&ev=PageView&noscript=1"
+    /></noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
     <!-- Analytics Tracking -->

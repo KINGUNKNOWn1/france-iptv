@@ -31,7 +31,7 @@ const IPTVKopen = () => {
   const features = [
     'Acheter IPTV sans tracas - paiement par Binance Pay ou PayPal',
     'Aucune reconduction automatique ni frais caché',
-    "Regardez sur un nombre illimité d'appareils à la fois",
+    "Regardez sur 4 appareils simultanément",
     '150 000+ films et séries à la demande',
     'EPG (guide électronique des programmes) inclus',
     'Fonction Catch-up TV pour les programmes manqués',
@@ -65,8 +65,8 @@ const IPTVKopen = () => {
   return (
     <>
       <SEO
-        title="Acheter IPTV en France | Abonnement IPTV Premium dès 45€/an - France IPTV"
-        description="Acheter IPTV en France ? Choisissez France IPTV pour 30 500+ chaînes, qualité 4K, support francophone 24/7. Aucune reconduction automatique. Commandez directement via Binance Pay ou PayPal."
+        title="Acheter IPTV en France : Abonnement Premium dès 8€ | France IPTV"
+        description="Acheter IPTV en France ? 30 500+ chaînes, qualité 4K, support francophone 24/7, sans reconduction automatique. Paiement Binance Pay ou PayPal."
         keywords="acheter iptv, acheter iptv france, acheter abonnement iptv, fournisseur iptv, iptv français"
         canonicalPath="/acheter-iptv"
       />

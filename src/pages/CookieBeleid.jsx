@@ -62,7 +62,7 @@ const CookieBeleid = () => {
     <>
       <Helmet>
         <title>Politique de Cookies - France IPTV</title>
-        <meta name="description" content="Politique de cookies de France IPTV. Informations sur les cookies que nous utilisons et pourquoi." />
+        <meta name="description" content="Politique de cookies de France IPTV : quels cookies nous utilisons (essentiels, analytiques, marketing), pourquoi, et comment gérer votre consentement." />
         <link rel="canonical" href="https://franceiptv.stream/politique-de-cookies" />
       </Helmet>
 

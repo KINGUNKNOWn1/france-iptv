@@ -12,6 +12,14 @@ window.addEventListener('vite:preloadError', (event) => {
   window.location.reload();
 });
 
+// Pages are prerendered (see scripts/prerender.mjs) with their head tags already
+// in the HTML. Remove them before React mounts so Helmet doesn't leave duplicates.
+document.head
+  .querySelectorAll(
+    'title, link[rel="canonical"], meta[name="description"], meta[name="robots"], meta[name="language"], meta[name="author"], meta[name^="geo."], meta[property^="og:"], meta[property^="twitter:"]'
+  )
+  .forEach((el) => el.remove());
+
 // Initialize Web Vitals monitoring
 initWebVitals();
 

@@ -123,7 +123,7 @@ const Apparaten = () => {
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Regardez l'IPTV sur votre <strong>Smart TV, smartphone, tablette, ordinateur</strong> et plus.
-                Compatible avec 99 % des appareils. Nombre illimité d'appareils simultanés.
+                Compatible avec 99 % des appareils. Jusqu'à 4 appareils simultanés.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <a
@@ -463,7 +463,7 @@ const Apparaten = () => {
               </a>
             </div>
             <p className="text-sm text-brand-gray mt-6">
-              📱 Tous les appareils • 🔄 Nombre illimité • ⚡ Installation facile • 🇫🇷 Support francophone
+              📱 Tous les appareils • 🔄 4 écrans simultanés • ⚡ Installation facile • 🇫🇷 Support francophone
             </p>
           </div>
         </section>

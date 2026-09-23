@@ -142,10 +142,10 @@ const IPTVZonderContract = () => {
   return (
     <>
       <Helmet>
-        <title>IPTV Sans Engagement - Aucune Obligation dès 3,75€/mois | France IPTV</title>
+        <title>IPTV Sans Engagement : Aucune Obligation dès 8€ | France IPTV</title>
         <meta
           name="description"
-          content="IPTV sans engagement dès 8€. Aucune reconduction automatique, aucun préavis. Arrêtez quand vous voulez. 30 500+ chaînes, paiement Binance Pay ou PayPal. Commandez sans obligation ➜"
+          content="IPTV sans engagement dès 8€. Aucune reconduction automatique, arrêtez quand vous voulez. 30 500+ chaînes, paiement Binance Pay ou PayPal."
         />
         <meta
           name="keywords"
