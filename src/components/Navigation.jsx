@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Logo from './Logo';
@@ -11,6 +11,11 @@ const NavLink = ({ href, ...props }) =>
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  // The transparent, white-text bar only works over a dark hero that starts at
+  // the very top. Other pages start with a white strip, where it was invisible.
+  const { pathname } = useLocation();
+  const overDarkHero = pathname === '/' || pathname === '/acheter-iptv';
+  const solid = scrolled || !overDarkHero;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,19 +36,19 @@ const Navigation = () => {
     { name: 'À propos', href: '/a-propos' },
   ];
 
-  const linkColor = scrolled ? 'text-brand-gray hover:text-brand-black' : 'text-white/90 hover:text-white';
-  const iconColor = scrolled ? 'text-brand-black' : 'text-white';
+  const linkColor = solid ? 'text-brand-gray hover:text-brand-black' : 'text-white/90 hover:text-white';
+  const iconColor = solid ? 'text-brand-black' : 'text-white';
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 backdrop-blur-lg shadow-md' : 'bg-transparent'
+        solid ? 'bg-white/95 backdrop-blur-lg shadow-md' : 'bg-transparent'
       }`}
     >
       <div className="container-custom px-4 md:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Logo textColor={scrolled ? 'black' : 'white'} size="sm" showTagline={false} />
+          <Logo textColor={solid ? 'black' : 'white'} size="sm" showTagline={false} />
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">

@@ -89,6 +89,9 @@ for (const route of routes) {
     html = '<!DOCTYPE html>' + html.replace(/^<!DOCTYPE html>/i, '');
     // Drop transient UI that must not be baked into static HTML.
     html = html.replace(/<script[^>]+src="https:\/\/(www\.googletagmanager\.com|analytics-backend[^"]*)"[^>]*><\/script>/g, '');
+    // The Meta Pixel snippet injects fbevents.js at runtime; a baked-in copy can
+    // run before the snippet defines fbq ("fbq is not defined") and loads twice.
+    html = html.replace(/<script[^>]+src="https:\/\/connect\.facebook\.net\/[^"]*"[^>]*><\/script>/g, '');
     const outDir = route === '/' ? dist : path.join(dist, route);
     fs.mkdirSync(outDir, { recursive: true });
     fs.writeFileSync(path.join(outDir, 'index.html'), html);

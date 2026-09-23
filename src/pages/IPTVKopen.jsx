@@ -43,7 +43,7 @@ const IPTVKopen = () => {
     {
       number: '1',
       title: 'Choisissez votre abonnement',
-      description: 'Sélectionnez un <link-prijzen>abonnement IPTV</link-prijzen> qui vous convient : 3, 6 ou 12 mois.'
+      description: 'Sélectionnez un <link-prijzen>abonnement IPTV</link-prijzen> qui vous convient : 1, 3, 6 ou 12 mois.'
     },
     {
       number: '2',
@@ -107,13 +107,15 @@ const IPTVKopen = () => {
                 >
                   Voir les Tarifs de l'Abonnement IPTV
                 </Link>
-                <Link
-                  to="/contact"
+                <a
+                  href="https://wa.me/18653169315?text=Bonjour%20!%20Je%20souhaite%20acheter%20un%20abonnement%20IPTV."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-8 py-3 bg-transparent border-2 border-white/40 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-200 text-center"
                 >
                   <FaWhatsapp className="inline mr-2" />
                   Commander via WhatsApp
-                </Link>
+                </a>
               </div>
             </motion.div>
           </div>
@@ -279,17 +281,14 @@ const IPTVKopen = () => {
         {/* CTA Section */}
         <section className="py-20 bg-white">
           <div className="container-custom">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-r from-brand-gold to-[#2B4577] rounded-2xl p-12 text-center"
-            >
+            {/* Static on purpose: as a whileInView fade it was prerendered with
+                opacity 0 and could stay invisible (blank block above the footer). */}
+            <div className="bg-gradient-to-r from-brand-gold to-[#2B4577] rounded-2xl p-8 md:p-12 text-center">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Prêt à acheter votre IPTV ?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Choisissez le <Link to="/abonnement-iptv" className="text-white underline font-semibold">meilleur abonnement IPTV pour la France</Link> et commencez à regarder sous 5 minutes. À partir de seulement 45 € par an.
+                Choisissez le <Link to="/abonnement-iptv" className="text-white underline font-semibold">meilleur abonnement IPTV pour la France</Link> et commencez à regarder sous 5 minutes. 1 mois 8 € · 12 mois 45 € (3,75 €/mois).
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -305,7 +304,7 @@ const IPTVKopen = () => {
                   Questions Fréquentes
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>
