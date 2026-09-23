@@ -151,21 +151,21 @@ const Pricing = () => {
               {
                 icon: FaCreditCard,
                 text: 'Paiement Unique',
-                gradient: 'from-brand-gold to-[#2B4577]',
+                gradient: 'from-brand-gold to-[#C4FF86]',
                 iconBg: 'bg-brand-offwhite',
                 iconColor: 'text-brand-gold'
               },
               {
                 icon: FaHeadset,
                 text: 'Support 24/7',
-                gradient: 'from-brand-gold to-[#2B4577]',
+                gradient: 'from-brand-gold to-[#C4FF86]',
                 iconBg: 'bg-brand-offwhite',
                 iconColor: 'text-brand-gold'
               },
               {
                 icon: FaTrophy,
                 text: 'Excellent Rapport Qualité/Prix',
-                gradient: 'from-brand-gold to-[#2B4577]',
+                gradient: 'from-brand-gold to-[#C4FF86]',
                 iconBg: 'bg-brand-offwhite',
                 iconColor: 'text-brand-gold'
               },
@@ -228,7 +228,7 @@ const Pricing = () => {
               whileHover={{ scale: 1.03, y: -10 }}
               className={`relative p-8 rounded-2xl shadow-xl transition-all duration-300 ${
                 plan.popular
-                  ? 'bg-gradient-to-b from-brand-gold via-[#2B4577] to-brand-gold border-2 border-brand-gold lg:scale-110 lg:-mt-8 z-10'
+                  ? 'bg-surface border border-brand-gold/40 border-2 border-brand-gold lg:scale-110 lg:-mt-8 z-10'
                   : 'bg-white border border-brand-gray-border'
               }`}
             >

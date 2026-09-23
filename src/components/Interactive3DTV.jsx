@@ -85,7 +85,7 @@ const Interactive3DTV = () => {
   const currentChannelData = channels[currentChannel];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-[#141311] via-[#201C18] to-[#141311] overflow-hidden">
+    <section className="py-20 bg-gradient-to-b from-[#090B0B] via-[#111413] to-[#090B0B] overflow-hidden">
       <div className="container-custom">
         {/* Section Header */}
         <motion.div
@@ -112,7 +112,7 @@ const Interactive3DTV = () => {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto mb-8"
         >
-          <div className="relative bg-[#201C18]/50 backdrop-blur-sm rounded-3xl overflow-hidden border-2 border-slate-700 group hover:border-blue-500 transition-all">
+          <div className="relative bg-[#111413]/50 backdrop-blur-sm rounded-3xl overflow-hidden border-2 border-slate-700 group hover:border-blue-500 transition-all">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentChannel}
@@ -130,7 +130,7 @@ loading="lazy" decoding="async"                   src={currentChannelData.image}
                 />
 
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#141311] via-[#141311]/80 to-[#141311]/30" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#090B0B] via-[#090B0B]/80 to-[#090B0B]/30" />
 
                 {/* Live Badge */}
                 {currentChannelData.live && (
@@ -145,7 +145,7 @@ loading="lazy" decoding="async"                   src={currentChannelData.image}
                 )}
 
                 {/* Quality Badge */}
-                <div className="absolute top-6 right-6 px-4 py-2 bg-gradient-to-r from-brand-gold to-[#2B4577] backdrop-blur-sm rounded-xl shadow-lg z-10">
+                <div className="absolute top-6 right-6 px-4 py-2 bg-surface border border-brand-gold/40 backdrop-blur-sm rounded-xl shadow-lg z-10">
                   <span className="text-sm font-bold text-white">
                     {currentChannelData.quality}
                   </span>
@@ -156,7 +156,7 @@ loading="lazy" decoding="async"                   src={currentChannelData.image}
                   <p className="text-sm text-brand-gold mb-2 uppercase tracking-wide">{currentChannelData.category}</p>
                   <h3 className="text-4xl font-bold text-white mb-6">{currentChannelData.name}</h3>
                   <div className="flex items-center gap-4">
-                    <button className="flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-brand-gold to-[#2B4577] text-white rounded-xl hover:from-[#2B4577] hover:to-[#2B4577] transition-all shadow-lg shadow-blue-600/30 text-lg font-semibold">
+                    <button className="flex items-center gap-3 px-8 py-4 bg-surface border border-brand-gold/40 text-white rounded-xl hover:from-[#C4FF86] hover:to-[#C4FF86] transition-all shadow-lg shadow-blue-600/30 text-lg font-semibold">
                       <FaPlay className="text-lg" />
                       <span>Regarder Maintenant</span>
                     </button>
@@ -211,7 +211,7 @@ loading="lazy" decoding="async"                   src={channel.image}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16"
         >
           {[
-            { number: '30 500+', label: 'Chaînes en Direct', gradient: 'from-brand-gold to-[#2B4577]' },
+            { number: '30 500+', label: 'Chaînes en Direct', gradient: 'from-brand-gold to-[#C4FF86]' },
             { number: '150 000+', label: 'Films & Séries', gradient: 'from-orange-600 to-red-600' },
             { number: '99,9 %', label: 'Disponibilité', gradient: 'from-green-600 to-emerald-600' },
             { number: '24/7', label: 'Support FR', gradient: 'from-purple-600 to-pink-600' }
@@ -228,7 +228,7 @@ loading="lazy" decoding="async"                   src={channel.image}
               <div className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-xl"
                    style={{ background: `linear-gradient(to right, var(--tw-gradient-stops))` }}
               />
-              <div className="relative text-center p-6 bg-[#201C18]/80 backdrop-blur-sm rounded-xl border border-slate-700 group-hover:border-transparent transition-all">
+              <div className="relative text-center p-6 bg-[#111413]/80 backdrop-blur-sm rounded-xl border border-slate-700 group-hover:border-transparent transition-all">
                 <div className={`text-3xl md:text-4xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent mb-2`}>
                   {stat.number}
                 </div>

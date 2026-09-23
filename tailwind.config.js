@@ -7,28 +7,39 @@ export default {
   theme: {
     extend: {
       colors: {
-        // France IPTV Brand Colors — ink, cream & tricolore (blue/red) editorial palette
+        // Dark "home cinema" theme. Token names are kept from the old light
+        // palette so every call site re-themes without edits: "black" is now
+        // the main text colour, "offwhite" a dark section background and
+        // "gold" the lime accent.
         brand: {
-          black: '#1C1B19',       // Ink (text, headings)
-          gold: '#33518C',        // Primary accent — French blue (kept key name "gold" to avoid touching every call site)
-          red: '#B8433A',         // Secondary accent — French red, used sparingly for urgency/badges
-          offwhite: '#F7F5F0',    // Warm cream background
-          gray: '#8A877F',        // Secondary gray
-          'gray-light': '#9A968C', // Label gray (for use on dark backgrounds)
-          'gray-border': '#E2E0DA', // Border gray
+          black: '#F5F4EE',       // Main text
+          gold: '#B3F66B',        // Lime accent (links, highlights, primary buttons)
+          red: '#F07A6E',         // Secondary accent for urgency/badges
+          offwhite: '#0B0D0D',    // Alternate section background
+          gray: '#A8ADAD',        // Muted text
+          'gray-light': '#8B9090',
+          'gray-border': '#262A28', // Hairlines and card borders
+        },
+        ink: '#090B0B',           // Page background
+        surface: '#111413',       // Cards and white-section background
+        'surface-2': '#1A1E1B',   // Raised elements, hovers
+        lime: {
+          DEFAULT: '#B3F66B',
+          hover: '#C4FF86',
+          on: '#101709',          // Text on lime
         },
         // French blue accent scale
         primary: {
-          50: '#F3F5F8',
-          100: '#E0E5EE',
-          200: '#C2CBDD',
-          300: '#99A8C6',
-          400: '#667DA9',
-          500: '#33518C',  // Brand blue (matches the logo mark)
-          600: '#2B4577',
-          700: '#243962',
-          800: '#1C2D4D',
-          900: '#142038',
+          50: '#111A0D',
+          100: '#16210F',
+          200: '#223214',
+          300: '#3F5A24',
+          400: '#8FD150',
+          500: '#B3F66B',
+          600: '#A2E85A',
+          700: '#C4FF86',
+          800: '#D5FFA8',
+          900: '#E6FFC9',
         },
         secondary: {
           50: '#eff6ff',
@@ -69,59 +80,71 @@ export default {
         // every text-orange-*, bg-orange-*, from-orange-* utility already in
         // the markup renders on-brand without touching each call site.
         orange: {
-          50: '#F3F5F8',
-          100: '#E0E5EE',
-          200: '#C2CBDD',
-          300: '#99A8C6',
-          400: '#667DA9',
-          500: '#33518C',
-          600: '#2B4577',
-          700: '#243962',
-          800: '#1C2D4D',
-          900: '#142038',
+          50: '#111A0D',
+          100: '#16210F',
+          200: '#223214',
+          300: '#3F5A24',
+          400: '#8FD150',
+          500: '#B3F66B',
+          600: '#A2E85A',
+          700: '#C4FF86',
+          800: '#D5FFA8',
+          900: '#E6FFC9',
         },
         amber: {
-          50: '#F3F5F8',
-          100: '#E0E5EE',
-          200: '#C2CBDD',
-          300: '#99A8C6',
-          400: '#667DA9',
-          500: '#33518C',
-          600: '#2B4577',
-          700: '#243962',
-          800: '#1C2D4D',
-          900: '#142038',
+          50: '#111A0D',
+          100: '#16210F',
+          200: '#223214',
+          300: '#3F5A24',
+          400: '#8FD150',
+          500: '#B3F66B',
+          600: '#A2E85A',
+          700: '#C4FF86',
+          800: '#D5FFA8',
+          900: '#E6FFC9',
         },
         // A handful of leftover accent classes from an earlier pass still use
         // Tailwind's stock "blue" scale as the brand accent — keep it mapped
         // to the same scale so it stays consistent with the brand blue.
         blue: {
-          50: '#F3F5F8',
-          100: '#E0E5EE',
-          200: '#C2CBDD',
-          300: '#99A8C6',
-          400: '#667DA9',
-          500: '#33518C',
-          600: '#2B4577',
-          700: '#243962',
-          800: '#1C2D4D',
-          900: '#142038',
+          50: '#111A0D',
+          100: '#16210F',
+          200: '#223214',
+          300: '#3F5A24',
+          400: '#8FD150',
+          500: '#B3F66B',
+          600: '#A2E85A',
+          700: '#C4FF86',
+          800: '#D5FFA8',
+          900: '#E6FFC9',
         },
-        background: '#ffffff',
-        foreground: '#1C1B19',
-        card: '#ffffff',
-        'card-foreground': '#1C1B19',
-        muted: '#F7F5F0',
-        'muted-foreground': '#8A877F',
-        border: '#E2E0DA',
-        destructive: '#dc2626',
-        'on-destructive': '#ffffff',
-        ring: '#33518C',
+        purple: {
+          50: '#111A0D',
+          100: '#16210F',
+          200: '#223214',
+          300: '#C4FF86',
+          400: '#D6FF9E',
+          500: '#C4FF86',
+          600: '#9BDB5A',
+          700: '#8FD150',
+          800: '#6FA83C',
+          900: '#3F5A24',
+        },
+        background: '#090B0B',
+        foreground: '#F5F4EE',
+        card: '#111413',
+        'card-foreground': '#F5F4EE',
+        muted: '#0B0D0D',
+        'muted-foreground': '#A8ADAD',
+        border: '#262A28',
+        destructive: '#F07A6E',
+        'on-destructive': '#101709',
+        ring: '#B3F66B',
       },
       fontFamily: {
-        brand: ['Space Grotesk', 'sans-serif'],
-        heading: ['Space Grotesk', 'system-ui', 'sans-serif'],
-        sans: ['IBM Plex Sans', 'system-ui', '-apple-system', 'sans-serif'],
+        brand: ['DM Sans', 'sans-serif'],
+        heading: ['DM Serif Display', 'Georgia', 'serif'],
+        sans: ['DM Sans', 'system-ui', '-apple-system', 'sans-serif'],
         mono: ['IBM Plex Mono', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       animation: {

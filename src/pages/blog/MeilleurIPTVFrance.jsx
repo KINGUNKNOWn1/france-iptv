@@ -92,7 +92,7 @@ const MeilleurIPTVFrance = () => {
       </Helmet>
 
       <div className="min-h-screen bg-white text-brand-black pt-20">
-        <section className="py-16 bg-gradient-to-br from-[#141311] via-[#201C18] to-[#141311] text-white">
+        <section className="py-16 bg-gradient-to-br from-[#090B0B] via-[#111413] to-[#090B0B] text-white">
           <div className="container mx-auto px-4 max-w-4xl">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center">
               <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6">
@@ -119,7 +119,7 @@ const MeilleurIPTVFrance = () => {
                       Il n'existe pas un « meilleur IPTV » universel : il existe un <strong>meilleur choix pour vos besoins</strong>, évalué sur 7 critères objectifs — légalité, stabilité, support, paiement, prix, politique d'abonnement et compatibilité multi-appareils. Un fournisseur qui coche ces cases mérite votre confiance ; un fournisseur qui en esquive plusieurs est un risque.
                     </p>
                     <p className="text-brand-gray">
-                      Voir notre <Link to="/tarifs" className="text-brand-gold hover:text-[#2B4577] underline font-semibold">grille tarifaire</Link> ou notre article détaillé sur le <Link to="/blog/prix-iptv-france" className="text-brand-gold hover:text-[#2B4577] underline font-semibold">prix d'un abonnement IPTV</Link>.
+                      Voir notre <Link to="/tarifs" className="text-brand-gold hover:text-[#C4FF86] underline font-semibold">grille tarifaire</Link> ou notre article détaillé sur le <Link to="/blog/prix-iptv-france" className="text-brand-gold hover:text-[#C4FF86] underline font-semibold">prix d'un abonnement IPTV</Link>.
                     </p>
                   </div>
                 </div>
@@ -206,7 +206,7 @@ const MeilleurIPTVFrance = () => {
             </section>
 
             {/* CTA */}
-            <section className="bg-gradient-to-br from-brand-gold to-[#2B4577] p-8 rounded-xl text-center text-white">
+            <section className="bg-surface border border-brand-gold/40 p-8 rounded-xl text-center text-white">
               <h2 className="text-3xl font-bold mb-4">Testez France IPTV Dès Aujourd'hui</h2>
               <p className="text-xl mb-6">1 jour d'essai gratuit, sans engagement, activation en 5 minutes</p>
               <div className="flex flex-wrap gap-4 justify-center">

@@ -11,11 +11,10 @@ const NavLink = ({ href, ...props }) =>
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  // The transparent, white-text bar only works over a dark hero that starts at
-  // the very top. Other pages start with a white strip, where it was invisible.
+  // Transparent over the homepage hero until you scroll; a dark translucent
+  // bar everywhere else (all pages are dark in this theme).
   const { pathname } = useLocation();
-  const overDarkHero = pathname === '/' || pathname === '/acheter-iptv';
-  const solid = scrolled || !overDarkHero;
+  const solid = scrolled || pathname !== '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,23 +31,25 @@ const Navigation = () => {
     { name: 'Tarifs', href: '/tarifs' },
     { name: 'Appareils', href: '/appareils' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Avis clients', href: '/#reviews' },
+    { name: 'Aide', href: '/faq' },
     { name: 'À propos', href: '/a-propos' },
   ];
 
-  const linkColor = solid ? 'text-brand-gray hover:text-brand-black' : 'text-white/90 hover:text-white';
-  const iconColor = solid ? 'text-brand-black' : 'text-white';
+  const openTrial = () => {
+    setIsOpen(false);
+    window.dispatchEvent(new CustomEvent('open-trial'));
+  };
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        solid ? 'bg-white/95 backdrop-blur-lg shadow-md' : 'bg-transparent'
+        solid ? 'bg-ink/85 backdrop-blur-lg border-b border-white/10' : 'bg-transparent'
       }`}
     >
       <div className="container-custom px-4 md:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Logo textColor={solid ? 'black' : 'white'} size="sm" showTagline={false} />
+          <Logo textColor="white" size="sm" showTagline={false} />
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
@@ -56,23 +57,24 @@ const Navigation = () => {
               <NavLink
                 key={item.name}
                 href={item.href}
-                className={`${linkColor} transition-colors duration-200 text-sm font-medium`}
+                className="text-white/80 hover:text-lime transition-colors duration-200 text-sm font-medium"
               >
                 {item.name}
               </NavLink>
             ))}
-            <a
-              href="/#pricing"
-              className="px-6 py-2.5 bg-brand-gold hover:bg-[#2B4577] text-white font-semibold rounded-lg transition-colors"
+            <button
+              type="button"
+              onClick={openTrial}
+              className="px-6 py-2.5 bg-lime hover:bg-lime-hover text-lime-on font-semibold rounded-lg transition-colors"
             >
-              Contact
-            </a>
+              Essayer 24 h
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`lg:hidden text-2xl ${iconColor}`}
+            className="lg:hidden text-2xl text-white"
             aria-label={isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
           >
             {isOpen ? <FaTimes /> : <FaBars />}
@@ -81,25 +83,25 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden pb-4 bg-white/95 backdrop-blur-lg rounded-b-xl shadow-md">
+          <div className="lg:hidden pb-4 bg-surface border border-white/10 rounded-xl shadow-2xl">
             <div className="flex flex-col gap-4 px-2 pt-2">
               {navItems.map((item) => (
                 <NavLink
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-brand-gray hover:text-brand-black transition-colors duration-200 py-2"
+                  className="text-white/80 hover:text-lime transition-colors duration-200 py-2"
                 >
                   {item.name}
                 </NavLink>
               ))}
-              <a
-                href="/#pricing"
-                onClick={() => setIsOpen(false)}
-                className="px-6 py-2.5 bg-brand-gold hover:bg-[#2B4577] text-white font-semibold rounded-lg transition-colors text-center"
+              <button
+                type="button"
+                onClick={openTrial}
+                className="px-6 py-2.5 bg-lime hover:bg-lime-hover text-lime-on font-semibold rounded-lg transition-colors text-center"
               >
-                Contact
-              </a>
+                Essayer 24 h gratuitement
+              </button>
             </div>
           </div>
         )}

@@ -56,7 +56,7 @@ const OverOns = () => {
       />
       <div className="min-h-screen bg-white text-brand-black pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-[#141311] via-[#201C18] to-[#141311] text-white">
+        <section className="py-20 bg-gradient-to-br from-[#090B0B] via-[#111413] to-[#090B0B] text-white">
           <div className="container mx-auto px-4 max-w-6xl">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -211,7 +211,7 @@ const OverOns = () => {
 
               <div>
                 <h3 className="text-2xl font-bold mb-6 text-brand-gold">Notre Engagement Envers Vous</h3>
-                <div className="bg-gradient-to-br from-brand-gold to-purple-600 p-8 rounded-xl">
+                <div className="bg-surface border border-brand-gold/40 p-8 rounded-xl">
                   <ul className="space-y-4 text-white/95">
                     <li className="flex items-center gap-3">
                       <FaClock className="text-2xl flex-shrink-0" />
@@ -276,7 +276,7 @@ const OverOns = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-white to-brand-offwhite">
+        <section className="py-20 bg-gradient-to-br from-surface to-brand-offwhite">
           <div className="container mx-auto px-4 max-w-4xl text-center">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-brand-black">
               Prêt à Commencer avec France IPTV ?
@@ -288,7 +288,7 @@ const OverOns = () => {
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 to="/abonnement-iptv"
-                className="px-10 py-4 bg-brand-gold hover:bg-[#2B4577] text-white text-lg font-semibold rounded-lg transition-all transform hover:scale-105"
+                className="px-10 py-4 bg-brand-gold hover:bg-[#C4FF86] text-white text-lg font-semibold rounded-lg transition-all transform hover:scale-105"
               >
                 Voir les Abonnements
               </Link>

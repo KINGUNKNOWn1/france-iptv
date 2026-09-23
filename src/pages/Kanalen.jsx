@@ -92,7 +92,7 @@ const Kanalen = () => {
       />
       <div className="min-h-screen bg-white text-brand-black pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-[#141311] via-[#201C18] to-[#141311] text-white">
+        <section className="py-20 bg-gradient-to-br from-[#090B0B] via-[#111413] to-[#090B0B] text-white">
           <div className="container mx-auto px-4 max-w-6xl">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -112,7 +112,7 @@ const Kanalen = () => {
               <div className="flex flex-wrap gap-4 justify-center">
                 <a
                   href="#categories"
-                  className="px-8 py-4 bg-brand-gold hover:bg-[#2B4577] text-white font-semibold rounded-lg transition-all transform hover:scale-105"
+                  className="px-8 py-4 bg-brand-gold hover:bg-[#C4FF86] text-white font-semibold rounded-lg transition-all transform hover:scale-105"
                 >
                   Voir les Catégories
                 </a>
@@ -127,7 +127,7 @@ const Kanalen = () => {
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-4xl mx-auto">
                 <div className="bg-white/10 p-6 rounded-lg backdrop-blur">
-                  <div className="text-4xl font-bold text-[#7B9FD9]">30 500+</div>
+                  <div className="text-4xl font-bold text-brand-gold">30 500+</div>
                   <div className="text-gray-300 mt-2">Chaînes en Direct</div>
                 </div>
                 <div className="bg-white/10 p-6 rounded-lg backdrop-blur">
@@ -236,7 +236,7 @@ const Kanalen = () => {
             </h2>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-purple-600 to-purple-700 p-8 rounded-xl text-white">
+              <div className="bg-surface border border-lime/30 p-8 rounded-xl text-white">
                 <div className="text-4xl mb-4">🎬</div>
                 <h3 className="text-2xl font-bold mb-3">Films</h3>
                 <ul className="space-y-2 text-white/90">
@@ -248,7 +248,7 @@ const Kanalen = () => {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-brand-gold to-[#2B4577] p-8 rounded-xl text-white">
+              <div className="bg-surface border border-brand-gold/40 p-8 rounded-xl text-white">
                 <div className="text-4xl mb-4">📺</div>
                 <h3 className="text-2xl font-bold mb-3">Séries</h3>
                 <ul className="space-y-2 text-white/90">
@@ -260,7 +260,7 @@ const Kanalen = () => {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-green-600 to-green-700 p-8 rounded-xl text-white">
+              <div className="bg-surface border border-lime/30 p-8 rounded-xl text-white">
                 <div className="text-4xl mb-4">🎪</div>
                 <h3 className="text-2xl font-bold mb-3">Contenu Bonus</h3>
                 <ul className="space-y-2 text-white/90">
@@ -276,7 +276,7 @@ const Kanalen = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-brand-offwhite to-white">
+        <section className="py-20 bg-gradient-to-br from-brand-offwhite to-surface">
           <div className="container mx-auto px-4 max-w-4xl text-center">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-brand-black">
               Accédez à 30 500+ Chaînes
@@ -288,7 +288,7 @@ const Kanalen = () => {
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 to="/abonnement-iptv"
-                className="px-10 py-4 bg-brand-gold hover:bg-[#2B4577] text-white text-lg font-semibold rounded-lg transition-all transform hover:scale-105"
+                className="px-10 py-4 bg-brand-gold hover:bg-[#C4FF86] text-white text-lg font-semibold rounded-lg transition-all transform hover:scale-105"
               >
                 Voir les Abonnements
               </Link>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { homeFaqs } from '../data/homeFaqs';
 
 const SITE_URL = 'https://franceiptv.stream';
 const DEFAULT_TITLE = 'IPTV France : Abonnement IPTV Premium dès 8€ | France IPTV';
@@ -24,16 +25,7 @@ const productSchema = {
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'Comment démarrer avec France IPTV ?', acceptedAnswer: { '@type': 'Answer', text: "C'est très simple ! Contactez-nous via WhatsApp, choisissez votre forfait, payez en toute sécurité par Binance Pay ou PayPal, et recevez vos identifiants sous 5 minutes. Vous pouvez alors commencer à regarder immédiatement sur tous vos appareils." } },
-    { '@type': 'Question', name: "Sur combien d'appareils puis-je regarder en même temps ?", acceptedAnswer: { '@type': 'Answer', text: 'Avec tous nos forfaits, vous pouvez regarder sur 4 appareils maximum simultanément. Parfait pour toute la famille ! Chaque écran reçoit la même qualité élevée.' } },
-    { '@type': 'Question', name: 'Quelles chaînes sont disponibles ?', acceptedAnswer: { '@type': 'Answer', text: "Nous proposons plus de 30 500 chaînes en direct, dont des chaînes françaises, turques, arabes, anglaises et bien d'autres chaînes internationales. Vous avez également accès à plus de 150 000 films et séries à la demande." } },
-    { '@type': 'Question', name: 'Comment fonctionne le rattrapage ?', acceptedAnswer: { '@type': 'Answer', text: "Avec notre fonction de rattrapage sur 14 jours (Catch-Up TV), vous pouvez revoir les programmes manqués jusqu'à 14 jours en arrière. Les programmes manqués sont directement disponibles dans le guide EPG." } },
-    { '@type': 'Question', name: 'Quels moyens de paiement acceptez-vous ?', acceptedAnswer: { '@type': 'Answer', text: 'Nous acceptons Binance Pay et PayPal pour des paiements sûrs et simples. Après paiement, vous recevez immédiatement vos identifiants via WhatsApp.' } },
-    { '@type': 'Question', name: "Proposez-vous un essai gratuit ?", acceptedAnswer: { '@type': 'Answer', text: "Oui ! Nous offrons 1 jour d'essai gratuit pour que vous puissiez juger de la qualité de notre service avant de vous engager. Contactez-nous via WhatsApp pour en profiter." } },
-    { '@type': 'Question', name: 'Que se passe-t-il à la fin de mon abonnement ?', acceptedAnswer: { '@type': 'Answer', text: "Nous ne pratiquons PAS la reconduction automatique. Votre abonnement s'arrête automatiquement à la fin de la période choisie. Vous recevez un rappel lorsque votre abonnement arrive à échéance, pour le renouveler si vous le souhaitez." } },
-    { '@type': 'Question', name: 'Ai-je un support francophone ?', acceptedAnswer: { '@type': 'Answer', text: 'Absolument ! Nous proposons un support francophone 24/7 via WhatsApp et e-mail. Notre équipe est toujours disponible pour vous.' } }
-  ]
+  mainEntity: homeFaqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } }))
 };
 
 const SEO = ({

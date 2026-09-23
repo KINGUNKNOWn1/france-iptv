@@ -14,7 +14,7 @@ const Retourbeleid = () => {
 
       <div className="min-h-screen bg-white text-brand-black">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-br from-[#141311] via-[#201C18] to-[#141311] text-white">
+        <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-br from-[#090B0B] via-[#111413] to-[#090B0B] text-white">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -364,7 +364,7 @@ const Retourbeleid = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-r from-blue-50 to-blue-100 border border-brand-gold/30 rounded-2xl p-8 text-center"
+                className="bg-surface border border-lime/30 border border-brand-gold/30 rounded-2xl p-8 text-center"
               >
                 <RotateCcw className="w-12 h-12 text-brand-gold mx-auto mb-4" />
                 <h2 className="text-2xl font-bold mb-4 text-brand-black">Des Questions sur le Droit de Rétractation ?</h2>
@@ -374,7 +374,7 @@ const Retourbeleid = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
                     href="mailto:support@franceiptv.stream"
-                    className="bg-brand-gold hover:bg-[#2B4577] text-white px-8 py-3 rounded-full font-semibold transition-colors"
+                    className="bg-brand-gold hover:bg-[#C4FF86] text-white px-8 py-3 rounded-full font-semibold transition-colors"
                   >
                     E-mail au Support
                   </a>

@@ -27,7 +27,7 @@ const Hero = () => {
           decoding="async"
         />
         {/* Dark navy overlay for text readability, tinted to the brand blue */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#141311]/95 via-[#191613]/85 to-[#33518C]/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#090B0B]/95 via-[#0D0F0F]/85 to-[#1E3314]/60"></div>
       </div>
 
       {/* Content */}
@@ -84,7 +84,7 @@ const Hero = () => {
       </div>
 
       {/* Bottom Gradient Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-0"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-surface to-transparent z-0"></div>
     </section>
   );
 };

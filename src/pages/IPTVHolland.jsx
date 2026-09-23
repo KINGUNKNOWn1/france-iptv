@@ -282,7 +282,7 @@ const IPTVHolland = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#141311] via-[#141311] to-[#141311]">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#090B0B] via-[#090B0B] to-[#090B0B]">
         {/* Animated Background */}
         <Suspense fallback={null}>
           <LightweightBackground variant="hero" />
@@ -312,7 +312,7 @@ const IPTVHolland = () => {
               transition={{ delay: 0.2 }}
               className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-2 mb-8"
             >
-              <MapPin className="w-5 h-5 text-[#7B9FD9]" />
+              <MapPin className="w-5 h-5 text-brand-gold" />
               <span className="font-medium">Au service de la Belgique francophone</span>
             </motion.div>
 
@@ -336,7 +336,7 @@ const IPTVHolland = () => {
                 transition={{ delay: 0.3 }}
                 className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6"
               >
-                <Users className="w-8 h-8 text-[#7B9FD9] mx-auto mb-2" />
+                <Users className="w-8 h-8 text-brand-gold mx-auto mb-2" />
                 <div className="text-3xl font-bold">15 000+</div>
                 <div className="text-sm text-gray-300">Clients francophones</div>
               </motion.div>
@@ -347,7 +347,7 @@ const IPTVHolland = () => {
                 transition={{ delay: 0.4 }}
                 className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6"
               >
-                <Tv className="w-8 h-8 text-[#7B9FD9] mx-auto mb-2" />
+                <Tv className="w-8 h-8 text-brand-gold mx-auto mb-2" />
                 <div className="text-3xl font-bold">25 000+</div>
                 <div className="text-sm text-gray-300">Chaînes</div>
               </motion.div>
@@ -358,7 +358,7 @@ const IPTVHolland = () => {
                 transition={{ delay: 0.5 }}
                 className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6"
               >
-                <Zap className="w-8 h-8 text-[#7B9FD9] mx-auto mb-2" />
+                <Zap className="w-8 h-8 text-brand-gold mx-auto mb-2" />
                 <div className="text-3xl font-bold">99,9 %</div>
                 <div className="text-sm text-gray-300">Disponibilité</div>
               </motion.div>
@@ -369,7 +369,7 @@ const IPTVHolland = () => {
                 transition={{ delay: 0.6 }}
                 className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6"
               >
-                <Star className="w-8 h-8 text-[#7B9FD9] mx-auto mb-2" />
+                <Star className="w-8 h-8 text-brand-gold mx-auto mb-2" />
                 <div className="text-3xl font-bold">4,9/5</div>
                 <div className="text-sm text-gray-300">Note client</div>
               </motion.div>
@@ -432,7 +432,7 @@ const IPTVHolland = () => {
                   variants={itemVariants}
                   className="bg-brand-offwhite border border-brand-gray-border rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-brand-gold to-[#2B4577] rounded-2xl flex items-center justify-center mb-6">
+                  <div className="w-16 h-16 bg-surface border border-brand-gold/40 rounded-2xl flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-brand-black">{benefit.title}</h3>
@@ -475,7 +475,7 @@ const IPTVHolland = () => {
                   className="bg-white rounded-2xl p-8 border border-brand-gray-border"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-brand-gold to-[#2B4577] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-surface border border-brand-gold/40 rounded-xl flex items-center justify-center flex-shrink-0">
                       <Icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -491,7 +491,7 @@ const IPTVHolland = () => {
       </section>
 
       {/* Belgian Channels Section */}
-      <section className="py-20 bg-gradient-to-br from-[#141311] to-[#201C18] text-white">
+      <section className="py-20 bg-gradient-to-br from-[#090B0B] to-[#111413] text-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -570,7 +570,7 @@ const IPTVHolland = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-gradient-to-r from-brand-gold to-[#2B4577] text-white px-6 py-3 rounded-full font-medium shadow-lg"
+                className="bg-surface border border-brand-gold/40 text-white px-6 py-3 rounded-full font-medium shadow-lg"
               >
                 {city}
               </motion.div>
@@ -652,7 +652,7 @@ const IPTVHolland = () => {
                   className={`block text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
                     option.popular
                       ? 'bg-brand-gold text-white hover:shadow-xl'
-                      : 'bg-brand-black text-white hover:bg-brand-black/80'
+                      : 'bg-surface-2 text-white hover:bg-surface-2/80'
                   }`}
                 >
                   Commander via WhatsApp
@@ -719,7 +719,7 @@ const IPTVHolland = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-brand-gold via-purple-600 to-[#141311] text-white">
+      <section className="py-20 bg-surface border border-lime/30 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -774,26 +774,26 @@ const IPTVHolland = () => {
       </section>
 
       {/* Trust Footer */}
-      <section className="py-12 bg-[#141311] text-white">
+      <section className="py-12 bg-[#090B0B] text-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center items-center gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-[#7B9FD9]">15 000+</div>
+              <div className="text-3xl font-bold text-brand-gold">15 000+</div>
               <div className="text-sm text-gray-400">Clients satisfaits</div>
             </div>
             <div className="hidden md:block w-px h-12 bg-gray-700" />
             <div>
-              <div className="text-3xl font-bold text-[#7B9FD9]">99,9 %</div>
+              <div className="text-3xl font-bold text-brand-gold">99,9 %</div>
               <div className="text-sm text-gray-400">Disponibilité garantie</div>
             </div>
             <div className="hidden md:block w-px h-12 bg-gray-700" />
             <div>
-              <div className="text-3xl font-bold text-[#7B9FD9]">24/7</div>
+              <div className="text-3xl font-bold text-brand-gold">24/7</div>
               <div className="text-sm text-gray-400">Support francophone</div>
             </div>
             <div className="hidden md:block w-px h-12 bg-gray-700" />
             <div>
-              <div className="text-3xl font-bold text-[#7B9FD9]">4,9/5</div>
+              <div className="text-3xl font-bold text-brand-gold">4,9/5</div>
               <div className="text-sm text-gray-400">Note client</div>
             </div>
           </div>

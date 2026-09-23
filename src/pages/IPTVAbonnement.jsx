@@ -178,7 +178,7 @@ const IPTVAbonnement = () => {
       </Helmet>
       <div className="min-h-screen bg-white text-brand-black pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-[#141311] via-[#201C18] to-[#141311] text-white">
+        <section className="py-20 bg-gradient-to-br from-[#090B0B] via-[#111413] to-[#090B0B] text-white">
           <div className="container mx-auto px-4 max-w-6xl">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -198,7 +198,7 @@ const IPTVAbonnement = () => {
               <div className="flex flex-wrap gap-4 justify-center">
                 <a
                   href="#pricing"
-                  className="px-8 py-4 bg-brand-gold hover:bg-[#2B4577] text-white font-semibold rounded-lg transition-all transform hover:scale-105"
+                  className="px-8 py-4 bg-brand-gold hover:bg-[#C4FF86] text-white font-semibold rounded-lg transition-all transform hover:scale-105"
                 >
                   Voir les Abonnements
                 </a>
@@ -292,7 +292,7 @@ const IPTVAbonnement = () => {
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+                      <span className="bg-surface border border-lime/30 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
                         <FaCrown /> LE PLUS CHOISI
                       </span>
                     </div>
@@ -315,8 +315,8 @@ const IPTVAbonnement = () => {
                       href="https://wa.me/18653169315"
                       className={`block w-full py-3 rounded-lg font-semibold transition-all ${
                         plan.popular
-                          ? 'bg-brand-gold hover:bg-[#2B4577] text-white'
-                          : 'bg-brand-black text-white hover:bg-brand-black/80'
+                          ? 'bg-brand-gold hover:bg-[#C4FF86] text-white'
+                          : 'bg-surface-2 text-white hover:bg-surface-2/80'
                       }`}
                     >
                       Commander Maintenant
@@ -464,7 +464,7 @@ const IPTVAbonnement = () => {
               ))}
             </div>
 
-            <div className="bg-gradient-to-r from-brand-gold to-purple-600 rounded-xl p-8 text-center">
+            <div className="bg-surface border border-brand-gold/40 rounded-xl p-8 text-center">
               <h3 className="text-2xl font-bold mb-4 text-white">
                 Commencez Aujourd'hui Votre Abonnement IPTV
               </h3>
@@ -509,7 +509,7 @@ const IPTVAbonnement = () => {
               <p className="text-brand-gray mb-4">D'autres questions sur les abonnements IPTV ?</p>
               <Link
                 to="/faq"
-                className="text-brand-gold hover:text-[#2B4577] font-semibold underline"
+                className="text-brand-gold hover:text-[#C4FF86] font-semibold underline"
               >
                 Voir toutes les questions fréquentes →
               </Link>
@@ -520,7 +520,7 @@ const IPTVAbonnement = () => {
         <RelatedGuides />
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-brand-offwhite to-white">
+        <section className="py-20 bg-gradient-to-br from-brand-offwhite to-surface">
           <div className="container mx-auto px-4 max-w-4xl text-center">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-brand-black">
               Prêt à Commencer avec l'IPTV ?

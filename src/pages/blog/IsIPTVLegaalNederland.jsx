@@ -24,7 +24,7 @@ const IsIPTVLegaalNederland = () => {
         ))}
       </Helmet>
       <div className="min-h-screen bg-white text-brand-black pt-20">
-        <section className="py-16 bg-gradient-to-br from-[#141311] via-[#141311] to-[#141311] text-white">
+        <section className="py-16 bg-gradient-to-br from-[#090B0B] via-[#090B0B] to-[#090B0B] text-white">
           <div className="container mx-auto px-4 max-w-4xl">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center">
               <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6">
@@ -275,7 +275,7 @@ const IsIPTVLegaalNederland = () => {
             </section>
 
             {/* CTA */}
-            <section className="bg-gradient-to-br from-green-600 to-brand-gold p-8 rounded-xl text-center text-white">
+            <section className="bg-surface border border-lime/30 p-8 rounded-xl text-center text-white">
               <h2 className="text-3xl font-bold mb-4">Démarrez en Toute Sécurité avec un IPTV Légal</h2>
               <p className="text-xl mb-6">
                 Choisissez France IPTV : 100 % légal, support 24/7, et 30 500+ chaînes dès 4€/mois

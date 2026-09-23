@@ -81,7 +81,7 @@ const Contact = () => {
                 Contact & Commande
               </h1>
               <p className="text-xl text-brand-gray leading-relaxed">
-                Commandez votre <Link to="/abonnement-iptv" className="text-brand-gold hover:text-[#2B4577] underline">abonnement IPTV</Link> directement via WhatsApp ou contactez-nous pour toute question.
+                Commandez votre <Link to="/abonnement-iptv" className="text-brand-gold hover:text-[#C4FF86] underline">abonnement IPTV</Link> directement via WhatsApp ou contactez-nous pour toute question.
                 Support francophone disponible 24/7.
               </p>
             </motion.div>
@@ -107,7 +107,7 @@ const Contact = () => {
                     window.open(isWhatsApp ? withSourceTag(method.link) : method.link, '_blank');
                   }}
                 >
-                  <div className={`w-14 h-14 rounded-xl ${method.primary ? 'bg-gradient-to-br from-green-600 to-green-700' : 'bg-gradient-to-br from-brand-gold to-[#2B4577]'} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                  <div className={`w-14 h-14 rounded-xl ${method.primary ? 'bg-gradient-to-br from-green-600 to-green-700' : 'bg-surface border border-brand-gold/40'} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                     <method.icon className="text-white text-2xl" />
                   </div>
                   <h3 className="text-xl font-bold text-brand-black mb-2">
@@ -132,7 +132,7 @@ const Contact = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-r from-green-600 to-green-700 rounded-2xl p-12 text-center"
+              className="bg-surface border border-lime/30 rounded-2xl p-12 text-center"
             >
               <FaWhatsapp className="text-white text-6xl mx-auto mb-6" />
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -168,7 +168,7 @@ const Contact = () => {
                 Le processus de commande en 5 étapes
               </h2>
               <p className="text-xl text-brand-gray">
-                Consultez d'abord nos <Link to="/tarifs" className="text-brand-gold hover:text-[#2B4577] underline">tarifs IPTV</Link> et choisissez votre abonnement
+                Consultez d'abord nos <Link to="/tarifs" className="text-brand-gold hover:text-[#C4FF86] underline">tarifs IPTV</Link> et choisissez votre abonnement
               </p>
             </motion.div>
 
@@ -182,7 +182,7 @@ const Contact = () => {
                   transition={{ delay: index * 0.1 }}
                   className="flex items-start gap-4 bg-white border border-brand-gray-border rounded-xl p-6"
                 >
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-brand-gold to-[#2B4577] flex items-center justify-center flex-shrink-0 text-white font-bold">
+                  <div className="w-10 h-10 rounded-full bg-surface border border-brand-gold/40 flex items-center justify-center flex-shrink-0 text-white font-bold">
                     {index + 1}
                   </div>
                   <div className="flex-1">
@@ -234,7 +234,7 @@ const Contact = () => {
               </p>
               <Link
                 to="/faq"
-                className="text-brand-gold hover:text-[#2B4577] underline text-lg"
+                className="text-brand-gold hover:text-[#C4FF86] underline text-lg"
               >
                 Questions Fréquentes →
               </Link>
@@ -256,11 +256,11 @@ const Contact = () => {
                   Nouveau client ?
                 </h3>
                 <p className="text-brand-gray mb-6">
-                  Découvrez notre service et pourquoi nos clients choisissent France IPTV comme leur <Link to="/iptv-france" className="text-brand-gold hover:text-[#2B4577] underline">fournisseur IPTV de confiance en France</Link>.
+                  Découvrez notre service et pourquoi nos clients choisissent France IPTV comme leur <Link to="/iptv-france" className="text-brand-gold hover:text-[#C4FF86] underline">fournisseur IPTV de confiance en France</Link>.
                 </p>
                 <Link
                   to="/a-propos"
-                  className="inline-flex items-center gap-2 text-brand-gold hover:text-[#2B4577] font-semibold"
+                  className="inline-flex items-center gap-2 text-brand-gold hover:text-[#C4FF86] font-semibold"
                 >
                   En savoir plus sur France IPTV →
                 </Link>
@@ -276,11 +276,11 @@ const Contact = () => {
                   Vérifier la compatibilité ?
                 </h3>
                 <p className="text-brand-gray mb-6">
-                  Vous voulez savoir si France IPTV fonctionne sur votre appareil ? Consultez notre liste des <Link to="/appareils" className="text-brand-gold hover:text-[#2B4577] underline">appareils</Link> pris en charge.
+                  Vous voulez savoir si France IPTV fonctionne sur votre appareil ? Consultez notre liste des <Link to="/appareils" className="text-brand-gold hover:text-[#C4FF86] underline">appareils</Link> pris en charge.
                 </p>
                 <Link
                   to="/appareils"
-                  className="inline-flex items-center gap-2 text-brand-gold hover:text-[#2B4577] font-semibold"
+                  className="inline-flex items-center gap-2 text-brand-gold hover:text-[#C4FF86] font-semibold"
                 >
                   Voir les appareils →
                 </Link>

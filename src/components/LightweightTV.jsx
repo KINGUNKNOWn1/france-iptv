@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
  */
 const LightweightTV = ({ imageUrl = 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=1200&q=80' }) => {
   return (
-    <div className="w-full h-[600px] relative overflow-hidden bg-gradient-to-b from-brand-black to-gray-900">
+    <div className="w-full h-[600px] relative overflow-hidden bg-gradient-to-b from-ink to-gray-900">
       {/* Ambient glow effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-gold/20 rounded-full blur-3xl animate-pulse" />
@@ -44,7 +44,7 @@ const LightweightTV = ({ imageUrl = 'https://images.unsplash.com/photo-157995236
                 />
 
                 {/* Screen shine effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-br from-surface/10 via-transparent to-transparent" />
               </div>
 
               {/* Power indicator */}
@@ -86,7 +86,7 @@ const LightweightTV = ({ imageUrl = 'https://images.unsplash.com/photo-157995236
         transition={{ delay: 0.8, duration: 0.6 }}
         className="absolute bottom-8 left-8 z-10"
       >
-        <div className="bg-brand-black/90 backdrop-blur-md border border-brand-gold/30 rounded-2xl p-6 shadow-xl">
+        <div className="bg-surface-2/90 backdrop-blur-md border border-brand-gold/30 rounded-2xl p-6 shadow-xl">
           <div className="flex items-center gap-2 mb-2">
             <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
             <span className="text-sm font-semibold text-gray-300">LIVE IN 4K</span>

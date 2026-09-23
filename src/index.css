@@ -7,12 +7,24 @@
     @apply scroll-smooth;
   }
 
-  body {
-    @apply bg-white text-brand-black antialiased;
+  html {
+    color-scheme: dark;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  body {
+    @apply bg-ink text-brand-black antialiased;
+  }
+
+  /* Theme typography: serif display for page and section titles, DM Sans
+     for everything else (DM Serif Display only ships one weight). */
+  h1, h2 {
     @apply font-heading;
+    font-weight: 400 !important;
+    letter-spacing: -0.02em;
+  }
+
+  h3, h4, h5, h6 {
+    font-family: 'DM Sans', system-ui, sans-serif !important;
   }
 
   /* Ensure focus states are visible for accessibility */
@@ -39,29 +51,29 @@
 
   .gradient-border::before {
     content: '';
-    @apply absolute inset-0 rounded-lg bg-gradient-to-r from-brand-gold to-[#2B4577];
+    @apply absolute inset-0 rounded-lg bg-surface border border-brand-gold/40;
     @apply -z-10;
   }
 
   .glass-effect {
-    @apply bg-white/80 backdrop-blur-xl border border-brand-gray-border/60 shadow-lg;
+    @apply bg-surface/80 backdrop-blur-xl border border-brand-gray-border shadow-lg;
   }
 
   .btn-primary {
-    @apply px-8 py-3 bg-brand-gold text-white font-semibold rounded-lg
-    hover:bg-[#2B4577] transition-all duration-200
+    @apply px-8 py-3 bg-lime text-lime-on font-semibold rounded-lg
+    hover:bg-lime-hover transition-all duration-200
     cursor-pointer focus-visible:ring-2 focus-visible:ring-brand-gold;
   }
 
   .btn-secondary {
     @apply px-8 py-3 bg-transparent border-2 border-brand-black/15 text-brand-black font-semibold rounded-lg
-    hover:bg-brand-black/5 transition-all duration-200
+    hover:bg-surface-2/5 transition-all duration-200
     cursor-pointer focus-visible:ring-2 focus-visible:ring-brand-gold;
   }
 
   .btn-accent {
-    @apply px-6 py-3 bg-gradient-to-r from-brand-gold to-[#2B4577] text-white font-semibold rounded-xl
-    hover:from-[#2B4577] hover:to-brand-gold transition-all duration-200
+    @apply px-6 py-3 bg-surface border border-brand-gold/40 text-white font-semibold rounded-xl
+    hover:from-[#C4FF86] hover:to-brand-gold transition-all duration-200
     hover:shadow-xl hover:shadow-brand-gold/30 hover:scale-105 active:scale-95
     cursor-pointer focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2;
   }
@@ -85,7 +97,7 @@
 
   .block-pattern::before {
     content: '';
-    @apply absolute inset-0 bg-gradient-to-br from-brand-gold/10 to-[#2B4577]/10 -z-10;
+    @apply absolute inset-0 bg-gradient-to-br from-brand-gold/10 to-[#C4FF86]/10 -z-10;
   }
 }
 
@@ -103,3 +115,49 @@ section {
   content-visibility: auto;
   contain-intrinsic-size: auto 800px;
 }
+
+/* ------------------------------------------------------------------
+   Dark theme bridge. The pages were written for a light palette; these
+   rules re-map the light-only utilities that the colour tokens in
+   tailwind.config.js can't reach (they live after @tailwind utilities,
+   so they win at equal specificity).
+   ------------------------------------------------------------------ */
+.bg-white { background-color: #111413; }
+.bg-white\/80, .bg-white\/90, .bg-white\/95 { background-color: rgb(17 20 19 / 0.9); }
+.hover\:bg-white:hover { background-color: #1A1E1B; }
+.bg-gray-50, .bg-gray-100 { background-color: #1A1E1B; }
+.bg-gray-200, .hover\:bg-gray-200:hover { background-color: #262A28; }
+.bg-green-50, .bg-green-100 { background-color: #10200F; }
+.bg-yellow-50 { background-color: #201C0B; }
+.bg-red-50 { background-color: #231311; }
+.bg-orange-50, .bg-indigo-50 { background-color: #111A0D; }
+.text-gray-900, .text-gray-800 { color: #F5F4EE; }
+.text-gray-700 { color: #D1D4D0; }
+.text-gray-600 { color: #A8ADAD; }
+.text-gray-500 { color: #8B9090; }
+.text-green-700, .text-green-800 { color: #86EFAC; }
+.text-yellow-800, .text-yellow-700 { color: #FDE68A; }
+.text-red-700, .text-red-800 { color: #FCA5A5; }
+.border-gray-200, .border-gray-300 { border-color: #262A28; }
+/* Lime surfaces need dark text: white on lime is unreadable. */
+.bg-brand-gold.text-white, .bg-lime.text-white { color: #101709; }
+.bg-brand-gold, .bg-lime { color: #101709; }
+
+/* Long-form readability: article body copy slightly brighter and airier
+   than the muted grey used for short UI text. */
+article p, article li { line-height: 1.75; }
+article p.text-brand-gray, article li.text-brand-gray,
+article .text-brand-gray p, article .text-brand-gray li { color: #D1D4D0; }
+.blog-body h2 { font-size: 1.9rem; line-height: 1.2; color: #fff; margin-bottom: 0.9rem; }
+.blog-body h3 { font-size: 1.15rem; font-weight: 600; color: #fff; margin: 1.4rem 0 0.4rem; }
+.blog-body p + p { margin-top: 0.9rem; }
+.blog-body ul, .blog-body ol { margin-top: 0.8rem; padding-left: 1.3rem; }
+.blog-body ul { list-style: disc; }
+.blog-body ol { list-style: decimal; }
+.blog-body li { margin: 0.35rem 0; }
+.blog-body li::marker { color: #B3F66B; }
+.blog-body a { color: #B3F66B; text-decoration: underline; text-underline-offset: 3px; }
+.blog-body strong { color: #F5F4EE; }
+.blog-body table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.95rem; }
+.blog-body th, .blog-body td { border: 1px solid #262A28; padding: 0.6rem 0.8rem; text-align: left; vertical-align: top; }
+.blog-body th { background: #111413; color: #fff; }

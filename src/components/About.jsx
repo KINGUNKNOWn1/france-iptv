@@ -39,7 +39,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-[#141311] via-[#201C18] to-[#141311]">
+    <section id="about" className="py-20 bg-gradient-to-b from-[#090B0B] via-[#111413] to-[#090B0B]">
       <div className="container-custom">
         {/* Header */}
         <motion.div
@@ -71,7 +71,7 @@ loading="lazy" decoding="async"                 src="https://images.unsplash.com
                 alt="France"
                 className="w-full h-[400px] object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#141311] via-[#141311]/50 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#090B0B] via-[#090B0B]/50 to-transparent" />
 
               {/* Location Badge */}
               <div className="absolute bottom-6 left-6 right-6">
@@ -97,10 +97,10 @@ loading="lazy" decoding="async"                 src="https://images.unsplash.com
             viewport={{ once: true }}
           >
             <h3 className="text-3xl font-bold text-white mb-4">
-              Six raisons de choisir France IPTV pour <Link to="/acheter-iptv" className="text-[#7B9FD9] hover:text-white underline">acheter votre IPTV</Link>
+              Six raisons de choisir France IPTV pour <Link to="/acheter-iptv" className="text-brand-gold hover:text-white underline">acheter votre IPTV</Link>
             </h3>
             <p className="text-gray-300 text-lg mb-6">
-              Pas ce que chaque fournisseur promet. Ce que nous faisons concrètement différemment. Découvrez nos <Link to="/tarifs" className="text-[#7B9FD9] hover:text-white underline">tarifs transparents</Link> sans frais cachés.
+              Pas ce que chaque fournisseur promet. Ce que nous faisons concrètement différemment. Découvrez nos <Link to="/tarifs" className="text-brand-gold hover:text-white underline">tarifs transparents</Link> sans frais cachés.
             </p>
 
             {/* Features List */}
@@ -162,11 +162,11 @@ loading="lazy" decoding="async"                 src="https://images.unsplash.com
             Prêt à commencer avec France IPTV ?
           </h3>
           <p className="text-gray-300 mb-6">
-            Actif en 5 minutes. Aucune reconduction automatique. <Link to="/contact" className="text-[#7B9FD9] hover:text-white underline">Commandez maintenant via WhatsApp</Link>.
+            Actif en 5 minutes. Aucune reconduction automatique. <Link to="/contact" className="text-brand-gold hover:text-white underline">Commandez maintenant via WhatsApp</Link>.
           </p>
           <Link
             to="/tarifs"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-brand-gold text-white font-bold rounded-xl hover:bg-[#2B4577] transition-all shadow-lg shadow-brand-gold/30"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-brand-gold text-white font-bold rounded-xl hover:bg-[#C4FF86] transition-all shadow-lg shadow-brand-gold/30"
           >
             Voir les Tarifs de l'Abonnement IPTV
           </Link>

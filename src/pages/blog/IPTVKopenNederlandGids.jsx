@@ -75,7 +75,7 @@ const IPTVKopenNederlandGids = () => {
       </Helmet>
       <div className="min-h-screen bg-white text-brand-black pt-20">
         {/* Hero */}
-        <section className="py-16 bg-gradient-to-br from-[#141311] via-[#201C18] to-[#141311] text-white">
+        <section className="py-16 bg-gradient-to-br from-[#090B0B] via-[#111413] to-[#090B0B] text-white">
           <div className="container mx-auto px-4 max-w-4xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -83,7 +83,7 @@ const IPTVKopenNederlandGids = () => {
               className="text-center"
             >
               <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6">
-                Acheter IPTV en France 2026 : <span className="text-[#7B9FD9]">Guide Complet</span>
+                Acheter IPTV en France 2026 : <span className="text-brand-gold">Guide Complet</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8">
                 Tout ce qu'il faut savoir sur l'achat d'un IPTV en France. Meilleurs fournisseurs, tarifs, conseils et plus.
@@ -103,7 +103,7 @@ const IPTVKopenNederlandGids = () => {
               <ul className="grid md:grid-cols-2 gap-2">
                 {tableOfContents.map((item, index) => (
                   <li key={index}>
-                    <a href={`#${item.id}`} className="text-brand-gold hover:text-[#2B4577] transition-colors">
+                    <a href={`#${item.id}`} className="text-brand-gold hover:text-[#C4FF86] transition-colors">
                       {index + 1}. {item.title}
                     </a>
                   </li>
@@ -218,7 +218,7 @@ const IPTVKopenNederlandGids = () => {
                     {provider.recommended && (
                       <Link
                         to="/abonnement-iptv"
-                        className="block w-full text-center bg-brand-gold hover:bg-[#2B4577] text-white py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
+                        className="block w-full text-center bg-brand-gold hover:bg-[#C4FF86] text-white py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
                       >
                         Voir les Abonnements →
                       </Link>
@@ -233,7 +233,7 @@ const IPTVKopenNederlandGids = () => {
               <h2 className="text-3xl font-heading font-bold mb-6 text-brand-gold">Comparer les Tarifs IPTV</h2>
               <div className="overflow-x-auto">
                 <table className="w-full bg-white border border-brand-gray-border rounded-lg">
-                  <thead className="bg-brand-black">
+                  <thead className="bg-surface-2">
                     <tr>
                       <th className="p-4 text-left text-white">Durée</th>
                       <th className="p-4 text-left text-white">France IPTV</th>
@@ -391,7 +391,7 @@ const IPTVKopenNederlandGids = () => {
             </section>
 
             {/* CTA */}
-            <section className="bg-gradient-to-br from-brand-gold to-purple-600 p-8 rounded-xl text-center text-white">
+            <section className="bg-surface border border-brand-gold/40 p-8 rounded-xl text-center text-white">
               <h2 className="text-3xl font-bold mb-4">Prêt à Commander un IPTV ?</h2>
               <p className="text-xl mb-6">
                 Démarrez dès aujourd'hui avec France IPTV et profitez de 30 500+ chaînes pour seulement 3,75€/mois !

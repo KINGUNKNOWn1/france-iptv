@@ -18,7 +18,7 @@ const CEOSection = () => {
             >
               {/* CEO Photo Container */}
               <div className="relative rounded-2xl overflow-hidden border-4 border-brand-gold shadow-2xl">
-                <div className="aspect-[4/5] bg-gradient-to-br from-brand-black via-brand-gray to-brand-black">
+                <div className="aspect-[4/5] bg-gradient-to-br from-ink via-brand-gray to-ink">
                   {/* Professional CEO photo */}
                   <img
 loading="lazy" decoding="async"                     src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=750&fit=crop&q=80"
@@ -42,7 +42,7 @@ loading="lazy" decoding="async"                     src="https://images.unsplash
                 <div className="flex items-center gap-3">
                   <a
                     href="#"
-                    className="w-10 h-10 rounded-full bg-brand-gold hover:bg-[#2B4577] flex items-center justify-center transition-colors"
+                    className="w-10 h-10 rounded-full bg-brand-gold hover:bg-[#C4FF86] flex items-center justify-center transition-colors"
                   >
                     <FaLinkedin className="text-white text-xl" />
                   </a>

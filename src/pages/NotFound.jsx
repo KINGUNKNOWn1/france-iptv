@@ -31,7 +31,7 @@ const NotFound = () => {
             </div>
             {/* Main text */}
             <div className="relative text-[200px] md:text-[300px] font-bold leading-none">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-blue-500 to-purple-500">
+              <span className="text-transparent bg-clip-text bg-surface border border-brand-gold/40">
                 404
               </span>
             </div>
@@ -73,14 +73,14 @@ const NotFound = () => {
         >
           <Link
             to="/"
-            className="inline-flex items-center justify-center gap-2 bg-brand-gold hover:bg-[#2B4577] text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+            className="inline-flex items-center justify-center gap-2 bg-brand-gold hover:bg-[#C4FF86] text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
           >
             <Home className="w-5 h-5" />
             Retour à l'Accueil
           </Link>
           <Link
             to="/contact"
-            className="inline-flex items-center justify-center gap-2 bg-brand-black/5 hover:bg-brand-black/10 text-brand-black px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 border border-brand-gray-border"
+            className="inline-flex items-center justify-center gap-2 bg-surface-2/5 hover:bg-surface-2/10 text-brand-black px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 border border-brand-gray-border"
           >
             <Search className="w-5 h-5" />
             Nous Contacter

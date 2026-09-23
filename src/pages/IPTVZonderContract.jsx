@@ -173,7 +173,7 @@ const IPTVZonderContract = () => {
             <LightweightBackground variant="hero" />
           </Suspense>
 
-          <div className="absolute inset-0 bg-gradient-to-r from-[#141311] via-[#191613] to-[#33518C]"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#090B0B] via-[#0D0F0F] to-[#1E3314]"></div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -199,7 +199,7 @@ const IPTVZonderContract = () => {
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 <a
                   href="https://wa.me/18653169315?text=Je%20souhaite%20commander%20IPTV%20sans%20engagement"
-                  className="bg-brand-gold hover:bg-[#2B4577] text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className="bg-brand-gold hover:bg-[#C4FF86] text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 >
                   Commander Sans Engagement via WhatsApp
                 </a>
@@ -321,7 +321,7 @@ const IPTVZonderContract = () => {
             <div className="overflow-x-auto">
               <table className="w-full bg-white rounded-xl overflow-hidden border border-brand-gray-border">
                 <thead>
-                  <tr className="bg-brand-black">
+                  <tr className="bg-surface-2">
                     <th className="px-6 py-4 text-left text-white font-bold">Caractéristique</th>
                     <th className="px-6 py-4 text-center text-white font-bold">
                       <div className="flex items-center justify-center gap-2">
@@ -402,8 +402,8 @@ const IPTVZonderContract = () => {
                       href={`https://wa.me/18653169315?text=Je%20souhaite%20commander%20le%20forfait%20${option.period}%20sans%20engagement`}
                       className={`block w-full py-3 rounded-full font-bold transition-all duration-300 ${
                         option.popular
-                          ? 'bg-brand-gold hover:bg-[#2B4577] text-white'
-                          : 'bg-brand-black hover:bg-brand-black/80 text-white'
+                          ? 'bg-brand-gold hover:bg-[#C4FF86] text-white'
+                          : 'bg-surface-2 hover:bg-surface-2/80 text-white'
                       }`}
                     >
                       Commander via WhatsApp
@@ -477,7 +477,7 @@ const IPTVZonderContract = () => {
 
             <a
               href="https://wa.me/18653169315?text=Je%20souhaite%20commander%20IPTV%20sans%20engagement"
-              className="inline-block bg-brand-gold hover:bg-[#2B4577] text-white px-12 py-5 rounded-full font-bold text-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="inline-block bg-brand-gold hover:bg-[#C4FF86] text-white px-12 py-5 rounded-full font-bold text-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               Commencer Maintenant Sans Engagement
             </a>
@@ -491,16 +491,16 @@ const IPTVZonderContract = () => {
               Plus d'Informations
             </h3>
             <div className="grid md:grid-cols-4 gap-4">
-              <Link to="/acheter-iptv" className="bg-brand-black hover:bg-brand-black/80 p-4 rounded-lg text-white text-center transition-colors">
+              <Link to="/acheter-iptv" className="bg-surface-2 hover:bg-surface-2/80 p-4 rounded-lg text-white text-center transition-colors">
                 Acheter IPTV
               </Link>
-              <Link to="/tarifs" className="bg-brand-black hover:bg-brand-black/80 p-4 rounded-lg text-white text-center transition-colors">
+              <Link to="/tarifs" className="bg-surface-2 hover:bg-surface-2/80 p-4 rounded-lg text-white text-center transition-colors">
                 Voir les Tarifs
               </Link>
-              <Link to="/appareils" className="bg-brand-black hover:bg-brand-black/80 p-4 rounded-lg text-white text-center transition-colors">
+              <Link to="/appareils" className="bg-surface-2 hover:bg-surface-2/80 p-4 rounded-lg text-white text-center transition-colors">
                 Appareils Compatibles
               </Link>
-              <Link to="/faq" className="bg-brand-black hover:bg-brand-black/80 p-4 rounded-lg text-white text-center transition-colors">
+              <Link to="/faq" className="bg-surface-2 hover:bg-surface-2/80 p-4 rounded-lg text-white text-center transition-colors">
                 Toutes les FAQ
               </Link>
             </div>

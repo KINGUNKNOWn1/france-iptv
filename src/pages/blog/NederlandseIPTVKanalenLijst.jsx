@@ -67,11 +67,11 @@ const NederlandseIPTVKanalenLijst = () => {
         ))}
       </Helmet>
       <div className="min-h-screen bg-white text-brand-black pt-20">
-        <section className="py-16 bg-gradient-to-br from-[#141311] via-[#201C18] to-[#141311] text-white">
+        <section className="py-16 bg-gradient-to-br from-[#090B0B] via-[#111413] to-[#090B0B] text-white">
           <div className="container mx-auto px-4 max-w-4xl">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center">
               <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6">
-                🇫🇷 Liste des <span className="text-[#7B9FD9]">Chaînes IPTV Françaises</span> 2026
+                🇫🇷 Liste des <span className="text-brand-gold">Chaînes IPTV Françaises</span> 2026
               </h1>
               <p className="text-xl text-gray-300 mb-4">Vue d'ensemble complète des 80+ chaînes françaises disponibles via IPTV</p>
               <p className="text-sm text-gray-400">📅 Septembre 2026 • 📺 80+ Chaînes</p>
@@ -129,7 +129,7 @@ const NederlandseIPTVKanalenLijst = () => {
               </div>
             </section>
 
-            <section className="bg-gradient-to-br from-brand-gold to-[#2B4577] p-8 rounded-xl text-center text-white">
+            <section className="bg-surface border border-brand-gold/40 p-8 rounded-xl text-center text-white">
               <h2 className="text-3xl font-bold mb-4">Toutes les Chaînes Françaises + 30 500 de Plus !</h2>
               <p className="text-xl mb-6">Démarrez avec France IPTV et regardez toutes les chaînes françaises + des milliers de chaînes internationales</p>
               <div className="flex flex-wrap gap-4 justify-center">

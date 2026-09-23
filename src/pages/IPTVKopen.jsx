@@ -82,7 +82,7 @@ const IPTVKopen = () => {
               fetchpriority="high"
               decoding="async"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#141311]/95 via-[#191613]/85 to-[#33518C]/60"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#090B0B]/95 via-[#0D0F0F]/85 to-[#1E3314]/60"></div>
           </div>
 
           <div className="container-custom relative z-10">
@@ -95,7 +95,7 @@ const IPTVKopen = () => {
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
                 Acheter IPTV en France
                 <br />
-                <span className="text-[#7B9FD9]">Fiable & Abordable</span>
+                <span className="text-brand-gold">Fiable & Abordable</span>
               </h1>
               <p className="text-xl text-gray-200 leading-relaxed mb-8 max-w-3xl">
                 Vous cherchez où <strong>acheter IPTV</strong> en France ? France IPTV est LE fournisseur IPTV fiable avec 30 500+ chaînes, qualité 4K et support francophone. Aucune reconduction automatique, paiement par Binance Pay ou PayPal possible.
@@ -134,7 +134,7 @@ const IPTVKopen = () => {
                 Pourquoi acheter IPTV chez France IPTV ?
               </h2>
               <p className="text-xl text-brand-gray max-w-3xl mx-auto">
-                Si vous cherchez un <Link to="/abonnement-iptv" className="text-brand-gold hover:text-[#2B4577] underline">abonnement IPTV fiable</Link>, vous êtes au bon endroit.
+                Si vous cherchez un <Link to="/abonnement-iptv" className="text-brand-gold hover:text-[#C4FF86] underline">abonnement IPTV fiable</Link>, vous êtes au bon endroit.
               </p>
             </motion.div>
 
@@ -148,7 +148,7 @@ const IPTVKopen = () => {
                   transition={{ delay: index * 0.1 }}
                   className="bg-white border border-brand-gray-border rounded-xl p-6 hover:border-brand-gold transition-all"
                 >
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-brand-gold to-[#2B4577] flex items-center justify-center mb-4">
+                  <div className="w-14 h-14 rounded-xl bg-surface border border-brand-gold/40 flex items-center justify-center mb-4">
                     <benefit.icon className="text-white text-2xl" />
                   </div>
                   <h3 className="text-xl font-bold text-brand-black mb-2">
@@ -176,7 +176,7 @@ const IPTVKopen = () => {
                   Que recevez-vous en achetant un abonnement IPTV ?
                 </h2>
                 <p className="text-brand-gray text-lg mb-8">
-                  Chez France IPTV, vous accédez à l'offre IPTV la plus complète de France. Découvrez <Link to="/chaines" className="text-brand-gold hover:text-[#2B4577] underline">toutes les chaînes IPTV disponibles</Link> et plus encore.
+                  Chez France IPTV, vous accédez à l'offre IPTV la plus complète de France. Découvrez <Link to="/chaines" className="text-brand-gold hover:text-[#C4FF86] underline">toutes les chaînes IPTV disponibles</Link> et plus encore.
                 </p>
                 <div className="space-y-4">
                   {features.map((feature, index) => (
@@ -214,7 +214,7 @@ const IPTVKopen = () => {
         </section>
 
         {/* How It Works */}
-        <section className="py-20 bg-gradient-to-b from-white to-brand-offwhite">
+        <section className="py-20 bg-gradient-to-b from-surface to-brand-offwhite">
           <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -241,7 +241,7 @@ const IPTVKopen = () => {
                   className="relative"
                 >
                   <div className="bg-white border border-brand-gray-border rounded-xl p-6">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-brand-gold to-[#2B4577] flex items-center justify-center mb-4 text-white text-2xl font-bold">
+                    <div className="w-16 h-16 rounded-full bg-surface border border-brand-gold/40 flex items-center justify-center mb-4 text-white text-2xl font-bold">
                       {step.number}
                     </div>
                     <h3 className="text-xl font-bold text-brand-black mb-3">
@@ -251,7 +251,7 @@ const IPTVKopen = () => {
                       {step.description.includes('<link-prijzen>') ? (
                         <>
                           {step.description.split('<link-prijzen>')[0]}
-                          <Link to="/tarifs" className="text-brand-gold hover:text-[#2B4577] underline">
+                          <Link to="/tarifs" className="text-brand-gold hover:text-[#C4FF86] underline">
                             {step.description.split('<link-prijzen>')[1].split('</link-prijzen>')[0]}
                           </Link>
                           {step.description.split('</link-prijzen>')[1]}
@@ -259,7 +259,7 @@ const IPTVKopen = () => {
                       ) : step.description.includes('<link-apparaten>') ? (
                         <>
                           {step.description.split('<link-apparaten>')[0]}
-                          <Link to="/appareils" className="text-brand-gold hover:text-[#2B4577] underline">
+                          <Link to="/appareils" className="text-brand-gold hover:text-[#C4FF86] underline">
                             {step.description.split('<link-apparaten>')[1].split('</link-apparaten>')[0]}
                           </Link>
                           {step.description.split('</link-apparaten>')[1]}
@@ -283,7 +283,7 @@ const IPTVKopen = () => {
           <div className="container-custom">
             {/* Static on purpose: as a whileInView fade it was prerendered with
                 opacity 0 and could stay invisible (blank block above the footer). */}
-            <div className="bg-gradient-to-r from-brand-gold to-[#2B4577] rounded-2xl p-8 md:p-12 text-center">
+            <div className="bg-surface border border-brand-gold/40 rounded-2xl p-8 md:p-12 text-center">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Prêt à acheter votre IPTV ?
               </h2>

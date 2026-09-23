@@ -182,7 +182,7 @@ const SFR = () => {
       </Helmet>
 
       {/* Hero */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#141311] via-[#201C18] to-[#191613]">
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#090B0B] via-[#111413] to-[#0D0F0F]">
         <Suspense fallback={null}>
           <LightweightBackground variant="hero" />
         </Suspense>
@@ -258,7 +258,7 @@ const SFR = () => {
                   transition={{ delay: index * 0.1 }}
                   className="bg-white border border-brand-gray-border rounded-xl p-6 shadow-md"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-brand-gold to-[#2B4577] rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-surface border border-brand-gold/40 rounded-lg flex items-center justify-center mb-4">
                     <Icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="font-bold text-lg mb-2 text-brand-black">{benefit.title}</h3>
@@ -271,7 +271,7 @@ const SFR = () => {
       </section>
 
       {/* Causes */}
-      <section className="py-20 bg-gradient-to-br from-[#141311] to-[#201C18] text-white">
+      <section className="py-20 bg-gradient-to-br from-[#090B0B] to-[#111413] text-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -344,7 +344,7 @@ const SFR = () => {
                   className="bg-brand-offwhite rounded-2xl p-8 border-l-4 border-blue-500 shadow-lg hover:shadow-xl transition-shadow"
                 >
                   <div className="flex items-start gap-6">
-                    <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-brand-gold to-[#2B4577] rounded-2xl flex items-center justify-center text-white text-2xl font-bold">
+                    <div className="flex-shrink-0 w-16 h-16 bg-surface border border-brand-gold/40 rounded-2xl flex items-center justify-center text-white text-2xl font-bold">
                       {step.number}
                     </div>
                     <div className="flex-1">
@@ -435,7 +435,7 @@ const SFR = () => {
       </section>
 
       {/* Related devices */}
-      <section className="py-20 bg-gradient-to-br from-[#141311] to-[#201C18] text-white">
+      <section className="py-20 bg-gradient-to-br from-[#090B0B] to-[#111413] text-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -471,7 +471,7 @@ const SFR = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white">
+      <section className="py-20 bg-surface border border-lime/30 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Un IPTV Fiable, Sans Coupures</h2>

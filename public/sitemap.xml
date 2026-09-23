@@ -226,6 +226,35 @@
     <priority>0.3</priority>
   </url>
 
+  <!-- New blog posts (2026-09-23) -->
+  <url>
+    <loc>https://franceiptv.stream/blog/iptv-smarters-pro</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://franceiptv.stream/blog/m3u-xtream-codes-mac</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://franceiptv.stream/blog/meilleure-box-iptv</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://franceiptv.stream/blog/iptv-qui-coupe</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Blog index -->
   <url>
     <loc>https://franceiptv.stream/blog</loc>

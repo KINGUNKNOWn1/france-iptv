@@ -108,7 +108,7 @@ const Apparaten = () => {
       />
       <div className="min-h-screen bg-white text-brand-black pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-[#141311] via-[#241F19] to-[#141311] text-white">
+        <section className="py-20 bg-gradient-to-br from-[#090B0B] via-[#241F19] to-[#090B0B] text-white">
           <div className="container mx-auto px-4 max-w-6xl">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -117,7 +117,7 @@ const Apparaten = () => {
               className="text-center"
             >
               <h1 className="text-5xl md:text-6xl font-heading font-bold mb-6">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-[#C4FF86]">
                   IPTV sur Tous les Appareils
                 </span>
               </h1>
@@ -165,7 +165,7 @@ const Apparaten = () => {
                     className={`block relative bg-gradient-to-br ${device.color} p-8 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-[1.02]`}
                   >
                     {/* Glossy overlay effect */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-surface/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                     {/* 3D depth shadow */}
                     <div className="absolute -inset-1 bg-gradient-to-br from-black/20 to-transparent rounded-2xl -z-10 blur-xl" />
@@ -318,11 +318,11 @@ const Apparaten = () => {
 
             <div className="text-center mt-10 space-y-2">
               <p className="text-brand-gray mb-1">Un problème de lecture ou une erreur affichée ?</p>
-              <Link to="/appareils/erreur-lecture-iptv" className="text-brand-gold hover:text-[#2B4577] underline font-semibold block">
+              <Link to="/appareils/erreur-lecture-iptv" className="text-brand-gold hover:text-[#C4FF86] underline font-semibold block">
                 Consultez notre guide de dépannage IPTV →
               </Link>
               <p className="text-brand-gray mb-1 pt-4">Besoin d'aide pour entrer votre code d'activation ?</p>
-              <Link to="/appareils/activer-code-iptv" className="text-brand-gold hover:text-[#2B4577] underline font-semibold block">
+              <Link to="/appareils/activer-code-iptv" className="text-brand-gold hover:text-[#C4FF86] underline font-semibold block">
                 Guide d'activation (Xtream Codes, M3U, MAC) →
               </Link>
             </div>
@@ -361,7 +361,7 @@ const Apparaten = () => {
               ))}
             </div>
 
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl p-8 text-center">
+            <div className="bg-surface border border-lime/30 rounded-xl p-8 text-center">
               <h3 className="text-2xl font-bold mb-4 text-white">
                 Besoin d'Aide pour l'Installation ?
               </h3>
@@ -438,7 +438,7 @@ const Apparaten = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-white to-brand-offwhite">
+        <section className="py-20 bg-gradient-to-br from-surface to-brand-offwhite">
           <div className="container mx-auto px-4 max-w-4xl text-center">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-brand-black">
               Prêt à Regarder l'IPTV sur Vos Appareils ?

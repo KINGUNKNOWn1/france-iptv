@@ -115,7 +115,7 @@ const IPTVNeFonctionnePlus = () => {
       </Helmet>
 
       <div className="min-h-screen bg-white text-brand-black pt-20">
-        <section className="py-16 bg-gradient-to-br from-[#141311] via-[#201C18] to-[#141311] text-white">
+        <section className="py-16 bg-gradient-to-br from-[#090B0B] via-[#111413] to-[#090B0B] text-white">
           <div className="container mx-auto px-4 max-w-4xl">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center">
               <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6">
@@ -214,7 +214,7 @@ const IPTVNeFonctionnePlus = () => {
             </section>
 
             {/* CTA */}
-            <section className="bg-gradient-to-br from-blue-600 to-brand-gold p-8 rounded-xl text-center text-white">
+            <section className="bg-surface border border-lime/30 p-8 rounded-xl text-center text-white">
               <h2 className="text-3xl font-bold mb-4">Toujours un Problème ?</h2>
               <p className="text-xl mb-6">Notre support francophone diagnostique votre panne en quelques minutes via WhatsApp</p>
               <div className="flex flex-wrap gap-4 justify-center">

@@ -42,7 +42,7 @@ const CountdownTimer = ({ endTime }) => {
           </span>
         </div>
         {/* Shine effect */}
-        <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/20 to-transparent" />
+        <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-surface/20 to-transparent" />
       </div>
       <span className="text-xs md:text-sm text-gray-400 mt-2 font-semibold uppercase tracking-wider">
         {label}

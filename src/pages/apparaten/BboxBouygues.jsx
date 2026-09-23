@@ -162,7 +162,7 @@ const BboxBouygues = () => {
         <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
       </Helmet>
 
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#141311] via-[#201C18] to-[#191613]">
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#090B0B] via-[#111413] to-[#0D0F0F]">
         <Suspense fallback={null}><LightweightBackground variant="hero" /></Suspense>
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 opacity-10">
@@ -209,7 +209,7 @@ const BboxBouygues = () => {
               const Icon = benefit.icon;
               return (
                 <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="bg-white border border-brand-gray-border rounded-xl p-6 shadow-md">
-                  <div className="w-12 h-12 bg-gradient-to-br from-brand-gold to-[#2B4577] rounded-lg flex items-center justify-center mb-4"><Icon className="w-6 h-6 text-white" /></div>
+                  <div className="w-12 h-12 bg-surface border border-brand-gold/40 rounded-lg flex items-center justify-center mb-4"><Icon className="w-6 h-6 text-white" /></div>
                   <h3 className="font-bold text-lg mb-2 text-brand-black">{benefit.title}</h3>
                   <p className="text-brand-gray text-sm">{benefit.description}</p>
                 </motion.div>
@@ -232,7 +232,7 @@ const BboxBouygues = () => {
               return (
                 <motion.div key={index} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="bg-brand-offwhite rounded-2xl p-8 border-l-4 border-blue-500 shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-start gap-6">
-                    <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-brand-gold to-[#2B4577] rounded-2xl flex items-center justify-center text-white text-2xl font-bold">{step.number}</div>
+                    <div className="flex-shrink-0 w-16 h-16 bg-surface border border-brand-gold/40 rounded-2xl flex items-center justify-center text-white text-2xl font-bold">{step.number}</div>
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-3"><Icon className="w-6 h-6 text-blue-500" /><h3 className="text-2xl font-bold text-brand-black">{step.title}</h3></div>
                       <p className="text-brand-gray leading-relaxed mb-4">{step.description}</p>
@@ -256,7 +256,7 @@ const BboxBouygues = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-[#141311] to-[#201C18] text-white">
+      <section className="py-20 bg-gradient-to-br from-[#090B0B] to-[#111413] text-white">
         <div className="container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Modèles Bbox <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Compatibles</span></h2>
@@ -287,7 +287,7 @@ const BboxBouygues = () => {
       <section className="py-20 bg-brand-offwhite">
         <div className="container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16 relative">
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden"><span className="text-[120px] md:text-[180px] font-bold text-gray-300/40 select-none">Problème ?</span></div>
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden"><span className="text-[120px] md:text-[180px] font-bold text-white/[0.04] select-none">Problème ?</span></div>
             <div className="relative z-10">
               <h2 className="text-5xl md:text-7xl font-bold mb-4"><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-blue-600">Solutions</span></h2>
               <p className="text-xl text-brand-gray max-w-2xl mx-auto">Problèmes courants sur Bbox et leurs solutions</p>
@@ -345,7 +345,7 @@ const BboxBouygues = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-[#141311] to-[#201C18] text-white">
+      <section className="py-20 bg-gradient-to-br from-[#090B0B] to-[#111413] text-white">
         <div className="container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Autres Appareils</h2>
@@ -367,7 +367,7 @@ const BboxBouygues = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white">
+      <section className="py-20 bg-surface border border-lime/30 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Prêt à Commencer ?</h2>

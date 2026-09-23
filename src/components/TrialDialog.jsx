@@ -1,0 +1,102 @@
+import React, { useEffect, useRef, useState } from 'react';
+import { Tv, Laptop, Smartphone, Box, Check, X, ArrowRight, ArrowLeft } from 'lucide-react';
+import TrialEmailForm from './TrialEmailForm';
+import { openWhatsApp } from '../utils/tracking';
+
+// Free-trial dialog from the dark theme: pick a device, then leave an email
+// (captured in MailerLite) or go straight to WhatsApp. Opened from anywhere
+// with: window.dispatchEvent(new CustomEvent('open-trial'))
+const DEVICES = [
+  { name: 'Smart TV', detail: 'Samsung, LG et autres', Icon: Tv },
+  { name: 'Ordinateur', detail: 'Windows et macOS', Icon: Laptop },
+  { name: 'Mobile & tablette', detail: 'iOS et Android', Icon: Smartphone },
+  { name: 'Box Android', detail: 'Android TV, Fire TV, Freebox', Icon: Box },
+];
+
+const TrialDialog = () => {
+  const dialog = useRef(null);
+  const [open, setOpen] = useState(false);
+  const [step, setStep] = useState(1);
+  const [device, setDevice] = useState(0);
+
+  useEffect(() => {
+    const onOpen = () => { setStep(1); setOpen(true); };
+    window.addEventListener('open-trial', onOpen);
+    return () => window.removeEventListener('open-trial', onOpen);
+  }, []);
+
+  useEffect(() => {
+    const el = dialog.current;
+    if (!el) return;
+    if (open && !el.open) el.showModal();
+    if (!open && el.open) el.close();
+  }, [open]);
+
+  const close = () => setOpen(false);
+  const message = `Bonjour ! Je souhaite activer mon essai gratuit de 24h sur ${DEVICES[device].name}.`;
+
+  return (
+    <dialog
+      ref={dialog}
+      onClose={close}
+      onClick={(e) => { if (e.target === dialog.current) close(); }}
+      aria-label="Essai gratuit de 24 heures"
+      className="bg-surface text-brand-black border border-white/15 rounded-2xl w-[min(560px,calc(100%-28px))] max-h-[90dvh] p-6 md:p-10 shadow-2xl backdrop:bg-black/70 backdrop:backdrop-blur-sm"
+    >
+      <button onClick={close} className="absolute right-3 top-3 w-9 h-9 grid place-items-center text-brand-gray hover:text-white" aria-label="Fermer">
+        <X size={22} />
+      </button>
+
+      {step === 1 ? (
+        <>
+          <p className="text-[10px] tracking-[0.2em] font-medium text-lime mb-2">VOTRE ESSAI DE 24 HEURES</p>
+          <h2 className="text-3xl md:text-4xl mb-2">Sur quel écran ?</h2>
+          <p className="text-sm text-brand-gray mb-6">Choisissez votre appareil pour préparer votre essai.</p>
+          <div className="grid grid-cols-2 gap-2.5 mb-6">
+            {DEVICES.map(({ name, detail, Icon }, i) => (
+              <button
+                key={name}
+                type="button"
+                aria-pressed={device === i}
+                onClick={() => setDevice(i)}
+                className={`flex items-center gap-2.5 text-left rounded-lg border px-3 py-4 text-sm transition-colors ${
+                  device === i ? 'border-lime text-lime bg-lime/5' : 'border-white/15 bg-surface-2 hover:border-white/30'
+                }`}
+              >
+                <Icon size={24} className="flex-shrink-0" />
+                <span className="flex-1">
+                  {name}
+                  <span className="block text-[11px] text-brand-gray">{detail}</span>
+                </span>
+                {device === i && <Check size={16} />}
+              </button>
+            ))}
+          </div>
+          <button type="button" onClick={() => setStep(2)} className="w-full min-h-[52px] inline-flex items-center justify-center gap-3 bg-lime hover:bg-lime-hover text-lime-on font-semibold rounded-lg">
+            Continuer <ArrowRight size={20} />
+          </button>
+        </>
+      ) : (
+        <>
+          <button type="button" onClick={() => setStep(1)} className="flex items-center gap-2 text-xs text-brand-gray hover:text-white mb-5">
+            <ArrowLeft size={16} /> Modifier l'appareil ({DEVICES[device].name})
+          </button>
+          <h2 className="text-3xl md:text-4xl mb-2">Tout commence par un essai.</h2>
+          <p className="text-sm text-brand-gray mb-5">
+            Entrez votre e-mail : on vous envoie la marche à suivre, puis vous activez votre essai de 24 h sur WhatsApp.
+          </p>
+          <TrialEmailForm source="trial_dialog" dark large message={message} />
+          <div className="flex items-center gap-3 my-5 text-xs text-brand-gray">
+            <span className="h-px flex-1 bg-white/10" /> ou <span className="h-px flex-1 bg-white/10" />
+          </div>
+          <button type="button" onClick={() => openWhatsApp(message)} className="w-full min-h-[48px] inline-flex items-center justify-center gap-2 border border-white/25 hover:bg-white/5 rounded-lg font-semibold text-sm">
+            Continuer directement sur WhatsApp <ArrowRight size={18} />
+          </button>
+          <p className="text-[11px] text-brand-gray text-center mt-3">Aucun paiement n'est demandé pour l'essai.</p>
+        </>
+      )}
+    </dialog>
+  );
+};
+
+export default TrialDialog;

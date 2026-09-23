@@ -92,7 +92,7 @@ const ExitIntentModal = () => {
           >
             <div
               onClick={(e) => e.stopPropagation()}
-              className="relative bg-gradient-to-br from-brand-black/90 to-brand-black rounded-3xl max-w-2xl w-full overflow-hidden border-2 border-brand-gold/50 shadow-2xl shadow-blue-600/20"
+              className="relative bg-gradient-to-br from-ink/90 to-ink rounded-3xl max-w-2xl w-full overflow-hidden border-2 border-brand-gold/50 shadow-2xl shadow-blue-600/20"
             >
               {/* Close Button */}
               <button
@@ -132,7 +132,7 @@ const ExitIntentModal = () => {
                     </p>
 
                     {/* Offer Box */}
-                    <div className="bg-gradient-to-r from-brand-gold/20 to-purple-600/20 border-2 border-brand-gold/50 rounded-2xl p-6 mb-6">
+                    <div className="bg-surface border border-lime/30 border-2 border-brand-gold/50 rounded-2xl p-6 mb-6">
                       <div className="text-center mb-4">
                         <p className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 mb-2">
                           10% DE RÉDUCTION
@@ -192,7 +192,7 @@ const ExitIntentModal = () => {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-green-600/50 text-lg disabled:opacity-50"
+                        className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-surface border border-lime/30 hover:from-green-700 hover:to-green-800 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-green-600/50 text-lg disabled:opacity-50"
                       >
                         {isSubmitting ? 'Envoi...' : 'Recevoir mon code -10%'}
                       </button>
@@ -239,7 +239,7 @@ const ExitIntentModal = () => {
 
                     <button
                       onClick={handleWhatsApp}
-                      className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-green-600/50 text-lg"
+                      className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-surface border border-lime/30 hover:from-green-700 hover:to-green-800 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-green-600/50 text-lg"
                     >
                       <FaWhatsapp className="text-xl" />
                       Commander sur WhatsApp

@@ -43,7 +43,7 @@ const IPTVNederland = () => {
       />
       <div className="min-h-screen bg-white text-brand-black pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-[#33518C] via-[#141311] to-[#141311] text-white">
+        <section className="py-20 bg-gradient-to-br from-[#1E3314] via-[#090B0B] to-[#090B0B] text-white">
           <div className="container mx-auto px-4 max-w-6xl">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -64,7 +64,7 @@ const IPTVNederland = () => {
               <div className="flex flex-wrap gap-4 justify-center">
                 <a
                   href="#channels"
-                  className="px-8 py-4 bg-brand-gold hover:bg-[#2B4577] text-white font-semibold rounded-lg transition-all transform hover:scale-105"
+                  className="px-8 py-4 bg-brand-gold hover:bg-[#C4FF86] text-white font-semibold rounded-lg transition-all transform hover:scale-105"
                 >
                   Voir les Chaînes Françaises
                 </a>
@@ -130,7 +130,7 @@ const IPTVNederland = () => {
               ))}
             </div>
 
-            <div className="text-center bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-xl">
+            <div className="text-center bg-surface border border-lime/30 p-6 rounded-xl">
               <p className="text-xl font-semibold mb-2 text-brand-black">
                 + 30 420 chaînes internationales
               </p>
@@ -218,7 +218,7 @@ const IPTVNederland = () => {
             </h2>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-brand-gold to-[#2B4577] p-8 rounded-xl text-center">
+              <div className="bg-surface border border-brand-gold/40 p-8 rounded-xl text-center">
                 <div className="text-4xl mb-4">💳</div>
                 <h3 className="text-2xl font-bold mb-3 text-white">Paiement Sécurisé</h3>
                 <p className="text-white/90">
@@ -226,7 +226,7 @@ const IPTVNederland = () => {
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-[#141311] to-[#201C18] p-8 rounded-xl text-center">
+              <div className="bg-gradient-to-br from-[#090B0B] to-[#111413] p-8 rounded-xl text-center">
                 <div className="text-4xl mb-4">🇫🇷</div>
                 <h3 className="text-2xl font-bold mb-3 text-white">Support Francophone</h3>
                 <p className="text-white/90">
@@ -234,7 +234,7 @@ const IPTVNederland = () => {
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-green-600 to-green-700 p-8 rounded-xl text-center">
+              <div className="bg-surface border border-lime/30 p-8 rounded-xl text-center">
                 <div className="text-4xl mb-4">⚡</div>
                 <h3 className="text-2xl font-bold mb-3 text-white">Serveurs les Plus Rapides</h3>
                 <p className="text-white/90">
@@ -246,7 +246,7 @@ const IPTVNederland = () => {
         </section>
 
         {/* Pricing CTA */}
-        <section className="py-20 bg-gradient-to-br from-white to-brand-offwhite">
+        <section className="py-20 bg-gradient-to-br from-surface to-brand-offwhite">
           <div className="container mx-auto px-4 max-w-4xl text-center">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-brand-black">
               Démarrez avec le Meilleur <span className="text-brand-gold">IPTV en France</span>
@@ -258,7 +258,7 @@ const IPTVNederland = () => {
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 to="/abonnement-iptv"
-                className="px-10 py-4 bg-brand-gold hover:bg-[#2B4577] text-white text-lg font-semibold rounded-lg transition-all transform hover:scale-105"
+                className="px-10 py-4 bg-brand-gold hover:bg-[#C4FF86] text-white text-lg font-semibold rounded-lg transition-all transform hover:scale-105"
               >
                 Voir les Abonnements
               </Link>

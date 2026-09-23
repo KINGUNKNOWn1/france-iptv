@@ -174,7 +174,7 @@ const VeelgesteldeVragen = () => {
       </Helmet>
       <div className="min-h-screen bg-white text-brand-black pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-[#141311] via-[#201C18] to-[#141311] text-white">
+        <section className="py-20 bg-gradient-to-br from-[#090B0B] via-[#111413] to-[#090B0B] text-white">
           <div className="container mx-auto px-4 max-w-4xl text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -266,7 +266,7 @@ const VeelgesteldeVragen = () => {
             <div className="grid md:grid-cols-3 gap-6">
               <Link
                 to="/acheter-iptv"
-                className="bg-gradient-to-br from-brand-gold to-[#2B4577] p-8 rounded-xl hover:scale-105 transition-transform text-white"
+                className="bg-surface border border-brand-gold/40 p-8 rounded-xl hover:scale-105 transition-transform text-white"
               >
                 <FaCheckCircle className="text-4xl mb-4" />
                 <h3 className="text-2xl font-bold mb-2">Acheter IPTV</h3>
@@ -277,7 +277,7 @@ const VeelgesteldeVragen = () => {
 
               <Link
                 to="/chaines"
-                className="bg-gradient-to-br from-purple-600 to-purple-700 p-8 rounded-xl hover:scale-105 transition-transform text-white"
+                className="bg-surface border border-lime/30 p-8 rounded-xl hover:scale-105 transition-transform text-white"
               >
                 <FaCheckCircle className="text-4xl mb-4" />
                 <h3 className="text-2xl font-bold mb-2">Chaînes</h3>
@@ -288,7 +288,7 @@ const VeelgesteldeVragen = () => {
 
               <Link
                 to="/appareils"
-                className="bg-gradient-to-br from-green-600 to-green-700 p-8 rounded-xl hover:scale-105 transition-transform text-white"
+                className="bg-surface border border-lime/30 p-8 rounded-xl hover:scale-105 transition-transform text-white"
               >
                 <FaCheckCircle className="text-4xl mb-4" />
                 <h3 className="text-2xl font-bold mb-2">Appareils</h3>
@@ -301,7 +301,7 @@ const VeelgesteldeVragen = () => {
         </section>
 
         {/* Still Have Questions */}
-        <section className="py-20 bg-gradient-to-br from-white to-brand-offwhite">
+        <section className="py-20 bg-gradient-to-br from-surface to-brand-offwhite">
           <div className="container mx-auto px-4 max-w-4xl text-center">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-brand-black">
               Question Sans Réponse ?
@@ -319,7 +319,7 @@ const VeelgesteldeVragen = () => {
               </a>
               <Link
                 to="/contact"
-                className="px-10 py-4 bg-brand-gold hover:bg-[#2B4577] text-white text-lg font-semibold rounded-lg transition-all transform hover:scale-105"
+                className="px-10 py-4 bg-brand-gold hover:bg-[#C4FF86] text-white text-lg font-semibold rounded-lg transition-all transform hover:scale-105"
               >
                 Formulaire de Contact
               </Link>

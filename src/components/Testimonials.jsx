@@ -55,7 +55,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="reviews" className="py-24 bg-gradient-to-b from-white via-gray-50 to-white">
+    <section id="reviews" className="py-24 bg-gradient-to-b from-surface via-gray-50 to-surface">
       <div className="container-custom">
         {/* Section Header */}
         <motion.div

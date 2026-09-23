@@ -115,7 +115,7 @@ const ThreeDTV = ({ imageUrl = 'https://images.unsplash.com/photo-1579952363873-
 
       {/* Overlay text */}
       <div className="absolute bottom-8 left-8 z-10">
-        <div className="bg-brand-black/80 backdrop-blur-md border border-brand-gold/30 rounded-2xl p-6">
+        <div className="bg-surface-2/80 backdrop-blur-md border border-brand-gold/30 rounded-2xl p-6">
           <div className="flex items-center gap-2 mb-2">
             <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
             <span className="text-sm font-semibold text-gray-300">LIVE IN 4K</span>

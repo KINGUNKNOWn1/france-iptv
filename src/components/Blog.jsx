@@ -6,15 +6,10 @@ import { blogPosts as posts, formatPostDate } from '../data/blogPosts';
 
 const Blog = ({ showAllLink = true }) => {
   return (
-    <section id="blog" className="py-20 bg-gradient-to-b from-[#141311] via-[#201C18] to-[#141311]">
+    <section id="blog" className="py-20 bg-gradient-to-b from-[#090B0B] via-[#111413] to-[#090B0B]">
       <div className="container-custom">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
+        <motion.div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Blog & Actualités IPTV
           </h2>
@@ -28,12 +23,8 @@ const Blog = ({ showAllLink = true }) => {
           {posts.map((post, index) => (
             <motion.article
               key={post.link}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -10 }}
-              className="group bg-[#201C18] rounded-2xl overflow-hidden border border-slate-700 hover:border-brand-gold transition-all duration-300"
+              whileHover={{ y: -6 }}
+              className="group bg-[#111413] rounded-2xl overflow-hidden border border-slate-700 hover:border-brand-gold transition-all duration-300"
             >
             <Link to={post.link} className="block">
               {/* Image */}
@@ -43,7 +34,7 @@ loading="lazy" decoding="async"                   src={post.image}
                   alt={post.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#141311] to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#090B0B] to-transparent" />
 
                 {/* Category Badge */}
                 <div className="absolute top-4 left-4">

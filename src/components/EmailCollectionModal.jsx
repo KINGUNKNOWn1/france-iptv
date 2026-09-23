@@ -55,7 +55,7 @@ const EmailCollectionModal = ({ isOpen, onClose, onSubmit, planName }) => {
             </button>
 
             {/* Header */}
-            <div className="bg-gradient-to-r from-brand-gold to-[#2B4577] p-8 text-white">
+            <div className="bg-surface border border-brand-gold/40 p-8 text-white">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
                   <FaEnvelope className="text-2xl" />
@@ -122,7 +122,7 @@ const EmailCollectionModal = ({ isOpen, onClose, onSubmit, planName }) => {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-brand-gold to-[#2B4577] hover:from-[#2B4577] hover:to-brand-gold text-white font-bold py-4 rounded-xl transition-all flex items-center justify-center gap-3 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-surface border border-brand-gold/40 hover:from-[#C4FF86] hover:to-brand-gold text-white font-bold py-4 rounded-xl transition-all flex items-center justify-center gap-3 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <FaWhatsapp className="text-2xl" />
                   <span>Continuer vers WhatsApp</span>

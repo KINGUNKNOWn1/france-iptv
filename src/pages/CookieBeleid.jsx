@@ -68,7 +68,7 @@ const CookieBeleid = () => {
 
       <div className="min-h-screen bg-white text-brand-black">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-br from-[#141311] via-[#201C18] to-[#141311] text-white">
+        <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-br from-[#090B0B] via-[#111413] to-[#090B0B] text-white">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -160,9 +160,9 @@ const CookieBeleid = () => {
                 {cookieTypes.map((type, index) => {
                   const Icon = type.icon;
                   const colorClasses = {
-                    green: 'from-green-50 to-white border-green-300',
-                    blue: 'from-blue-50 to-white border-blue-300',
-                    purple: 'from-purple-50 to-white border-purple-300'
+                    green: 'from-green-50 to-surface border-green-300',
+                    blue: 'from-blue-50 to-surface border-blue-300',
+                    purple: 'from-purple-50 to-surface border-purple-300'
                   };
 
                   return (
@@ -241,7 +241,7 @@ const CookieBeleid = () => {
                         <p className="text-brand-gray text-sm mb-3">
                           Vous pouvez ajuster vos préférences de cookies via le bandeau qui apparaît lors de votre première visite, ou via les paramètres ci-dessous.
                         </p>
-                        <button className="bg-brand-gold hover:bg-[#2B4577] text-white px-6 py-2 rounded-full font-semibold transition-colors text-sm">
+                        <button className="bg-brand-gold hover:bg-[#C4FF86] text-white px-6 py-2 rounded-full font-semibold transition-colors text-sm">
                           Ajuster les Préférences de Cookies
                         </button>
                       </div>
@@ -373,7 +373,7 @@ const CookieBeleid = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-r from-blue-50 to-blue-100 border border-brand-gold/30 rounded-2xl p-8 text-center"
+                className="bg-surface border border-lime/30 border border-brand-gold/30 rounded-2xl p-8 text-center"
               >
                 <Cookie className="w-12 h-12 text-brand-gold mx-auto mb-4" />
                 <h2 className="text-2xl font-bold mb-4 text-brand-black">Des Questions sur les Cookies ?</h2>
@@ -383,7 +383,7 @@ const CookieBeleid = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
                     href="mailto:privacy@franceiptv.stream"
-                    className="bg-brand-gold hover:bg-[#2B4577] text-white px-8 py-3 rounded-full font-semibold transition-colors"
+                    className="bg-brand-gold hover:bg-[#C4FF86] text-white px-8 py-3 rounded-full font-semibold transition-colors"
                   >
                     E-mail à l'Équipe Confidentialité
                   </a>

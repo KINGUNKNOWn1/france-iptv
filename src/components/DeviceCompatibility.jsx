@@ -65,7 +65,7 @@ const DeviceCompatibility = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white via-slate-50 to-white relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-b from-surface via-[#0D0F0F] to-surface relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full blur-3xl" />
@@ -136,7 +136,7 @@ const DeviceCompatibility = () => {
                     <Link
                       to={device.link}
                       aria-label={`Voir le guide d'installation pour ${device.name}`}
-                      className="relative block bg-white rounded-2xl p-5 border-2 border-gray-100 group-hover:border-transparent group-hover:shadow-xl transition-all duration-300"
+                      className="relative block bg-white rounded-2xl p-5 border-2 border-white/10 group-hover:border-lime/40 group-hover:shadow-xl transition-all duration-300"
                     >
                       <div className={`w-14 h-14 mx-auto mb-3 rounded-xl bg-gradient-to-br ${device.color} flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300`}>
                         <device.icon className="text-white text-2xl" />
@@ -157,7 +157,7 @@ const DeviceCompatibility = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
               whileHover={{ scale: 1.02 }}
-              className="inline-flex items-center gap-4 px-8 py-5 bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-2xl shadow-lg hover:shadow-xl transition-all"
+              className="inline-flex items-center gap-4 px-8 py-5 bg-[#10200F] border-2 border-green-500/40 rounded-2xl shadow-lg hover:shadow-xl transition-all"
             >
               <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                 <FaCheckCircle className="text-white text-2xl" />
@@ -183,7 +183,7 @@ const DeviceCompatibility = () => {
               whileInView={{ scale: 1, rotate: 0 }}
               viewport={{ once: true }}
               transition={{ type: 'spring', stiffness: 200, delay: 0.3 }}
-              className="absolute -top-6 -right-6 z-20 bg-gradient-to-br from-brand-gold via-blue-700 to-[#2B4577] text-white rounded-3xl px-8 py-6 shadow-2xl border-4 border-white"
+              className="absolute -top-6 -right-6 z-20 bg-surface border border-brand-gold/40 text-white rounded-3xl px-8 py-6 shadow-2xl border-4 border-white"
             >
               <div className="text-center">
                 <p className="text-5xl font-bold mb-1">8+</p>
@@ -195,7 +195,7 @@ const DeviceCompatibility = () => {
             <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              className="relative bg-gradient-to-br from-brand-black via-slate-800 to-brand-black rounded-3xl p-10 shadow-2xl"
+              className="relative bg-gradient-to-br from-ink via-slate-800 to-ink rounded-3xl p-10 shadow-2xl"
             >
               {/* TV Screen */}
               <motion.div

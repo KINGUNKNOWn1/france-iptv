@@ -7,6 +7,7 @@ import StickyWhatsAppCTA from './components/StickyWhatsAppCTA';
 import CookieConsent from './components/CookieConsent';
 import ExitIntentModal from './components/ExitIntentModal';
 import TrialPopup from './components/TrialPopup';
+import TrialDialog from './components/TrialDialog';
 import PageTransition from './components/PageTransition';
 import SmoothScroll from './components/SmoothScroll';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -45,6 +46,10 @@ const BesteIPTVApps2024 = lazy(() => import('./pages/blog/BesteIPTVApps2024'));
 const IsIPTVLegaalNederland = lazy(() => import('./pages/blog/IsIPTVLegaalNederland'));
 const NederlandseIPTVKanalenLijst = lazy(() => import('./pages/blog/NederlandseIPTVKanalenLijst'));
 const BlogIndex = lazy(() => import('./pages/BlogIndex'));
+const IPTVSmartersPro = lazy(() => import('./pages/blog/IPTVSmartersPro'));
+const M3UXtreamCodesMAC = lazy(() => import('./pages/blog/M3UXtreamCodesMAC'));
+const MeilleureBoxIPTV = lazy(() => import('./pages/blog/MeilleureBoxIPTV'));
+const IPTVQuiCoupe = lazy(() => import('./pages/blog/IPTVQuiCoupe'));
 const PrixIPTVFrance = lazy(() => import('./pages/blog/PrixIPTVFrance'));
 const MeilleurIPTVFrance = lazy(() => import('./pages/blog/MeilleurIPTVFrance'));
 const IPTVNeFonctionnePlus = lazy(() => import('./pages/blog/IPTVNeFonctionnePlus'));
@@ -161,6 +166,10 @@ function AppContent() {
             <Route path="/a-propos" element={<OverOns />} />
             {/* Blog Routes */}
             <Route path="/blog" element={<BlogIndex />} />
+            <Route path="/blog/iptv-smarters-pro" element={<IPTVSmartersPro />} />
+            <Route path="/blog/m3u-xtream-codes-mac" element={<M3UXtreamCodesMAC />} />
+            <Route path="/blog/meilleure-box-iptv" element={<MeilleureBoxIPTV />} />
+            <Route path="/blog/iptv-qui-coupe" element={<IPTVQuiCoupe />} />
             <Route path="/blog/acheter-iptv-france-guide-complet" element={<IPTVKopenNederlandGids />} />
             <Route path="/blog/meilleures-applications-iptv" element={<BesteIPTVApps2024 />} />
             <Route path="/blog/iptv-legal-en-france" element={<IsIPTVLegaalNederland />} />
@@ -184,6 +193,7 @@ function AppContent() {
       <CookieConsent />
       <ExitIntentModal />
       <TrialPopup />
+      <TrialDialog />
     </div>
   );
 }

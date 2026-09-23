@@ -40,7 +40,7 @@ const ComparisonTable = () => {
   };
 
   return (
-    <section id="comparison" className="py-20 bg-gradient-to-b from-[#141311] via-[#201C18] to-[#141311]">
+    <section id="comparison" className="py-20 bg-gradient-to-b from-[#090B0B] via-[#111413] to-[#090B0B]">
       <div className="container-custom">
         {/* Section Header */}
         <motion.div
@@ -69,7 +69,7 @@ const ComparisonTable = () => {
               <table className="min-w-full divide-y divide-slate-700">
                 {/* Table Header */}
                 <thead>
-                  <tr className="bg-[#141311]">
+                  <tr className="bg-[#090B0B]">
                     <th className="px-6 py-5 text-left text-sm font-semibold text-gray-400 uppercase tracking-wider">
                       Caractéristiques
                     </th>
@@ -79,7 +79,7 @@ const ComparisonTable = () => {
                           <FaCrown className="text-yellow-500 text-xl" />
                           <span className="text-lg font-bold text-white">France IPTV</span>
                         </div>
-                        <span className="px-3 py-1 bg-gradient-to-r from-brand-gold to-[#2B4577] text-white text-xs font-bold rounded-full">
+                        <span className="px-3 py-1 bg-surface border border-brand-gold/40 text-white text-xs font-bold rounded-full">
                           RECOMMANDÉ
                         </span>
                       </div>
@@ -97,7 +97,7 @@ const ComparisonTable = () => {
                 </thead>
 
                 {/* Table Body */}
-                <tbody className="bg-[#0F1E38] divide-y divide-slate-700/50">
+                <tbody className="bg-[#111A0D] divide-y divide-slate-700/50">
                   {features.map((feature, index) => (
                     <motion.tr
                       key={index}
@@ -108,7 +108,7 @@ const ComparisonTable = () => {
                       onHoverStart={() => setHoveredRow(index)}
                       onHoverEnd={() => setHoveredRow(null)}
                       className={`transition-colors duration-200 ${
-                        hoveredRow === index ? 'bg-[#141311]/50' : ''
+                        hoveredRow === index ? 'bg-[#090B0B]/50' : ''
                       }`}
                     >
                       <td className="px-6 py-4 text-sm text-gray-300 font-medium">
@@ -116,7 +116,7 @@ const ComparisonTable = () => {
                       </td>
 
                       {/* France IPTV Column (Highlighted) */}
-                      <td className="px-6 py-4 text-center bg-gradient-to-r from-brand-gold/10 to-[#2B4577]/10 border-x-2 border-blue-500/30">
+                      <td className="px-6 py-4 text-center bg-gradient-to-r from-brand-gold/10 to-[#C4FF86]/10 border-x-2 border-blue-500/30">
                         {renderCell(feature.streamholland, true)}
                       </td>
 
@@ -151,7 +151,7 @@ const ComparisonTable = () => {
           </p>
           <a
             href="#pricing"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-brand-gold to-[#2B4577] text-white font-bold rounded-xl hover:from-[#2B4577] hover:to-[#2B4577] transition-all shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 text-lg"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-surface border border-brand-gold/40 text-white font-bold rounded-xl hover:from-[#C4FF86] hover:to-[#C4FF86] transition-all shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 text-lg"
           >
             <FaCrown />
             Choisir Le Meilleur - À partir de 45 €/an

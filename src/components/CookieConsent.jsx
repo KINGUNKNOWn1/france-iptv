@@ -83,7 +83,7 @@ const CookieConsent = () => {
             transition={{ type: "spring", damping: 25 }}
             className="fixed bottom-0 left-0 right-0 z-[9999] p-2 md:p-4"
           >
-            <div className="max-w-4xl mx-auto bg-[#141311] border border-white/15 rounded-xl shadow-2xl overflow-hidden">
+            <div className="max-w-4xl mx-auto bg-[#090B0B] border border-white/15 rounded-xl shadow-2xl overflow-hidden">
               {!showSettings ? (
                 // Slim bar: never blocks the page. Refusing is as easy as accepting (CNIL).
                 <div className="p-3 md:p-4 flex flex-col md:flex-row md:items-center gap-3">
@@ -211,7 +211,7 @@ const CookieConsent = () => {
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
                       onClick={savePreferences}
-                      className="flex-1 bg-brand-gold hover:bg-[#2B4577] text-white px-6 py-3 rounded-full font-semibold transition-all duration-300"
+                      className="flex-1 bg-brand-gold hover:bg-[#C4FF86] text-white px-6 py-3 rounded-full font-semibold transition-all duration-300"
                     >
                       Enregistrer les Préférences
                     </button>

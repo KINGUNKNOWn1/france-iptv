@@ -94,7 +94,7 @@ const Prijzen = () => {
               </h1>
               <p className="text-xl text-brand-gray leading-relaxed">
                 Des prix transparents, sans frais cachés. Choisissez la durée qui vous convient.
-                Consultez notre page <Link to="/acheter-iptv" className="text-brand-gold hover:text-[#2B4577] underline">acheter IPTV</Link> pour en savoir plus sur ce que vous recevez.
+                Consultez notre page <Link to="/acheter-iptv" className="text-brand-gold hover:text-[#C4FF86] underline">acheter IPTV</Link> pour en savoir plus sur ce que vous recevez.
               </p>
             </motion.div>
           </div>
@@ -119,7 +119,7 @@ const Prijzen = () => {
                 Tarif IPTV : que recevez-vous avec chaque abonnement ?
               </h2>
               <p className="text-xl text-brand-gray max-w-3xl mx-auto">
-                Quel que soit l'<Link to="/abonnement-iptv" className="text-brand-gold hover:text-[#2B4577] underline">abonnement IPTV</Link> que vous choisissez, vous avez toujours accès à notre offre complète
+                Quel que soit l'<Link to="/abonnement-iptv" className="text-brand-gold hover:text-[#C4FF86] underline">abonnement IPTV</Link> que vous choisissez, vous avez toujours accès à notre offre complète
               </p>
             </motion.div>
 
@@ -162,7 +162,7 @@ const Prijzen = () => {
                 </h3>
                 <p className="text-brand-gray">
                   L'abonnement 12 mois est l'option la plus avantageuse : seulement 45 € par an (3,75 € par mois).
-                  C'est moins cher que la plupart des <Link to="/iptv-france" className="text-brand-gold hover:text-[#2B4577] underline">fournisseurs IPTV en France</Link>.
+                  C'est moins cher que la plupart des <Link to="/iptv-france" className="text-brand-gold hover:text-[#C4FF86] underline">fournisseurs IPTV en France</Link>.
                 </p>
               </div>
 
@@ -172,7 +172,7 @@ const Prijzen = () => {
                 </h3>
                 <p className="text-brand-gray">
                   Oui, nous acceptons Binance Pay et PayPal. Ce sont des moyens de paiement rapides et sécurisés.
-                  Contactez-nous par <Link to="/contact" className="text-brand-gold hover:text-[#2B4577] underline">contact</Link> via WhatsApp pour commander.
+                  Contactez-nous par <Link to="/contact" className="text-brand-gold hover:text-[#C4FF86] underline">contact</Link> via WhatsApp pour commander.
                 </p>
               </div>
 
@@ -190,7 +190,7 @@ const Prijzen = () => {
                   Sur combien d'appareils puis-je regarder ?
                 </h3>
                 <p className="text-brand-gray">
-                  Vous pouvez regarder sur 4 <Link to="/appareils" className="text-brand-gold hover:text-[#2B4577] underline">appareils</Link> simultanément avec tous les forfaits :
+                  Vous pouvez regarder sur 4 <Link to="/appareils" className="text-brand-gold hover:text-[#C4FF86] underline">appareils</Link> simultanément avec tous les forfaits :
                   Smart TV, téléphone, tablette ou ordinateur, avec la même qualité sur chaque écran.
                 </p>
               </div>
@@ -199,7 +199,7 @@ const Prijzen = () => {
             <div className="text-center mt-12">
               <Link
                 to="/faq"
-                className="text-brand-gold hover:text-[#2B4577] underline text-lg"
+                className="text-brand-gold hover:text-[#C4FF86] underline text-lg"
               >
                 Voir toutes les questions fréquentes →
               </Link>
@@ -210,13 +210,13 @@ const Prijzen = () => {
         <RelatedGuides />
 
         {/* CTA */}
-        <section className="py-20 bg-gradient-to-b from-white to-brand-offwhite">
+        <section className="py-20 bg-gradient-to-b from-surface to-brand-offwhite">
           <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-r from-brand-gold to-[#2B4577] rounded-2xl p-12 text-center"
+              className="bg-surface border border-brand-gold/40 rounded-2xl p-12 text-center"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Prêt à commencer ?

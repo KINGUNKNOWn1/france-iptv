@@ -380,7 +380,7 @@ const SamsungTV = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#141311] via-[#201C18] to-[#191613]">
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#090B0B] via-[#111413] to-[#0D0F0F]">
         {/* Animated Background */}
         <Suspense fallback={null}>
           <LightweightBackground variant="hero" />
@@ -485,7 +485,7 @@ const SamsungTV = () => {
                   transition={{ delay: index * 0.1 }}
                   className="bg-white border border-brand-gray-border rounded-xl p-6 shadow-md"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-brand-gold to-[#2B4577] rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-surface border border-brand-gold/40 rounded-lg flex items-center justify-center mb-4">
                     <Icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="font-bold text-lg mb-2 text-brand-black">{benefit.title}</h3>
@@ -528,7 +528,7 @@ const SamsungTV = () => {
                 >
                   <div className="flex items-start gap-6">
                     {/* Step Number */}
-                    <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-brand-gold to-[#2B4577] rounded-2xl flex items-center justify-center text-white text-2xl font-bold">
+                    <div className="flex-shrink-0 w-16 h-16 bg-surface border border-brand-gold/40 rounded-2xl flex items-center justify-center text-white text-2xl font-bold">
                       {step.number}
                     </div>
 
@@ -576,7 +576,7 @@ const SamsungTV = () => {
       </section>
 
       {/* Compatible Models */}
-      <section className="py-20 bg-gradient-to-br from-[#141311] to-[#201C18] text-white">
+      <section className="py-20 bg-gradient-to-br from-[#090B0B] to-[#111413] text-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -712,7 +712,7 @@ const SamsungTV = () => {
           >
             {/* Background text "Probleem?" */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
-              <span className="text-[120px] md:text-[180px] font-bold text-gray-300/40 select-none">
+              <span className="text-[120px] md:text-[180px] font-bold text-white/[0.04] select-none">
                 Problème ?
               </span>
             </div>
@@ -843,7 +843,7 @@ const SamsungTV = () => {
       </section>
 
       {/* Related Devices CTA */}
-      <section className="py-20 bg-gradient-to-br from-[#141311] to-[#201C18] text-white">
+      <section className="py-20 bg-gradient-to-br from-[#090B0B] to-[#111413] text-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -883,7 +883,7 @@ const SamsungTV = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white">
+      <section className="py-20 bg-surface border border-lime/30 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

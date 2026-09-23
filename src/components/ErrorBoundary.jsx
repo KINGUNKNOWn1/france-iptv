@@ -69,7 +69,7 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.error) {
       return (
-        <main className="min-h-screen bg-brand-black text-white flex items-center justify-center px-6">
+        <main className="min-h-screen bg-surface-2 text-white flex items-center justify-center px-6">
           <div className="max-w-lg text-center">
             <h1 className="text-3xl font-bold mb-4">Cette page n'a pas pu être chargée</h1>
             <p className="text-gray-400 mb-8">

@@ -8,14 +8,14 @@ import { motion } from 'framer-motion';
 const LightweightBackground = ({ variant = 'default' }) => {
   const variants = {
     default: {
-      gradient: 'from-brand-black via-gray-900 to-brand-black',
+      gradient: 'from-ink via-gray-900 to-ink',
       orbs: [
         { size: 'w-96 h-96', color: 'bg-brand-gold/10', position: 'top-20 -left-20', delay: 0 },
         { size: 'w-[500px] h-[500px]', color: 'bg-orange-600/5', position: 'bottom-40 -right-40', delay: 2 },
       ]
     },
     hero: {
-      gradient: 'from-brand-black to-gray-900',
+      gradient: 'from-ink to-gray-900',
       orbs: [
         { size: 'w-[600px] h-[600px]', color: 'bg-brand-gold/15', position: 'top-0 right-0', delay: 0 },
         { size: 'w-96 h-96', color: 'bg-blue-500/10', position: 'bottom-0 left-0', delay: 1.5 },
@@ -23,7 +23,7 @@ const LightweightBackground = ({ variant = 'default' }) => {
       ]
     },
     minimal: {
-      gradient: 'from-brand-black to-brand-black',
+      gradient: 'from-ink to-ink',
       orbs: [
         { size: 'w-64 h-64', color: 'bg-brand-gold/5', position: 'top-10 right-10', delay: 0 },
       ]
@@ -92,7 +92,7 @@ const LightweightBackground = ({ variant = 'default' }) => {
       />
 
       {/* Vignette effect */}
-      <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-brand-black/50" />
+      <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-ink/50" />
     </div>
   );
 };

@@ -40,7 +40,7 @@ const SocialProof = () => {
   return (
     <>
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-b from-[#141311] via-[#201C18] to-[#141311] relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-b from-[#090B0B] via-[#111413] to-[#090B0B] relative overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
@@ -126,7 +126,7 @@ const SocialProof = () => {
                 {/* Glow on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-r ${badge.gradient} rounded-xl opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300`} />
 
-                <div className="relative flex items-center gap-3 px-6 py-3 bg-[#141311]/80 backdrop-blur-sm rounded-xl border border-slate-700/50 group-hover:border-transparent transition-all">
+                <div className="relative flex items-center gap-3 px-6 py-3 bg-[#090B0B]/80 backdrop-blur-sm rounded-xl border border-slate-700/50 group-hover:border-transparent transition-all">
                   <span className="text-2xl">{badge.icon}</span>
                   <span className="text-sm text-gray-300 font-semibold group-hover:text-white transition-colors">
                     {badge.text}
@@ -177,7 +177,7 @@ const StatCard = ({ stat, index }) => {
         transition={{ type: 'spring', stiffness: 300, damping: 20 }}
         className="relative h-full"
       >
-        <div className="relative bg-gradient-to-br from-[#141311]/95 via-[#201C18]/95 to-[#141311]/95 backdrop-blur-xl rounded-2xl p-8 border border-slate-700/50 group-hover:border-transparent transition-all duration-300 overflow-hidden">
+        <div className="relative bg-gradient-to-br from-[#090B0B]/95 via-[#111413]/95 to-[#090B0B]/95 backdrop-blur-xl rounded-2xl p-8 border border-slate-700/50 group-hover:border-transparent transition-all duration-300 overflow-hidden">
           {/* Animated Background Pattern */}
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
             <div className="absolute inset-0" style={{
@@ -251,7 +251,7 @@ const StatCard = ({ stat, index }) => {
               duration: 1.5,
               ease: "easeInOut",
             }}
-            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12"
+            className="absolute inset-0 bg-gradient-to-r from-transparent via-surface/10 to-transparent skew-x-12"
           />
 
           {/* Corner Accent */}

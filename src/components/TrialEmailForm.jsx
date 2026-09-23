@@ -6,7 +6,7 @@ import { openWhatsApp, subscribeEmail } from '../utils/tracking';
 // Email capture for the free 24h trial. The email goes to MailerLite, then the
 // visitor activates the trial on WhatsApp (where trials are delivered), with
 // their email prefilled so the conversation can be matched to the lead.
-const TrialEmailForm = ({ source, dark = false, large = false }) => {
+const TrialEmailForm = ({ source, dark = false, large = false, message = "Bonjour ! Je souhaite activer mon essai gratuit de 24h." }) => {
   const [email, setEmail] = useState('');
   const [isValid, setIsValid] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -25,7 +25,7 @@ const TrialEmailForm = ({ source, dark = false, large = false }) => {
   };
 
   const activateOnWhatsApp = () =>
-    openWhatsApp(`Bonjour ! Je souhaite activer mon essai gratuit de 24h. Mon e-mail : ${email}`);
+    openWhatsApp(`${message} Mon e-mail : ${email}`);
 
   const text = dark ? 'text-gray-300' : 'text-gray-600';
   const size = large ? 'py-3.5 text-base' : 'py-2.5 text-sm';
@@ -67,7 +67,7 @@ const TrialEmailForm = ({ source, dark = false, large = false }) => {
         <button
           type="submit"
           disabled={isSubmitting}
-          className={`px-4 ${size} ${dark ? 'bg-green-600 hover:bg-green-700' : 'bg-brand-gold hover:bg-[#2B4577]'} disabled:opacity-60 text-white font-semibold rounded-lg transition-colors whitespace-nowrap`}
+          className={`px-4 ${size} ${dark ? 'bg-lime hover:bg-lime-hover text-lime-on' : 'bg-brand-gold hover:bg-[#C4FF86]'} disabled:opacity-60 text-white font-semibold rounded-lg transition-colors whitespace-nowrap`}
         >
           {isSubmitting ? '…' : "Obtenir l'essai"}
         </button>
