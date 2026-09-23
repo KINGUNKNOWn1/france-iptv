@@ -1,4 +1,5 @@
 import React, { useState, Suspense } from 'react';
+import SeoGuideSection from '../../components/SeoGuideSection';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import {
@@ -39,7 +40,7 @@ const SFR = () => {
         name: "Mon IPTV coupe sur ma ligne SFR, comment le résoudre ?",
         acceptedAnswer: {
           '@type': 'Answer',
-          text: "1) Redémarrez votre box SFR et votre boîtier IPTV. 2) Passez en Ethernet plutôt qu'en WiFi. 3) Vérifiez dans l'interface de gestion de la box (192.168.1.1) si une bande passante est réservée pour « TV by SFR » et réduisez-la si possible. 4) Changez le DNS de votre appareil pour 1.1.1.1 ou 8.8.8.8. 5) Contactez notre support via WhatsApp si le problème persiste."
+          text: "1) Redémarrez votre box SFR et votre boîtier IPTV. 2) Passez en Ethernet plutôt qu'en WiFi. 3) Vérifiez dans l'interface de gestion de la box (192.168.1.1) si une bande passante est réservée pour « TV by SFR » et réduisez-la si possible. 4) Mettez à jour votre application IPTV et testez sur un autre appareil. 5) Contactez notre support via WhatsApp si le problème persiste."
         }
       },
       {
@@ -93,8 +94,8 @@ const SFR = () => {
       severity: 'Cause fréquente'
     },
     {
-      title: 'DNS par défaut lent',
-      description: "Le DNS fourni par défaut par la box SFR n'est pas toujours le plus rapide pour résoudre les flux de streaming.",
+      title: 'Application ou appareil dépassé',
+      description: "Une application IPTV pas à jour ou un appareil ancien et saturé provoque des coupures, quelle que soit la box.",
       icon: Settings,
       severity: 'Cause occasionnelle'
     },
@@ -130,8 +131,8 @@ const SFR = () => {
     },
     {
       number: 4,
-      title: 'Changez de DNS',
-      description: "Dans les paramètres réseau de votre boîtier IPTV, remplacez le DNS automatique par 1.1.1.1 (Cloudflare) ou 8.8.8.8 (Google).",
+      title: "Mettez à jour l'application",
+      description: "Installez la dernière version de votre application IPTV, videz son cache, puis redémarrez l'appareil.",
       icon: Settings,
       time: '2 minutes'
     },
@@ -209,7 +210,7 @@ const SFR = () => {
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              IPTV Bloqué par
+              IPTV Bloqué par{' '}
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mt-2">
                 SFR ?
               </span>
@@ -380,6 +381,26 @@ const SFR = () => {
           </motion.div>
         </div>
       </section>
+
+      <SeoGuideSection title="SFR bloque l'IPTV ? Les vraies causes des coupures">
+        <p>
+          Beaucoup d'utilisateurs pensent que <strong>SFR bloque l'IPTV</strong> dès que l'image se fige. Dans la grande majorité
+          des cas, il s'agit d'un problème de connexion ou d'appareil, pas d'un blocage : Wi-Fi faible, box SFR qui n'a pas redémarré
+          depuis longtemps, réseau saturé aux heures de pointe ou application IPTV pas à jour.
+        </p>
+        <h3>Comment savoir si votre IPTV est vraiment bloquée par SFR ?</h3>
+        <ol>
+          <li>Redémarrez la box SFR et votre appareil.</li>
+          <li>Testez en câble Ethernet plutôt qu'en Wi-Fi.</li>
+          <li>Essayez une autre chaîne et un autre appareil (téléphone en 4G par exemple).</li>
+        </ol>
+        <p>
+          Si l'IPTV fonctionne en 4G mais plus du tout sur la box, et sur tous vos appareils, le service peut faire l'objet d'un
+          <strong> blocage ordonné par la justice</strong>, que les opérateurs français sont tenus d'appliquer. Dans ce cas, aucune
+          manipulation de votre box n'est à tenter : le problème vient du service. Pour tous les autres cas, suivez notre guide{' '}
+          <a href="/blog/iptv-qui-coupe">IPTV qui coupe ou qui freeze</a>.
+        </p>
+      </SeoGuideSection>
 
       {/* FAQ */}
       <section className="py-20 bg-brand-offwhite">

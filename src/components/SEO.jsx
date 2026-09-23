@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet-async';
 import { homeFaqs } from '../data/homeFaqs';
 
 const SITE_URL = 'https://franceiptv.stream';
-const DEFAULT_TITLE = 'IPTV France : Abonnement IPTV Premium dès 8€ | France IPTV';
-const DEFAULT_DESCRIPTION = 'Abonnement IPTV France : 30 500+ chaînes, films et séries en HD/4K dès 8€/mois. Sans reconduction automatique, support francophone, actif en 5 min.';
+const DEFAULT_TITLE = 'France IPTV : Abonnement IPTV 4K dès 8€, Essai 24h Gratuit';
+const DEFAULT_DESCRIPTION = 'France IPTV : abonnement IPTV 4K avec 30 500+ chaînes, films et séries dès 8€/mois. Essai gratuit 24h, sans reconduction, support francophone.';
 const DEFAULT_KEYWORDS = 'acheter iptv, acheter abonnement iptv, fournisseurs iptv, iptv france, meilleure application iptv, iptv français, fournisseur iptv, iptv légal, abonnement iptv, iptv 1 mois pas cher, ip tv';
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`;
 

@@ -1,4 +1,5 @@
 import React, { useState, Suspense } from 'react';
+import SeoGuideSection from '../../components/SeoGuideSection';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import {
@@ -211,7 +212,7 @@ const Chromecast = () => {
   return (
     <>
       <Helmet>
-        <title>Installer l'IPTV sur Chromecast et Google TV 2026 | France IPTV</title>
+        <title>IPTV Google TV et Chromecast : Installation 2026 | France IPTV</title>
         <meta
           name="description"
           content="Installer l'IPTV sur Chromecast avec Google TV ou caster depuis votre téléphone en 5 minutes ✓ Guide étape par étape ✓ Support francophone."
@@ -265,7 +266,7 @@ const Chromecast = () => {
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Installer l'IPTV sur
+              Installer l'IPTV sur{' '}
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mt-2">
                 Chromecast
               </span>
@@ -529,6 +530,25 @@ const Chromecast = () => {
           </motion.div>
         </div>
       </section>
+
+      <SeoGuideSection title="IPTV Google TV : installer l'IPTV sur Chromecast avec Google TV">
+        <p>
+          Le <strong>Chromecast avec Google TV</strong> et les téléviseurs sous <strong>Google TV</strong> (Sony, TCL, Philips…)
+          donnent accès au Google Play Store : l'<strong>IPTV sur Google TV</strong> s'installe donc comme sur n'importe quelle box
+          Android TV.
+        </p>
+        <ol>
+          <li>Depuis l'accueil Google TV, ouvrez <strong>Applications</strong> puis la recherche.</li>
+          <li>Installez un lecteur IPTV comme IPTV Smarters Pro ou TiviMate.</li>
+          <li>Ouvrez l'application et ajoutez vos accès Xtream Codes ou votre lien M3U.</li>
+          <li>Activez le guide TV (EPG) et ajoutez vos chaînes préférées en favoris.</li>
+        </ol>
+        <p>
+          Les anciens Chromecast sans télécommande (Chromecast classique) ne permettent pas d'installer d'application : ils servent
+          seulement à diffuser depuis votre téléphone. Pour une utilisation confortable au quotidien, préférez un modèle avec
+          Google TV. Plus de détails dans notre article <a href="/blog/iptv-smarters-pro">IPTV Smarters Pro</a>.
+        </p>
+      </SeoGuideSection>
 
       {/* FAQ */}
       <section className="py-20 bg-white">

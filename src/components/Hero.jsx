@@ -78,7 +78,7 @@ const Hero = () => {
           </div>
 
           <p className="text-base sm:text-lg text-gray-200 leading-relaxed max-w-2xl">
-            France IPTV est un fournisseur IPTV fiable au service de tout le territoire. Profitez d'un jour d'essai gratuit pour juger de la qualité par vous-même, sans engagement ! Nous livrons un abonnement IPTV aux clients dans toute la France : de Paris à Marseille, de Lyon à Toulouse. Chaînes françaises, chaînes sportives, chaînes arabes et turques, le tout dans un seul abonnement. Aucune reconduction automatique, paiement par Binance Pay ou PayPal.
+            France IPTV est un fournisseur IPTV fiable au service de tout le territoire, en HD et en IPTV 4K. Profitez d'un jour d'essai gratuit pour juger de la qualité par vous-même, sans engagement ! Nous livrons un abonnement IPTV aux clients dans toute la France : de Paris à Marseille, de Lyon à Toulouse. Chaînes françaises, chaînes sportives, chaînes arabes et turques, le tout dans un seul abonnement. Aucune reconduction automatique, paiement par Binance Pay ou PayPal.
           </p>
         </div>
       </div>

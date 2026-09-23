@@ -85,7 +85,7 @@ const Home = () => {
               <span className="block text-lime">Votre soirée, votre programme.</span>
             </h1>
             <p className="text-base md:text-lg text-gray-300 mb-4 max-w-xl">
-              Films, séries, chaînes TV et sport en HD/4K, sur vos écrans, partout en France.
+              France IPTV : films, séries, chaînes TV et sport en HD et en IPTV 4K, sur vos écrans, partout en France.
             </p>
             <p className="text-sm md:text-base mb-6">
               <strong className="text-white">1 mois à 8 € · 12 mois à 45 €</strong>

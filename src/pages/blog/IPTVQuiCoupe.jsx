@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: 'Un VPN peut-il résoudre les coupures IPTV ?',
-    a: "Parfois, si votre fournisseur d'accès ralentit certains flux. Mais un VPN ajoute aussi un intermédiaire qui peut lui-même ralentir la connexion. Essayez d'abord les solutions gratuites (Ethernet, DNS, lecteur vidéo) avant d'en ajouter un.",
+    a: "Parfois, si votre fournisseur d'accès ralentit certains flux. Mais un VPN ajoute aussi un intermédiaire qui peut lui-même ralentir la connexion. Essayez d'abord les solutions gratuites (Ethernet, redémarrage, lecteur vidéo) avant d'en ajouter un.",
   },
   {
     q: 'Mon IPTV coupe sur toutes les chaînes, que faire ?',
@@ -85,11 +85,12 @@ const IPTVQuiCoupe = () => (
     </section>
 
     <section>
-      <h2>5. Les DNS de votre fournisseur d'accès</h2>
+      <h2>5. Les réglages de votre box internet</h2>
       <p>
-        Les DNS de certaines box peuvent ralentir la connexion aux serveurs IPTV. Dans les réglages réseau de votre appareil, essayez
-        des DNS publics comme <strong>1.1.1.1</strong> (Cloudflare) ou <strong>8.8.8.8</strong> (Google). Nos guides par opérateur
-        détaillent la manipulation : <Link to="/appareils/orange">Orange</Link>, <Link to="/appareils/sfr">SFR</Link>,{' '}
+        Certaines box réservent une partie de la bande passante à leur propre service TV, ou saturent quand beaucoup d'appareils
+        sont connectés. Redémarrez la box, déconnectez les appareils inutiles pendant le visionnage et, si votre box le permet,
+        réduisez la bande passante réservée à la TV de l'opérateur si vous ne l'utilisez pas. Nos guides par opérateur détaillent
+        chaque box : <Link to="/appareils/orange">Orange</Link>, <Link to="/appareils/sfr">SFR</Link>,{' '}
         <Link to="/appareils/freebox">Freebox</Link>, <Link to="/appareils/bbox-bouygues">Bbox</Link>.
       </p>
     </section>

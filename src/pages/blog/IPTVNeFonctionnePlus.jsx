@@ -139,7 +139,7 @@ const IPTVNeFonctionnePlus = () => {
                   <div>
                     <h2 className="text-2xl font-bold mb-3 text-brand-black">La Réponse Courte</h2>
                     <p className="text-lg text-brand-gray mb-4">
-                      Dans la grande majorité des cas, un IPTV qui ne fonctionne plus se résout par un <strong>redémarrage de la box internet et de l'application</strong>, ou en vérifiant le <strong>débit de connexion</strong>. Si le problème persiste après ces vérifications, il s'agit généralement d'un blocage FAI ou d'un souci côté serveur du fournisseur.
+                      « Mon IPTV ne fonctionne plus » : dans la grande majorité des cas, le problème se résout par un <strong>redémarrage de la box internet et de l'application</strong>, ou en vérifiant le <strong>débit de connexion</strong>. Si le problème persiste après ces vérifications, il s'agit généralement d'un blocage FAI ou d'un souci côté serveur du fournisseur.
                     </p>
                     <p className="text-brand-gray">
                       Un problème sur un appareil précis ? Consultez nos guides dédiés : <Link to="/appareils/freebox" className="text-blue-600 underline">Freebox</Link>, <Link to="/appareils/orange" className="text-blue-600 underline">Box Orange</Link>, <Link to="/appareils/sfr" className="text-blue-600 underline">SFR</Link>, <Link to="/appareils/samsung-tv" className="text-blue-600 underline">Samsung TV</Link> ou <Link to="/appareils/erreur-lecture-iptv" className="text-blue-600 underline">erreur de lecture</Link>.

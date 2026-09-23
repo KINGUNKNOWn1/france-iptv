@@ -180,7 +180,7 @@ const FireStick = () => {
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Installer l'IPTV sur
+              Installer l'IPTV sur{' '}
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mt-2">Amazon Fire Stick</span>
             </h1>
 

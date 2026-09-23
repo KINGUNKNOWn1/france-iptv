@@ -1,4 +1,5 @@
 import React from 'react';
+import SeoGuideSection from '../components/SeoGuideSection';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
@@ -140,6 +141,35 @@ const Prijzen = () => {
             </div>
           </div>
         </section>
+
+        <SeoGuideSection title="Prix IPTV en France : combien coûte vraiment un abonnement ?">
+          <p>
+            En 2026, le <strong>prix d'un abonnement IPTV</strong> fiable se situe généralement entre 8 € et 15 € par mois en France,
+            avec des tarifs dégressifs sur les durées longues. Chez France IPTV, le <strong>tarif IPTV</strong> va de 8 € pour un mois
+            à 45 € pour un an, soit 3,75 € par mois : le contenu est identique dans toutes les formules.
+          </p>
+          <h3>Ce qui est inclus dans le prix</h3>
+          <ul>
+            <li>30 500+ chaînes en direct, dont les chaînes françaises, sportives et internationales</li>
+            <li>150 000+ films et séries à la demande, guide TV (EPG) et replay</li>
+            <li>4 écrans simultanés, en HD, Full HD et 4K selon les chaînes</li>
+            <li>L'aide à l'installation et le support francophone sur WhatsApp</li>
+          </ul>
+          <h3>Ce qui fait varier le tarif IPTV</h3>
+          <p>
+            La durée d'engagement est le premier facteur : plus elle est longue, plus le prix mensuel baisse. Viennent ensuite la
+            stabilité des serveurs, la qualité du support et le nombre d'écrans inclus. Méfiez-vous des prix trop bas : un service à
+            quelques euros par an n'a pas les moyens d'assurer un flux stable ni un support joignable. Tout est détaillé dans notre
+            guide <a href="/blog/prix-iptv-france">prix IPTV France 2026</a>.
+          </p>
+          <h3>Payer son abonnement IPTV</h3>
+          <p>
+            Le paiement se fait en une seule fois par <strong>PayPal</strong> ou <strong>Binance Pay</strong>, sans reconduction
+            automatique. Vous pouvez d'abord profiter de <strong>24 heures d'essai gratuit</strong>, sans rien payer, pour vérifier la
+            qualité sur votre écran. Pour comprendre l'offre dans son ensemble, voir la page{' '}
+            <a href="/abonnement-iptv">abonnement IPTV</a>.
+          </p>
+        </SeoGuideSection>
 
         {/* FAQ Snippet */}
         <section className="py-20 bg-white">
