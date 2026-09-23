@@ -75,76 +75,42 @@ const CookieConsent = () => {
     <AnimatePresence>
       {showBanner && (
         <>
-          {/* Overlay */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9998]"
-            onClick={() => setShowBanner(false)}
-          />
-
           {/* Cookie Banner */}
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 100, opacity: 0 }}
             transition={{ type: "spring", damping: 25 }}
-            className="fixed bottom-0 left-0 right-0 z-[9999] p-4 md:p-6"
+            className="fixed bottom-0 left-0 right-0 z-[9999] p-2 md:p-4"
           >
-            <div className="max-w-6xl mx-auto bg-[#141311] border-2 border-brand-gold/30 rounded-2xl shadow-2xl overflow-hidden">
+            <div className="max-w-4xl mx-auto bg-[#141311] border border-white/15 rounded-xl shadow-2xl overflow-hidden">
               {!showSettings ? (
-                // Main Banner
-                <div className="p-6 md:p-8">
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-12 h-12 bg-brand-gold/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Cookie className="w-6 h-6 text-brand-gold" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
-                        🍪 Ce Site Utilise des Cookies
-                      </h3>
-                      <p className="text-gray-300 leading-relaxed">
-                        Nous utilisons des cookies pour améliorer votre expérience, analyser notre site et afficher du contenu personnalisé.
-                        Les cookies essentiels sont nécessaires au fonctionnement du site.
-                        Les autres cookies ne sont déposés qu'avec votre consentement.
-                      </p>
-                      <Link
-                        to="/politique-de-cookies"
-                        className="text-brand-gold hover:underline text-sm mt-2 inline-block"
-                        onClick={() => setShowBanner(false)}
-                      >
-                        Lire notre Politique de Cookies →
-                      </Link>
-                    </div>
+                // Slim bar: never blocks the page. Refusing is as easy as accepting (CNIL).
+                <div className="p-3 md:p-4 flex flex-col md:flex-row md:items-center gap-3">
+                  <p className="text-gray-300 text-sm leading-snug flex-1">
+                    🍪 Nous utilisons des cookies pour mesurer l'audience et nos publicités.{' '}
+                    <Link to="/politique-de-cookies" className="text-white underline" onClick={() => setShowBanner(false)}>
+                      En savoir plus
+                    </Link>
+                  </p>
+                  <div className="flex gap-2 flex-shrink-0">
                     <button
-                      onClick={() => setShowBanner(false)}
-                      className="text-gray-400 hover:text-white transition-colors flex-shrink-0"
+                      onClick={() => setShowSettings(true)}
+                      className="px-3 py-2 text-sm text-gray-300 hover:text-white underline"
                     >
-                      <X className="w-6 h-6" />
-                    </button>
-                  </div>
-
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <button
-                      onClick={acceptAll}
-                      className="flex-1 bg-brand-gold hover:bg-[#2B4577] text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center justify-center gap-2"
-                    >
-                      <Check className="w-5 h-5" />
-                      Accepter Tous les Cookies
+                      Personnaliser
                     </button>
                     <button
                       onClick={acceptEssential}
-                      className="flex-1 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 border border-white/20"
+                      className="flex-1 md:flex-none px-4 py-2 text-sm font-semibold text-white rounded-lg bg-white/10 hover:bg-white/20 border border-white/20"
                     >
-                      Essentiels Uniquement
+                      Refuser
                     </button>
                     <button
-                      onClick={() => setShowSettings(true)}
-                      className="sm:w-auto bg-white/5 hover:bg-white/10 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 border border-white/10 flex items-center justify-center gap-2"
+                      onClick={acceptAll}
+                      className="flex-1 md:flex-none px-4 py-2 text-sm font-semibold text-white rounded-lg bg-white/10 hover:bg-white/20 border border-white/20"
                     >
-                      <Settings className="w-5 h-5" />
-                      Paramètres
+                      Accepter
                     </button>
                   </div>
                 </div>

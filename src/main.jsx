@@ -31,10 +31,15 @@ document.addEventListener('click', (event) => {
 // Initialize Web Vitals monitoring
 initWebVitals();
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const app = (
   <React.StrictMode>
     <HelmetProvider>
       <App />
     </HelmetProvider>
   </React.StrictMode>
 );
+
+// Prerendered HTML is a browser snapshot, not React server output, so it can't
+// be hydrated (React #418); render fresh. The page no longer flashes a
+// full-screen loader or fades in, so the swap causes no layout shift.
+ReactDOM.createRoot(document.getElementById('root')).render(app);

@@ -1,44 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence, useMotionValue, useTransform } from 'framer-motion';
-import { FaCheckCircle, FaUsers, FaStar, FaShieldAlt, FaTrophy, FaFire } from 'react-icons/fa';
+import React, { useState, useRef } from 'react';
+import { motion } from 'framer-motion';
+import { FaUsers, FaStar, FaShieldAlt, FaTrophy } from 'react-icons/fa';
 
 const SocialProof = () => {
-  const [currentNotification, setCurrentNotification] = useState(0);
-  const [showNotification, setShowNotification] = useState(true);
-  const [customerCount, setCustomerCount] = useState(24587);
-
-  const notifications = [
-    { name: 'Mohammed A.', location: 'Marseille', time: 'il y a 2 minutes', plan: '12 mois' },
-    { name: 'Lisa V.', location: 'Paris', time: 'il y a 5 minutes', plan: '6 mois' },
-    { name: 'Ahmed K.', location: 'Lyon', time: 'il y a 8 minutes', plan: '12 mois' },
-    { name: 'Sarah B.', location: 'Toulouse', time: 'il y a 12 minutes', plan: '3 mois' },
-    { name: 'Hassan M.', location: 'Nice', time: 'il y a 15 minutes', plan: '12 mois' },
-    { name: 'Emma J.', location: 'Nantes', time: 'il y a 18 minutes', plan: '6 mois' },
-    { name: 'Fatima D.', location: 'Lille', time: 'il y a 22 minutes', plan: '12 mois' },
-    { name: 'Pierre S.', location: 'Strasbourg', time: 'il y a 25 minutes', plan: '3 mois' },
-  ];
-
-  // Cycle through notifications
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setShowNotification(false);
-      setTimeout(() => {
-        setCurrentNotification((prev) => (prev + 1) % notifications.length);
-        setShowNotification(true);
-      }, 300);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [notifications.length]);
-
-  // Increment customer count periodically
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCustomerCount(prev => prev + 1);
-    }, 8000);
-
-    return () => clearInterval(interval);
-  }, []);
+  // Static figure: the old counter ticked up every 8s and the floating
+  // "X vient de commander" cards were invented, both removed.
+  const customerCount = 24587;
 
   const stats = [
     {
@@ -70,77 +37,8 @@ const SocialProof = () => {
     },
   ];
 
-  const currentNotif = notifications[currentNotification];
-
   return (
     <>
-      {/* Floating Notification */}
-      <div className="fixed bottom-24 left-4 z-50 max-w-sm">
-        <AnimatePresence mode="wait">
-          {showNotification && (
-            <motion.div
-              key={currentNotification}
-              initial={{ x: -400, opacity: 0, scale: 0.8 }}
-              animate={{ x: 0, opacity: 1, scale: 1 }}
-              exit={{ x: -400, opacity: 0, scale: 0.8 }}
-              transition={{ type: 'spring', stiffness: 100, damping: 20 }}
-              className="relative"
-            >
-              {/* Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl blur-xl opacity-30" />
-
-              {/* Card */}
-              <div className="relative bg-white/95 backdrop-blur-md rounded-xl shadow-2xl p-4 border border-green-100">
-                <div className="flex items-start gap-3">
-                  {/* Success Icon with animation */}
-                  <motion.div
-                    initial={{ scale: 0, rotate: -180 }}
-                    animate={{ scale: 1, rotate: 0 }}
-                    transition={{ type: 'spring', delay: 0.1 }}
-                    className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center shadow-lg shadow-green-500/50"
-                  >
-                    <FaCheckCircle className="text-white text-xl" />
-                  </motion.div>
-
-                  {/* Content */}
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm font-bold text-gray-900 flex items-center gap-2">
-                      {currentNotif.name} de {currentNotif.location}
-                      <FaFire className="text-orange-500 text-xs animate-pulse" />
-                    </p>
-                    <p className="text-xs text-gray-600 mt-1">
-                      vient de commander un abonnement de <span className="font-bold text-brand-gold">{currentNotif.plan}</span>
-                    </p>
-                    <p className="text-xs text-gray-400 mt-1 flex items-center gap-1">
-                      <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
-                      {currentNotif.time}
-                    </p>
-                  </div>
-
-                  {/* Close button */}
-                  <button
-                    onClick={() => setShowNotification(false)}
-                    className="flex-shrink-0 text-gray-400 hover:text-gray-600 transition-colors"
-                  >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                </div>
-
-                {/* Animated Progress bar */}
-                <motion.div
-                  initial={{ width: '100%' }}
-                  animate={{ width: '0%' }}
-                  transition={{ duration: 5, ease: 'linear' }}
-                  className="h-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mt-3"
-                />
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-b from-[#141311] via-[#201C18] to-[#141311] relative overflow-hidden">
         {/* Animated Background Orbs */}

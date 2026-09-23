@@ -6,14 +6,13 @@ import { subscribeEmail } from '../utils/tracking';
 const EmailCollectionModal = ({ isOpen, onClose, onSubmit, planName }) => {
   const [email, setEmail] = useState('');
   const [isValid, setIsValid] = useState(true);
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validateEmail = (email) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!validateEmail(email)) {
@@ -21,12 +20,8 @@ const EmailCollectionModal = ({ isOpen, onClose, onSubmit, planName }) => {
       return;
     }
 
-    setIsSubmitting(true);
-
-    // Failure here never blocks checkout (subscribeEmail doesn't throw)
-    await subscribeEmail(email, 'checkout_pricing_page');
-
-    setIsSubmitting(false);
+    // Not awaited: WhatsApp must open inside this tap, or mobile browsers block it.
+    subscribeEmail(email, 'checkout_pricing_page');
     onSubmit(email);
   };
 
@@ -127,20 +122,10 @@ const EmailCollectionModal = ({ isOpen, onClose, onSubmit, planName }) => {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-brand-gold to-[#2B4577] hover:from-[#2B4577] hover:to-brand-gold text-white font-bold py-4 rounded-xl transition-all flex items-center justify-center gap-3 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? (
-                    <>
-                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      <span>Traitement...</span>
-                    </>
-                  ) : (
-                    <>
-                      <FaWhatsapp className="text-2xl" />
-                      <span>Continuer vers WhatsApp</span>
-                    </>
-                  )}
+                  <FaWhatsapp className="text-2xl" />
+                  <span>Continuer vers WhatsApp</span>
                 </button>
               </form>
 

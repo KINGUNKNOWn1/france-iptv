@@ -8,7 +8,6 @@ import CookieConsent from './components/CookieConsent';
 import ExitIntentModal from './components/ExitIntentModal';
 import TrialPopup from './components/TrialPopup';
 import PageTransition from './components/PageTransition';
-import LoadingScreen from './components/LoadingScreen';
 import SmoothScroll from './components/SmoothScroll';
 import ErrorBoundary from './components/ErrorBoundary';
 
@@ -133,7 +132,7 @@ function AppContent() {
       <ScrollToTop />
       <SmoothScroll />
       <ErrorBoundary>
-      <Suspense fallback={<LoadingScreen />}>
+      <Suspense fallback={<div className="min-h-screen" />}>
         <PageTransition>
           <Routes>
             <Route path="/" element={<Home />} />

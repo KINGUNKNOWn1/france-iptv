@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 
 const PageTransition = ({ children }) => {
   const location = useLocation();
+  // Skip the fade-in on the first page: that content is already on screen
+  // (prerendered HTML), so animating it from opacity 0 only delays it.
+  const isFirstPage = useRef(true);
+  const initial = isFirstPage.current ? false : 'initial';
+  isFirstPage.current = false;
 
   const pageVariants = {
     initial: {
@@ -32,7 +37,7 @@ const PageTransition = ({ children }) => {
     <AnimatePresence mode="wait">
       <motion.div
         key={location.pathname}
-        initial="initial"
+        initial={initial}
         animate="animate"
         exit="exit"
         variants={pageVariants}
