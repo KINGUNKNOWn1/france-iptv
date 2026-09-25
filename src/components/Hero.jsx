@@ -46,7 +46,7 @@ const Hero = () => {
 
           {/* One price message (was "45 € par an" in the title vs "dès 8 €" in badges) */}
           <p className="text-lg sm:text-xl text-[#9DB8E6] font-semibold mb-6">
-            1 mois 8 € · 12 mois 45 € (3,75 €/mois) · Sans engagement
+            1 mois 8 € · 12 mois 45 € · Sans engagement
           </p>
 
           {/* Free trial email capture: above the fold on mobile */}

@@ -17,7 +17,7 @@ const faqItems = [
   },
   {
     q: 'Quelle est la différence entre les abonnements ?',
-    a: 'Tous les abonnements incluent exactement la même offre : 30 500+ chaînes et 150 000+ titres VOD. La seule différence est la durée. Les abonnements plus longs sont moins chers par mois : de 8 € pour 1 mois à 45 € pour 12 mois, soit 3,75 € par mois.'
+    a: 'Tous les abonnements incluent exactement la même offre : 30 500+ chaînes et 150 000+ titres VOD. La seule différence est la durée. Les abonnements plus longs sont plus avantageux : de 8 € pour 1 mois à 45 € pour 12 mois.'
   },
   {
     q: 'Mon abonnement IPTV se renouvelle-t-il automatiquement ?',
@@ -91,7 +91,7 @@ const deviceGuides = [
 ];
 
 const comparisonRows = [
-  { label: 'Prix mensuel', iptv: 'Dès 3,75 €/mois', classic: 'Souvent 20 à 60 €/mois selon les options' },
+  { label: 'Prix', iptv: '8 € le mois, 45 € l’année, payés une fois', classic: 'Souvent 20 à 60 €/mois selon les options' },
   { label: 'Engagement', iptv: 'Aucun, sans reconduction automatique', classic: 'Engagement de 12 à 24 mois fréquent' },
   { label: 'Chaînes', iptv: '30 500+ chaînes françaises et internationales', classic: 'Bouquet limité, options payantes en plus' },
   { label: 'Films et séries', iptv: '150 000+ titres VOD inclus', classic: 'Abonnements streaming séparés' },
@@ -127,27 +127,26 @@ const IPTVAbonnement = () => {
     {
       duration: "1 Mois",
       price: "8 €",
-      perMonth: "8,00 €/mois",
+      perMonth: "Paiement unique",
       popular: false
     },
     {
       duration: "3 Mois",
       price: "19,99 €",
-      perMonth: "6,66 €/mois",
+      perMonth: "Paiement unique",
       popular: false
     },
     {
       duration: "6 Mois",
       price: "30 €",
-      perMonth: "5,00 €/mois",
+      perMonth: "Paiement unique",
       popular: false
     },
     {
       duration: "12 Mois",
       price: "45 €",
-      perMonth: "3,75 €/mois",
-      popular: true,
-      savings: "Économisez 35 €"
+      perMonth: "Paiement unique",
+      popular: true
     }
   ];
 
@@ -168,7 +167,7 @@ const IPTVAbonnement = () => {
     <>
       <SEO
         title="Abonnement IPTV 2026 : 30 500+ Chaînes dès 8€ | France IPTV"
-        description="Abonnement IPTV en France : 30 500+ chaînes, 150 000+ films et séries en HD/4K, 4 écrans, sans engagement. Dès 3,75€/mois, 1er mois remboursable."
+        description="Abonnement IPTV en France : 30 500+ chaînes, 150 000+ films et séries en HD/4K, 4 écrans, sans engagement. Dès 8 €, 1er mois remboursable."
         keywords="abonnement iptv, abonnement iptv france, meilleur abonnement iptv, iptv premium"
         canonicalPath="/abonnement-iptv"
       />
@@ -194,7 +193,7 @@ const IPTVAbonnement = () => {
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Un <strong>abonnement IPTV</strong> complet : 30 500+ chaînes, 150 000+ films et séries en HD/4K.
-                À partir de 3,75 € par mois, sans engagement, 1er mois satisfait ou remboursé 24 h.
+                Dès 8 € le mois, sans engagement, 1er mois satisfait ou remboursé 24 h.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <a
@@ -445,7 +444,7 @@ const IPTVAbonnement = () => {
         <SeoGuideSection title="IPTV abonnement : 1, 3, 6 ou 12 mois, quelle durée choisir ?">
           <p>
             Tous nos <strong>abonnements IPTV</strong> donnent accès exactement au même contenu : 30 500+ chaînes, 150 000+ films et
-            séries, 4 écrans simultanés et le support francophone. Seule la durée change, et avec elle le prix par mois. Le bon choix
+            séries, 4 écrans simultanés et le support francophone. Seule la durée change, et avec elle le prix. Le bon choix
             dépend de votre usage.
           </p>
           <div className="overflow-x-auto">
@@ -454,15 +453,14 @@ const IPTVAbonnement = () => {
                 <tr className="bg-brand-offwhite">
                   <th className="p-3 border border-brand-gray-border text-brand-black">Durée</th>
                   <th className="p-3 border border-brand-gray-border text-brand-black">Prix</th>
-                  <th className="p-3 border border-brand-gray-border text-brand-black">Prix par mois</th>
                   <th className="p-3 border border-brand-gray-border text-brand-black">Idéal pour</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td className="p-3 border border-brand-gray-border">1 mois</td><td className="p-3 border border-brand-gray-border">8 €</td><td className="p-3 border border-brand-gray-border">8 €</td><td className="p-3 border border-brand-gray-border">Découvrir le service (satisfait ou remboursé 24 h), un événement sportif précis</td></tr>
-                <tr><td className="p-3 border border-brand-gray-border">3 mois</td><td className="p-3 border border-brand-gray-border">19,99 €</td><td className="p-3 border border-brand-gray-border">6,66 €</td><td className="p-3 border border-brand-gray-border">Une saison de séries, tester la stabilité sur la durée</td></tr>
-                <tr><td className="p-3 border border-brand-gray-border">6 mois</td><td className="p-3 border border-brand-gray-border">30 €</td><td className="p-3 border border-brand-gray-border">5 €</td><td className="p-3 border border-brand-gray-border">Une demi-saison de football, un usage régulier</td></tr>
-                <tr><td className="p-3 border border-brand-gray-border">12 mois</td><td className="p-3 border border-brand-gray-border">45 €</td><td className="p-3 border border-brand-gray-border">3,75 €</td><td className="p-3 border border-brand-gray-border">Le meilleur prix : toute la famille, toute l'année</td></tr>
+                <tr><td className="p-3 border border-brand-gray-border">1 mois</td><td className="p-3 border border-brand-gray-border">8 €</td><td className="p-3 border border-brand-gray-border">Découvrir le service (satisfait ou remboursé 24 h), un événement sportif précis</td></tr>
+                <tr><td className="p-3 border border-brand-gray-border">3 mois</td><td className="p-3 border border-brand-gray-border">19,99 €</td><td className="p-3 border border-brand-gray-border">Une saison de séries, tester la stabilité sur la durée</td></tr>
+                <tr><td className="p-3 border border-brand-gray-border">6 mois</td><td className="p-3 border border-brand-gray-border">30 €</td><td className="p-3 border border-brand-gray-border">Une demi-saison de football, un usage régulier</td></tr>
+                <tr><td className="p-3 border border-brand-gray-border">12 mois</td><td className="p-3 border border-brand-gray-border">45 €</td><td className="p-3 border border-brand-gray-border">Le meilleur prix : toute la famille, toute l'année</td></tr>
               </tbody>
             </table>
           </div>

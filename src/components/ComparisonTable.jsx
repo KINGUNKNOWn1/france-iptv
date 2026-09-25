@@ -18,7 +18,7 @@ const ComparisonTable = () => {
     { name: 'Mise en service', streamholland: '5 minutes', competitor1: 'Variable', competitor2: 'Plusieurs jours' },
     { name: 'Écrans simultanés', streamholland: '4', competitor1: 'Variable', competitor2: 'Limité au décodeur' },
     { name: 'Guide TV (EPG) et replay', streamholland: true, competitor1: 'Variable', competitor2: true },
-    { name: 'Prix', streamholland: 'Dès 3,75 €/mois', competitor1: '5 à 15 € par an', competitor2: '20 à 60 €/mois' },
+    { name: 'Prix', streamholland: '8 € le mois, 45 € l’année', competitor1: '5 à 15 € par an', competitor2: '20 à 60 €/mois' },
   ];
 
   const renderCell = (value, isFranceIPTV = false) => {
@@ -144,7 +144,7 @@ const ComparisonTable = () => {
             className="inline-flex items-center gap-2 px-8 py-4 bg-lime hover:bg-lime-hover text-lime-on font-bold rounded-xl transition-colors text-lg"
           >
             <FaCrown />
-            Voir les formules, dès 3,75 €/mois
+            Voir les formules, dès 8 €
           </a>
         </motion.div>
 

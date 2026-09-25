@@ -278,7 +278,7 @@ const IsIPTVLegaalNederland = () => {
             <section className="bg-surface border border-lime/30 p-8 rounded-xl text-center text-white">
               <h2 className="text-3xl font-bold mb-4">Testez France IPTV Gratuitement Pendant 24 h</h2>
               <p className="text-xl mb-6">
-                Support francophone 24/7, 30 500+ chaînes et 4 écrans, dès 3,75 €/mois
+                Support francophone 24/7, 30 500+ chaînes et 4 écrans, dès 8 €
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link to="/abonnement-iptv" className="px-8 py-4 bg-white text-green-600 font-bold rounded-lg hover:bg-green-50 transition-all">

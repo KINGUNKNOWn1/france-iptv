@@ -154,7 +154,7 @@ const IPTVHolland = () => {
   const pricingOptions = [
     {
       duration: '1 Mois',
-      price: '23 €',
+      price: '8 €',
       features: [
         'Toutes les 25 000+ chaînes',
         'Chaînes belges en HD/4K',
@@ -167,9 +167,7 @@ const IPTVHolland = () => {
     },
     {
       duration: '3 Mois',
-      price: '45 €',
-      pricePerMonth: '15 €/mois',
-      savings: 'Économisez 24 €',
+      price: '19,99 €',
       features: [
         'Toutes les 25 000+ chaînes',
         'Chaînes belges en HD/4K',
@@ -183,9 +181,7 @@ const IPTVHolland = () => {
     },
     {
       duration: '12 Mois',
-      price: '120 €',
-      pricePerMonth: '10 €/mois',
-      savings: 'Économisez 156 €',
+      price: '45 €',
       features: [
         'Toutes les 25 000+ chaînes',
         'Chaînes belges en HD/4K',
@@ -260,7 +256,7 @@ const IPTVHolland = () => {
 
         {/* Open Graph */}
         <meta property="og:title" content="IPTV Belgique - Fournisseur IPTV Francophone | France IPTV" />
-        <meta property="og:description" content="Support francophone ✓ Toutes les chaînes belges ✓ Paiement Bancontact ✓ 99,9 % de disponibilité. Dès 4€/mois." />
+        <meta property="og:description" content="Support francophone ✓ Toutes les chaînes belges ✓ Paiement Bancontact ✓ 99,9 % de disponibilité. Dès 8 €." />
         <meta property="og:url" content="https://franceiptv.stream/iptv-belgique" />
         <meta property="og:type" content="website" />
 
@@ -325,7 +321,7 @@ const IPTVHolland = () => {
 
             <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed">
               Au service de l'espace francophone. Toutes les chaînes belges, paiement Bancontact,
-              serveurs en Europe et service client francophone 24/7. Dès 10€/mois.
+              serveurs en Europe et service client francophone 24/7. Dès 8 €.
             </p>
 
             {/* Stats */}

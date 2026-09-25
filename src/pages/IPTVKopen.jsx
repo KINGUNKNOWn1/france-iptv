@@ -9,7 +9,7 @@ import SeoGuideSection from '../components/SeoGuideSection';
 const SITE_URL = 'https://franceiptv.stream';
 
 const acheterFaqs = [
-  { q: 'Combien coûte un abonnement IPTV ?', a: "Chez France IPTV : 8 € pour 1 mois, 19,99 € pour 3 mois, 30 € pour 6 mois et 45 € pour 12 mois, soit 3,75 € par mois. Le contenu est identique dans toutes les formules, seule la durée change." },
+  { q: 'Combien coûte un abonnement IPTV ?', a: "Chez France IPTV : 8 € pour 1 mois, 19,99 € pour 3 mois, 30 € pour 6 mois et 45 € pour 12 mois, payés une fois. Le contenu est identique dans toutes les formules, seule la durée change." },
   { q: "Peut-on essayer avant de s'engager ?", a: "Oui : le 1er mois coûte 8 € et il est satisfait ou remboursé pendant 24 h. Si le service ne vous convient pas, vous êtes remboursé intégralement." },
   { q: "Sur combien d'écrans peut-on regarder ?", a: "Toutes les formules incluent 4 écrans simultanés : Smart TV, box, téléphone, tablette ou ordinateur, avec la même qualité sur chaque écran." },
   { q: 'Comment payer un abonnement IPTV ?', a: "Le paiement se fait en une seule fois par PayPal ou Binance Pay, deux moyens de paiement traçables. Vos identifiants arrivent sur WhatsApp en quelques minutes." },
@@ -336,13 +336,13 @@ const IPTVKopen = () => {
           <div className="overflow-x-auto">
             <table className="w-full text-left text-base border border-brand-gray-border">
               <thead>
-                <tr><th className="p-3 border border-brand-gray-border text-brand-black">Durée</th><th className="p-3 border border-brand-gray-border text-brand-black">Prix</th><th className="p-3 border border-brand-gray-border text-brand-black">Par mois</th></tr>
+                <tr><th className="p-3 border border-brand-gray-border text-brand-black">Durée</th><th className="p-3 border border-brand-gray-border text-brand-black">Prix</th></tr>
               </thead>
               <tbody>
-                <tr><td className="p-3 border border-brand-gray-border">1 mois</td><td className="p-3 border border-brand-gray-border">8 €</td><td className="p-3 border border-brand-gray-border">8 €</td></tr>
-                <tr><td className="p-3 border border-brand-gray-border">3 mois</td><td className="p-3 border border-brand-gray-border">19,99 €</td><td className="p-3 border border-brand-gray-border">6,66 €</td></tr>
-                <tr><td className="p-3 border border-brand-gray-border">6 mois</td><td className="p-3 border border-brand-gray-border">30 €</td><td className="p-3 border border-brand-gray-border">5 €</td></tr>
-                <tr><td className="p-3 border border-brand-gray-border">12 mois</td><td className="p-3 border border-brand-gray-border">45 €</td><td className="p-3 border border-brand-gray-border">3,75 €</td></tr>
+                <tr><td className="p-3 border border-brand-gray-border">1 mois</td><td className="p-3 border border-brand-gray-border">8 €</td></tr>
+                <tr><td className="p-3 border border-brand-gray-border">3 mois</td><td className="p-3 border border-brand-gray-border">19,99 €</td></tr>
+                <tr><td className="p-3 border border-brand-gray-border">6 mois</td><td className="p-3 border border-brand-gray-border">30 €</td></tr>
+                <tr><td className="p-3 border border-brand-gray-border">12 mois</td><td className="p-3 border border-brand-gray-border">45 €</td></tr>
               </tbody>
             </table>
           </div>
@@ -384,7 +384,7 @@ const IPTVKopen = () => {
                 Prêt à acheter votre IPTV ?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Choisissez le <Link to="/abonnement-iptv" className="text-white underline font-semibold">meilleur abonnement IPTV pour la France</Link> et commencez à regarder sous 5 minutes. 1 mois 8 € · 12 mois 45 € (3,75 €/mois).
+                Choisissez le <Link to="/abonnement-iptv" className="text-white underline font-semibold">meilleur abonnement IPTV pour la France</Link> et commencez à regarder sous 5 minutes. 1 mois 8 € · 12 mois 45 €.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link

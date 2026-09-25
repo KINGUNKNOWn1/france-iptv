@@ -12,7 +12,7 @@ import { FaCheckCircle, FaWhatsapp } from 'react-icons/fa';
 const SITE_URL = 'https://franceiptv.stream';
 
 const tarifsFaq = [
-  { q: "Quelle est l'option la moins chère ?", a: "L'abonnement 12 mois est l'option la plus avantageuse : seulement 45 € par an (3,75 € par mois). C'est moins cher que la plupart des fournisseurs IPTV en France." },
+  { q: "Quelle est l'option la moins chère ?", a: "L'abonnement 12 mois est l'option la plus avantageuse : seulement 45 € pour 12 mois, payés une fois. C'est moins cher que la plupart des fournisseurs IPTV en France." },
   { q: 'Puis-je payer par Binance Pay ou PayPal ?', a: 'Oui, nous acceptons Binance Pay et PayPal. Ce sont des moyens de paiement rapides et sécurisés. Contactez-nous via WhatsApp pour commander.' },
   { q: 'Mon abonnement se renouvelle-t-il automatiquement ?', a: "Non, absolument pas. Votre abonnement s'arrête automatiquement à la fin de la durée choisie. Aucune surprise, aucune reconduction non désirée." },
   { q: "Sur combien d'appareils puis-je regarder ?", a: "Vous pouvez regarder sur 4 appareils simultanément avec tous les forfaits : Smart TV, téléphone, tablette ou ordinateur, avec la même qualité sur chaque écran." }
@@ -146,7 +146,7 @@ const Prijzen = () => {
           <p>
             En 2026, le <strong>prix d'un abonnement IPTV</strong> fiable se situe généralement entre 8 € et 15 € par mois en France,
             avec des tarifs dégressifs sur les durées longues. Chez France IPTV, le <strong>tarif IPTV</strong> va de 8 € pour un mois
-            à 45 € pour un an, soit 3,75 € par mois : le contenu est identique dans toutes les formules.
+            à 45 € pour un an : le contenu est identique dans toutes les formules.
           </p>
           <h3>Ce qui est inclus dans le prix</h3>
           <ul>
@@ -191,7 +191,7 @@ const Prijzen = () => {
                   Quelle est l'option la moins chère ?
                 </h3>
                 <p className="text-brand-gray">
-                  L'abonnement 12 mois est l'option la plus avantageuse : seulement 45 € par an (3,75 € par mois).
+                  L'abonnement 12 mois est l'option la plus avantageuse : seulement 45 € pour 12 mois, payés une fois.
                   C'est moins cher que la plupart des <Link to="/iptv-france" className="text-brand-gold hover:text-[#C4FF86] underline">fournisseurs IPTV en France</Link>.
                 </p>
               </div>

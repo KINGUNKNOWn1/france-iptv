@@ -10,7 +10,7 @@ const iptvFranceFaqs = [
   { q: "Qu'est-ce que l'IPTV en France ?", a: "L'IPTV est la télévision diffusée par internet. En France, elle se regarde sur une Smart TV, une box Android TV, un Fire TV Stick, une Freebox Pop, un téléphone ou un ordinateur, grâce à une application IPTV et aux accès d'un abonnement." },
   { q: "Quelle connexion faut-il pour l'IPTV en France ?", a: "La fibre est idéale, mais une bonne connexion ADSL/VDSL ou une box 4G/5G suffit pour la HD. Comptez environ 7 Mbit/s par écran en HD, 15 Mbit/s en Full HD et 25 Mbit/s en 4K." },
   { q: "L'IPTV fonctionne-t-elle avec toutes les box françaises ?", a: "Votre box internet (Freebox, Livebox, Bbox, box SFR) fournit la connexion. La lecture se fait sur un appareil compatible : directement sur les Freebox sous Android TV, sinon sur une Smart TV ou un stick HDMI branché à la télévision." },
-  { q: "Combien coûte un abonnement IPTV en France ?", a: "Chez France IPTV, de 8 € pour 1 mois à 45 € pour 12 mois, soit 3,75 € par mois, sans reconduction automatique, et le 1er mois est satisfait ou remboursé 24 h." },
+  { q: "Combien coûte un abonnement IPTV en France ?", a: "Chez France IPTV, de 8 € pour 1 mois à 45 € pour 12 mois, sans reconduction automatique, et le 1er mois est satisfait ou remboursé 24 h." },
 ];
 
 const IPTVNederland = () => {
@@ -307,7 +307,7 @@ const IPTVNederland = () => {
               Démarrez avec le Meilleur <span className="text-brand-gold">IPTV en France</span>
             </h2>
             <p className="text-xl text-brand-gray mb-8">
-              À partir de 3,75 € par mois. Toutes les chaînes françaises + 30 500+ chaînes internationales.
+              Dès 8 € le mois, 45 € l'année. Toutes les chaînes françaises + 30 500+ chaînes internationales.
               Actif en 5 minutes.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">

@@ -446,7 +446,7 @@ const Apparaten = () => {
             <p className="text-xl text-brand-gray mb-8">
               Commencez dès aujourd'hui. Compatible avec votre{' '}
               <Link to="/appareils" className="text-purple-600 underline">Smart TV, smartphone, tablette et plus</Link>.
-              À partir de 3,75 € par mois.
+              Dès 8 € le mois, 45 € l'année.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link

@@ -39,7 +39,7 @@ const VeelgesteldeVragen = () => {
         },
         {
           q: "Combien coûte un abonnement IPTV ?",
-          a: "Nos abonnements démarrent à 8 € pour 1 mois (sans engagement), 19,99 € pour 3 mois (6,66 €/mois), 30 € pour 6 mois (5,00 €/mois), ou 45 € pour 12 mois (3,75 €/mois). Aucun frais caché ni reconduction automatique."
+          a: "Nos abonnements démarrent à 8 € pour 1 mois (sans engagement), 19,99 € pour 3 mois, 30 € pour 6 mois ou 45 € pour 12 mois, payés une fois. Aucun frais caché ni reconduction automatique."
         },
         {
           q: "Est-ce que je reçois une facture ?",

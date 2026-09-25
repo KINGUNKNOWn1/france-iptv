@@ -105,35 +105,35 @@ const IPTVZonderContract = () => {
     { feature: 'Paiement', streamHolland: 'Unique par Binance Pay/PayPal', traditional: 'Mensuel automatique' },
     { feature: 'Flexibilité', streamHolland: 'Maximale', traditional: 'Limitée' },
     { feature: 'Frais cachés', streamHolland: 'Aucun', traditional: 'Frais d\'activation, de gestion' },
-    { feature: 'Prix', streamHolland: 'Dès 3,75€/mois', traditional: '8-15€/mois' }
+    { feature: 'Prix', streamHolland: '8 € le mois, 45 € l’année', traditional: 'Souvent 20 à 60 €/mois' }
   ];
 
   const pricingOptions = [
     {
       period: '1 Mois',
       total: '8 €',
-      monthly: '8,00 €/mois',
+      monthly: 'Paiement unique',
       description: 'Parfait pour tester',
       popular: false
     },
     {
       period: '3 Mois',
       total: '19,99 €',
-      monthly: '6,66 €/mois',
+      monthly: 'Paiement unique',
       description: 'Sans engagement',
       popular: false
     },
     {
       period: '6 Mois',
       total: '30 €',
-      monthly: '5,00 €/mois',
+      monthly: 'Paiement unique',
       description: 'Bon rapport qualité-prix',
       popular: false
     },
     {
       period: '12 Mois',
       total: '45 €',
-      monthly: '3,75 €/mois',
+      monthly: 'Paiement unique',
       description: 'Meilleure offre !',
       popular: true
     }
@@ -155,7 +155,7 @@ const IPTVZonderContract = () => {
 
         {/* Open Graph */}
         <meta property="og:title" content="IPTV Sans Engagement - Aucune Obligation | France IPTV" />
-        <meta property="og:description" content="IPTV sans engagement dès 3,75€/mois. Aucune reconduction automatique, aucun préavis. Commandez sans obligation." />
+        <meta property="og:description" content="IPTV sans engagement dès 8 €. Aucune reconduction automatique, aucun préavis. Commandez sans obligation." />
         <meta property="og:url" content="https://franceiptv.stream/iptv-sans-engagement" />
         <meta property="og:type" content="website" />
 
@@ -394,7 +394,7 @@ const IPTVZonderContract = () => {
                         {option.total}
                       </div>
                       <div className="text-brand-gray mt-2">
-                        = {option.monthly}
+                        {option.monthly}
                       </div>
                     </div>
 
@@ -419,7 +419,7 @@ const IPTVZonderContract = () => {
 
             <div className="mt-12 text-center">
               <p className="text-brand-gray mb-4">
-                💡 <strong className="text-brand-black">Astuce :</strong> Choisissez 12 mois pour le meilleur prix (seulement 3,75€/mois), en sachant que même après 12 mois, vous n'êtes engagé à rien.
+                💡 <strong className="text-brand-black">Astuce :</strong> Choisissez 12 mois pour le meilleur prix (45 € payés une fois), en sachant que même après 12 mois, vous n'êtes engagé à rien.
               </p>
             </div>
           </div>

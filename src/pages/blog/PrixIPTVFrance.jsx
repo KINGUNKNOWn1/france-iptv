@@ -20,7 +20,7 @@ const PrixIPTVFrance = () => {
   const faqItems = [
     {
       q: "Quel est le prix moyen d'un abonnement IPTV en France ?",
-      a: "En 2026, un abonnement IPTV fiable coûte entre 8€ et 15€ par mois en France, selon la durée d'engagement et le nombre de chaînes. Les offres annuelles reviennent généralement moins cher au mois : chez France IPTV par exemple, l'abonnement 12 mois revient à 3,75€/mois (45€/an) contre 8€/mois à l'unité."
+      a: "En 2026, un abonnement IPTV fiable coûte entre 8€ et 15€ par mois en France, selon la durée d'engagement et le nombre de chaînes. Les offres annuelles reviennent généralement moins cher au mois : chez France IPTV par exemple, l'abonnement 12 mois coûte 45 € payés une fois, contre 8 € pour un seul mois."
     },
     {
       q: "Pourquoi certains IPTV sont-ils si peu chers (5€/an) ?",
@@ -73,7 +73,7 @@ const PrixIPTVFrance = () => {
   };
 
   const priceFactors = [
-    { title: 'Durée de l\'engagement', text: 'Plus la durée est longue, plus le prix mensuel baisse. Chez France IPTV : 8€/mois en mensuel, 3,75€/mois en annuel (45€/an).' },
+    { title: 'Durée de l\'engagement', text: 'Plus la durée est longue, plus le prix mensuel baisse. Chez France IPTV : 8 € pour 1 mois, 45 € pour 12 mois.' },
     { title: 'Nombre de chaînes et VOD', text: 'Un catalogue large (30 000+ chaînes, 150 000+ films/séries) coûte plus cher à maintenir qu\'un bouquet limité, mais offre bien plus de choix.' },
     { title: 'Qualité du flux (HD/4K)', text: 'La diffusion en 4K/UHD nécessite plus de bande passante serveur, ce qui influence légèrement le tarif par rapport à du HD simple.' },
     { title: 'Support client', text: 'Un support francophone réactif 24/7 (WhatsApp, chat) a un coût opérationnel que les services illégaux ou low-cost n\'assument pas.' },
@@ -114,7 +114,7 @@ const PrixIPTVFrance = () => {
                   <div>
                     <h2 className="text-2xl font-bold mb-3 text-brand-black">La Réponse Courte</h2>
                     <p className="text-lg text-brand-gray mb-4">
-                      Un abonnement IPTV fiable coûte en moyenne <strong>entre 8€ et 15€ par mois</strong> en France, avec des tarifs dégressifs sur l'engagement long. Chez <Link to="/" className="text-blue-600 underline">France IPTV</Link>, les prix vont de <strong>8€/mois</strong> (sans engagement) à <strong>45€/an</strong> (soit 3,75€/mois).
+                      Un abonnement IPTV fiable coûte en moyenne <strong>entre 8€ et 15€ par mois</strong> en France, avec des tarifs dégressifs sur l'engagement long. Chez <Link to="/" className="text-blue-600 underline">France IPTV</Link>, les prix vont de <strong>8€/mois</strong> (sans engagement) à <strong>45 € pour 12 mois</strong>.
                     </p>
                     <p className="text-brand-gray">
                       Consultez notre <Link to="/tarifs" className="text-blue-600 underline font-semibold">grille tarifaire complète</Link> pour comparer toutes les formules.
@@ -133,7 +133,6 @@ const PrixIPTVFrance = () => {
                     <tr className="bg-brand-offwhite">
                       <th className="p-4 border border-brand-gray-border font-bold">Durée</th>
                       <th className="p-4 border border-brand-gray-border font-bold">Prix Total</th>
-                      <th className="p-4 border border-brand-gray-border font-bold">Prix / Mois</th>
                       <th className="p-4 border border-brand-gray-border font-bold">Économie</th>
                     </tr>
                   </thead>
@@ -141,25 +140,21 @@ const PrixIPTVFrance = () => {
                     <tr>
                       <td className="p-4 border border-brand-gray-border">1 mois</td>
                       <td className="p-4 border border-brand-gray-border">8 €</td>
-                      <td className="p-4 border border-brand-gray-border">8 €</td>
                       <td className="p-4 border border-brand-gray-border">—</td>
                     </tr>
                     <tr className="bg-brand-offwhite">
                       <td className="p-4 border border-brand-gray-border">3 mois</td>
                       <td className="p-4 border border-brand-gray-border">19,99 €</td>
-                      <td className="p-4 border border-brand-gray-border">6,66 €</td>
                       <td className="p-4 border border-brand-gray-border text-green-600 font-semibold">17%</td>
                     </tr>
                     <tr>
                       <td className="p-4 border border-brand-gray-border">6 mois</td>
                       <td className="p-4 border border-brand-gray-border">30 €</td>
-                      <td className="p-4 border border-brand-gray-border">5 €</td>
                       <td className="p-4 border border-brand-gray-border text-green-600 font-semibold">37%</td>
                     </tr>
                     <tr className="bg-brand-offwhite">
                       <td className="p-4 border border-brand-gray-border font-semibold">12 mois</td>
                       <td className="p-4 border border-brand-gray-border font-semibold">45 €</td>
-                      <td className="p-4 border border-brand-gray-border font-semibold">3,75 €</td>
                       <td className="p-4 border border-brand-gray-border text-green-600 font-bold">53% — Meilleure offre</td>
                     </tr>
                   </tbody>

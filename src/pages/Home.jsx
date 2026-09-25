@@ -41,10 +41,10 @@ const DEVICES = [
 const FEATURES = ['30 500+ chaînes en direct HD/4K', '150 000+ films et séries', 'Sport, replay et guide TV (EPG)', '4 écrans simultanés', 'Sans reconduction automatique'];
 
 const PLANS = [
-  { label: 'POUR DÉCOUVRIR', name: '1 mois', price: '8 €', perMonth: '8 € / mois', payment: 'Paiement unique de 8 €' },
-  { label: 'POUR TESTER LA DURÉE', name: '3 mois', price: '19,99 €', perMonth: 'soit 6,66 € / mois', payment: 'Paiement unique de 19,99 €' },
-  { label: 'POUR LA SAISON', name: '6 mois', price: '30 €', perMonth: 'soit 5 € / mois', payment: 'Paiement unique de 30 €' },
-  { label: 'POUR EN PROFITER', badge: 'Meilleur prix', name: '12 mois', price: '45 €', perMonth: 'soit 3,75 € / mois', payment: 'Paiement unique de 45 €', featured: true },
+  { label: 'POUR DÉCOUVRIR', name: '1 mois', price: '8 €', perMonth: 'Sans reconduction', payment: 'Paiement unique de 8 €' },
+  { label: 'POUR TESTER LA DURÉE', name: '3 mois', price: '19,99 €', perMonth: 'Sans reconduction', payment: 'Paiement unique de 19,99 €' },
+  { label: 'POUR LA SAISON', name: '6 mois', price: '30 €', perMonth: 'Sans reconduction', payment: 'Paiement unique de 30 €' },
+  { label: 'POUR EN PROFITER', badge: 'Meilleur prix', name: '12 mois', price: '45 €', perMonth: 'Sans reconduction', payment: 'Paiement unique de 45 €', featured: true },
 ].map((plan) => ({ ...plan, message: `Bonjour ! Je souhaite l'abonnement IPTV ${plan.name} à ${plan.price}.` }));
 
 const Eyebrow = ({ children, centered = false }) => (
