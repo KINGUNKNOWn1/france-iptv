@@ -32,7 +32,7 @@ const PrixIPTVFrance = () => {
     },
     {
       q: "Peut-on tester avant de s'engager ?",
-      a: "Chez France IPTV, oui : le 1er mois coûte 8 € et il est satisfait ou remboursé pendant 24 h. Méfiez-vous des fournisseurs qui refusent tout essai, toute garantie ou toute preuve avant paiement."
+      a: "Chez France IPTV, oui : un test gratuit de 24 h est possible sur demande. Méfiez-vous des fournisseurs qui refusent tout essai, toute garantie ou toute preuve avant paiement."
     },
     {
       q: "Quels moyens de paiement sont les plus sûrs pour l'IPTV ?",

@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaSearch, FaTv, FaGlobe, FaFootballBall, FaFilm, FaNewspaper, FaChild, FaMusic } from 'react-icons/fa';
 import SEO from '../components/SEO';
-import ChannelGrid from '../components/ChannelGrid';
+import ChannelExplorer from '../components/ChannelExplorer';
 
 const chainesFaqs = [
   { q: 'Combien de chaînes sont incluses ?', a: "L'abonnement donne accès à plus de 30 500 chaînes en direct, françaises et internationales, ainsi qu'à plus de 150 000 films et séries à la demande. Le contenu est identique dans toutes les formules." },
   { q: 'Les chaînes françaises sont-elles en HD ?', a: "Oui, la plupart des chaînes françaises sont proposées en HD, et certaines en Full HD ou 4K. La qualité affichée dépend aussi de votre connexion et de votre appareil." },
   { q: 'Y a-t-il un guide des programmes et le replay ?', a: "Oui. Le guide des programmes (EPG) s'affiche dans l'application, et de nombreuses chaînes proposent le rattrapage pour revoir un programme déjà diffusé." },
-  { q: 'Peut-on voir la liste complète avant de s\'engager ?', a: "Oui : avec le 1er mois à 8 €, satisfait ou remboursé 24 h, vous accédez à l'ensemble des chaînes et vérifiez que vos chaînes préférées sont disponibles et fluides sur votre appareil." },
+  { q: 'Peut-on voir la liste complète avant de s\'engager ?', a: "Oui : avec le test gratuit de 24 h, vous accédez à l'ensemble des chaînes et vérifiez que vos chaînes préférées sont disponibles et fluides sur votre appareil." },
 ];
 
 const Kanalen = () => {
@@ -123,10 +123,10 @@ const Kanalen = () => {
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <a
-                  href="#categories"
+                  href="#chaines"
                   className="px-8 py-4 bg-brand-gold hover:bg-[#C4FF86] text-white font-semibold rounded-lg transition-all transform hover:scale-105"
                 >
-                  Voir les Catégories
+                  Chercher ma chaîne
                 </a>
                 <Link
                   to="/acheter-iptv"
@@ -230,21 +230,13 @@ const Kanalen = () => {
           </div>
         </section>
 
-        {/* Channel Grid Component */}
-        <section className="py-20 bg-brand-offwhite">
-          <div className="container mx-auto px-4 max-w-6xl">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-12 text-brand-black">
-              Découvrez Notre <span className="text-brand-gold">Liste de Chaînes</span>
-            </h2>
-          </div>
-          <ChannelGrid />
-        </section>
+        <ChannelExplorer />
 
         <SeoGuideSection title="Liste des chaînes françaises en IPTV">
           <p>
             Voici les principales <strong>chaînes françaises</strong> disponibles avec l'abonnement, classées par catégorie. Elles
             s'affichent avec le guide des programmes (EPG) et, pour la plupart, en HD. La liste complète, avec les chaînes
-            internationales, est consultable dès le <a href="/abonnement-iptv">1er mois à 8 €, satisfait ou remboursé 24 h</a>.
+            internationales, est consultable avec le <a href="/abonnement-iptv">test gratuit de 24 h</a>.
           </p>
           <h3>Chaînes publiques</h3>
           <p>France 2, France 3, France 4, France 5, franceinfo, France 24, LCP, Public Sénat, Arte.</p>

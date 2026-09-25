@@ -165,7 +165,7 @@ const Prijzen = () => {
           <h3>Payer son abonnement IPTV</h3>
           <p>
             Le paiement se fait en une seule fois par <strong>PayPal</strong> ou <strong>Binance Pay</strong>, sans reconduction
-            automatique. Le <strong>1er mois à 8 € est satisfait ou remboursé 24 h</strong> : vous pouvez vérifier la
+            automatique. Le <strong>test gratuit de 24 h</strong> sur demande vous permet de vérifier la
             qualité sur votre écran. Pour comprendre l'offre dans son ensemble, voir la page{' '}
             <a href="/abonnement-iptv">abonnement IPTV</a>.
           </p>

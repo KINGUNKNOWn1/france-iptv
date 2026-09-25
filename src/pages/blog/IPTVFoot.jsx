@@ -99,7 +99,7 @@ const IPTVFoot = () => (
     <section>
       <h2>5. Testez pendant un vrai match</h2>
       <p>
-        Le seul test qui compte : regarder un match en direct, en soirée, pendant les 24 h de garantie de votre 1er mois. Notez s'il y a des coupures, le
+        Le seul test qui compte : regarder un match en direct, en soirée, pendant votre test gratuit de 24 h. Notez s'il y a des coupures, le
         temps de chargement au changement de chaîne et la fluidité des actions rapides. Si tout est bon, vous pouvez choisir une
         formule longue en confiance.
       </p>

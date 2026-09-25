@@ -4,7 +4,7 @@ import { FaGift, FaTimes } from 'react-icons/fa';
 import TrialEmailForm from './TrialEmailForm';
 import { hasCapturedLead } from '../utils/tracking';
 
-// Slide-in free-trial offer. Deliberately NOT a full-screen popup on page
+// Slide-in free-test offer. Deliberately NOT a full-screen popup on page
 // load: Google demotes mobile pages that cover content right after landing
 // ("intrusive interstitials"). It appears after 15s or 40% scroll, as a small
 // card, at most once every 7 days, and never for visitors who already left an email.
@@ -67,7 +67,7 @@ const TrialPopup = () => {
       {isOpen && (
         <motion.aside
           role="dialog"
-          aria-label="1er mois à 8 €"
+          aria-label="Test gratuit 24 h"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 40 }}
@@ -86,10 +86,10 @@ const TrialPopup = () => {
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center flex-shrink-0">
                 <FaGift className="text-white" />
               </div>
-              <p className="font-bold text-gray-900 leading-tight">1er mois à 8 €, satisfait ou remboursé</p>
+              <p className="font-bold text-gray-900 leading-tight">Test gratuit 24 h, sans engagement</p>
             </div>
             <p className="text-sm text-gray-600 mb-4">
-              Toutes les chaînes et la VOD, sans engagement. Pas convaincu dans les 24 h ? Vous êtes remboursé. Recevez l'offre par e-mail.
+              Toutes les chaînes et la VOD pendant 24 h, sans payer. Laissez votre e-mail, puis envoyez la demande sur WhatsApp.
             </p>
             <TrialEmailForm source="trial_popup" />
           </div>

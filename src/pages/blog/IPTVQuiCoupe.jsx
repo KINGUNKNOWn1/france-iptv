@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: 'Mon IPTV coupe sur toutes les chaînes, que faire ?',
-    a: "Si toutes les chaînes coupent, même en Ethernet et après redémarrage de la box, le problème vient probablement de votre fournisseur IPTV. Contactez son support ; si les coupures durent, changez de fournisseur. France IPTV propose un 1er mois à 8 €, satisfait ou remboursé 24 h, pour comparer.",
+    a: "Si toutes les chaînes coupent, même en Ethernet et après redémarrage de la box, le problème vient probablement de votre fournisseur IPTV. Contactez son support ; si les coupures durent, changez de fournisseur. France IPTV propose un test gratuit de 24 h pour comparer.",
   },
 ];
 

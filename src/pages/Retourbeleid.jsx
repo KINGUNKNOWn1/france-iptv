@@ -94,23 +94,21 @@ const Retourbeleid = () => {
                 </div>
               </motion.div>
 
-              {/* Guarantee: first month, 24 h */}
-              <div id="garantie-24h" className="bg-brand-offwhite border-2 border-brand-gold/60 rounded-2xl p-8 scroll-mt-24">
-                <h2 className="text-2xl font-bold mb-4 text-brand-black">Garantie Satisfait ou Remboursé 24 h (1er mois)</h2>
+              {/* Free test before buying */}
+              <div id="test-gratuit" className="bg-brand-offwhite border-2 border-brand-gold/60 rounded-2xl p-8 scroll-mt-24">
+                <h2 className="text-2xl font-bold mb-4 text-brand-black">Test gratuit de 24 h avant l'achat</h2>
                 <p className="text-brand-gray leading-relaxed mb-4">
-                  En plus de vos droits légaux, France IPTV vous accorde une <strong className="text-brand-black">garantie commerciale</strong> sur
-                  votre première commande : si l'abonnement <strong className="text-brand-black">1 mois à 8 €</strong> ne vous convient pas, vous êtes
-                  <strong className="text-brand-black"> remboursé intégralement (8 €)</strong>, même après l'activation.
+                  Pour vérifier vos chaînes et la qualité sur votre appareil <strong className="text-brand-black">avant de payer</strong>, vous pouvez
+                  demander un <strong className="text-brand-black">test gratuit de 24 h</strong> sur WhatsApp. Le test ne vous engage à rien.
                 </p>
                 <h3 className="font-bold text-brand-black mb-2">Conditions :</h3>
                 <ul className="space-y-2 text-brand-gray mb-4">
-                  <li className="flex items-start gap-2"><span className="text-green-500 mt-1">✓</span><span>Elle s'applique à la <strong className="text-brand-black">première commande</strong> d'un abonnement <strong className="text-brand-black">1 mois</strong>, une seule fois par client (même personne, numéro WhatsApp, adresse e-mail ou appareil).</span></li>
-                  <li className="flex items-start gap-2"><span className="text-green-500 mt-1">✓</span><span>La demande doit être faite dans les <strong className="text-brand-black">24 heures suivant l'activation</strong>, par WhatsApp ou par e-mail à support@franceiptv.stream.</span></li>
-                  <li className="flex items-start gap-2"><span className="text-green-500 mt-1">✓</span><span>Le remboursement de <strong className="text-brand-black">8 €</strong> est effectué sur le même moyen de paiement (PayPal ou Binance Pay), sous 14 jours au plus tard ; les accès sont alors désactivés.</span></li>
-                  <li className="flex items-start gap-2"><span className="text-red-500 mt-1">✗</span><span>Elle ne s'applique pas aux abonnements 3, 6 et 12 mois, ni en cas de non-respect des conditions générales de vente (partage de compte, revente…).</span></li>
+                  <li className="flex items-start gap-2"><span className="text-green-500 mt-1">✓</span><span>Un seul test par personne (même personne, numéro WhatsApp, adresse e-mail ou appareil).</span></li>
+                  <li className="flex items-start gap-2"><span className="text-green-500 mt-1">✓</span><span>Le test est envoyé par notre équipe, sur demande, selon les disponibilités.</span></li>
+                  <li className="flex items-start gap-2"><span className="text-green-500 mt-1">✓</span><span>Après votre achat, nous vous aidons à l'installation jusqu'à ce que le service fonctionne sur votre appareil.</span></li>
                 </ul>
                 <p className="text-brand-gray text-sm">
-                  Cette garantie commerciale s'ajoute aux règles décrites ci-dessous, qui restent applicables à toutes les autres commandes.
+                  Le test vous permettant de vérifier le service avant de payer, les règles de remboursement décrites ci-dessous s'appliquent à toutes les commandes.
                 </p>
               </div>
 
@@ -319,7 +317,7 @@ const Retourbeleid = () => {
                 <ul className="space-y-2 text-brand-gray">
                   <li className="flex items-start gap-2">
                     <span className="text-red-500 mt-1">✗</span>
-                    <span>L'abonnement est déjà activé et vous avez eu accès au service (sauf garantie 24 h sur le 1er mois, voir plus haut)</span>
+                    <span>L'abonnement est déjà activé et vous avez eu accès au service</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-red-500 mt-1">✗</span>
@@ -359,7 +357,7 @@ const Retourbeleid = () => {
                 <div className="space-y-4">
                   <div className="bg-white rounded-lg p-4 border border-brand-gray-border">
                     <h3 className="font-bold text-brand-black mb-2">Puis-je être remboursé si le service ne fonctionne pas ?</h3>
-                    <p className="text-brand-gray text-sm">Pour une première commande d'un mois, oui : la garantie satisfait ou remboursé 24 h s'applique. Pour les autres commandes, nous nous engageons à résoudre le problème via notre support 24/7. En cas de problème durable de notre côté, nous proposons une compensation sous forme de prolongation de durée.</p>
+                    <p className="text-brand-gray text-sm">Pour éviter ce cas, demandez d'abord le test gratuit de 24 h. Après l'achat, nous nous engageons à résoudre le problème via notre support 24/7. En cas de problème durable de notre côté, nous proposons une compensation sous forme de prolongation de durée.</p>
                   </div>
 
                   <div className="bg-white rounded-lg p-4 border border-brand-gray-border">

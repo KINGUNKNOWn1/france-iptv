@@ -28,7 +28,7 @@ const FAQ = () => {
     },
     {
       question: "Puis-je tester avant de m'engager ?",
-      answer: "Oui : le 1er mois coûte 8 € et il est satisfait ou remboursé pendant 24 h. Si le service ne vous convient pas, écrivez-nous dans les 24 h qui suivent l'activation et vous êtes remboursé intégralement.",
+      answer: "Oui : demandez un test gratuit de 24 h sur WhatsApp (un test par personne). Vous vérifiez vos chaînes et la qualité sur votre appareil avant de payer, puis vous choisissez votre formule, dès 8 € le mois.",
     },
     {
       question: "Que se passe-t-il à la fin de mon abonnement ?",

@@ -457,13 +457,13 @@ const IPTVZonderContract = () => {
               Pourquoi les Clients Choisissent France IPTV
             </h2>
             <p className="text-xl text-brand-gray mb-8">
-              Un service sans engagement : 1er mois à 8 €, satisfait ou remboursé 24 h
+              Un service sans engagement : test gratuit 24 h, puis dès 8 €
             </p>
 
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="bg-brand-offwhite p-6 rounded-xl border border-brand-gray-border">
                 <div className="text-4xl font-bold text-brand-gold mb-2">24 h</div>
-                <div className="text-brand-gray">Satisfait ou remboursé</div>
+                <div className="text-brand-gray">Test gratuit</div>
               </div>
               <div className="bg-brand-offwhite p-6 rounded-xl border border-brand-gray-border">
                 <div className="text-4xl font-bold text-brand-gold mb-2">99,9 %</div>

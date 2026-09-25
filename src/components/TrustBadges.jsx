@@ -36,8 +36,8 @@ const TrustBadges = () => {
     },
     {
       icon: FaAward,
-      title: 'Satisfait ou remboursé 24 h',
-      description: 'Sur simple demande',
+      title: 'Test gratuit 24 h',
+      description: 'Sur demande, avant de payer',
       color: 'from-yellow-500 to-yellow-600'
     }
   ];

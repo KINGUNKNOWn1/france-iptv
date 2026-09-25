@@ -98,7 +98,7 @@ const VeelgesteldeVragen = () => {
         },
         {
           q: "Puis-je annuler mon abonnement ?",
-          a: "Le 1er mois à 8 € est satisfait ou remboursé pendant 24 h après l'activation : écrivez-nous dans ce délai et vous êtes remboursé intégralement. Ensuite, votre abonnement arrive simplement à échéance à la fin de la période choisie, sans reconduction automatique. Conditions détaillées sur la page Droit de rétractation (franceiptv.stream/droit-de-retractation)."
+          a: "Avant d'acheter, vous pouvez demander un test gratuit de 24 h sur WhatsApp (un test par personne). Une fois activé, votre abonnement arrive simplement à échéance à la fin de la période choisie, sans reconduction automatique. Conditions détaillées sur la page Droit de rétractation (franceiptv.stream/droit-de-retractation)."
         },
         {
           q: "Puis-je passer à un abonnement plus long ?",

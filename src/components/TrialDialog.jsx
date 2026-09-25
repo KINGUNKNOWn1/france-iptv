@@ -3,9 +3,11 @@ import { Tv, Laptop, Smartphone, Box, Check, X, ArrowRight, ArrowLeft } from 'lu
 import TrialEmailForm from './TrialEmailForm';
 import { openWhatsApp } from '../utils/tracking';
 
-// Free-trial dialog from the dark theme: pick a device, then leave an email
-// (captured in MailerLite) or go straight to WhatsApp. Opened from anywhere
-// with: window.dispatchEvent(new CustomEvent('open-trial'))
+// Free-test dialog: pick a device, leave an email (captured in MailerLite),
+// then send the test request on WhatsApp, where tests are granted by hand
+// (one per person). Visitors who are already convinced can order 1 month
+// directly. Opened from anywhere with:
+// window.dispatchEvent(new CustomEvent('open-trial'))
 const DEVICES = [
   { name: 'Smart TV', detail: 'Samsung, LG et autres', Icon: Tv },
   { name: 'Ordinateur', detail: 'Windows et macOS', Icon: Laptop },
@@ -38,7 +40,8 @@ const TrialDialog = () => {
   }, [open]);
 
   const close = () => setOpen(false);
-  const message = `Bonjour ! Je souhaite commencer avec le 1er mois à 8 € (satisfait ou remboursé 24 h) sur ${DEVICES[device].name}.`;
+  const testMessage = `Bonjour ! Je souhaite un test gratuit de 24 h sur ${DEVICES[device].name}.`;
+  const orderMessage = `Bonjour ! Je souhaite commander 1 mois (8 €) sur ${DEVICES[device].name}.`;
 
   return (
     <dialog
@@ -49,7 +52,7 @@ const TrialDialog = () => {
         if (e.target === dialog.current && pressStartedOnBackdrop.current) close();
         pressStartedOnBackdrop.current = false;
       }}
-      aria-label="Commencer pour 8 €"
+      aria-label="Test gratuit 24 h"
       className="bg-surface text-brand-black border border-white/15 rounded-2xl w-[min(560px,calc(100%-28px))] max-h-[90dvh] p-6 md:p-10 shadow-2xl backdrop:bg-black/70 backdrop:backdrop-blur-sm"
     >
       <button onClick={close} className="absolute right-3 top-3 w-9 h-9 grid place-items-center text-brand-gray hover:text-white" aria-label="Fermer">
@@ -59,7 +62,7 @@ const TrialDialog = () => {
       {/* Content only exists while open, so its headings aren't part of every page's HTML */}
       {open && (step === 1 ? (
         <>
-          <p className="text-[10px] tracking-[0.2em] font-medium text-lime mb-2">1ER MOIS À 8 € · SATISFAIT OU REMBOURSÉ 48 H</p>
+          <p className="text-[10px] tracking-[0.2em] font-medium text-lime mb-2">TEST GRATUIT 24 H · SANS ENGAGEMENT</p>
           <h2 className="text-3xl md:text-4xl mb-2">Sur quel écran ?</h2>
           <p className="text-sm text-brand-gray mb-6">Choisissez votre appareil : on vous envoie les bons accès et le guide d'installation.</p>
           <div className="grid grid-cols-2 gap-2.5 mb-6">
@@ -91,18 +94,18 @@ const TrialDialog = () => {
           <button type="button" onClick={() => setStep(1)} className="flex items-center gap-2 text-xs text-brand-gray hover:text-white mb-5">
             <ArrowLeft size={16} /> Modifier l'appareil ({DEVICES[device].name})
           </button>
-          <h2 className="text-3xl md:text-4xl mb-2">Commencez pour 8 €.</h2>
+          <h2 className="text-3xl md:text-4xl mb-2">Testez gratuitement 24 h.</h2>
           <p className="text-sm text-brand-gray mb-5">
-            Le 1er mois coûte 8 €. S'il ne vous convient pas, vous êtes remboursé intégralement dans les 24 h.
+            Laissez votre e-mail, puis envoyez la demande sur WhatsApp : notre équipe vous envoie votre test. Un test par personne.
           </p>
-          <button type="button" onClick={() => openWhatsApp(message)} className="w-full min-h-[52px] inline-flex items-center justify-center gap-2 bg-lime hover:bg-lime-hover text-lime-on font-semibold rounded-lg">
-            Commander le 1er mois (8 €) sur WhatsApp <ArrowRight size={18} />
-          </button>
+          <TrialEmailForm source="trial_dialog" dark message={testMessage} />
           <div className="flex items-center gap-3 my-5 text-xs text-brand-gray">
-            <span className="h-px flex-1 bg-white/10" /> ou recevez l'offre par e-mail <span className="h-px flex-1 bg-white/10" />
+            <span className="h-px flex-1 bg-white/10" /> déjà convaincu ? <span className="h-px flex-1 bg-white/10" />
           </div>
-          <TrialEmailForm source="trial_dialog" dark message={message} />
-          <p className="text-[11px] text-brand-gray text-center mt-3">Satisfait ou remboursé 24 h sur le 1er mois · paiement PayPal ou Binance Pay.</p>
+          <button type="button" onClick={() => openWhatsApp(orderMessage)} className="w-full min-h-[52px] inline-flex items-center justify-center gap-2 border border-white/40 hover:bg-white/5 text-white font-semibold rounded-lg">
+            Commander 1 mois (8 €) sur WhatsApp <ArrowRight size={18} />
+          </button>
+          <p className="text-[11px] text-brand-gray text-center mt-3">Sans engagement · paiement Binance Pay ou PayPal.</p>
         </>
       ))}
     </dialog>

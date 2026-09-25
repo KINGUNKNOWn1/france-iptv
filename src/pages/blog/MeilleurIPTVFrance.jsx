@@ -40,7 +40,7 @@ const MeilleurIPTVFrance = () => {
     },
     {
       q: "Peut-on tester un IPTV avant de s'engager sur l'année ?",
-      a: "Avec un fournisseur sérieux, oui. Chez France IPTV, le 1er mois à 8 € est satisfait ou remboursé pendant 24 h : vous validez la stabilité du flux et le catalogue de chaînes avant de passer à une formule longue."
+      a: "Avec un fournisseur sérieux, oui. Chez France IPTV, un test gratuit de 24 h est possible sur demande : vous validez la stabilité du flux et le catalogue de chaînes avant de passer à une formule longue."
     }
   ];
 
@@ -250,7 +250,7 @@ const MeilleurIPTVFrance = () => {
                   'Paiement Binance Pay ou PayPal',
                   'Aucune reconduction automatique',
                   '99,9% de disponibilité garantie',
-                  '1er mois satisfait ou remboursé 24 h'
+                  'Test gratuit de 24 h sur demande'
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 bg-white border border-brand-gray-border rounded-lg p-4">
                     <FaCheckCircle className="text-green-600 flex-shrink-0" />
@@ -284,13 +284,13 @@ const MeilleurIPTVFrance = () => {
             {/* CTA */}
             <section className="bg-surface border border-brand-gold/40 p-8 rounded-xl text-center text-white">
               <h2 className="text-3xl font-bold mb-4">Testez France IPTV Dès Aujourd'hui</h2>
-              <p className="text-xl mb-6">1er mois à 8 €, satisfait ou remboursé 24 h, activation en 5 minutes</p>
+              <p className="text-xl mb-6">Test gratuit 24 h, puis dès 8 €, activation en 5 minutes</p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link to="/abonnement-iptv" className="px-8 py-4 bg-white text-brand-gold font-bold rounded-lg hover:bg-yellow-50 transition-all">
                   Voir les Abonnements
                 </Link>
                 <a href="https://wa.me/18653169315?text=Bonjour%2C%20je%20voudrais%20tester%20France%20IPTV" className="px-8 py-4 bg-black/30 hover:bg-black/40 text-white font-bold rounded-lg transition-all">
-                  <FaWhatsapp className="inline mr-2" /> Commencer pour 8 €
+                  <FaWhatsapp className="inline mr-2" /> Demander un test gratuit
                 </a>
               </div>
             </section>

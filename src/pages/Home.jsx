@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Tv, Laptop, Smartphone, Box, Check, ArrowRight, Wrench, ChevronDown } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
@@ -7,7 +7,8 @@ import TrialEmailForm from '../components/TrialEmailForm';
 import Blog from '../components/Blog';
 import TrustBadges from '../components/TrustBadges';
 import LightweightTV from '../components/LightweightTV';
-import ChannelGrid from '../components/ChannelGrid';
+import ChannelExplorer from '../components/ChannelExplorer';
+import { useHeroTV, HeroTVScreen, HeroTVRemote } from '../components/HeroTV';
 import DeviceCompatibility from '../components/DeviceCompatibility';
 import ComparisonTable from '../components/ComparisonTable';
 import Interactive3DTV from '../components/Interactive3DTV';
@@ -58,13 +59,15 @@ const openTrial = () => window.dispatchEvent(new CustomEvent('open-trial'));
 const Home = () => {
   const [device, setDevice] = useState(0);
   const current = DEVICES[device];
+  const heroRef = useRef(null);
+  const tv = useHeroTV(heroRef);
 
   return (
     <>
       <SEO canonicalPath="/" includeHomeSchema />
 
       {/* Hero */}
-      <section className="relative min-h-[680px] md:min-h-[720px] flex items-center overflow-hidden">
+      <section ref={heroRef} className="relative min-h-[680px] md:min-h-[720px] flex items-center overflow-hidden">
         <picture>
           <source media="(max-width: 700px)" srcSet="/assets/cinema-hero-900.webp" />
           <img
@@ -74,8 +77,9 @@ const Home = () => {
             fetchpriority="high"
           />
         </picture>
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/20 md:to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink to-transparent" />
+        <HeroTVScreen tv={tv} />
+        <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-ink via-ink/85 to-ink/20 md:to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-40 pointer-events-none bg-gradient-to-t from-ink to-transparent" />
 
         <div className="relative z-10 w-full container-custom px-4 md:px-8 pt-28 pb-16">
           <div className="max-w-2xl">
@@ -93,7 +97,7 @@ const Home = () => {
             </p>
 
             <div className="bg-white/[0.06] backdrop-blur-md border border-white/15 rounded-2xl p-4 md:p-5 max-w-xl">
-              <p className="text-white font-semibold mb-3">🎁 1er mois à 8 €, satisfait ou remboursé 24 h</p>
+              <p className="text-white font-semibold mb-3">🎁 Test gratuit 24 h, sans engagement</p>
               <TrialEmailForm source="hero" dark large />
             </div>
 
@@ -112,9 +116,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <span className="hidden xl:block absolute right-[3%] top-[42%] text-[9px] tracking-[0.3em] leading-loose text-white/80">
-          LE GRAND ÉCRAN<br />CHEZ VOUS.
-        </span>
+        <HeroTVRemote tv={tv} />
       </section>
 
       {/* Device strip */}
@@ -199,7 +201,7 @@ const Home = () => {
         </div>
       </section>
 
-      <ChannelGrid />
+      <ChannelExplorer />
       <DeviceCompatibility />
 
       {/* Setup guide */}
@@ -235,7 +237,7 @@ const Home = () => {
           <div id="device-guide" role="tabpanel" aria-labelledby={`device-tab-${device}`} className="grid md:grid-cols-3 gap-8 md:gap-12 mt-9 mb-7">
             {[
               ['01', 'Préparez votre appareil', current.help],
-              ['02', 'Demandez votre accès', "Commencez par le 1er mois à 8 €, satisfait ou remboursé 24 h. Vous recevez vos identifiants par WhatsApp en quelques minutes."],
+              ['02', 'Demandez votre accès', "Demandez votre test gratuit de 24 h, ou commandez directement dès 8 €. Vous recevez vos identifiants par WhatsApp en quelques minutes."],
               ['03', 'Installez-vous confortablement', 'Testez la lecture sur votre connexion. Besoin d\'un coup de main ? Notre assistance francophone vous accompagne.'],
             ].map(([n, title, text]) => (
               <div key={n}>
@@ -276,7 +278,7 @@ const Home = () => {
               un seul <Link to="/abonnement-iptv" className="text-lime hover:underline">abonnement IPTV</Link>, sur 4 écrans à la fois.
             </p>
             <p>
-              Commencez par le 1er mois à 8 € : s'il ne vous convient pas, vous êtes remboursé dans les 24 h. Ensuite, choisissez la durée qui vous convient
+              Commencez par un test gratuit de 24 h pour vérifier vos chaînes sur votre écran. Ensuite, choisissez la durée qui vous convient
               sur la page <Link to="/tarifs" className="text-lime hover:underline">tarifs</Link> : aucune reconduction automatique,
               paiement par Binance Pay ou PayPal, activation en 5 minutes. Consultez aussi la{' '}
               <Link to="/chaines" className="text-lime hover:underline">liste des chaînes</Link> et nos{' '}
@@ -335,7 +337,7 @@ const Home = () => {
             onClick={openTrial}
             className="self-start md:self-auto min-h-[52px] inline-flex items-center gap-3 px-7 bg-lime hover:bg-lime-hover text-lime-on font-semibold rounded-lg"
           >
-            Commencer pour 8 € <ArrowRight size={20} />
+            Test gratuit 24 h <ArrowRight size={20} />
           </button>
         </div>
       </section>

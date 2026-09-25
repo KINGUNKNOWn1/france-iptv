@@ -70,9 +70,9 @@ const BlogArticle = ({ link, seoTitle, description, keywords, quickAnswer, child
           )}
 
           <section className="mt-14 rounded-2xl border border-brand-gold/40 bg-brand-offwhite p-7 md:p-9">
-            <h2 className="text-3xl font-bold text-brand-black mb-3">Commencez France IPTV pour 8 €</h2>
+            <h2 className="text-3xl font-bold text-brand-black mb-3">Testez France IPTV gratuitement 24 h</h2>
             <p className="text-brand-gray mb-6">
-              30 500+ chaînes, films et séries en HD/4K, aide à l'installation sur votre appareil. 1er mois satisfait ou remboursé 24 h, sans engagement.
+              30 500+ chaînes, films et séries en HD/4K, aide à l'installation sur votre appareil. Test gratuit de 24 h sur demande, puis dès 8 € le mois, sans engagement.
             </p>
             <div className="flex flex-wrap gap-3">
               <button
@@ -80,7 +80,7 @@ const BlogArticle = ({ link, seoTitle, description, keywords, quickAnswer, child
                 onClick={() => window.dispatchEvent(new CustomEvent('open-trial'))}
                 className="min-h-[50px] inline-flex items-center gap-2 px-6 bg-brand-gold hover:opacity-90 text-white font-semibold rounded-lg"
               >
-                Commencer pour 8 € <ArrowRight size={18} />
+                Test gratuit 24 h <ArrowRight size={18} />
               </button>
               <button
                 type="button"

@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import { FaWhatsapp, FaCheckCircle } from 'react-icons/fa';
 import { openWhatsApp, subscribeEmail } from '../utils/tracking';
 
-// Email capture for the free 24h trial. The email goes to MailerLite, then the
-// visitor activates the trial on WhatsApp (where trials are delivered), with
-// their email prefilled so the conversation can be matched to the lead.
-const TrialEmailForm = ({ source, dark = false, large = false, message = "Bonjour ! Je souhaite commencer avec le 1er mois à 8 € (satisfait ou remboursé 24 h)." }) => {
+// Email capture for the free 24h test. The email goes to MailerLite, then the
+// visitor requests the test on WhatsApp (where tests are granted by hand, one
+// per person), with their email prefilled so the request can be matched to the lead.
+const TrialEmailForm = ({ source, dark = false, large = false, message = "Bonjour ! Je souhaite un test gratuit de 24 h." }) => {
   const [email, setEmail] = useState('');
   const [isValid, setIsValid] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -36,13 +36,13 @@ const TrialEmailForm = ({ source, dark = false, large = false, message = "Bonjou
         <p className={`flex items-center justify-center gap-2 font-semibold mb-3 ${dark ? 'text-white' : 'text-gray-900'}`}>
           <FaCheckCircle className="text-green-500" /> C'est noté !
         </p>
-        <p className={`text-sm mb-3 ${text}`}>Dernière étape : confirmez votre commande sur WhatsApp.</p>
+        <p className={`text-sm mb-3 ${text}`}>Dernière étape : envoyez votre demande sur WhatsApp. Un test par personne.</p>
         <button
           type="button"
           onClick={activateOnWhatsApp}
           className={`w-full flex items-center justify-center gap-2 px-4 ${size} bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors`}
         >
-          <FaWhatsapp /> Commander le 1er mois (8 €)
+          <FaWhatsapp /> Demander mon test gratuit
         </button>
       </div>
     );
@@ -69,7 +69,7 @@ const TrialEmailForm = ({ source, dark = false, large = false, message = "Bonjou
           disabled={isSubmitting}
           className={`px-4 ${size} ${dark ? 'bg-lime hover:bg-lime-hover text-lime-on' : 'bg-brand-gold hover:bg-[#C4FF86]'} disabled:opacity-60 text-white font-semibold rounded-lg transition-colors whitespace-nowrap`}
         >
-          {isSubmitting ? '…' : "Recevoir l'offre"}
+          {isSubmitting ? '…' : 'Obtenir mon test'}
         </button>
       </div>
       {!isValid && <p className="text-red-500 text-xs mt-1">Veuillez saisir une adresse e-mail valide.</p>}

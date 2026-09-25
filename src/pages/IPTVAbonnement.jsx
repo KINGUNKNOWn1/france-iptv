@@ -29,11 +29,11 @@ const faqItems = [
   },
   {
     q: 'Puis-je tester avant de m\'engager ?',
-    a: "Oui : le 1er mois coûte 8 € et il est satisfait ou remboursé pendant 24 h. Si le service ne vous convient pas sur votre appareil, écrivez-nous dans les 24 h qui suivent l'activation et vous êtes remboursé intégralement."
+    a: "Oui : demandez un test gratuit de 24 h sur WhatsApp (un test par personne). Vous vérifiez vos chaînes et la qualité sur votre appareil avant de payer, puis vous choisissez votre formule, dès 8 € le mois."
   },
   {
     q: 'Puis-je annuler mon abonnement IPTV ?',
-    a: "Durant les 14 premiers jours, nous offrons une garantie satisfait ou remboursé. Ensuite, votre abonnement arrive automatiquement à échéance à la fin de la période choisie, sans reconduction."
+    a: "Il n'y a rien à résilier : votre abonnement arrive automatiquement à échéance à la fin de la période choisie, sans reconduction."
   },
   {
     q: "Sur combien d'appareils puis-je regarder ?",
@@ -62,7 +62,7 @@ const abonnementSchemas = [
 ];
 
 const steps = [
-  { title: 'Choisissez votre durée', text: "1, 3, 6 ou 12 mois : le contenu est identique, seul le prix mensuel change. Pas sûr ? Commencez par le 1er mois à 8 €, satisfait ou remboursé 24 h." },
+  { title: 'Choisissez votre durée', text: "1, 3, 6 ou 12 mois : le contenu est identique, seul le prix change. Pas sûr ? Demandez d'abord un test gratuit de 24 h." },
   { title: 'Payez en toute sécurité', text: 'Réglez par Binance Pay ou PayPal, deux moyens de paiement traçables qui vous donnent une preuve de transaction.' },
   { title: 'Recevez vos identifiants', text: 'En moins de 5 minutes, vous recevez vos accès (identifiants Xtream Codes, lien M3U ou activation par adresse MAC) par WhatsApp.' },
   { title: "Installez l'application", text: "Installez une application IPTV sur votre appareil (IPTV Smarters Pro, TiviMate, Smart IPTV…) et saisissez vos accès. Nos guides pas à pas couvrent chaque appareil." }
@@ -154,7 +154,7 @@ const IPTVAbonnement = () => {
     "Aucun frais caché ni supplément",
     "Aucune reconduction automatique - contrôle total",
     "Actif en 5 minutes après le paiement",
-    "Satisfait ou remboursé 24 h sur le 1er mois",
+    "Test gratuit de 24 h avant de payer",
     "Paiement sécurisé par Binance Pay ou PayPal",
     "Disponibilité stable de 99,9 %",
     "Qualité HD, UHD et 4K",
@@ -167,7 +167,7 @@ const IPTVAbonnement = () => {
     <>
       <SEO
         title="Abonnement IPTV 2026 : 30 500+ Chaînes dès 8€ | France IPTV"
-        description="Abonnement IPTV en France : 30 500+ chaînes, 150 000+ films et séries en HD/4K, 4 écrans, sans engagement. Dès 8 €, 1er mois remboursable."
+        description="Abonnement IPTV en France : 30 500+ chaînes, 150 000+ films et séries en HD/4K, 4 écrans, sans engagement. Dès 8 €, test gratuit 24 h."
         keywords="abonnement iptv, abonnement iptv france, meilleur abonnement iptv, iptv premium"
         canonicalPath="/abonnement-iptv"
       />
@@ -193,7 +193,7 @@ const IPTVAbonnement = () => {
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Un <strong>abonnement IPTV</strong> complet : 30 500+ chaînes, 150 000+ films et séries en HD/4K.
-                Dès 8 € le mois, sans engagement, 1er mois satisfait ou remboursé 24 h.
+                Dès 8 € le mois, sans engagement, test gratuit 24 h sur demande.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <a
@@ -457,7 +457,7 @@ const IPTVAbonnement = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr><td className="p-3 border border-brand-gray-border">1 mois</td><td className="p-3 border border-brand-gray-border">8 €</td><td className="p-3 border border-brand-gray-border">Découvrir le service (satisfait ou remboursé 24 h), un événement sportif précis</td></tr>
+                <tr><td className="p-3 border border-brand-gray-border">1 mois</td><td className="p-3 border border-brand-gray-border">8 €</td><td className="p-3 border border-brand-gray-border">Découvrir le service après le test gratuit, un événement sportif précis</td></tr>
                 <tr><td className="p-3 border border-brand-gray-border">3 mois</td><td className="p-3 border border-brand-gray-border">19,99 €</td><td className="p-3 border border-brand-gray-border">Une saison de séries, tester la stabilité sur la durée</td></tr>
                 <tr><td className="p-3 border border-brand-gray-border">6 mois</td><td className="p-3 border border-brand-gray-border">30 €</td><td className="p-3 border border-brand-gray-border">Une demi-saison de football, un usage régulier</td></tr>
                 <tr><td className="p-3 border border-brand-gray-border">12 mois</td><td className="p-3 border border-brand-gray-border">45 €</td><td className="p-3 border border-brand-gray-border">Le meilleur prix : toute la famille, toute l'année</td></tr>
@@ -465,7 +465,7 @@ const IPTVAbonnement = () => {
             </table>
           </div>
           <p>
-            Notre conseil : commencez par le <strong>1er mois à 8 €, satisfait ou remboursé 24 h</strong> pour vérifier la qualité sur votre appareil et
+            Notre conseil : commencez par le <strong>test gratuit de 24 h</strong> pour vérifier la qualité sur votre appareil et
             votre connexion, puis passez à la formule 12 mois si tout vous convient. Aucune formule n'est reconduite
             automatiquement : à la fin de la période, vous décidez librement de renouveler ou non.
           </p>
@@ -526,7 +526,7 @@ const IPTVAbonnement = () => {
                 Commencez Aujourd'hui Votre Abonnement IPTV
               </h3>
               <p className="text-lg mb-6 opacity-90 text-white">
-                Actif en 5 minutes. 1er mois satisfait ou remboursé 24 h. Sans risque.
+                Actif en 5 minutes. Test gratuit 24 h avant de payer.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link
@@ -593,7 +593,7 @@ const IPTVAbonnement = () => {
               Commander Maintenant via WhatsApp
             </a>
             <p className="text-sm text-brand-gray mt-4">
-              Actif en 5 minutes • 1er mois satisfait ou remboursé 24 h • Aucune reconduction automatique
+              Actif en 5 minutes • Test gratuit 24 h • Aucune reconduction automatique
             </p>
           </div>
         </section>
