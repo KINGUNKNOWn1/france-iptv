@@ -46,6 +46,7 @@ const BesteIPTVApps2024 = lazy(() => import('./pages/blog/BesteIPTVApps2024'));
 const IsIPTVLegaalNederland = lazy(() => import('./pages/blog/IsIPTVLegaalNederland'));
 const NederlandseIPTVKanalenLijst = lazy(() => import('./pages/blog/NederlandseIPTVKanalenLijst'));
 const BlogIndex = lazy(() => import('./pages/BlogIndex'));
+const TestDebit = lazy(() => import('./pages/TestDebit'));
 const IPTVSmartersPro = lazy(() => import('./pages/blog/IPTVSmartersPro'));
 const M3UXtreamCodesMAC = lazy(() => import('./pages/blog/M3UXtreamCodesMAC'));
 const MeilleureBoxIPTV = lazy(() => import('./pages/blog/MeilleureBoxIPTV'));
@@ -165,6 +166,7 @@ function AppContent() {
             <Route path="/faq" element={<VeelgesteldeVragen />} />
             <Route path="/a-propos" element={<OverOns />} />
             {/* Blog Routes */}
+            <Route path="/test-debit-iptv" element={<TestDebit />} />
             <Route path="/blog" element={<BlogIndex />} />
             <Route path="/blog/iptv-smarters-pro" element={<IPTVSmartersPro />} />
             <Route path="/blog/m3u-xtream-codes-mac" element={<M3UXtreamCodesMAC />} />

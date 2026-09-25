@@ -60,7 +60,7 @@ const IPTVQuiCoupe = () => (
     <section>
       <h2>2. Un débit insuffisant ou instable</h2>
       <p>
-        Faites un test de débit sur l'appareil qui regarde l'IPTV, pas sur votre téléphone. Il faut environ <strong>10 Mbit/s</strong>{' '}
+        Faites un test de débit sur l'appareil qui regarde l'IPTV, pas sur votre téléphone : utilisez notre <Link to="/test-debit-iptv">test de débit IPTV gratuit</Link>. Il faut environ <strong>10 Mbit/s</strong>{' '}
         stables par écran en HD et <strong>25 Mbit/s</strong> en 4K. Si plusieurs personnes regardent ou téléchargent en même temps,
         additionnez les besoins.
       </p>

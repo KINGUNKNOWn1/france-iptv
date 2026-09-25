@@ -226,6 +226,14 @@
     <priority>0.3</priority>
   </url>
 
+  <!-- Free tool -->
+  <url>
+    <loc>https://franceiptv.stream/test-debit-iptv</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- New blog posts -->
   <url>
     <loc>https://franceiptv.stream/blog/iptv-smarters-pro</loc>
