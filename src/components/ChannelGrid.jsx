@@ -16,28 +16,28 @@ const ChannelGrid = () => {
 
   const channels = [
     // Sport Channels
-    { id: 1, name: 'beIN Sports 1', logo: '⚽', category: 'sport', quality: '4K', viewers: '12,5K' },
-    { id: 2, name: 'Canal+ Sport', logo: '🏆', category: 'sport', quality: '4K', viewers: '8,2K' },
-    { id: 3, name: 'ESPN', logo: '🏀', category: 'sport', quality: 'UHD', viewers: '15,3K' },
-    { id: 4, name: 'Eurosport 1', logo: '🎾', category: 'sport', quality: 'HD', viewers: '6,8K' },
-    { id: 5, name: 'Automoto', logo: '🏎️', category: 'sport', quality: '4K', viewers: '9,1K' },
-    { id: 6, name: 'Golf Channel', logo: '⛳', category: 'sport', quality: 'HD', viewers: '3,2K' },
+    { id: 1, name: 'beIN Sports 1', logo: '⚽', category: 'sport', quality: '4K' },
+    { id: 2, name: 'Canal+ Sport', logo: '🏆', category: 'sport', quality: '4K' },
+    { id: 3, name: 'ESPN', logo: '🏀', category: 'sport', quality: 'UHD' },
+    { id: 4, name: 'Eurosport 1', logo: '🎾', category: 'sport', quality: 'HD' },
+    { id: 5, name: 'Automoto', logo: '🏎️', category: 'sport', quality: '4K' },
+    { id: 6, name: 'Golf Channel', logo: '⛳', category: 'sport', quality: 'HD' },
 
     // French Channels
-    { id: 7, name: 'TF1', logo: '🇫🇷', category: 'francaises', quality: 'HD', viewers: '25,4K' },
-    { id: 8, name: 'France 2', logo: '📺', category: 'francaises', quality: 'HD', viewers: '18,7K' },
-    { id: 9, name: 'France 3', logo: '🎬', category: 'francaises', quality: 'HD', viewers: '14,2K' },
-    { id: 10, name: 'M6', logo: '📡', category: 'francaises', quality: 'UHD', viewers: '32,1K' },
-    { id: 11, name: 'Canal+', logo: '🎭', category: 'francaises', quality: 'HD', viewers: '16,5K' },
-    { id: 12, name: 'W9', logo: '📻', category: 'francaises', quality: 'HD', viewers: '19,8K' },
+    { id: 7, name: 'TF1', logo: '🇫🇷', category: 'francaises', quality: 'HD' },
+    { id: 8, name: 'France 2', logo: '📺', category: 'francaises', quality: 'HD' },
+    { id: 9, name: 'France 3', logo: '🎬', category: 'francaises', quality: 'HD' },
+    { id: 10, name: 'M6', logo: '📡', category: 'francaises', quality: 'UHD' },
+    { id: 11, name: 'Canal+', logo: '🎭', category: 'francaises', quality: 'HD' },
+    { id: 12, name: 'W9', logo: '📻', category: 'francaises', quality: 'HD' },
 
     // Movies & Series
-    { id: 13, name: 'Netflix Originals', logo: '🎥', category: 'films', quality: '4K', viewers: '45,2K' },
-    { id: 14, name: 'HBO Premium', logo: '🍿', category: 'films', quality: '4K', viewers: '38,9K' },
-    { id: 15, name: 'Disney+', logo: '✨', category: 'films', quality: '4K', viewers: '52,3K' },
-    { id: 16, name: 'Amazon Prime', logo: '📺', category: 'films', quality: '4K', viewers: '41,7K' },
-    { id: 17, name: 'Ciné+ Premier', logo: '🎬', category: 'films', quality: 'UHD', viewers: '22,4K' },
-    { id: 18, name: 'Ciné+ Frisson', logo: '💥', category: 'films', quality: 'HD', viewers: '18,9K' },
+    { id: 13, name: 'Cinéma 4K', logo: '🎥', category: 'films', quality: '4K' },
+    { id: 14, name: 'Séries TV', logo: '🍿', category: 'films', quality: '4K' },
+    { id: 15, name: 'Films famille', logo: '✨', category: 'films', quality: '4K' },
+    { id: 16, name: 'Documentaires', logo: '📺', category: 'films', quality: '4K' },
+    { id: 17, name: 'Ciné+ Premier', logo: '🎬', category: 'films', quality: 'UHD' },
+    { id: 18, name: 'Ciné+ Frisson', logo: '💥', category: 'films', quality: 'HD' },
   ];
 
   const filteredChannels = selectedCategory === 'all'
@@ -165,7 +165,7 @@ const ChannelGrid = () => {
                         className="relative mt-3 flex items-center justify-center gap-1 text-xs text-gray-400"
                       >
                         <div className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse" />
-                        <span>{channel.viewers} spectateurs</span>
+                        <span>En direct · {channel.quality}</span>
                       </motion.div>
                     )}
                   </AnimatePresence>

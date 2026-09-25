@@ -82,6 +82,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/liste-chaines-francaises-iptv",
+      "destination": "/chaines",
+      "permanent": true
+    },
+    {
+      "source": "/blog/acheter-iptv-france-guide-complet",
+      "destination": "/acheter-iptv",
+      "permanent": true
+    },
+    {
       "source": "/home",
       "destination": "/",
       "permanent": true

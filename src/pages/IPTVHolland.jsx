@@ -28,7 +28,7 @@ const IPTVHolland = () => {
         name: 'Pourquoi choisir France IPTV pour l\'IPTV en Belgique ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: "France IPTV dessert aussi la Belgique francophone. Nous proposons les chaînes belges, le paiement par Bancontact, un support francophone et des serveurs optimisés pour la Belgique. Avec 15 000+ clients satisfaits dans l'espace francophone, nous sommes un choix fiable pour l'IPTV en Belgique."
+          text: "France IPTV dessert aussi la Belgique francophone. Nous proposons les chaînes belges, le paiement par Bancontact, un support francophone et des serveurs optimisés pour la Belgique. Un essai gratuit de 24 h permet de vérifier la qualité avant de choisir une formule."
         }
       },
       {
@@ -60,7 +60,7 @@ const IPTVHolland = () => {
         name: "L'IPTV est-il légal en Belgique ?",
         acceptedAnswer: {
           '@type': 'Answer',
-          text: "L'utilisation de la technologie IPTV elle-même est parfaitement légale en Belgique. France IPTV propose un service IPTV légal avec du contenu officiel et des licences payées. Nous opérons conformément à la réglementation européenne."
+          text: "L'utilisation de la technologie IPTV elle-même est parfaitement légale en Belgique. La légalité d'une offre dépend des droits de diffusion des contenus proposés ; nos conditions sont détaillées dans nos conditions générales de vente."
         }
       }
     ]
@@ -89,7 +89,7 @@ const IPTVHolland = () => {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'IPTV Belgique - Fournisseur IPTV Francophone | France IPTV',
-    description: "IPTV Belgique : 15 000+ clients francophones ✓ Chaînes belges ✓ Paiement Bancontact ✓ Serveurs en Europe ✓ Support francophone.",
+    description: "IPTV Belgique : Support francophone ✓ Chaînes belges ✓ Paiement Bancontact ✓ Serveurs en Europe ✓ Support francophone.",
     url: 'https://franceiptv.stream/iptv-belgique'
   };
 
@@ -116,7 +116,7 @@ const IPTVHolland = () => {
     },
     {
       icon: Users,
-      title: '15 000+ Clients Francophones',
+      title: 'Support 100 % Francophone',
       description: 'Un service de référence avec la plus haute satisfaction client'
     },
     {
@@ -204,7 +204,7 @@ const IPTVHolland = () => {
     {
       icon: Award,
       title: 'Référence chez les Francophones',
-      description: "Avec 15 000+ clients satisfaits, nous sommes l'un des plus grands fournisseurs IPTV pour le public francophone. Notre expérience garantit le meilleur service."
+      description: "Nous servons le public francophone de France et de Belgique. Notre expérience garantit le meilleur service."
     },
     {
       icon: TrendingUp,
@@ -250,7 +250,7 @@ const IPTVHolland = () => {
         <title>IPTV Belgique : Fournisseur IPTV Francophone | France IPTV</title>
         <meta
           name="description"
-          content="IPTV Belgique : 15 000+ clients francophones ✓ Chaînes belges (La Une, RTL-TVI, Club RTL) ✓ Paiement Bancontact ✓ Serveurs en Europe ✓ Support francophone."
+          content="IPTV Belgique : Support francophone ✓ Chaînes belges (La Une, RTL-TVI, Club RTL) ✓ Paiement Bancontact ✓ Serveurs en Europe ✓ Support francophone."
         />
         <meta
           name="keywords"
@@ -260,14 +260,14 @@ const IPTVHolland = () => {
 
         {/* Open Graph */}
         <meta property="og:title" content="IPTV Belgique - Fournisseur IPTV Francophone | France IPTV" />
-        <meta property="og:description" content="15 000+ clients francophones ✓ Toutes les chaînes belges ✓ Paiement Bancontact ✓ 99,9 % de disponibilité. Dès 4€/mois." />
+        <meta property="og:description" content="Support francophone ✓ Toutes les chaînes belges ✓ Paiement Bancontact ✓ 99,9 % de disponibilité. Dès 4€/mois." />
         <meta property="og:url" content="https://franceiptv.stream/iptv-belgique" />
         <meta property="og:type" content="website" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="IPTV Belgique - Fournisseur IPTV Francophone" />
-        <meta name="twitter:description" content="15 000+ clients ✓ Chaînes belges ✓ Paiement Bancontact ✓ 99,9 % de disponibilité" />
+        <meta name="twitter:description" content="Support francophone ✓ Chaînes belges ✓ Paiement Bancontact ✓ 99,9 % de disponibilité" />
 
         {/* Schema.org structured data */}
         <script type="application/ld+json">
@@ -324,7 +324,7 @@ const IPTVHolland = () => {
             </h1>
 
             <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed">
-              15 000+ clients satisfaits dans l'espace francophone. Toutes les chaînes belges, paiement Bancontact,
+              Au service de l'espace francophone. Toutes les chaînes belges, paiement Bancontact,
               serveurs en Europe et service client francophone 24/7. Dès 10€/mois.
             </p>
 
@@ -337,8 +337,8 @@ const IPTVHolland = () => {
                 className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6"
               >
                 <Users className="w-8 h-8 text-brand-gold mx-auto mb-2" />
-                <div className="text-3xl font-bold">15 000+</div>
-                <div className="text-sm text-gray-300">Clients francophones</div>
+                <div className="text-3xl font-bold">4</div>
+                <div className="text-sm text-gray-300">Écrans simultanés</div>
               </motion.div>
 
               <motion.div
@@ -370,8 +370,8 @@ const IPTVHolland = () => {
                 className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6"
               >
                 <Star className="w-8 h-8 text-brand-gold mx-auto mb-2" />
-                <div className="text-3xl font-bold">4,9/5</div>
-                <div className="text-sm text-gray-300">Note client</div>
+                <div className="text-3xl font-bold">24 h</div>
+                <div className="text-sm text-gray-300">Essai gratuit</div>
               </motion.div>
             </div>
 
@@ -413,7 +413,7 @@ const IPTVHolland = () => {
               Pourquoi <span className="text-brand-gold">France IPTV</span> ?
             </h2>
             <p className="text-xl text-brand-gray max-w-2xl mx-auto">
-              Le fournisseur IPTV francophone choisi par 15 000+ clients
+              Le fournisseur IPTV francophone, en France et en Belgique
             </p>
           </motion.div>
 
@@ -727,7 +727,7 @@ const IPTVHolland = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              Rejoignez 15 000+ clients francophones
+              Rejoignez Support 100 % francophone
             </h2>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
               Démarrez dès aujourd'hui avec le meilleur service IPTV francophone.
@@ -778,8 +778,8 @@ const IPTVHolland = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center items-center gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-brand-gold">15 000+</div>
-              <div className="text-sm text-gray-400">Clients satisfaits</div>
+              <div className="text-3xl font-bold text-brand-gold">30 500+</div>
+              <div className="text-sm text-gray-400">Chaînes en direct</div>
             </div>
             <div className="hidden md:block w-px h-12 bg-gray-700" />
             <div>
@@ -793,8 +793,8 @@ const IPTVHolland = () => {
             </div>
             <div className="hidden md:block w-px h-12 bg-gray-700" />
             <div>
-              <div className="text-3xl font-bold text-brand-gold">4,9/5</div>
-              <div className="text-sm text-gray-400">Note client</div>
+              <div className="text-3xl font-bold text-brand-gold">24 h</div>
+              <div className="text-sm text-gray-400">Essai gratuit</div>
             </div>
           </div>
         </div>

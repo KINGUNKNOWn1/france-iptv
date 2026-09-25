@@ -12,7 +12,7 @@ const About = () => {
     },
     {
       icon: FaUsers,
-      title: '24 000+ Clients',
+      title: 'Stabilité',
       description: 'Disponibilité de 99,9 % sur tous les écrans. Nous investissons dans la scalabilité, pas dans du multi-écrans au rabais.'
     },
     {

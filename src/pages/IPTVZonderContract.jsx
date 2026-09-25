@@ -457,13 +457,13 @@ const IPTVZonderContract = () => {
               Pourquoi les Clients Choisissent France IPTV
             </h2>
             <p className="text-xl text-brand-gray mb-8">
-              Plus de 15 000 clients satisfaits font confiance à notre service sans engagement
+              Un service sans engagement, à tester gratuitement pendant 24 h
             </p>
 
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="bg-brand-offwhite p-6 rounded-xl border border-brand-gray-border">
-                <div className="text-4xl font-bold text-brand-gold mb-2">15 000+</div>
-                <div className="text-brand-gray">Clients Satisfaits</div>
+                <div className="text-4xl font-bold text-brand-gold mb-2">24 h</div>
+                <div className="text-brand-gray">Essai gratuit</div>
               </div>
               <div className="bg-brand-offwhite p-6 rounded-xl border border-brand-gray-border">
                 <div className="text-4xl font-bold text-brand-gold mb-2">99,9 %</div>

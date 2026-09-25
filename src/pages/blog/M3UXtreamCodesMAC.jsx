@@ -36,7 +36,7 @@ const M3UXtreamCodesMAC = () => (
       </p>
     }
     faqs={faqs}
-    related={['/blog/iptv-smarters-pro', '/blog/meilleures-applications-iptv', '/blog/meilleure-box-iptv', '/blog/acheter-iptv-france-guide-complet']}
+    related={['/blog/iptv-smarters-pro', '/blog/meilleures-applications-iptv', '/blog/meilleure-box-iptv', '/blog/code-iptv-invalide']}
   >
     <section>
       <h2>Xtream Codes : le format le plus complet</h2>

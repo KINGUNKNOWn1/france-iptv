@@ -1,9 +1,18 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import SeoGuideSection from '../components/SeoGuideSection';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaSearch, FaTv, FaGlobe, FaFootballBall, FaFilm, FaNewspaper, FaChild, FaMusic } from 'react-icons/fa';
 import SEO from '../components/SEO';
 import ChannelGrid from '../components/ChannelGrid';
+
+const chainesFaqs = [
+  { q: 'Combien de chaînes sont incluses ?', a: "L'abonnement donne accès à plus de 30 500 chaînes en direct, françaises et internationales, ainsi qu'à plus de 150 000 films et séries à la demande. Le contenu est identique dans toutes les formules." },
+  { q: 'Les chaînes françaises sont-elles en HD ?', a: "Oui, la plupart des chaînes françaises sont proposées en HD, et certaines en Full HD ou 4K. La qualité affichée dépend aussi de votre connexion et de votre appareil." },
+  { q: 'Y a-t-il un guide des programmes et le replay ?', a: "Oui. Le guide des programmes (EPG) s'affiche dans l'application, et de nombreuses chaînes proposent le rattrapage pour revoir un programme déjà diffusé." },
+  { q: 'Peut-on voir la liste complète avant de payer ?', a: "Oui : l'essai gratuit de 24 heures donne accès à l'ensemble des chaînes, pour vérifier que vos chaînes préférées sont disponibles et fluides sur votre appareil." },
+];
 
 const Kanalen = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -28,7 +37,7 @@ const Kanalen = () => {
       name: "Films & Séries",
       count: "150+",
       color: "from-purple-500 to-purple-600",
-      examples: ["HBO", "Ciné+", "Comedy Central"]
+      examples: ["Cinéma", "Séries", "Documentaires"]
     },
     {
       icon: <FaGlobe className="text-5xl" />,
@@ -90,6 +99,9 @@ const Kanalen = () => {
         keywords="liste chaînes iptv, chaînes françaises iptv, chaînes sportives iptv, catalogue iptv"
         canonicalPath="/chaines"
       />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: chainesFaqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })}</script>
+      </Helmet>
       <div className="min-h-screen bg-white text-brand-black pt-20">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-[#090B0B] via-[#111413] to-[#090B0B] text-white">
@@ -227,6 +239,48 @@ const Kanalen = () => {
           </div>
           <ChannelGrid />
         </section>
+
+        <SeoGuideSection title="Liste des chaînes françaises en IPTV">
+          <p>
+            Voici les principales <strong>chaînes françaises</strong> disponibles avec l'abonnement, classées par catégorie. Elles
+            s'affichent avec le guide des programmes (EPG) et, pour la plupart, en HD. La liste complète, avec les chaînes
+            internationales, est consultable pendant l'<a href="/abonnement-iptv">essai gratuit de 24 heures</a>.
+          </p>
+          <h3>Chaînes publiques</h3>
+          <p>France 2, France 3, France 4, France 5, franceinfo, France 24, LCP, Public Sénat, Arte.</p>
+          <h3>Chaînes de la TNT</h3>
+          <p>TF1, M6, W9, TMC, TFX, C8, CStar, 6ter, RMC Story, RMC Découverte, Chérie 25, NRJ 12, L'Équipe, Gulli.</p>
+          <h3>Information</h3>
+          <p>BFM TV, CNews, LCI, franceinfo, Euronews, France 24, BBC World News, CNN International.</p>
+          <h3>Régionales</h3>
+          <p>France 3 régions (Île-de-France, Provence-Alpes, Occitanie, Normandie…), BFM Paris, BFM Lyon, TV8 Mont-Blanc, Vosges Télévision, Alsace 20, TVR Rennes.</p>
+          <h3>Musique</h3>
+          <p>MTV, MCM, Trace, M6 Music, Mezzo.</p>
+          <h3>Jeunesse</h3>
+          <p>Gulli, Canal J, Piwi+, Nickelodeon, Cartoon Network, Boomerang.</p>
+          <h3>Chaînes internationales</h3>
+          <p>
+            Au-delà des chaînes françaises, l'abonnement inclut de nombreuses chaînes étrangères, pratiques pour les familles
+            bilingues : <strong>belges</strong> et <strong>suisses</strong> francophones, <strong>maghrébines</strong> et
+            <strong> arabes</strong>, <strong>turques</strong>, <strong>portugaises</strong>, <strong>italiennes</strong>,{' '}
+            <strong>espagnoles</strong>, <strong>britanniques</strong> et bien d'autres. Pour la Belgique, voir aussi la page{' '}
+            <a href="/iptv-belgique">IPTV Belgique</a>.
+          </p>
+          <h3>Questions fréquentes</h3>
+          {chainesFaqs.map(({ q, a }) => (
+            <div key={q}>
+              <p><strong>{q}</strong></p>
+              <p>{a}</p>
+            </div>
+          ))}
+          <h3>Comment retrouver vos chaînes dans l'application</h3>
+          <p>
+            Dans IPTV Smarters Pro ou TiviMate, les chaînes sont rangées par catégorie (France, Sport, Cinéma, Info…). Ajoutez vos
+            chaînes préférées en <strong>favoris</strong> pour y accéder en un clic, et activez le guide TV pour voir les programmes
+            en cours. Les réglages sont détaillés dans nos guides <a href="/blog/iptv-smarters-pro">IPTV Smarters Pro</a> et 
+            <a href="/blog/tivimate">TiviMate</a>.
+          </p>
+        </SeoGuideSection>
 
         {/* VOD Section */}
         <section className="py-20 bg-white">

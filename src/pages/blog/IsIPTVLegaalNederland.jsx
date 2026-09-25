@@ -203,12 +203,12 @@ const IsIPTVLegaalNederland = () => {
                 </div>
 
                 <div className="bg-green-50 border-l-4 border-green-500 p-6 my-6 rounded">
-                  <p className="text-brand-black font-semibold mb-2">✅ Pourquoi France IPTV Est Sûr</p>
+                  <p className="text-brand-black font-semibold mb-2">✅ Nos engagements chez France IPTV</p>
                   <p className="text-brand-gray mb-3">
-                    <Link to="/" className="text-green-600 underline">France IPTV</Link> répond à toutes les exigences juridiques :
+                    Chez <Link to="/" className="text-green-600 underline">France IPTV</Link>, nous nous engageons sur :
                   </p>
                   <ul className="text-brand-gray space-y-1 text-sm">
-                    <li>✓ Informations d'entreprise transparentes</li>
+                    <li>✓ Conditions générales de vente publiées</li>
                     <li>✓ Service client francophone 24/7</li>
                     <li>✓ Prix et conditions transparents</li>
                     <li>✓ Moyens de paiement sécurisés (Binance Pay, PayPal)</li>
@@ -276,9 +276,9 @@ const IsIPTVLegaalNederland = () => {
 
             {/* CTA */}
             <section className="bg-surface border border-lime/30 p-8 rounded-xl text-center text-white">
-              <h2 className="text-3xl font-bold mb-4">Démarrez en Toute Sécurité avec un IPTV Légal</h2>
+              <h2 className="text-3xl font-bold mb-4">Testez France IPTV Gratuitement Pendant 24 h</h2>
               <p className="text-xl mb-6">
-                Choisissez France IPTV : 100 % légal, support 24/7, et 30 500+ chaînes dès 4€/mois
+                Support francophone 24/7, 30 500+ chaînes et 4 écrans, dès 3,75 €/mois
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link to="/abonnement-iptv" className="px-8 py-4 bg-white text-green-600 font-bold rounded-lg hover:bg-green-50 transition-all">
@@ -297,7 +297,7 @@ const IsIPTVLegaalNederland = () => {
           <div className="container mx-auto px-4 max-w-4xl">
             <h2 className="text-2xl font-bold mb-6 text-brand-black">📖 Articles Similaires</h2>
             <div className="grid md:grid-cols-2 gap-4">
-              <Link to="/blog/acheter-iptv-france-guide-complet" className="bg-white border border-brand-gray-border p-4 rounded-lg hover:border-brand-gold transition-colors">
+              <Link to="/acheter-iptv" className="bg-white border border-brand-gray-border p-4 rounded-lg hover:border-brand-gold transition-colors">
                 <h3 className="font-bold mb-2 text-brand-black">Guide Complet Acheter IPTV en France</h3>
                 <p className="text-sm text-brand-gray">Tout savoir sur l'achat d'IPTV en France →</p>
               </Link>

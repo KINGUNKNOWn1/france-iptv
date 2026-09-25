@@ -17,8 +17,8 @@ const VeelgesteldeVragen = () => {
           a: "IPTV signifie Internet Protocol Television. C'est une manière de regarder la télévision via votre connexion internet plutôt que par satellite ou câble traditionnel. Avec France IPTV, vous avez accès à 30 500+ chaînes et 150 000+ films et séries via internet."
         },
         {
-          q: "France IPTV est-il légal ?",
-          a: "Oui, France IPTV est un fournisseur IPTV légal. Nous proposons un service fiable avec du contenu officiel et un support client complet. Acheter un IPTV légal, c'est choisir un fournisseur de confiance comme France IPTV."
+          q: "L'IPTV est-il légal en France ?",
+          a: "La technologie IPTV est légale en France : c'est simplement une façon de diffuser la télévision par internet. La légalité d'une offre dépend des droits de diffusion des contenus proposés. Nos conditions d'utilisation sont détaillées dans les conditions générales de vente, et notre article sur la réglementation de l'IPTV en France explique les points à connaître."
         },
         {
           q: "Quelle vitesse internet me faut-il ?",

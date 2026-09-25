@@ -1,14 +1,23 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import SeoGuideSection from '../components/SeoGuideSection';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaCheckCircle, FaTv, FaFootballBall, FaFilm, FaNewspaper } from 'react-icons/fa';
 import SEO from '../components/SEO';
 
+const iptvFranceFaqs = [
+  { q: "Qu'est-ce que l'IPTV en France ?", a: "L'IPTV est la télévision diffusée par internet. En France, elle se regarde sur une Smart TV, une box Android TV, un Fire TV Stick, une Freebox Pop, un téléphone ou un ordinateur, grâce à une application IPTV et aux accès d'un abonnement." },
+  { q: "Quelle connexion faut-il pour l'IPTV en France ?", a: "La fibre est idéale, mais une bonne connexion ADSL/VDSL ou une box 4G/5G suffit pour la HD. Comptez environ 7 Mbit/s par écran en HD, 15 Mbit/s en Full HD et 25 Mbit/s en 4K." },
+  { q: "L'IPTV fonctionne-t-elle avec toutes les box françaises ?", a: "Votre box internet (Freebox, Livebox, Bbox, box SFR) fournit la connexion. La lecture se fait sur un appareil compatible : directement sur les Freebox sous Android TV, sinon sur une Smart TV ou un stick HDMI branché à la télévision." },
+  { q: "Combien coûte un abonnement IPTV en France ?", a: "Chez France IPTV, de 8 € pour 1 mois à 45 € pour 12 mois, soit 3,75 € par mois, sans reconduction automatique et avec 24 heures d'essai gratuit." },
+];
+
 const IPTVNederland = () => {
   const frenchChannels = [
     { category: "Chaînes Françaises", count: "80+", icon: <FaTv />, examples: "TF1, France 2, France 3, M6, Canal+, W9, TMC, C8" },
     { category: "Chaînes Sportives", count: "250+", icon: <FaFootballBall />, examples: "beIN Sports, Canal+ Sport, ESPN, Eurosport" },
-    { category: "Films & Séries", count: "150+", icon: <FaFilm />, examples: "Ciné+, HBO, contenus Netflix, contenus Amazon Prime" },
+    { category: "Films & Séries", count: "150+", icon: <FaFilm />, examples: "Cinéma, séries, documentaires, films famille" },
     { category: "Actualités & Documentaires", count: "50+", icon: <FaNewspaper />, examples: "BFM TV, France Info, BBC News, CNN" }
   ];
 
@@ -41,6 +50,9 @@ const IPTVNederland = () => {
         keywords="iptv france, fournisseur iptv france, iptv français, meilleur iptv france"
         canonicalPath="/iptv-france"
       />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: iptvFranceFaqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })}</script>
+      </Helmet>
       <div className="min-h-screen bg-white text-brand-black pt-20">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-[#1E3314] via-[#090B0B] to-[#090B0B] text-white">
@@ -244,6 +256,49 @@ const IPTVNederland = () => {
             </div>
           </div>
         </section>
+
+        <SeoGuideSection title="IPTV France : tout savoir avant de commencer">
+          <p>
+            L'<strong>IPTV en France</strong>, c'est la télévision reçue par internet plutôt que par l'antenne, le satellite ou le
+            décodeur de votre opérateur. Vous installez une application sur l'écran de votre choix, vous y ajoutez les accès de votre
+            abonnement, et vous retrouvez les chaînes en direct, le guide des programmes, le replay et un catalogue de films et
+            séries à la demande.
+          </p>
+          <h3>Quelle connexion internet en France ?</h3>
+          <p>
+            La <strong>fibre</strong> offre le meilleur confort, surtout pour la 4K et plusieurs écrans. Une bonne connexion
+            <strong> ADSL ou VDSL</strong> suffit généralement pour la HD, tout comme une <strong>box 4G ou 5G</strong> bien captée.
+            Les repères : environ 7 Mbit/s par écran en HD, 15 Mbit/s en Full HD et 25 Mbit/s en 4K. Vérifiez la vôtre avec notre{' '}
+            <a href="/test-debit-iptv">test de débit IPTV</a>.
+          </p>
+          <h3>Compatible avec les box des opérateurs français</h3>
+          <p>
+            Votre box internet fournit la connexion ; la lecture se fait sur un appareil compatible. Les{' '}
+            <a href="/appareils/freebox">Freebox</a> sous Android TV installent directement une application IPTV. Avec une{' '}
+            <a href="/appareils/orange">Livebox</a>, une <a href="/appareils/bbox-bouygues">Bbox</a> ou une{' '}
+            <a href="/appareils/sfr">box SFR</a>, utilisez une Smart TV (<a href="/appareils/samsung-tv">Samsung</a>,{' '}
+            <a href="/appareils/lg-tv">LG</a>) ou un <a href="/appareils/fire-stick">Fire TV Stick</a> branché à la télévision.
+          </p>
+          <h3>Ce que vous regardez avec un IPTV France</h3>
+          <p>
+            Les chaînes nationales et de la TNT, les chaînes d'information, les chaînes régionales, jeunesse et musique, les
+            chaînes internationales pour toute la famille, et plus de 150 000 films et séries à la demande. La liste par catégorie
+            est sur la page <a href="/chaines">chaînes</a>.
+          </p>
+          <h3>Prix d'un IPTV en France</h3>
+          <p>
+            Un abonnement fiable coûte généralement entre 8 € et 15 € par mois selon la durée. Chez France IPTV : 8 € pour 1 mois,
+            19,99 € pour 3 mois, 30 € pour 6 mois et 45 € pour 12 mois. Détails sur la page <a href="/tarifs">tarifs</a> et
+            comparatif dans notre guide du <a href="/blog/meilleur-iptv-france">meilleur IPTV</a>.
+          </p>
+          <h3>Questions fréquentes</h3>
+          {iptvFranceFaqs.map(({ q, a }) => (
+            <div key={q}>
+              <p><strong>{q}</strong></p>
+              <p>{a}</p>
+            </div>
+          ))}
+        </SeoGuideSection>
 
         {/* Pricing CTA */}
         <section className="py-20 bg-gradient-to-br from-surface to-brand-offwhite">

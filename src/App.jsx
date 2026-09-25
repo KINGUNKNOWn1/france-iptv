@@ -41,10 +41,8 @@ const BboxBouygues = lazy(() => import('./pages/apparaten/BboxBouygues'));
 const LGTV = lazy(() => import('./pages/apparaten/LGTV'));
 
 // Lazy load blog pages
-const IPTVKopenNederlandGids = lazy(() => import('./pages/blog/IPTVKopenNederlandGids'));
 const BesteIPTVApps2024 = lazy(() => import('./pages/blog/BesteIPTVApps2024'));
 const IsIPTVLegaalNederland = lazy(() => import('./pages/blog/IsIPTVLegaalNederland'));
-const NederlandseIPTVKanalenLijst = lazy(() => import('./pages/blog/NederlandseIPTVKanalenLijst'));
 const BlogIndex = lazy(() => import('./pages/BlogIndex'));
 const TiviMate = lazy(() => import('./pages/blog/TiviMate'));
 const CodeIPTVInvalide = lazy(() => import('./pages/blog/CodeIPTVInvalide'));
@@ -180,10 +178,8 @@ function AppContent() {
             <Route path="/blog/m3u-xtream-codes-mac" element={<M3UXtreamCodesMAC />} />
             <Route path="/blog/meilleure-box-iptv" element={<MeilleureBoxIPTV />} />
             <Route path="/blog/iptv-qui-coupe" element={<IPTVQuiCoupe />} />
-            <Route path="/blog/acheter-iptv-france-guide-complet" element={<IPTVKopenNederlandGids />} />
             <Route path="/blog/meilleures-applications-iptv" element={<BesteIPTVApps2024 />} />
             <Route path="/blog/iptv-legal-en-france" element={<IsIPTVLegaalNederland />} />
-            <Route path="/blog/liste-chaines-francaises-iptv" element={<NederlandseIPTVKanalenLijst />} />
             <Route path="/blog/prix-iptv-france" element={<PrixIPTVFrance />} />
             <Route path="/blog/meilleur-iptv-france" element={<MeilleurIPTVFrance />} />
             <Route path="/blog/iptv-ne-fonctionne-plus" element={<IPTVNeFonctionnePlus />} />

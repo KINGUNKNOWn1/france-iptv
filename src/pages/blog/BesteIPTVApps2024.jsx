@@ -261,7 +261,7 @@ const BesteIPTVApps2024 = () => {
           <div className="container mx-auto px-4 max-w-4xl">
             <h2 className="text-2xl font-bold mb-6 text-brand-black">📖 Articles Similaires</h2>
             <div className="grid md:grid-cols-2 gap-4">
-              <Link to="/blog/acheter-iptv-france-guide-complet" className="bg-white border border-brand-gray-border p-4 rounded-lg hover:border-brand-gold transition-colors">
+              <Link to="/acheter-iptv" className="bg-white border border-brand-gray-border p-4 rounded-lg hover:border-brand-gold transition-colors">
                 <h3 className="font-bold mb-2 text-brand-black">Guide Complet Acheter IPTV en France</h3>
                 <p className="text-sm text-brand-gray">Tout savoir sur l'achat d'IPTV en France →</p>
               </Link>

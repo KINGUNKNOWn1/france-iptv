@@ -33,10 +33,10 @@ const OverOns = () => {
   ];
 
   const stats = [
-    { number: "24 587+", label: "Clients Satisfaits" },
+    { number: "30 500+", label: "Chaînes en direct" },
     { number: "30 500+", label: "Chaînes en Direct" },
     { number: "99,9 %", label: "Disponibilité" },
-    { number: "4,9/5", label: "Note Client" }
+    { number: "24 h", label: "Essai gratuit" }
   ];
 
   const teamFeatures = [
@@ -50,7 +50,7 @@ const OverOns = () => {
     <>
       <SEO
         title="À Propos de France IPTV | Notre Histoire et Nos Valeurs"
-        description="Découvrez France IPTV, votre fournisseur IPTV de confiance en France. Support francophone 24/7, service centré client, des milliers de clients satisfaits."
+        description="Découvrez France IPTV, votre fournisseur IPTV de confiance en France. Support francophone 24/7, service centré client, des clients partout en France satisfaits."
         keywords="à propos france iptv, qui sommes nous, fournisseur iptv fiable, histoire france iptv"
         canonicalPath="/a-propos"
       />
@@ -95,7 +95,7 @@ const OverOns = () => {
                   Un service où la qualité, la fiabilité et la satisfaction client passent avant tout.
                 </p>
                 <p className="text-lg text-brand-gray">
-                  Aujourd'hui, nous servons plus de <strong>24 000 clients satisfaits</strong> en France
+                  Aujourd'hui, nous servons des clients <strong>partout en France</strong>
                   et au-delà. Nous sommes fiers de livrer chaque jour la meilleure expérience IPTV, à un prix juste,
                   avec un support francophone personnalisé.
                 </p>
@@ -282,7 +282,7 @@ const OverOns = () => {
               Prêt à Commencer avec France IPTV ?
             </h2>
             <p className="text-xl text-brand-gray mb-8">
-              Rejoignez 24 587+ clients satisfaits. Découvrez par vous-même pourquoi nous sommes le{' '}
+              Testez gratuitement pendant 24 h. Découvrez par vous-même pourquoi nous sommes le{' '}
               <Link to="/iptv-france" className="text-brand-gold underline">meilleur fournisseur IPTV en France</Link>.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
@@ -300,7 +300,7 @@ const OverOns = () => {
               </a>
             </div>
             <p className="text-sm text-brand-gray mt-6">
-              ✅ 24 587+ clients satisfaits • ⭐ 4,9/5 de moyenne • 🇫🇷 100 % Francophone
+              ✅ Essai gratuit 24 h • 📺 4 écrans simultanés • 🇫🇷 100 % Francophone
             </p>
           </div>
         </section>

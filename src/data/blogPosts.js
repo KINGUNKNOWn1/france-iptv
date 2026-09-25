@@ -92,17 +92,6 @@ export const blogPosts = [
     link: '/blog/iptv-qui-coupe'
   },
   {
-    title: 'Acheter IPTV en France : Guide Complet + Meilleurs Fournisseurs',
-    shortTitle: 'Acheter IPTV en France',
-    excerpt: "Guide complet pour acheter un IPTV en France. Meilleurs fournisseurs, prix, conseils d'installation et tout ce qu'il faut savoir sur les abonnements IPTV.",
-    image: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=800&q=80',
-    datePublished: '2026-03-05',
-    dateModified: '2026-09-23',
-    readTime: '8 min',
-    category: 'Guide',
-    link: '/blog/acheter-iptv-france-guide-complet'
-  },
-  {
     title: 'Meilleures Applications IPTV 2026 : Top 10 pour Android, iOS & Smart TV',
     shortTitle: 'Meilleures Applications IPTV',
     excerpt: "Comparatif des meilleures applications IPTV : IPTV Smarters, TiviMate, GSE Smart IPTV et plus. Conseils d'installation et avis.",
@@ -112,17 +101,6 @@ export const blogPosts = [
     readTime: '6 min',
     category: 'Applications',
     link: '/blog/meilleures-applications-iptv'
-  },
-  {
-    title: 'Liste des Chaînes IPTV Françaises : 80+ Chaînes FR',
-    shortTitle: 'Liste des Chaînes IPTV Françaises',
-    excerpt: 'Liste complète des chaînes IPTV françaises. TF1, France Télévisions, M6, chaînes régionales et sportives.',
-    image: 'https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=800&q=80',
-    datePublished: '2026-02-20',
-    dateModified: '2026-09-23',
-    readTime: '7 min',
-    category: 'Chaînes',
-    link: '/blog/liste-chaines-francaises-iptv'
   },
   {
     title: 'IPTV Légal en France ? Informations Juridiques & Réglementation',

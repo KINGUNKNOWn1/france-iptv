@@ -5,23 +5,20 @@ import { FaCheckCircle, FaTimesCircle, FaCrown } from 'react-icons/fa';
 const ComparisonTable = () => {
   const [hoveredRow, setHoveredRow] = useState(null);
 
+  // Compares categories of offers a buyer actually weighs, with qualitative
+  // facts only (no invented competitor figures).
   const features = [
-    { name: 'Nombre de Chaînes en Direct', streamholland: '30 500+', competitor1: '15 000', competitor2: '10 000', competitor3: '8 500' },
-    { name: 'Films & Séries (VOD)', streamholland: '150 000+', competitor1: '50 000', competitor2: '30 000', competitor3: '25 000' },
-    { name: 'Qualité 4K/UHD', streamholland: true, competitor1: true, competitor2: false, competitor3: false },
-    { name: 'Qualité HD', streamholland: true, competitor1: true, competitor2: true, competitor3: true },
-    { name: 'Support Francophone 24/7', streamholland: true, competitor1: false, competitor2: false, competitor3: true },
-    { name: 'Paiement Binance Pay / PayPal', streamholland: true, competitor1: false, competitor2: true, competitor3: false },
-    { name: 'Sans Reconduction Automatique', streamholland: true, competitor1: false, competitor2: false, competitor3: false },
-    { name: 'Disponibilité Garantie', streamholland: '99,9 %', competitor1: '99 %', competitor2: '98 %', competitor3: '97 %' },
-    { name: 'Actif sous', streamholland: '5 minutes', competitor1: '24 heures', competitor2: '1-2 heures', competitor3: '12 heures' },
-    { name: 'Chaînes Arabes', streamholland: '2000+', competitor1: '500', competitor2: '300', competitor3: '400' },
-    { name: 'Chaînes Turques', streamholland: '1500+', competitor1: '400', competitor2: '200', competitor3: '300' },
-    { name: 'Chaînes Sportives', streamholland: '2500+', competitor1: '800', competitor2: '500', competitor3: '600' },
-    { name: 'EPG (Guide Électronique des Programmes)', streamholland: true, competitor1: true, competitor2: false, competitor3: true },
-    { name: 'Catch-up TV', streamholland: true, competitor1: false, competitor2: false, competitor3: false },
-    { name: 'Support Multi-appareils', streamholland: 'Illimité', competitor1: '2 appareils', competitor2: '3 appareils', competitor3: '2 appareils' },
-    { name: 'Prix par an (à partir de)', streamholland: '45 €', competitor1: '80 €', competitor2: '120 €', competitor3: '95 €' },
+    { name: 'Chaînes en direct', streamholland: '30 500+', competitor1: 'Annoncé, rarement vérifiable', competitor2: 'Bouquet limité' },
+    { name: 'Films & séries (VOD)', streamholland: '150 000+', competitor1: 'Variable', competitor2: 'Abonnements séparés' },
+    { name: 'Essai gratuit avant de payer', streamholland: '24 h', competitor1: 'Rarement', competitor2: false },
+    { name: 'Sans reconduction automatique', streamholland: true, competitor1: 'Variable', competitor2: false },
+    { name: 'Sans engagement de durée', streamholland: true, competitor1: true, competitor2: 'Souvent 12 à 24 mois' },
+    { name: 'Support francophone', streamholland: '24/7 sur WhatsApp', competitor1: 'Souvent injoignable', competitor2: 'Horaires limités' },
+    { name: 'Paiement traçable', streamholland: 'PayPal, Binance Pay', competitor1: 'Rarement', competitor2: true },
+    { name: 'Mise en service', streamholland: '5 minutes', competitor1: 'Variable', competitor2: 'Plusieurs jours' },
+    { name: 'Écrans simultanés', streamholland: '4', competitor1: 'Variable', competitor2: 'Limité au décodeur' },
+    { name: 'Guide TV (EPG) et replay', streamholland: true, competitor1: 'Variable', competitor2: true },
+    { name: 'Prix', streamholland: 'Dès 3,75 €/mois', competitor1: '5 à 15 € par an', competitor2: '20 à 60 €/mois' },
   ];
 
   const renderCell = (value, isFranceIPTV = false) => {
@@ -50,10 +47,10 @@ const ComparisonTable = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Pourquoi France IPTV Est Le Meilleur Choix
+            France IPTV comparé aux autres offres
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comparez-nous à d'autres fournisseurs et découvrez pourquoi des milliers de Français nous choisissent
+            Ce qui change concrètement face à une offre IPTV à très bas prix et à un bouquet TV classique
           </p>
         </motion.div>
 
@@ -85,13 +82,10 @@ const ComparisonTable = () => {
                       </div>
                     </th>
                     <th className="px-6 py-5 text-center text-sm font-semibold text-gray-400">
-                      Concurrent A
+                      Offre IPTV à très bas prix
                     </th>
                     <th className="px-6 py-5 text-center text-sm font-semibold text-gray-400">
-                      Concurrent B
-                    </th>
-                    <th className="px-6 py-5 text-center text-sm font-semibold text-gray-400">
-                      Concurrent C
+                      Bouquet TV classique
                     </th>
                   </tr>
                 </thead>
@@ -127,10 +121,6 @@ const ComparisonTable = () => {
                       <td className="px-6 py-4 text-center">
                         {renderCell(feature.competitor2)}
                       </td>
-
-                      <td className="px-6 py-4 text-center">
-                        {renderCell(feature.competitor3)}
-                      </td>
                     </motion.tr>
                   ))}
                 </tbody>
@@ -147,14 +137,14 @@ const ComparisonTable = () => {
           className="text-center mt-12"
         >
           <p className="text-gray-300 mb-6 text-lg">
-            Le meilleur choix, clairement ? Commandez maintenant et recevez vos accès sous 5 minutes !
+            Testez d'abord 24 h gratuitement, puis choisissez votre durée : accès actif en 5 minutes.
           </p>
           <a
-            href="#pricing"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-surface border border-brand-gold/40 text-white font-bold rounded-xl hover:from-[#C4FF86] hover:to-[#C4FF86] transition-all shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 text-lg"
+            href="/tarifs"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-lime hover:bg-lime-hover text-lime-on font-bold rounded-xl transition-colors text-lg"
           >
             <FaCrown />
-            Choisir Le Meilleur - À partir de 45 €/an
+            Voir les formules, dès 3,75 €/mois
           </a>
         </motion.div>
 
