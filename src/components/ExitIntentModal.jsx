@@ -92,83 +92,35 @@ const ExitIntentModal = () => {
           >
             <div
               onClick={(e) => e.stopPropagation()}
-              className="relative bg-gradient-to-br from-ink/90 to-ink rounded-3xl max-w-2xl w-full overflow-hidden border-2 border-brand-gold/50 shadow-2xl shadow-blue-600/20"
+              className="relative bg-surface rounded-2xl max-w-sm w-full max-h-[90dvh] overflow-y-auto border border-lime/40 shadow-2xl"
             >
-              {/* Close Button */}
               <button
                 onClick={handleClose}
-                className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-slate-700/50 hover:bg-slate-600 text-white flex items-center justify-center transition-colors"
+                className="absolute top-2 right-2 z-10 w-10 h-10 rounded-full text-brand-gray hover:text-white flex items-center justify-center transition-colors"
                 aria-label="Fermer"
               >
                 <FaTimes />
               </button>
 
-              {/* Decorative Elements */}
-              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brand-gold via-purple-600 to-pink-600" />
-              <div className="absolute -top-20 -right-20 w-40 h-40 bg-brand-gold rounded-full opacity-20 blur-3xl" />
-              <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-purple-600 rounded-full opacity-20 blur-3xl" />
-
-              {/* Content */}
-              <div className="relative p-8 md:p-12">
+              <div className="p-6">
                 {step === 'offer' ? (
                   <>
-                    {/* Icon */}
-                    <motion.div
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
-                      className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center shadow-lg"
-                    >
-                      <FaGift className="text-white text-3xl" />
-                    </motion.div>
-
-                    {/* Heading */}
-                    <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
-                      Attendez ! 🎉
-                    </h2>
-
-                    <p className="text-xl text-gray-300 text-center mb-6">
-                      Avant de partir, voici une <span className="text-yellow-500 font-bold">offre exclusive</span> pour vous !
-                    </p>
-
-                    {/* Offer Box */}
-                    <div className="bg-surface border border-lime/30 border-2 border-brand-gold/50 rounded-2xl p-6 mb-6">
-                      <div className="text-center mb-4">
-                        <p className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 mb-2">
-                          10% DE RÉDUCTION
-                        </p>
-                        <p className="text-gray-300 text-lg">
-                          Sur votre premier abonnement !
-                        </p>
+                    <div className="flex items-center gap-3 mb-4 pr-8">
+                      <div className="w-10 h-10 rounded-full bg-lime/15 flex items-center justify-center flex-shrink-0">
+                        <FaGift className="text-lime" />
                       </div>
-
-                      {/* Benefits */}
-                      <div className="space-y-3">
-                        {[
-                          '30 500+ chaînes en direct HD/4K',
-                          '150 000+ films et séries',
-                          'Actif en moins de 5 minutes',
-                          'Sans engagement',
-                          "Paiement par Binance Pay ou PayPal"
-                        ].map((benefit, index) => (
-                          <motion.div
-                            key={index}
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 0.3 + index * 0.1 }}
-                            className="flex items-center gap-2 text-gray-200"
-                          >
-                            <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0">
-                              <span className="text-white text-xs">✓</span>
-                            </div>
-                            <span className="text-sm">{benefit}</span>
-                          </motion.div>
-                        ))}
-                      </div>
+                      <p className="text-white font-semibold leading-tight">Attendez ! Une offre avant de partir</p>
                     </div>
 
-                    {/* Email Form */}
-                    <form onSubmit={handleSubmit} className="space-y-4 mb-4">
+                    <div className="rounded-xl border border-white/10 bg-ink/40 p-4 mb-4 text-center">
+                      <p className="text-4xl font-bold text-lime leading-none mb-1">-10 %</p>
+                      <p className="text-sm text-gray-300 mb-3">sur votre premier abonnement</p>
+                      <p className="text-xs text-brand-gray">
+                        30 500+ chaînes HD/4K · 150 000+ films et séries · Sans engagement
+                      </p>
+                    </div>
+
+                    <form onSubmit={handleSubmit} className="space-y-2.5">
                       <div className="relative">
                         <input
                           type="email"
@@ -178,70 +130,55 @@ const ExitIntentModal = () => {
                             setIsValid(true);
                           }}
                           placeholder="vous@email.fr"
-                          className={`w-full px-4 py-4 pr-12 rounded-xl bg-white/10 border-2 text-white placeholder-gray-400 focus:outline-none transition-all ${
-                            isValid ? 'border-white/20 focus:border-brand-gold' : 'border-red-500 focus:border-red-500'
+                          aria-label="Votre adresse e-mail"
+                          className={`w-full px-4 py-3 pr-11 rounded-lg bg-white/10 border text-white placeholder-gray-400 focus:outline-none transition-colors ${
+                            isValid ? 'border-white/20 focus:border-lime' : 'border-red-500'
                           }`}
                           required
                         />
                         <FaEnvelope className={`absolute right-4 top-1/2 -translate-y-1/2 ${isValid ? 'text-gray-400' : 'text-red-500'}`} />
                       </div>
-                      {!isValid && (
-                        <p className="text-red-400 text-sm">Veuillez saisir une adresse e-mail valide</p>
-                      )}
-
+                      {!isValid && <p className="text-red-400 text-xs">Veuillez saisir une adresse e-mail valide</p>}
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-surface border border-lime/30 hover:from-green-700 hover:to-green-800 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-green-600/50 text-lg disabled:opacity-50"
+                        className="w-full px-6 py-3 bg-lime hover:bg-lime-hover text-lime-on font-semibold rounded-lg transition-colors disabled:opacity-60"
                       >
-                        {isSubmitting ? 'Envoi...' : 'Recevoir mon code -10%'}
+                        {isSubmitting ? 'Envoi…' : 'Recevoir mon code -10 %'}
                       </button>
                     </form>
 
                     <button
                       onClick={handleClose}
-                      className="w-full text-center text-gray-400 hover:text-white transition-colors text-sm"
+                      className="w-full text-center text-brand-gray hover:text-white transition-colors text-sm py-2.5 mt-1"
                     >
-                      Non merci, je préfère payer plein tarif
+                      Non merci
                     </button>
-
-                    <p className="text-center text-xs text-gray-500 mt-4">
-                      🔒 Aucun spam. Vous pouvez vous désinscrire à tout moment.
-                    </p>
+                    <p className="text-center text-xs text-brand-gray">🔒 Aucun spam. Désinscription en 1 clic.</p>
                   </>
                 ) : (
                   <>
-                    <motion.div
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ type: 'spring', stiffness: 200 }}
-                      className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center shadow-lg"
-                    >
-                      <FaCheckCircle className="text-white text-3xl" />
-                    </motion.div>
-
-                    <h2 className="text-3xl font-bold text-white text-center mb-3">
-                      Votre code est prêt !
-                    </h2>
-                    <p className="text-gray-300 text-center mb-6">
-                      Utilisez ce code lors de votre commande sur WhatsApp pour obtenir 10% de réduction.
+                    <div className="flex items-center gap-3 mb-3 pr-8">
+                      <FaCheckCircle className="text-lime text-2xl flex-shrink-0" />
+                      <p className="text-white font-semibold">Votre code est prêt !</p>
+                    </div>
+                    <p className="text-sm text-gray-300 mb-4">
+                      Donnez ce code lors de votre commande sur WhatsApp pour obtenir 10 % de réduction.
                     </p>
-
                     <button
                       onClick={handleCopyCode}
-                      className="w-full flex items-center justify-between gap-3 bg-white/10 border-2 border-dashed border-brand-gold/60 rounded-xl px-6 py-4 mb-6 hover:bg-white/20 transition-colors"
+                      className="w-full flex items-center justify-between gap-3 bg-white/10 border border-dashed border-lime/60 rounded-lg px-4 py-3 mb-3 hover:bg-white/15 transition-colors"
                     >
-                      <span className="text-2xl font-bold tracking-widest text-yellow-400">{DISCOUNT_CODE}</span>
+                      <span className="text-xl font-bold tracking-widest text-lime">{DISCOUNT_CODE}</span>
                       <span className="flex items-center gap-2 text-sm text-gray-300">
-                        {copied ? <><FaCheckCircle className="text-green-400" /> Copié</> : <><FaCopy /> Copier</>}
+                        {copied ? <><FaCheckCircle className="text-lime" /> Copié</> : <><FaCopy /> Copier</>}
                       </span>
                     </button>
-
                     <button
                       onClick={handleWhatsApp}
-                      className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-surface border border-lime/30 hover:from-green-700 hover:to-green-800 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-green-600/50 text-lg"
+                      className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors"
                     >
-                      <FaWhatsapp className="text-xl" />
+                      <FaWhatsapp className="text-lg" />
                       Commander sur WhatsApp
                     </button>
                   </>
