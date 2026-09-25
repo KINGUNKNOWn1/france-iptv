@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Lenis from 'lenis';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import GuidesLies from './components/GuidesLies';
 import StickyWhatsAppCTA from './components/StickyWhatsAppCTA';
 import CookieConsent from './components/CookieConsent';
 import ExitIntentModal from './components/ExitIntentModal';
@@ -194,6 +195,7 @@ function AppContent() {
         </PageTransition>
       </Suspense>
       </ErrorBoundary>
+      <GuidesLies />
       <Footer />
       <StickyWhatsAppCTA />
       <CookieConsent />
