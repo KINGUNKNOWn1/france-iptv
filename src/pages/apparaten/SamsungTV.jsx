@@ -920,7 +920,7 @@ const SamsungTV = () => {
             </h2>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
               Installez l'IPTV France IPTV sur votre Samsung TV en 5 minutes.
-              Testez gratuitement pendant 24 h sur votre Samsung.
+              1er mois à 8 € sur votre Samsung, satisfait ou remboursé 48 h.
             </p>
 
             <a

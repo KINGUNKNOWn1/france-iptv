@@ -10,7 +10,7 @@ const SITE_URL = 'https://franceiptv.stream';
 
 const acheterFaqs = [
   { q: 'Combien coûte un abonnement IPTV ?', a: "Chez France IPTV : 8 € pour 1 mois, 19,99 € pour 3 mois, 30 € pour 6 mois et 45 € pour 12 mois, soit 3,75 € par mois. Le contenu est identique dans toutes les formules, seule la durée change." },
-  { q: "Peut-on essayer avant d'acheter ?", a: "Oui. Un essai gratuit de 24 heures permet de vérifier la qualité des chaînes et la compatibilité de votre appareil avant de payer. Il se demande en quelques secondes depuis le site ou sur WhatsApp." },
+  { q: "Peut-on essayer avant de s'engager ?", a: "Oui : le 1er mois coûte 8 € et il est satisfait ou remboursé pendant 48 h. Si le service ne vous convient pas, vous êtes remboursé intégralement." },
   { q: "Sur combien d'écrans peut-on regarder ?", a: "Toutes les formules incluent 4 écrans simultanés : Smart TV, box, téléphone, tablette ou ordinateur, avec la même qualité sur chaque écran." },
   { q: 'Comment payer un abonnement IPTV ?', a: "Le paiement se fait en une seule fois par PayPal ou Binance Pay, deux moyens de paiement traçables. Vos identifiants arrivent sur WhatsApp en quelques minutes." },
   { q: "Que se passe-t-il à la fin de l'abonnement ?", a: "Rien d'automatique : il n'y a aucune reconduction. L'abonnement s'arrête à la date prévue et vous recevez un rappel pour renouveler si vous le souhaitez." },
@@ -315,7 +315,7 @@ const IPTVKopen = () => {
           </ul>
           <h3>Les 6 points à vérifier chez un fournisseur</h3>
           <ol>
-            <li><strong>Un essai gratuit</strong> avant de payer, pour juger la qualité sur votre propre connexion.</li>
+            <li><strong>Un essai ou une garantie</strong> avant de s'engager, pour juger la qualité sur votre propre connexion.</li>
             <li><strong>Des prix clairs</strong>, affichés sur le site, sans frais cachés.</li>
             <li><strong>Aucune reconduction automatique</strong> : l'abonnement doit s'arrêter à la fin de la durée choisie.</li>
             <li><strong>Un support joignable</strong> en français, avant comme après l'achat.</li>
@@ -362,7 +362,7 @@ const IPTVKopen = () => {
             <li><strong>Box opérateur</strong> : <a href="/appareils/orange">Orange</a>, <a href="/appareils/sfr">SFR</a>, <a href="/appareils/bbox-bouygues">Bbox</a>.</li>
           </ul>
           <p>
-            Pas sûr de votre matériel ? Pendant l'essai gratuit, le support vous indique la meilleure application pour votre appareil.
+            Pas sûr de votre matériel ? Avant votre commande, le support vous indique la meilleure application pour votre appareil.
           </p>
 
           <h3>Questions fréquentes</h3>

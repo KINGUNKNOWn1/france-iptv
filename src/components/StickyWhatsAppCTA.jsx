@@ -66,7 +66,7 @@ const StickyWhatsAppCTA = () => {
                 </div>
 
                 <p className="text-sm text-gray-700 mb-3">
-                  👋 Bonjour ! Des questions sur notre service IPTV ? 🎁 Profitez d'1 jour d'essai gratuit, contactez-nous directement sur WhatsApp !
+                  👋 Bonjour ! Des questions sur notre service IPTV ? 🎁 1er mois à 8 €, satisfait ou remboursé 48 h. Écrivez-nous directement sur WhatsApp !
                 </p>
 
                 <button
@@ -83,7 +83,7 @@ const StickyWhatsAppCTA = () => {
                 {!hasCapturedLead() && (
                   <div className="mt-3 pt-3 border-t border-gray-200">
                     <p className="text-xs font-semibold text-gray-700 mb-2">
-                      🎁 Ou recevez votre essai gratuit par e-mail :
+                      🎁 Ou recevez l'offre par e-mail :
                     </p>
                     <TrialEmailForm source="whatsapp_bubble" />
                   </div>

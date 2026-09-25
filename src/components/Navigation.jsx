@@ -68,7 +68,7 @@ const Navigation = () => {
               onClick={openTrial}
               className="px-6 py-2.5 bg-lime hover:bg-lime-hover text-lime-on font-semibold rounded-lg transition-colors"
             >
-              Essayer 24 h
+              Commencer pour 8 €
             </button>
           </div>
 
@@ -101,7 +101,7 @@ const Navigation = () => {
                 onClick={openTrial}
                 className="px-6 py-2.5 bg-lime hover:bg-lime-hover text-lime-on font-semibold rounded-lg transition-colors text-center"
               >
-                Essayer 24 h gratuitement
+                Commencer pour 8 €
               </button>
             </div>
           </div>

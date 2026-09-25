@@ -11,7 +11,7 @@ const chainesFaqs = [
   { q: 'Combien de chaînes sont incluses ?', a: "L'abonnement donne accès à plus de 30 500 chaînes en direct, françaises et internationales, ainsi qu'à plus de 150 000 films et séries à la demande. Le contenu est identique dans toutes les formules." },
   { q: 'Les chaînes françaises sont-elles en HD ?', a: "Oui, la plupart des chaînes françaises sont proposées en HD, et certaines en Full HD ou 4K. La qualité affichée dépend aussi de votre connexion et de votre appareil." },
   { q: 'Y a-t-il un guide des programmes et le replay ?', a: "Oui. Le guide des programmes (EPG) s'affiche dans l'application, et de nombreuses chaînes proposent le rattrapage pour revoir un programme déjà diffusé." },
-  { q: 'Peut-on voir la liste complète avant de payer ?', a: "Oui : l'essai gratuit de 24 heures donne accès à l'ensemble des chaînes, pour vérifier que vos chaînes préférées sont disponibles et fluides sur votre appareil." },
+  { q: 'Peut-on voir la liste complète avant de s\'engager ?', a: "Oui : avec le 1er mois à 8 €, satisfait ou remboursé 48 h, vous accédez à l'ensemble des chaînes et vérifiez que vos chaînes préférées sont disponibles et fluides sur votre appareil." },
 ];
 
 const Kanalen = () => {
@@ -244,7 +244,7 @@ const Kanalen = () => {
           <p>
             Voici les principales <strong>chaînes françaises</strong> disponibles avec l'abonnement, classées par catégorie. Elles
             s'affichent avec le guide des programmes (EPG) et, pour la plupart, en HD. La liste complète, avec les chaînes
-            internationales, est consultable pendant l'<a href="/abonnement-iptv">essai gratuit de 24 heures</a>.
+            internationales, est consultable dès le <a href="/abonnement-iptv">1er mois à 8 €, satisfait ou remboursé 48 h</a>.
           </p>
           <h3>Chaînes publiques</h3>
           <p>France 2, France 3, France 4, France 5, franceinfo, France 24, LCP, Public Sénat, Arte.</p>

@@ -230,13 +230,13 @@ const TestDebit = () => {
                   <p className="text-brand-black font-semibold mb-1">
                     {result.download >= 7 ? 'Votre connexion est prête pour l’IPTV.' : 'Améliorez votre connexion, puis testez l’IPTV.'}
                   </p>
-                  <p className="text-sm text-brand-gray mb-4">Vérifiez la qualité réelle avec 24 h d'essai gratuit, sans carte bancaire.</p>
+                  <p className="text-sm text-brand-gray mb-4">Vérifiez la qualité réelle avec le 1er mois à 8 €, satisfait ou remboursé 48 h.</p>
                   <button
                     type="button"
                     onClick={() => window.dispatchEvent(new CustomEvent('open-trial'))}
                     className="w-full min-h-[50px] inline-flex items-center justify-center gap-2 bg-brand-gold hover:opacity-90 text-white font-semibold rounded-lg"
                   >
-                    Essayer 24 h gratuitement <ArrowRight size={18} />
+                    Commencer pour 8 € <ArrowRight size={18} />
                   </button>
                 </div>
               </div>

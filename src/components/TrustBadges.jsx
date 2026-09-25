@@ -36,7 +36,7 @@ const TrustBadges = () => {
     },
     {
       icon: FaAward,
-      title: 'Essai Gratuit 24h',
+      title: 'Satisfait ou remboursé 48 h',
       description: 'Sur simple demande',
       color: 'from-yellow-500 to-yellow-600'
     }

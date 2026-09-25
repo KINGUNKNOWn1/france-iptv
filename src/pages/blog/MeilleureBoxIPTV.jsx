@@ -114,7 +114,7 @@ const MeilleureBoxIPTV = () => (
         </tbody>
       </table>
       <p>
-        Pas sûr de votre matériel ? Pendant l'essai gratuit de 24 h, notre équipe vous indique si votre appareil actuel suffit avant
+        Pas sûr de votre matériel ? Avant votre commande, notre équipe vous indique si votre appareil actuel suffit avant
         que vous n'achetiez quoi que ce soit.
       </p>
     </section>

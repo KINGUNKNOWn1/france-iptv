@@ -110,7 +110,7 @@ const M3UXtreamCodesMAC = () => (
       </ul>
       <p>
         Chez France IPTV, les accès sont fournis dans le format qui correspond à votre appareil : précisez-le simplement au moment
-        de votre essai gratuit.
+        de votre commande.
       </p>
     </section>
   </BlogArticle>

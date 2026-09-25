@@ -31,8 +31,8 @@ const PrixIPTVFrance = () => {
       a: "Non. Le critère principal doit être la fiabilité : disponibilité du service (idéalement 99,9%), qualité du flux (HD/4K sans coupures), rapidité du support client, et moyens de paiement traçables. Un abonnement 20% plus cher mais stable coûte toujours moins cher qu'un abonnement interrompu sans remboursement."
     },
     {
-      q: "Existe-t-il un essai gratuit avant de payer ?",
-      a: "Chez France IPTV, oui : nous proposons 1 jour d'essai gratuit pour tester la qualité du flux et le nombre de chaînes avant de vous engager sur un abonnement payant. Méfiez-vous des fournisseurs qui refusent tout essai ou toute preuve avant paiement."
+      q: "Peut-on tester avant de s'engager ?",
+      a: "Chez France IPTV, oui : le 1er mois coûte 8 € et il est satisfait ou remboursé pendant 48 h. Méfiez-vous des fournisseurs qui refusent tout essai, toute garantie ou toute preuve avant paiement."
     },
     {
       q: "Quels moyens de paiement sont les plus sûrs pour l'IPTV ?",

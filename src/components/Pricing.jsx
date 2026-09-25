@@ -203,7 +203,7 @@ const Pricing = () => {
             className="inline-flex flex-col sm:flex-row items-center gap-4 px-6 py-4 bg-green-50 border-2 border-green-200 rounded-2xl mb-4"
           >
             <p className="text-brand-black font-semibold">
-              🎁 Pas encore convaincu ? Profitez d'<span className="text-green-700 font-bold">1 jour d'essai gratuit</span> avant de vous abonner.
+              🎁 Pas encore convaincu ? Le <span className="text-green-700 font-bold">1er mois à 8 € est satisfait ou remboursé 48 h</span>.
             </p>
             <a
               href="https://wa.me/18653169315?text=Bonjour%20!%20Je%20souhaite%20profiter%20de%20l%27essai%20gratuit%20de%201%20jour%20pour%20France%20IPTV"

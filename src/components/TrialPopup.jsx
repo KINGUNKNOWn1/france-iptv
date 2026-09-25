@@ -67,7 +67,7 @@ const TrialPopup = () => {
       {isOpen && (
         <motion.aside
           role="dialog"
-          aria-label="Essai gratuit 24h"
+          aria-label="1er mois à 8 €"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 40 }}
@@ -86,10 +86,10 @@ const TrialPopup = () => {
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center flex-shrink-0">
                 <FaGift className="text-white" />
               </div>
-              <p className="font-bold text-gray-900 leading-tight">Testez gratuitement pendant 24h</p>
+              <p className="font-bold text-gray-900 leading-tight">1er mois à 8 €, satisfait ou remboursé</p>
             </div>
             <p className="text-sm text-gray-600 mb-4">
-              Toutes les chaînes et la VOD, sans carte bancaire ni engagement. Entrez votre e-mail pour recevoir votre essai.
+              Toutes les chaînes et la VOD, sans engagement. Pas convaincu dans les 48 h ? Vous êtes remboursé. Recevez l'offre par e-mail.
             </p>
             <TrialEmailForm source="trial_popup" />
           </div>

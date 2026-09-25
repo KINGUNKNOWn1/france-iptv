@@ -24,7 +24,7 @@ const MeilleurIPTVFrance = () => {
     },
     {
       q: "Comment savoir si un IPTV est fiable avant de payer ?",
-      a: "Vérifiez cinq points : un essai gratuit ou une démo proposée, un support client francophone joignable avant l'achat, des moyens de paiement traçables (PayPal, Binance Pay), des avis clients récents et vérifiables, et un prix cohérent avec le marché (ni anormalement bas, ni excessif)."
+      a: "Vérifiez cinq points : un essai ou une garantie satisfait ou remboursé, un support client francophone joignable avant l'achat, des moyens de paiement traçables (PayPal, Binance Pay), des avis clients récents et vérifiables, et un prix cohérent avec le marché (ni anormalement bas, ni excessif)."
     },
     {
       q: "Le nombre de chaînes est-il le critère le plus important ?",
@@ -40,7 +40,7 @@ const MeilleurIPTVFrance = () => {
     },
     {
       q: "Peut-on tester un IPTV avant de s'engager sur l'année ?",
-      a: "Avec un fournisseur sérieux comme France IPTV, oui : un essai gratuit d'1 jour permet de valider la stabilité du flux et le catalogue de chaînes avant de choisir un abonnement plus long (3, 6 ou 12 mois)."
+      a: "Avec un fournisseur sérieux, oui. Chez France IPTV, le 1er mois à 8 € est satisfait ou remboursé pendant 48 h : vous validez la stabilité du flux et le catalogue de chaînes avant de passer à une formule longue."
     }
   ];
 
@@ -182,7 +182,7 @@ const MeilleurIPTVFrance = () => {
                   ['Pour toute la famille', "Le nombre d'écrans simultanés inclus (4 chez France IPTV), les chaînes jeunesse et internationales et le contrôle parental dans l'application."],
                   ['Pour un petit budget', "Le prix par mois sur la durée : un abonnement 12 mois revient souvent 2 fois moins cher qu'un abonnement mensuel. Méfiez-vous en revanche des offres à quelques euros par an."],
                   ['Pour la 4K', "Un téléviseur 4K, un appareil récent (box Android TV, Fire TV Stick 4K) et 25 Mbit/s stables par écran. Sans ces trois éléments, la 4K n'apporte rien."],
-                  ['Pour débuter', "Un support francophone qui vous guide pendant l'installation, et un essai gratuit pour vérifier la compatibilité de votre appareil avant de payer."]
+                  ['Pour débuter', "Un support francophone qui vous guide pendant l'installation, et un essai ou une garantie de remboursement pour vérifier la compatibilité de votre appareil avant de payer."]
                 ].map(([t, d]) => (
                   <div key={t} className="bg-brand-offwhite border border-brand-gray-border p-6 rounded-lg">
                     <h3 className="text-lg font-bold mb-2 text-brand-black">{t}</h3>
@@ -218,10 +218,10 @@ const MeilleurIPTVFrance = () => {
 
             {/* Checklist test 24h */}
             <section className="mb-12">
-              <h2 className="text-3xl font-heading font-bold mb-6 text-brand-gold">Comment Tester un IPTV en 24 h : la Checklist</h2>
+              <h2 className="text-3xl font-heading font-bold mb-6 text-brand-gold">Comment Tester un IPTV : la Checklist</h2>
               <p className="text-lg text-brand-gray mb-4">
-                Un essai gratuit ne sert à rien si on le teste à 14 h un mardi. Pour savoir si un IPTV est vraiment le meilleur pour
-                vous, vérifiez ces 8 points pendant les 24 heures :
+                Un test ne sert à rien si on le fait à 14 h un mardi. Pour savoir si un IPTV est vraiment le meilleur pour
+                vous, vérifiez ces 8 points pendant la période d'essai ou de garantie :
               </p>
               <ol className="list-decimal pl-6 space-y-2 text-brand-gray text-lg">
                 <li><strong className="text-brand-black">Testez votre débit</strong> avant de commencer, sur l'appareil qui regarde la TV (<Link to="/test-debit-iptv" className="text-brand-gold underline">test de débit IPTV gratuit</Link>).</li>
@@ -250,7 +250,7 @@ const MeilleurIPTVFrance = () => {
                   'Paiement Binance Pay ou PayPal',
                   'Aucune reconduction automatique',
                   '99,9% de disponibilité garantie',
-                  '1 jour d\'essai gratuit avant engagement'
+                  '1er mois satisfait ou remboursé 48 h'
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 bg-white border border-brand-gray-border rounded-lg p-4">
                     <FaCheckCircle className="text-green-600 flex-shrink-0" />
@@ -284,13 +284,13 @@ const MeilleurIPTVFrance = () => {
             {/* CTA */}
             <section className="bg-surface border border-brand-gold/40 p-8 rounded-xl text-center text-white">
               <h2 className="text-3xl font-bold mb-4">Testez France IPTV Dès Aujourd'hui</h2>
-              <p className="text-xl mb-6">1 jour d'essai gratuit, sans engagement, activation en 5 minutes</p>
+              <p className="text-xl mb-6">1er mois à 8 €, satisfait ou remboursé 48 h, activation en 5 minutes</p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link to="/abonnement-iptv" className="px-8 py-4 bg-white text-brand-gold font-bold rounded-lg hover:bg-yellow-50 transition-all">
                   Voir les Abonnements
                 </Link>
                 <a href="https://wa.me/18653169315?text=Bonjour%2C%20je%20voudrais%20tester%20France%20IPTV" className="px-8 py-4 bg-black/30 hover:bg-black/40 text-white font-bold rounded-lg transition-all">
-                  <FaWhatsapp className="inline mr-2" /> Demander l'Essai Gratuit
+                  <FaWhatsapp className="inline mr-2" /> Commencer pour 8 €
                 </a>
               </div>
             </section>

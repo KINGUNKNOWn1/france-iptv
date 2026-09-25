@@ -36,7 +36,7 @@ const OverOns = () => {
     { number: "30 500+", label: "Chaînes en direct" },
     { number: "30 500+", label: "Chaînes en Direct" },
     { number: "99,9 %", label: "Disponibilité" },
-    { number: "24 h", label: "Essai gratuit" }
+    { number: "48 h", label: "Satisfait ou remboursé" }
   ];
 
   const teamFeatures = [
@@ -219,7 +219,7 @@ const OverOns = () => {
                     </li>
                     <li className="flex items-center gap-3">
                       <FaShieldAlt className="text-2xl flex-shrink-0" />
-                      <span>Garantie satisfait ou remboursé 14 jours</span>
+                      <span>1er mois satisfait ou remboursé 48 h</span>
                     </li>
                     <li className="flex items-center gap-3">
                       <FaRocket className="text-2xl flex-shrink-0" />
@@ -282,7 +282,7 @@ const OverOns = () => {
               Prêt à Commencer avec France IPTV ?
             </h2>
             <p className="text-xl text-brand-gray mb-8">
-              Testez gratuitement pendant 24 h. Découvrez par vous-même pourquoi nous sommes le{' '}
+              Commencez pour 8 €, satisfait ou remboursé 48 h. Découvrez par vous-même pourquoi nous sommes le{' '}
               <Link to="/iptv-france" className="text-brand-gold underline">meilleur fournisseur IPTV en France</Link>.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
@@ -300,7 +300,7 @@ const OverOns = () => {
               </a>
             </div>
             <p className="text-sm text-brand-gray mt-6">
-              ✅ Essai gratuit 24 h • 📺 4 écrans simultanés • 🇫🇷 100 % Francophone
+              ✅ Satisfait ou remboursé 48 h • 📺 4 écrans simultanés • 🇫🇷 100 % Francophone
             </p>
           </div>
         </section>
