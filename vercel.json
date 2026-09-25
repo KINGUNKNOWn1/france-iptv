@@ -58,6 +58,17 @@
   ],
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.franceiptv.stream"
+        }
+      ],
+      "destination": "https://franceiptv.stream/",
+      "permanent": true
+    },
+    {
       "source": "/home",
       "destination": "/",
       "permanent": true
