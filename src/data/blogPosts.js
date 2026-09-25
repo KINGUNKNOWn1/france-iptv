@@ -103,12 +103,12 @@ export const blogPosts = [
     link: '/blog/prix-iptv-france'
   },
   {
-    title: 'Meilleur IPTV France 2026 : Comment Choisir un Fournisseur',
+    title: 'Meilleur IPTV 2026 : Comparatif et 7 Critères pour Bien Choisir',
     shortTitle: 'Meilleur IPTV France',
     excerpt: '7 critères concrets pour reconnaître un fournisseur IPTV fiable et éviter les pièges des services illégaux.',
     image: 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&q=80',
     datePublished: '2026-09-19',
-    dateModified: '2026-09-19',
+    dateModified: '2026-09-25',
     readTime: '8 min',
     category: 'Comparatif',
     link: '/blog/meilleur-iptv-france'

@@ -56,7 +56,8 @@ const TrialDialog = () => {
         <X size={22} />
       </button>
 
-      {step === 1 ? (
+      {/* Content only exists while open, so its headings aren't part of every page's HTML */}
+      {open && (step === 1 ? (
         <>
           <p className="text-[10px] tracking-[0.2em] font-medium text-lime mb-2">VOTRE ESSAI DE 24 HEURES</p>
           <h2 className="text-3xl md:text-4xl mb-2">Sur quel écran ?</h2>
@@ -103,7 +104,7 @@ const TrialDialog = () => {
           </button>
           <p className="text-[11px] text-brand-gray text-center mt-3">Aucun paiement n'est demandé pour l'essai.</p>
         </>
-      )}
+      ))}
     </dialog>
   );
 };

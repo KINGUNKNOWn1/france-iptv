@@ -280,7 +280,10 @@ const Home = () => {
               sur la page <Link to="/tarifs" className="text-lime hover:underline">tarifs</Link> : aucune reconduction automatique,
               paiement par Binance Pay ou PayPal, activation en 5 minutes. Consultez aussi la{' '}
               <Link to="/chaines" className="text-lime hover:underline">liste des chaînes</Link> et nos{' '}
-              <Link to="/appareils" className="text-lime hover:underline">guides d'installation</Link>.
+              <Link to="/appareils" className="text-lime hover:underline">guides d'installation</Link>. Vous hésitez entre plusieurs services ?
+              Notre guide pour trouver le <Link to="/blog/meilleur-iptv-france" className="text-lime hover:underline">meilleur IPTV</Link>{' '}
+              détaille les critères à vérifier, et le <Link to="/test-debit-iptv" className="text-lime hover:underline">test de débit IPTV</Link>{' '}
+              vous dit si votre connexion suffit pour la HD ou la 4K.
             </p>
           </div>
         </div>

@@ -98,7 +98,7 @@ const IPTVKopen = () => {
                 <span className="text-brand-gold">Fiable & Abordable</span>
               </h1>
               <p className="text-xl text-gray-200 leading-relaxed mb-8 max-w-3xl">
-                Vous cherchez où <strong>acheter IPTV</strong> en France ? France IPTV est LE fournisseur IPTV fiable avec 30 500+ chaînes, qualité 4K et support francophone. Aucune reconduction automatique, paiement par Binance Pay ou PayPal possible.
+                Vous cherchez où <strong>acheter IPTV</strong> en France ? France IPTV est LE fournisseur IPTV fiable avec 30 500+ chaînes, qualité 4K et support francophone. Aucune reconduction automatique, paiement par Binance Pay ou PayPal possible. Pour comparer, lisez notre guide du <Link to="/blog/meilleur-iptv-france" className="text-brand-gold underline">meilleur IPTV</Link>.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
