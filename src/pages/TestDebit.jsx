@@ -230,7 +230,7 @@ const TestDebit = () => {
                   <p className="text-brand-black font-semibold mb-1">
                     {result.download >= 7 ? 'Votre connexion est prête pour l’IPTV.' : 'Améliorez votre connexion, puis testez l’IPTV.'}
                   </p>
-                  <p className="text-sm text-brand-gray mb-4">Vérifiez la qualité réelle avec le 1er mois à 8 €, satisfait ou remboursé 48 h.</p>
+                  <p className="text-sm text-brand-gray mb-4">Vérifiez la qualité réelle avec le 1er mois à 8 €, satisfait ou remboursé 24 h.</p>
                   <button
                     type="button"
                     onClick={() => window.dispatchEvent(new CustomEvent('open-trial'))}

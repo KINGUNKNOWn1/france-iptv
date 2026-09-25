@@ -38,7 +38,7 @@ const TrialDialog = () => {
   }, [open]);
 
   const close = () => setOpen(false);
-  const message = `Bonjour ! Je souhaite commencer avec le 1er mois à 8 € (satisfait ou remboursé 48 h) sur ${DEVICES[device].name}.`;
+  const message = `Bonjour ! Je souhaite commencer avec le 1er mois à 8 € (satisfait ou remboursé 24 h) sur ${DEVICES[device].name}.`;
 
   return (
     <dialog
@@ -93,7 +93,7 @@ const TrialDialog = () => {
           </button>
           <h2 className="text-3xl md:text-4xl mb-2">Commencez pour 8 €.</h2>
           <p className="text-sm text-brand-gray mb-5">
-            Le 1er mois coûte 8 €. S'il ne vous convient pas, vous êtes remboursé intégralement dans les 48 h.
+            Le 1er mois coûte 8 €. S'il ne vous convient pas, vous êtes remboursé intégralement dans les 24 h.
           </p>
           <button type="button" onClick={() => openWhatsApp(message)} className="w-full min-h-[52px] inline-flex items-center justify-center gap-2 bg-lime hover:bg-lime-hover text-lime-on font-semibold rounded-lg">
             Commander le 1er mois (8 €) sur WhatsApp <ArrowRight size={18} />
@@ -102,7 +102,7 @@ const TrialDialog = () => {
             <span className="h-px flex-1 bg-white/10" /> ou recevez l'offre par e-mail <span className="h-px flex-1 bg-white/10" />
           </div>
           <TrialEmailForm source="trial_dialog" dark message={message} />
-          <p className="text-[11px] text-brand-gray text-center mt-3">Satisfait ou remboursé 48 h sur le 1er mois · paiement PayPal ou Binance Pay.</p>
+          <p className="text-[11px] text-brand-gray text-center mt-3">Satisfait ou remboursé 24 h sur le 1er mois · paiement PayPal ou Binance Pay.</p>
         </>
       ))}
     </dialog>

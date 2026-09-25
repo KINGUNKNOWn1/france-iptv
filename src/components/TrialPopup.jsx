@@ -89,7 +89,7 @@ const TrialPopup = () => {
               <p className="font-bold text-gray-900 leading-tight">1er mois à 8 €, satisfait ou remboursé</p>
             </div>
             <p className="text-sm text-gray-600 mb-4">
-              Toutes les chaînes et la VOD, sans engagement. Pas convaincu dans les 48 h ? Vous êtes remboursé. Recevez l'offre par e-mail.
+              Toutes les chaînes et la VOD, sans engagement. Pas convaincu dans les 24 h ? Vous êtes remboursé. Recevez l'offre par e-mail.
             </p>
             <TrialEmailForm source="trial_popup" />
           </div>

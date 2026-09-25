@@ -6,7 +6,7 @@ import { openWhatsApp, subscribeEmail } from '../utils/tracking';
 // Email capture for the free 24h trial. The email goes to MailerLite, then the
 // visitor activates the trial on WhatsApp (where trials are delivered), with
 // their email prefilled so the conversation can be matched to the lead.
-const TrialEmailForm = ({ source, dark = false, large = false, message = "Bonjour ! Je souhaite commencer avec le 1er mois à 8 € (satisfait ou remboursé 48 h)." }) => {
+const TrialEmailForm = ({ source, dark = false, large = false, message = "Bonjour ! Je souhaite commencer avec le 1er mois à 8 € (satisfait ou remboursé 24 h)." }) => {
   const [email, setEmail] = useState('');
   const [isValid, setIsValid] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);

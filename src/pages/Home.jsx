@@ -93,7 +93,7 @@ const Home = () => {
             </p>
 
             <div className="bg-white/[0.06] backdrop-blur-md border border-white/15 rounded-2xl p-4 md:p-5 max-w-xl">
-              <p className="text-white font-semibold mb-3">🎁 1er mois à 8 €, satisfait ou remboursé 48 h</p>
+              <p className="text-white font-semibold mb-3">🎁 1er mois à 8 €, satisfait ou remboursé 24 h</p>
               <TrialEmailForm source="hero" dark large />
             </div>
 
@@ -235,7 +235,7 @@ const Home = () => {
           <div id="device-guide" role="tabpanel" aria-labelledby={`device-tab-${device}`} className="grid md:grid-cols-3 gap-8 md:gap-12 mt-9 mb-7">
             {[
               ['01', 'Préparez votre appareil', current.help],
-              ['02', 'Demandez votre accès', "Commencez par le 1er mois à 8 €, satisfait ou remboursé 48 h. Vous recevez vos identifiants par WhatsApp en quelques minutes."],
+              ['02', 'Demandez votre accès', "Commencez par le 1er mois à 8 €, satisfait ou remboursé 24 h. Vous recevez vos identifiants par WhatsApp en quelques minutes."],
               ['03', 'Installez-vous confortablement', 'Testez la lecture sur votre connexion. Besoin d\'un coup de main ? Notre assistance francophone vous accompagne.'],
             ].map(([n, title, text]) => (
               <div key={n}>
@@ -276,7 +276,7 @@ const Home = () => {
               un seul <Link to="/abonnement-iptv" className="text-lime hover:underline">abonnement IPTV</Link>, sur 4 écrans à la fois.
             </p>
             <p>
-              Commencez par le 1er mois à 8 € : s'il ne vous convient pas, vous êtes remboursé dans les 48 h. Ensuite, choisissez la durée qui vous convient
+              Commencez par le 1er mois à 8 € : s'il ne vous convient pas, vous êtes remboursé dans les 24 h. Ensuite, choisissez la durée qui vous convient
               sur la page <Link to="/tarifs" className="text-lime hover:underline">tarifs</Link> : aucune reconduction automatique,
               paiement par Binance Pay ou PayPal, activation en 5 minutes. Consultez aussi la{' '}
               <Link to="/chaines" className="text-lime hover:underline">liste des chaînes</Link> et nos{' '}

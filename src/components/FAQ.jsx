@@ -28,7 +28,7 @@ const FAQ = () => {
     },
     {
       question: "Puis-je tester avant de m'engager ?",
-      answer: "Oui : le 1er mois coûte 8 € et il est satisfait ou remboursé pendant 48 h. Si le service ne vous convient pas, écrivez-nous dans les 48 h qui suivent l'activation et vous êtes remboursé intégralement.",
+      answer: "Oui : le 1er mois coûte 8 € et il est satisfait ou remboursé pendant 24 h. Si le service ne vous convient pas, écrivez-nous dans les 24 h qui suivent l'activation et vous êtes remboursé intégralement.",
     },
     {
       question: "Que se passe-t-il à la fin de mon abonnement ?",

@@ -10,7 +10,7 @@ const SITE_URL = 'https://franceiptv.stream';
 
 const acheterFaqs = [
   { q: 'Combien coûte un abonnement IPTV ?', a: "Chez France IPTV : 8 € pour 1 mois, 19,99 € pour 3 mois, 30 € pour 6 mois et 45 € pour 12 mois, soit 3,75 € par mois. Le contenu est identique dans toutes les formules, seule la durée change." },
-  { q: "Peut-on essayer avant de s'engager ?", a: "Oui : le 1er mois coûte 8 € et il est satisfait ou remboursé pendant 48 h. Si le service ne vous convient pas, vous êtes remboursé intégralement." },
+  { q: "Peut-on essayer avant de s'engager ?", a: "Oui : le 1er mois coûte 8 € et il est satisfait ou remboursé pendant 24 h. Si le service ne vous convient pas, vous êtes remboursé intégralement." },
   { q: "Sur combien d'écrans peut-on regarder ?", a: "Toutes les formules incluent 4 écrans simultanés : Smart TV, box, téléphone, tablette ou ordinateur, avec la même qualité sur chaque écran." },
   { q: 'Comment payer un abonnement IPTV ?', a: "Le paiement se fait en une seule fois par PayPal ou Binance Pay, deux moyens de paiement traçables. Vos identifiants arrivent sur WhatsApp en quelques minutes." },
   { q: "Que se passe-t-il à la fin de l'abonnement ?", a: "Rien d'automatique : il n'y a aucune reconduction. L'abonnement s'arrête à la date prévue et vous recevez un rappel pour renouveler si vous le souhaitez." },

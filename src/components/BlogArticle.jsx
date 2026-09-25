@@ -72,7 +72,7 @@ const BlogArticle = ({ link, seoTitle, description, keywords, quickAnswer, child
           <section className="mt-14 rounded-2xl border border-brand-gold/40 bg-brand-offwhite p-7 md:p-9">
             <h2 className="text-3xl font-bold text-brand-black mb-3">Commencez France IPTV pour 8 €</h2>
             <p className="text-brand-gray mb-6">
-              30 500+ chaînes, films et séries en HD/4K, aide à l'installation sur votre appareil. 1er mois satisfait ou remboursé 48 h, sans engagement.
+              30 500+ chaînes, films et séries en HD/4K, aide à l'installation sur votre appareil. 1er mois satisfait ou remboursé 24 h, sans engagement.
             </p>
             <div className="flex flex-wrap gap-3">
               <button

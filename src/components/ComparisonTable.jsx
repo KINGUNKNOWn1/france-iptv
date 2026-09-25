@@ -10,7 +10,7 @@ const ComparisonTable = () => {
   const features = [
     { name: 'Chaînes en direct', streamholland: '30 500+', competitor1: 'Annoncé, rarement vérifiable', competitor2: 'Bouquet limité' },
     { name: 'Films & séries (VOD)', streamholland: '150 000+', competitor1: 'Variable', competitor2: 'Abonnements séparés' },
-    { name: 'Garantie satisfait ou remboursé', streamholland: '48 h sur le 1er mois', competitor1: 'Rarement', competitor2: false },
+    { name: 'Garantie satisfait ou remboursé', streamholland: '24 h sur le 1er mois', competitor1: 'Rarement', competitor2: false },
     { name: 'Sans reconduction automatique', streamholland: true, competitor1: 'Variable', competitor2: false },
     { name: 'Sans engagement de durée', streamholland: true, competitor1: true, competitor2: 'Souvent 12 à 24 mois' },
     { name: 'Support francophone', streamholland: '24/7 sur WhatsApp', competitor1: 'Souvent injoignable', competitor2: 'Horaires limités' },
@@ -137,7 +137,7 @@ const ComparisonTable = () => {
           className="text-center mt-12"
         >
           <p className="text-gray-300 mb-6 text-lg">
-            Commencez par le 1er mois à 8 €, satisfait ou remboursé 48 h : accès actif en 5 minutes.
+            Commencez par le 1er mois à 8 €, satisfait ou remboursé 24 h : accès actif en 5 minutes.
           </p>
           <a
             href="/tarifs"
@@ -158,8 +158,8 @@ const ComparisonTable = () => {
           <div className="inline-flex items-center gap-3 px-6 py-4 bg-green-600/10 border border-green-600/30 rounded-xl">
             <FaCheckCircle className="text-green-500 text-2xl" />
             <div className="text-left">
-              <p className="text-white font-bold">Satisfait ou remboursé 48 h sur le 1er mois</p>
-              <p className="text-sm text-gray-300">Pas satisfait du 1er mois ? Remboursement intégral de 8 € dans les 48 h.</p>
+              <p className="text-white font-bold">Satisfait ou remboursé 24 h sur le 1er mois</p>
+              <p className="text-sm text-gray-300">Pas satisfait du 1er mois ? Remboursement intégral de 8 € dans les 24 h.</p>
             </div>
           </div>
         </motion.div>

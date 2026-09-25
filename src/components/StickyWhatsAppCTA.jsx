@@ -66,7 +66,7 @@ const StickyWhatsAppCTA = () => {
                 </div>
 
                 <p className="text-sm text-gray-700 mb-3">
-                  👋 Bonjour ! Des questions sur notre service IPTV ? 🎁 1er mois à 8 €, satisfait ou remboursé 48 h. Écrivez-nous directement sur WhatsApp !
+                  👋 Bonjour ! Des questions sur notre service IPTV ? 🎁 1er mois à 8 €, satisfait ou remboursé 24 h. Écrivez-nous directement sur WhatsApp !
                 </p>
 
                 <button

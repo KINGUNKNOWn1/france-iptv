@@ -28,7 +28,7 @@ const IPTVHolland = () => {
         name: 'Pourquoi choisir France IPTV pour l\'IPTV en Belgique ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: "France IPTV dessert aussi la Belgique francophone. Nous proposons les chaînes belges, le paiement par Bancontact, un support francophone et des serveurs optimisés pour la Belgique. Le 1er mois à 8 € est satisfait ou remboursé pendant 48 h."
+          text: "France IPTV dessert aussi la Belgique francophone. Nous proposons les chaînes belges, le paiement par Bancontact, un support francophone et des serveurs optimisés pour la Belgique. Le 1er mois à 8 € est satisfait ou remboursé pendant 24 h."
         }
       },
       {
@@ -370,7 +370,7 @@ const IPTVHolland = () => {
                 className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6"
               >
                 <Star className="w-8 h-8 text-brand-gold mx-auto mb-2" />
-                <div className="text-3xl font-bold">48 h</div>
+                <div className="text-3xl font-bold">24 h</div>
                 <div className="text-sm text-gray-300">Satisfait ou remboursé</div>
               </motion.div>
             </div>
@@ -793,7 +793,7 @@ const IPTVHolland = () => {
             </div>
             <div className="hidden md:block w-px h-12 bg-gray-700" />
             <div>
-              <div className="text-3xl font-bold text-brand-gold">48 h</div>
+              <div className="text-3xl font-bold text-brand-gold">24 h</div>
               <div className="text-sm text-gray-400">Satisfait ou remboursé</div>
             </div>
           </div>
