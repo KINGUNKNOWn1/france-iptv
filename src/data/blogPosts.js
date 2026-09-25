@@ -4,6 +4,17 @@ export const SITE_URL = 'https://franceiptv.stream';
 
 export const blogPosts = [
   {
+    title: "Codes d'Erreur IPTV : 401, 403, 404, 458, 502, Code 7",
+    shortTitle: "Codes d'erreur IPTV",
+    excerpt: "La signification de chaque code d'erreur IPTV (401, 403, 404, 429, 458, 502, 503, code 7 Formuler, « authorization failed ») et la solution pour chacun.",
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80',
+    datePublished: '2026-09-25',
+    dateModified: '2026-09-25',
+    readTime: '8 min',
+    category: 'Dépannage',
+    link: '/blog/codes-erreur-iptv'
+  },
+  {
     title: 'TiviMate : Installation et Configuration IPTV (Guide 2026)',
     shortTitle: 'TiviMate',
     excerpt: 'Installer TiviMate sur Android TV, Fire Stick ou Freebox, ajouter Xtream Codes ou M3U, régler le guide TV et corriger les erreurs.',
