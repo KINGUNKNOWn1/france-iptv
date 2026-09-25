@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaPhone, FaPlay } from 'react-icons/fa';
+import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaPhone, FaPlay, FaFacebook, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -50,6 +50,26 @@ const Footer = () => {
             <p className="text-brand-gray leading-relaxed">
               Le service de streaming le plus fiable de France. 30 500+ chaînes, 150 000+ films et séries, et un support francophone 24/7.
             </p>
+            <div className="flex gap-3 mt-5">
+              <a
+                href="https://www.facebook.com/people/FranceIptv/61594926951010/"
+                target="_blank"
+                rel="noopener noreferrer me"
+                aria-label="France IPTV sur Facebook"
+                className="w-11 h-11 rounded-full border border-brand-gray-border flex items-center justify-center text-brand-gray hover:text-brand-gold hover:border-brand-gold transition-colors"
+              >
+                <FaFacebook size={18} />
+              </a>
+              <a
+                href="https://www.instagram.com/franceiptv.stream/"
+                target="_blank"
+                rel="noopener noreferrer me"
+                aria-label="France IPTV sur Instagram"
+                className="w-11 h-11 rounded-full border border-brand-gray-border flex items-center justify-center text-brand-gray hover:text-brand-gold hover:border-brand-gold transition-colors"
+              >
+                <FaInstagram size={18} />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
