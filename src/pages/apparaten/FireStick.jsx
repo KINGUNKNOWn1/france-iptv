@@ -1,4 +1,5 @@
 import React, { useState, Suspense } from 'react';
+import SeoGuideSection from '../../components/SeoGuideSection';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import {
@@ -322,6 +323,15 @@ const FireStick = () => {
           </motion.div>
         </div>
       </section>
+
+      <SeoGuideSection title="Quelle application IPTV installer ?">
+        <p>
+          Sur Android TV et Fire TV Stick, les deux lecteurs les plus utilisés sont <strong>TiviMate</strong>, idéal pour la TV en
+          direct avec une grille façon décodeur, et <strong>IPTV Smarters Pro</strong>, plus polyvalent. Suivez nos guides pas à pas :{' '}
+          <a href="/blog/tivimate">configurer TiviMate</a> et <a href="/blog/iptv-smarters-pro">configurer IPTV Smarters Pro</a>.
+          Avant de commencer, vérifiez que votre connexion suffit avec le <a href="/test-debit-iptv">test de débit IPTV</a>.
+        </p>
+      </SeoGuideSection>
 
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">

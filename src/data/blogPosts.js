@@ -4,6 +4,50 @@ export const SITE_URL = 'https://franceiptv.stream';
 
 export const blogPosts = [
   {
+    title: 'TiviMate : Installation et Configuration IPTV (Guide 2026)',
+    shortTitle: 'TiviMate',
+    excerpt: 'Installer TiviMate sur Android TV, Fire Stick ou Freebox, ajouter Xtream Codes ou M3U, régler le guide TV et corriger les erreurs.',
+    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=800&q=80',
+    datePublished: '2026-09-25',
+    dateModified: '2026-09-25',
+    readTime: '7 min',
+    category: 'Tutoriel',
+    link: '/blog/tivimate'
+  },
+  {
+    title: 'Code IPTV Invalide ou Expiré : Causes et Solutions',
+    shortTitle: 'Code IPTV invalide',
+    excerpt: "Code d'activation refusé, expiré ou « invalid credentials » : les 7 causes les plus fréquentes et la solution pour chacune.",
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80',
+    datePublished: '2026-09-25',
+    dateModified: '2026-09-25',
+    readTime: '6 min',
+    category: 'Dépannage',
+    link: '/blog/code-iptv-invalide'
+  },
+  {
+    title: 'IPTV et Foot : Regarder les Matchs Sans Coupure',
+    shortTitle: 'IPTV et foot',
+    excerpt: 'Débit, Ethernet, appareil, réglages et tests à faire avant un grand match pour regarder le football en IPTV sans coupure.',
+    image: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80',
+    datePublished: '2026-09-25',
+    dateModified: '2026-09-25',
+    readTime: '7 min',
+    category: 'Guide',
+    link: '/blog/iptv-foot'
+  },
+  {
+    title: "Formuler et MAG : Configurer l'IPTV sur Votre Boîtier",
+    shortTitle: 'Formuler et MAG',
+    excerpt: "Configurer l'IPTV sur un boîtier Formuler (MyTVOnline) ou MAG (portail et adresse MAC), différences et erreurs fréquentes.",
+    image: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=800&q=80',
+    datePublished: '2026-09-25',
+    dateModified: '2026-09-25',
+    readTime: '7 min',
+    category: 'Tutoriel',
+    link: '/blog/formuler-mag-iptv'
+  },
+  {
     title: 'IPTV Smarters Pro : Installation et Configuration (Guide 2026)',
     shortTitle: 'IPTV Smarters Pro',
     excerpt: "Installer et configurer IPTV Smarters Pro sur Android, iPhone, Smart TV et Fire Stick, avec Xtream Codes ou M3U, et régler les erreurs courantes.",

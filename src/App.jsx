@@ -46,6 +46,10 @@ const BesteIPTVApps2024 = lazy(() => import('./pages/blog/BesteIPTVApps2024'));
 const IsIPTVLegaalNederland = lazy(() => import('./pages/blog/IsIPTVLegaalNederland'));
 const NederlandseIPTVKanalenLijst = lazy(() => import('./pages/blog/NederlandseIPTVKanalenLijst'));
 const BlogIndex = lazy(() => import('./pages/BlogIndex'));
+const TiviMate = lazy(() => import('./pages/blog/TiviMate'));
+const CodeIPTVInvalide = lazy(() => import('./pages/blog/CodeIPTVInvalide'));
+const IPTVFoot = lazy(() => import('./pages/blog/IPTVFoot'));
+const FormulerMAG = lazy(() => import('./pages/blog/FormulerMAG'));
 const TestDebit = lazy(() => import('./pages/TestDebit'));
 const IPTVSmartersPro = lazy(() => import('./pages/blog/IPTVSmartersPro'));
 const M3UXtreamCodesMAC = lazy(() => import('./pages/blog/M3UXtreamCodesMAC'));
@@ -168,6 +172,10 @@ function AppContent() {
             {/* Blog Routes */}
             <Route path="/test-debit-iptv" element={<TestDebit />} />
             <Route path="/blog" element={<BlogIndex />} />
+            <Route path="/blog/tivimate" element={<TiviMate />} />
+            <Route path="/blog/code-iptv-invalide" element={<CodeIPTVInvalide />} />
+            <Route path="/blog/iptv-foot" element={<IPTVFoot />} />
+            <Route path="/blog/formuler-mag-iptv" element={<FormulerMAG />} />
             <Route path="/blog/iptv-smarters-pro" element={<IPTVSmartersPro />} />
             <Route path="/blog/m3u-xtream-codes-mac" element={<M3UXtreamCodesMAC />} />
             <Route path="/blog/meilleure-box-iptv" element={<MeilleureBoxIPTV />} />

@@ -99,7 +99,8 @@ const IPTVQuiCoupe = () => (
       <h2>6. Les heures de pointe</h2>
       <p>
         Le soir et pendant les grands matchs, le réseau de tout le quartier est chargé. Si les coupures n'arrivent qu'entre 20 h et
-        23 h, commencez par passer en Ethernet et baisser la qualité (HD au lieu de 4K) sur les chaînes concernées.
+        23 h, commencez par passer en Ethernet et baisser la qualité (HD au lieu de 4K) sur les chaînes concernées. Pour les soirs
+        de match, suivez notre guide <Link to="/blog/iptv-foot">IPTV et foot : regarder les matchs sans coupure</Link>.
       </p>
     </section>
 

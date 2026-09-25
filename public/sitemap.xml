@@ -236,6 +236,35 @@
 
   <!-- New blog posts -->
   <url>
+    <loc>https://franceiptv.stream/blog/tivimate</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://franceiptv.stream/blog/code-iptv-invalide</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://franceiptv.stream/blog/iptv-foot</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://franceiptv.stream/blog/formuler-mag-iptv</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+
+  <url>
     <loc>https://franceiptv.stream/blog/iptv-smarters-pro</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
@@ -309,7 +338,7 @@
 
   <url>
     <loc>https://franceiptv.stream/blog/meilleur-iptv-france</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

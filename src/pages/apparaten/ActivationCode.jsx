@@ -1,4 +1,5 @@
 import React, { useState, Suspense } from 'react';
+import SeoGuideSection from '../../components/SeoGuideSection';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import {
@@ -463,6 +464,15 @@ const ActivationCode = () => {
           </motion.div>
         </div>
       </section>
+
+      <SeoGuideSection title="Votre code IPTV est refusé ?">
+        <p>
+          Un message « code invalide », « invalid credentials » ou « account expired » ? Les 7 causes possibles (faute de frappe,
+          URL du serveur, adresse MAC, expiration…) et la solution pour chacune sont détaillées dans notre guide{' '}
+          <a href="/blog/code-iptv-invalide">code IPTV invalide ou expiré</a>. Sur boîtier dédié, voir aussi{' '}
+          <a href="/blog/formuler-mag-iptv">configurer Formuler et MAG</a>.
+        </p>
+      </SeoGuideSection>
 
       {/* FAQ */}
       <section className="py-20 bg-white">

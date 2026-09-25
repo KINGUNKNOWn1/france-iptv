@@ -263,7 +263,8 @@ const TestDebit = () => {
               </table>
               <p>
                 Exemple : deux personnes qui regardent un match en Full HD et une série en HD ont besoin d'environ 15 + 7 = 22 Mbit/s
-                stables. Nos abonnements permettent jusqu'à 4 écrans simultanés : voir les <Link to="/tarifs">tarifs</Link>.
+                stables. Nos abonnements permettent jusqu'à 4 écrans simultanés : voir les <Link to="/tarifs">tarifs</Link>. Pour le sport en
+                direct, voir aussi <Link to="/blog/iptv-foot">IPTV et foot sans coupure</Link>.
               </p>
             </section>
 
