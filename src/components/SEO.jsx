@@ -8,17 +8,46 @@ const DEFAULT_DESCRIPTION = 'France IPTV : abonnement IPTV 4K avec 30 500+ chaî
 const DEFAULT_KEYWORDS = 'acheter iptv, acheter abonnement iptv, fournisseurs iptv, iptv france, meilleure application iptv, iptv français, fournisseur iptv, iptv légal, abonnement iptv, iptv 1 mois pas cher, ip tv';
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`;
 
+// Fields Google's merchant listing / product snippet reports expect on every
+// Offer. Digital subscription: delivered by WhatsApp, free, same day; no
+// returns (matches the offer terms: free 24 h test instead of refunds).
+export const OFFER_POLICIES = {
+  hasMerchantReturnPolicy: {
+    '@type': 'MerchantReturnPolicy',
+    applicableCountry: ['FR', 'BE'],
+    returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
+  },
+  shippingDetails: {
+    '@type': 'OfferShippingDetails',
+    shippingRate: { '@type': 'MonetaryAmount', value: '0', currency: 'EUR' },
+    shippingDestination: [
+      { '@type': 'DefinedRegion', addressCountry: 'FR' },
+      { '@type': 'DefinedRegion', addressCountry: 'BE' },
+    ],
+    deliveryTime: {
+      '@type': 'ShippingDeliveryTime',
+      handlingTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 0, unitCode: 'DAY' },
+      transitTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 0, unitCode: 'DAY' },
+    },
+  },
+};
+
+const offer = (name, price) => ({
+  '@type': 'Offer', name, price, priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: `${SITE_URL}/tarifs`, ...OFFER_POLICIES,
+});
+
 const productSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
   name: 'Abonnement Premium France IPTV',
   description: '30 500+ chaînes en direct, 150 000+ titres VOD, qualité HD/UHD/4K, support francophone 24/7',
+  image: DEFAULT_IMAGE,
   brand: { '@type': 'Brand', name: 'France IPTV' },
   offers: [
-    { '@type': 'Offer', name: 'Abonnement IPTV 1 Mois', price: '8', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: `${SITE_URL}/tarifs` },
-    { '@type': 'Offer', name: 'Abonnement IPTV 3 Mois', price: '19.99', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: `${SITE_URL}/tarifs` },
-    { '@type': 'Offer', name: 'Abonnement IPTV 6 Mois', price: '30', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: `${SITE_URL}/tarifs` },
-    { '@type': 'Offer', name: 'Abonnement IPTV 12 Mois - Meilleure Offre', price: '45', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: `${SITE_URL}/tarifs` }
+    offer('Abonnement IPTV 1 Mois', '8'),
+    offer('Abonnement IPTV 3 Mois', '19.99'),
+    offer('Abonnement IPTV 6 Mois', '30'),
+    offer('Abonnement IPTV 12 Mois - Meilleure Offre', '45')
   ]
 };
 

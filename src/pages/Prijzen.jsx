@@ -3,7 +3,7 @@ import SeoGuideSection from '../components/SeoGuideSection';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import SEO from '../components/SEO';
+import SEO, { OFFER_POLICIES } from '../components/SEO';
 import Pricing from '../components/Pricing';
 import ComparisonTable from '../components/ComparisonTable';
 import RelatedGuides from '../components/RelatedGuides';
@@ -18,7 +18,7 @@ const tarifsFaq = [
   { q: "Sur combien d'appareils puis-je regarder ?", a: "Vous pouvez regarder sur 4 appareils simultanément avec tous les forfaits : Smart TV, téléphone, tablette ou ordinateur, avec la même qualité sur chaque écran." }
 ];
 
-const offer = (name, price) => ({ '@type': 'Offer', name, price, priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: `${SITE_URL}/tarifs` });
+const offer = (name, price) => ({ '@type': 'Offer', name, price, priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: `${SITE_URL}/tarifs`, ...OFFER_POLICIES });
 
 const tarifsSchemas = [
   {
@@ -26,6 +26,7 @@ const tarifsSchemas = [
     '@type': 'Product',
     name: 'Abonnement IPTV France IPTV',
     description: "Abonnement IPTV : 30 500+ chaînes, films et séries à la demande, HD/4K, support francophone. Sans reconduction automatique.",
+    image: `${SITE_URL}/og-image.png`,
     brand: { '@type': 'Brand', name: 'France IPTV' },
     offers: {
       '@type': 'AggregateOffer',
