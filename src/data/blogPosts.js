@@ -4,6 +4,28 @@ export const SITE_URL = 'https://franceiptv.stream';
 
 export const blogPosts = [
   {
+    title: "IPTV C'est Quoi ? Définition, Fonctionnement et Lexique (2026)",
+    shortTitle: "IPTV c'est quoi",
+    excerpt: "L'IPTV expliquée simplement : comment ça marche, ce qu'il faut pour regarder, combien ça coûte, et le sens de M3U, EPG, Xtream Codes, adresse MAC et panel.",
+    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=800&q=80',
+    datePublished: '2026-09-28',
+    dateModified: '2026-09-28',
+    readTime: '8 min',
+    category: 'Guide',
+    link: '/blog/iptv-c-est-quoi'
+  },
+  {
+    title: 'Test IPTV Gratuit 24 h : Comment Tester Avant d’Acheter',
+    shortTitle: 'Test IPTV gratuit',
+    excerpt: "Comment demander un test IPTV gratuit de 24 h, quoi vérifier pendant le test (chaînes, image, appareil, connexion) et les pièges des « tests » qui demandent de payer.",
+    image: 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&q=80',
+    datePublished: '2026-09-28',
+    dateModified: '2026-09-28',
+    readTime: '6 min',
+    category: 'Guide',
+    link: '/blog/test-iptv-gratuit'
+  },
+  {
     title: "Codes d'Erreur IPTV : 401, 403, 404, 458, 502, Code 7",
     shortTitle: "Codes d'erreur IPTV",
     excerpt: "La signification de chaque code d'erreur IPTV (401, 403, 404, 429, 458, 502, 503, code 7 Formuler, « authorization failed ») et la solution pour chacun.",

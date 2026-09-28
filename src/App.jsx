@@ -41,6 +41,7 @@ const IphoneIpad = lazy(() => import('./pages/apparaten/IphoneIpad'));
 const BboxBouygues = lazy(() => import('./pages/apparaten/BboxBouygues'));
 const LGTV = lazy(() => import('./pages/apparaten/LGTV'));
 const AppleTV = lazy(() => import('./pages/apparaten/AppleTV'));
+const PCMac = lazy(() => import('./pages/apparaten/PCMac'));
 
 // Lazy load blog pages
 const BesteIPTVApps2024 = lazy(() => import('./pages/blog/BesteIPTVApps2024'));
@@ -59,6 +60,8 @@ const IPTVQuiCoupe = lazy(() => import('./pages/blog/IPTVQuiCoupe'));
 const PrixIPTVFrance = lazy(() => import('./pages/blog/PrixIPTVFrance'));
 const MeilleurIPTVFrance = lazy(() => import('./pages/blog/MeilleurIPTVFrance'));
 const IPTVNeFonctionnePlus = lazy(() => import('./pages/blog/IPTVNeFonctionnePlus'));
+const IPTVCestQuoi = lazy(() => import('./pages/blog/IPTVCestQuoi'));
+const TestIPTVGratuit = lazy(() => import('./pages/blog/TestIPTVGratuit'));
 
 // Lazy load legal pages
 const Privacybeleid = lazy(() => import('./pages/Privacybeleid'));
@@ -169,6 +172,7 @@ function AppContent() {
             <Route path="/appareils/bbox-bouygues" element={<BboxBouygues />} />
             <Route path="/appareils/lg-tv" element={<LGTV />} />
             <Route path="/appareils/apple-tv" element={<AppleTV />} />
+            <Route path="/appareils/pc-mac" element={<PCMac />} />
             <Route path="/faq" element={<VeelgesteldeVragen />} />
             <Route path="/a-propos" element={<OverOns />} />
             {/* Blog Routes */}
@@ -188,6 +192,8 @@ function AppContent() {
             <Route path="/blog/prix-iptv-france" element={<PrixIPTVFrance />} />
             <Route path="/blog/meilleur-iptv-france" element={<MeilleurIPTVFrance />} />
             <Route path="/blog/iptv-ne-fonctionne-plus" element={<IPTVNeFonctionnePlus />} />
+            <Route path="/blog/iptv-c-est-quoi" element={<IPTVCestQuoi />} />
+            <Route path="/blog/test-iptv-gratuit" element={<TestIPTVGratuit />} />
             {/* Legal Routes */}
             <Route path="/politique-de-confidentialite" element={<Privacybeleid />} />
             <Route path="/cgv" element={<AlgemeneVoorwaarden />} />

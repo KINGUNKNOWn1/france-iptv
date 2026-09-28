@@ -13,6 +13,7 @@ const TITLES = {
   '/appareils/chromecast-google-tv': 'IPTV sur Google TV et Chromecast',
   '/appareils/iphone-ipad': 'IPTV sur iPhone et iPad',
   '/appareils/apple-tv': 'IPTV sur Apple TV',
+  '/appareils/pc-mac': 'IPTV sur PC et Mac (VLC, Kodi)',
   '/appareils/freebox': 'IPTV sur Freebox',
   '/appareils/orange': 'IPTV sur box Orange',
   '/appareils/sfr': 'IPTV bloquée par SFR : que faire',
@@ -33,6 +34,8 @@ const TITLES = {
   '/blog/prix-iptv-france': "Prix d'un abonnement IPTV en France",
   '/blog/meilleur-iptv-france': 'Meilleur IPTV en France : comparatif',
   '/blog/iptv-ne-fonctionne-plus': 'IPTV ne fonctionne plus : que faire',
+  '/blog/iptv-c-est-quoi': "IPTV c'est quoi : définition et lexique",
+  '/blog/test-iptv-gratuit': 'Test IPTV gratuit 24 h',
 };
 
 const RELATED = {
@@ -43,6 +46,7 @@ const RELATED = {
   '/appareils/chromecast-google-tv': ['/appareils/android-tv', '/appareils/iphone-ipad', '/blog/meilleures-applications-iptv', '/blog/iptv-qui-coupe'],
   '/appareils/iphone-ipad': ['/appareils/apple-tv', '/blog/iptv-smarters-pro', '/blog/meilleures-applications-iptv', '/blog/m3u-xtream-codes-mac'],
   '/appareils/apple-tv': ['/appareils/iphone-ipad', '/blog/iptv-smarters-pro', '/blog/codes-erreur-iptv', '/appareils/fire-stick'],
+  '/appareils/pc-mac': ['/blog/m3u-xtream-codes-mac', '/blog/meilleures-applications-iptv', '/blog/codes-erreur-iptv', '/appareils/apple-tv'],
   '/appareils/freebox': ['/appareils/orange', '/appareils/bbox-bouygues', '/appareils/sfr', '/blog/iptv-legal-en-france'],
   '/appareils/orange': ['/appareils/freebox', '/appareils/sfr', '/appareils/bbox-bouygues', '/blog/iptv-ne-fonctionne-plus'],
   '/appareils/sfr': ['/appareils/orange', '/appareils/freebox', '/blog/iptv-legal-en-france', '/blog/iptv-ne-fonctionne-plus'],
@@ -63,6 +67,8 @@ const RELATED = {
   '/blog/prix-iptv-france': ['/blog/meilleur-iptv-france', '/blog/iptv-legal-en-france', '/blog/iptv-foot', '/blog/meilleure-box-iptv'],
   '/blog/meilleur-iptv-france': ['/blog/prix-iptv-france', '/blog/iptv-legal-en-france', '/blog/iptv-foot', '/blog/meilleures-applications-iptv'],
   '/blog/iptv-ne-fonctionne-plus': ['/blog/codes-erreur-iptv', '/appareils/erreur-lecture-iptv', '/blog/iptv-qui-coupe', '/appareils/orange'],
+  '/blog/iptv-c-est-quoi': ['/blog/test-iptv-gratuit', '/blog/meilleures-applications-iptv', '/blog/meilleure-box-iptv', '/appareils/activer-code-iptv'],
+  '/blog/test-iptv-gratuit': ['/blog/iptv-c-est-quoi', '/blog/iptv-qui-coupe', '/appareils/fire-stick', '/appareils/samsung-tv'],
 };
 
 export const GUIDES_LIES = RELATED;
