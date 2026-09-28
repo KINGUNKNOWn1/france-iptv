@@ -115,6 +115,50 @@ const IPTVSmartersPro = () => (
         <Link to="/blog/iptv-qui-coupe">IPTV qui coupe ou qui freeze : 8 solutions</Link>, et consultez aussi{' '}
         <Link to="/appareils/erreur-lecture-iptv">erreur de lecture IPTV</Link>.
       </p>
+      <h3>Écran noir (avec ou sans son)</h3>
+      <p>
+        Dans Settings → Player Selection, changez de lecteur (lecteur intégré, puis VLC) et relancez la chaîne. Si une seule chaîne reste
+        noire, c'est sa source : essayez-en une autre. Si toutes sont noires, vérifiez que votre abonnement est actif.
+      </p>
+      <h3>Problème de son</h3>
+      <p>
+        Pas de son ou son décalé : changez de lecteur vidéo dans les réglages, puis vérifiez la sortie audio de l'appareil (format
+        « Automatique » ou « PCM » sur les TV et box). Certaines chaînes diffusent en AC3, que tous les lecteurs ne décodent pas.
+      </p>
+    </section>
+
+    <section>
+      <h2>IPTV Smarters ne fonctionne plus : que faire ?</h2>
+      <ol>
+        <li>Vérifiez la date de fin de votre abonnement : c'est la cause la plus fréquente.</li>
+        <li>Fermez complètement l'application, puis rouvrez-la.</li>
+        <li>Mettez à jour l'application et le système de votre appareil.</li>
+        <li>Supprimez votre profil utilisateur dans l'application et ajoutez à nouveau vos accès.</li>
+        <li>Testez vos accès sur un autre appareil : si ça marche ailleurs, le problème vient de l'application, pas de l'abonnement.</li>
+      </ol>
+      <p>
+        Un code d'erreur s'affiche ? Chaque code est expliqué dans notre guide des <Link to="/blog/codes-erreur-iptv">codes d'erreur IPTV</Link>.
+        Sur Samsung, voir aussi <Link to="/appareils/samsung-tv">IPTV Smarters ne fonctionne plus sur TV Samsung</Link>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Questions pratiques sur IPTV Smarters Pro</h2>
+      <h3>Comment changer la langue ?</h3>
+      <p>
+        L'application suit en général la langue de votre appareil. Selon la version, une option de langue existe aussi dans Settings. Si
+        l'interface reste en anglais, changez la langue du système de votre TV ou de votre téléphone, puis relancez l'application.
+      </p>
+      <h3>Comment enregistrer une émission ?</h3>
+      <p>
+        Selon la version et l'appareil, un appui long sur une chaîne dans Live TV propose « Record ». L'enregistrement demande un espace de
+        stockage libre sur l'appareil (ou une clé USB sur les box Android). Sur Smart TV, cette fonction est souvent indisponible.
+      </p>
+      <h3>Comment ça marche, en résumé ?</h3>
+      <p>
+        IPTV Smarters est un lecteur : il affiche les chaînes de votre abonnement, rien de plus. Pour comprendre les notions de base (M3U, EPG,
+        Xtream Codes), lisez <Link to="/blog/iptv-c-est-quoi">IPTV c'est quoi</Link>.
+      </p>
     </section>
   </BlogArticle>
 );

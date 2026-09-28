@@ -107,6 +107,41 @@ const CodeIPTVInvalide = () => (
         pas, voir <Link to="/appareils/erreur-lecture-iptv">erreur de lecture IPTV</Link>.
       </p>
     </section>
+
+    <section>
+      <h2>Code IPTV : comment ça marche ?</h2>
+      <p>
+        Le « code IPTV » désigne les accès de votre abonnement. Selon l'application, il prend l'une de ces formes :
+      </p>
+      <ul>
+        <li><strong>Identifiants Xtream Codes</strong> : nom d'utilisateur, mot de passe et adresse du serveur. C'est le format le plus courant.</li>
+        <li><strong>Lien M3U</strong> : une seule adresse qui contient la liste des chaînes.</li>
+        <li><strong>Activation par adresse MAC</strong> : vous transmettez l'adresse de votre appareil, le fournisseur l'active.</li>
+      </ul>
+      <p>
+        Vous l'entrez une seule fois dans l'application ; il reste valable jusqu'à la date de fin de votre abonnement. Les bases sont expliquées
+        dans <Link to="/blog/iptv-c-est-quoi">IPTV c'est quoi</Link>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Code IPTV pour TiviMate</h2>
+      <p>
+        TiviMate accepte les identifiants Xtream Codes (recommandé) et les liens M3U. Ajoutez une playlist, choisissez « Xtream Codes »,
+        puis saisissez l'adresse du serveur, le nom d'utilisateur et le mot de passe. Le pas-à-pas complet : <Link to="/blog/tivimate">configurer TiviMate</Link>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Mon code IPTV ne marche plus : pourquoi ?</h2>
+      <p>
+        Un code qui fonctionnait et qui s'arrête d'un coup a presque toujours l'une de ces trois causes : <strong>l'abonnement est arrivé
+        à échéance</strong>, <strong>l'adresse du serveur a changé</strong> (le fournisseur vous en communique une nouvelle), ou{' '}
+        <strong>une mise à jour de l'application a effacé la configuration</strong>. Vérifiez la date de fin, puis ajoutez de nouveau vos
+        accès. Si tout votre compte IPTV ne fonctionne plus, sur tous vos appareils, voir{' '}
+        <Link to="/blog/iptv-ne-fonctionne-plus">IPTV ne fonctionne plus</Link>.
+      </p>
+    </section>
   </BlogArticle>
 );
 

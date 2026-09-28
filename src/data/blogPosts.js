@@ -42,7 +42,7 @@ export const blogPosts = [
     excerpt: 'Installer TiviMate sur Android TV, Fire Stick ou Freebox, ajouter Xtream Codes ou M3U, régler le guide TV et corriger les erreurs.',
     image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=800&q=80',
     datePublished: '2026-09-25',
-    dateModified: '2026-09-25',
+    dateModified: '2026-09-28',
     readTime: '7 min',
     category: 'Tutoriel',
     link: '/blog/tivimate'
@@ -53,7 +53,7 @@ export const blogPosts = [
     excerpt: "Code d'activation refusé, expiré ou « invalid credentials » : les 7 causes les plus fréquentes et la solution pour chacune.",
     image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80',
     datePublished: '2026-09-25',
-    dateModified: '2026-09-25',
+    dateModified: '2026-09-28',
     readTime: '6 min',
     category: 'Dépannage',
     link: '/blog/code-iptv-invalide'
@@ -64,7 +64,7 @@ export const blogPosts = [
     excerpt: 'Débit, Ethernet, appareil, réglages et tests à faire avant un grand match pour regarder le football en IPTV sans coupure.',
     image: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80',
     datePublished: '2026-09-25',
-    dateModified: '2026-09-25',
+    dateModified: '2026-09-28',
     readTime: '7 min',
     category: 'Guide',
     link: '/blog/iptv-foot'
@@ -86,7 +86,7 @@ export const blogPosts = [
     excerpt: "Installer et configurer IPTV Smarters Pro sur Android, iPhone, Smart TV et Fire Stick, avec Xtream Codes ou M3U, et régler les erreurs courantes.",
     image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=800&q=80',
     datePublished: '2026-09-23',
-    dateModified: '2026-09-23',
+    dateModified: '2026-09-28',
     readTime: '7 min',
     category: 'Tutoriel',
     link: '/blog/iptv-smarters-pro'
@@ -119,7 +119,7 @@ export const blogPosts = [
     excerpt: 'Image figée, chargement en boucle, coupures pendant les matchs : les 8 causes les plus fréquentes et comment les régler.',
     image: 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&q=80',
     datePublished: '2026-09-23',
-    dateModified: '2026-09-23',
+    dateModified: '2026-09-28',
     readTime: '7 min',
     category: 'Dépannage',
     link: '/blog/iptv-qui-coupe'

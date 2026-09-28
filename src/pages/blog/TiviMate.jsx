@@ -112,6 +112,37 @@ const TiviMate = () => (
         <Link to="/blog/iptv-qui-coupe">IPTV qui coupe : 8 solutions</Link>.
       </p>
     </section>
+
+    <section>
+      <h2>TiviMate ne fonctionne plus : que faire ?</h2>
+      <ol>
+        <li>Vérifiez que votre abonnement est toujours actif.</li>
+        <li>Mettez à jour la playlist : Paramètres → Playlists → votre playlist → Mettre à jour la playlist.</li>
+        <li>Forcez l'arrêt de TiviMate et videz son cache dans les paramètres de la box ou du Fire Stick, puis relancez.</li>
+        <li>Mettez TiviMate à jour depuis le magasin d'applications.</li>
+        <li>Toujours rien ? Supprimez la playlist et ajoutez-la de nouveau avec vos accès Xtream Codes.</li>
+      </ol>
+      <p>
+        Si un code s'affiche (401, 403, 458…), sa signification est dans notre guide des{' '}
+        <Link to="/blog/codes-erreur-iptv">codes d'erreur IPTV</Link>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Quelle alternative à TiviMate ?</h2>
+      <p>
+        Sur un appareil qui ne fait pas tourner Android (Samsung, LG, iPhone, <Link to="/appareils/apple-tv">Apple TV</Link>), TiviMate
+        n'est pas disponible. Les alternatives les plus courantes :
+      </p>
+      <ul>
+        <li><strong><Link to="/blog/iptv-smarters-pro">IPTV Smarters Pro</Link></strong> : disponible sur presque tous les écrans, interface simple.</li>
+        <li><strong>iPlayTV</strong> : sur iPhone, iPad et Apple TV.</li>
+        <li><strong>Kodi</strong> avec PVR IPTV Simple Client : gratuit, sur <Link to="/appareils/pc-mac">PC et Mac</Link> comme sur Android.</li>
+      </ul>
+      <p>
+        Le comparatif complet est dans notre article sur les <Link to="/blog/meilleures-applications-iptv">meilleures applications IPTV</Link>.
+      </p>
+    </section>
   </BlogArticle>
 );
 

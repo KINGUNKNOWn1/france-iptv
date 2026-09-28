@@ -26,7 +26,7 @@ const IPTVFoot = () => (
     link="/blog/iptv-foot"
     seoTitle="IPTV et Foot : Regarder les Matchs Sans Coupure (Guide 2026)"
     description="Regarder le foot en IPTV sans coupure : débit nécessaire, Ethernet ou Wi-Fi, réglages de l'application, appareil conseillé et tests à faire avant un match."
-    keywords="iptv foot, iptv football, iptv match sans coupure, iptv sport, regarder foot iptv, iptv coupe pendant match, iptv ligue 1"
+    keywords="iptv foot, iptv football, iptv match sans coupure, iptv sport, regarder foot iptv, iptv coupe pendant match, iptv ligue 1, iptv champions league, iptv formule 1, iptv qui ne coupe pas pendant les matchs"
     quickAnswer={
       <p>
         Pour regarder le foot en IPTV sans coupure : <strong>câble Ethernet</strong> plutôt que Wi-Fi, au moins{' '}
@@ -117,6 +117,20 @@ const IPTVFoot = () => (
       <p>
         Une coupure malgré tout ? Suivez le guide <Link to="/blog/iptv-qui-coupe">IPTV qui coupe ou qui freeze</Link>.
       </p>
+    </section>
+
+    <section>
+      <h2>Ligue 1, Ligue des Champions, Formule 1 : vérifiez vos chaînes pendant le test</h2>
+      <p>
+        Les droits de diffusion changent d'une saison à l'autre, et ce ne sont pas toujours les mêmes chaînes qui diffusent la Ligue 1, la
+        Ligue des Champions ou la Formule 1. Avant de payer, pendant votre <Link to="/blog/test-iptv-gratuit">test gratuit de 24 h</Link> :
+      </p>
+      <ul>
+        <li>cherchez les chaînes sport qui vous intéressent dans la <Link to="/chaines">liste des chaînes</Link> ;</li>
+        <li>regardez-les un soir de match, à l'heure où tout le monde est connecté ;</li>
+        <li>vérifiez le guide des programmes pour repérer le prochain match ;</li>
+        <li>une chaîne précise vous manque ? Demandez-nous sur WhatsApp avant de commander.</li>
+      </ul>
     </section>
   </BlogArticle>
 );
