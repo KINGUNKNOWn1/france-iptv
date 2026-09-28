@@ -24,8 +24,11 @@ const TrialEmailForm = ({ source, dark = false, large = false, message = "Bonjou
     setSubmitted(true);
   };
 
+  // Device and internet provider are asked up front so the test can be set up
+  // for the right app, and so connections where the service is known not to
+  // work are spotted before a test is spent on them.
   const activateOnWhatsApp = () =>
-    openWhatsApp(`${message} Mon e-mail : ${email}`);
+    openWhatsApp(`${message}\nMon e-mail : ${email}\nMon appareil (TV, Fire Stick, box…) : \nMon fournisseur internet : `);
 
   const text = dark ? 'text-gray-300' : 'text-gray-600';
   const size = large ? 'py-3.5 text-base' : 'py-2.5 text-sm';

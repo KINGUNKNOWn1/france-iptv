@@ -173,6 +173,14 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Apple TV Device Page -->
+  <url>
+    <loc>https://franceiptv.stream/appareils/apple-tv</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- FAQ -->
   <url>
     <loc>https://franceiptv.stream/faq</loc>

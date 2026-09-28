@@ -40,6 +40,7 @@ const AndroidTV = lazy(() => import('./pages/apparaten/AndroidTV'));
 const IphoneIpad = lazy(() => import('./pages/apparaten/IphoneIpad'));
 const BboxBouygues = lazy(() => import('./pages/apparaten/BboxBouygues'));
 const LGTV = lazy(() => import('./pages/apparaten/LGTV'));
+const AppleTV = lazy(() => import('./pages/apparaten/AppleTV'));
 
 // Lazy load blog pages
 const BesteIPTVApps2024 = lazy(() => import('./pages/blog/BesteIPTVApps2024'));
@@ -167,6 +168,7 @@ function AppContent() {
             <Route path="/appareils/iphone-ipad" element={<IphoneIpad />} />
             <Route path="/appareils/bbox-bouygues" element={<BboxBouygues />} />
             <Route path="/appareils/lg-tv" element={<LGTV />} />
+            <Route path="/appareils/apple-tv" element={<AppleTV />} />
             <Route path="/faq" element={<VeelgesteldeVragen />} />
             <Route path="/a-propos" element={<OverOns />} />
             {/* Blog Routes */}

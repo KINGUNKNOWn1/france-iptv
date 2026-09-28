@@ -295,7 +295,8 @@ const Apparaten = () => {
                 { name: 'Chromecast / Google TV', desc: "Installation en quelques minutes", link: '/appareils/chromecast-google-tv' },
                 { name: 'Samsung Smart TV', desc: 'Tizen OS, tous modèles', link: '/appareils/samsung-tv' },
                 { name: 'LG Smart TV', desc: 'WebOS, OLED, NanoCell', link: '/appareils/lg-tv' },
-                { name: 'iPhone et iPad', desc: 'iOS 14 et supérieur', link: '/appareils/iphone-ipad' }
+                { name: 'iPhone et iPad', desc: 'iOS 14 et supérieur', link: '/appareils/iphone-ipad' },
+                { name: 'Apple TV', desc: 'Apple TV 4K et HD (tvOS)', link: '/appareils/apple-tv' }
               ].map((box, index) => (
                 <motion.div
                   key={index}
