@@ -801,6 +801,37 @@ const SamsungTV = () => {
         </p>
         <h3>4. Redémarrage complet</h3>
         <p>Débranchez la TV 1 minute (un simple arrêt à la télécommande ne vide pas la mémoire), puis relancez.</p>
+
+        <h3>IPTV Smarters sur TV Samsung : « Authorization failed »</h3>
+        <p>
+          Ce message signifie que le serveur refuse vos accès. Dans l'ordre : vérifiez les majuscules et les espaces en fin de ligne,
+          l'URL du serveur (avec <em>http://</em> et le numéro de port), puis la date de fin de votre abonnement ou de votre test. Si tout
+          est correct, envoyez-nous une capture sur WhatsApp. Tous les messages d'erreur sont expliqués dans notre guide des{' '}
+          <a href="/blog/codes-erreur-iptv">codes d'erreur IPTV</a>.
+        </p>
+
+        <h3>Smart IPTV sur Samsung : écran noir</h3>
+        <p>
+          Un écran noir avec ou sans son vient le plus souvent d'un format de flux mal géré par le lecteur de la TV. Dans les réglages de
+          l'application, changez le lecteur vidéo ou le format de flux (HLS au lieu de TS), puis relancez la chaîne. Si une seule chaîne
+          est concernée, c'est sa source : essayez-en une autre. Si rien ne s'affiche nulle part, vérifiez que votre playlist est toujours
+          active.
+        </p>
+
+        <h3>IPTV sur Samsung Tizen : quelle application ?</h3>
+        <p>
+          Les Samsung récentes fonctionnent sous <strong>Tizen</strong>, qui a son propre magasin d'applications (Smart Hub). Le choix de
+          lecteurs IPTV y est plus réduit que sur Android, et il varie selon l'année du téléviseur : IPTV Smarters, Smart IPTV ou d'autres
+          lecteurs selon les modèles. <strong>TiviMate n'existe pas sur Samsung</strong> : c'est une application Android. Pour l'utiliser,
+          branchez un <a href="/appareils/fire-stick">Fire TV Stick</a> ou une <a href="/appareils/android-tv">box Android TV</a> en HDMI.
+        </p>
+
+        <h3>Problème IPTV sur TV Samsung après une mise à jour</h3>
+        <p>
+          Une mise à jour du téléviseur peut rendre une application incompatible pendant quelques jours, le temps que son éditeur la mette
+          à jour. En attendant, testez vos accès sur un téléphone ou un <a href="/appareils/pc-mac">ordinateur</a> : si ça fonctionne,
+          le problème vient bien de l'application sur la TV, pas de votre abonnement.
+        </p>
       </SeoGuideSection>
 
       {/* FAQ Section */}

@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 
 import LightweightBackground from "../../components/LightweightBackground";
+import SeoGuideSection from '../../components/SeoGuideSection';
 
 const IphoneIpad = () => {
   const [openFaq, setOpenFaq] = useState(null);
@@ -286,6 +287,31 @@ const IphoneIpad = () => {
           </motion.div>
         </div>
       </section>
+
+      <SeoGuideSection title="IPTV sur iPhone : applications et solutions">
+        <h3>Quelle application IPTV sur iPhone ?</h3>
+        <p>
+          Sur l'App Store, <strong>IPTV Smarters</strong>, <strong>iPlayTV</strong> et <strong>GSE Smart IPTV</strong> acceptent les connexions
+          Xtream Codes et M3U. La disponibilité et le prix changent selon les pays : demandez-nous avant d'acheter une application payante.
+          La même application fonctionne souvent sur iPad et <a href="/appareils/apple-tv">Apple TV</a>.
+        </p>
+        <h3>IPTV Smarters sur iPhone</h3>
+        <p>
+          Choisissez « Xtream Codes », puis saisissez le nom d'utilisateur, le mot de passe et l'URL du serveur exactement comme reçus. Le
+          guide complet : <a href="/blog/iptv-smarters-pro">configurer IPTV Smarters Pro</a>.
+        </p>
+        <h3>IPTV sur iPhone avec VLC</h3>
+        <p>
+          VLC (gratuit sur l'App Store) lit aussi un lien M3U : ouvrez VLC, onglet Réseau → Ouvrir un flux réseau, collez le lien et lancez.
+          Pratique pour tester, mais sans guide des programmes. Voir aussi notre guide <a href="/appareils/pc-mac">IPTV sur PC et Mac avec VLC</a>.
+        </p>
+        <h3>L'IPTV ne fonctionne plus sur iPhone</h3>
+        <p>
+          Fermez l'application (balayez-la vers le haut dans le sélecteur d'applications), vérifiez que votre abonnement est actif, puis
+          mettez à jour iOS et l'application. En 4G ou 5G, vérifiez que l'application a le droit d'utiliser les données cellulaires
+          (Réglages → nom de l'application). Si un code d'erreur s'affiche, consultez les <a href="/blog/codes-erreur-iptv">codes d'erreur IPTV</a>.
+        </p>
+      </SeoGuideSection>
 
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">

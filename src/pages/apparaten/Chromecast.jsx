@@ -548,6 +548,27 @@ const Chromecast = () => {
           seulement à diffuser depuis votre téléphone. Pour une utilisation confortable au quotidien, préférez un modèle avec
           Google TV. Plus de détails dans notre article <a href="/blog/iptv-smarters-pro">IPTV Smarters Pro</a>.
         </p>
+
+        <h3>Caster l'IPTV sur Chromecast depuis un téléphone</h3>
+        <p>
+          Avec un Chromecast classique, lancez la chaîne dans un lecteur IPTV qui gère le cast (bouton en forme d'écran avec des ondes),
+          touchez ce bouton et choisissez votre Chromecast. Le téléphone et le Chromecast doivent être sur le <strong>même réseau Wi-Fi</strong>.
+          Si le bouton n'apparaît pas, votre lecteur ne gère pas le cast : essayez-en un autre.
+        </p>
+
+        <h3>IPTV sur Chromecast depuis un iPhone</h3>
+        <p>
+          Sur iPhone, tous les lecteurs IPTV ne gèrent pas le cast vers Chromecast : vérifiez que le bouton de cast est présent dans
+          l'application avant de l'acheter. Plus simple : un Chromecast avec Google TV, où l'application s'installe directement sur la TV.
+          Voir aussi notre guide <a href="/appareils/iphone-ipad">IPTV sur iPhone et iPad</a>.
+        </p>
+
+        <h3>IPTV sur Chromecast : pas de son</h3>
+        <p>
+          L'image passe mais pas le son ? Le format audio de la chaîne (souvent AC3 ou E-AC3) n'est pas lu par le lecteur. Dans les réglages
+          de l'application, changez le lecteur vidéo ou activez le décodage audio logiciel. Sur le téléviseur, vérifiez aussi la sortie audio
+          (Paramètres → Son → Format audio : « Automatique » ou « PCM »).
+        </p>
       </SeoGuideSection>
 
       {/* FAQ */}

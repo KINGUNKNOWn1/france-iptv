@@ -331,6 +331,37 @@ const FireStick = () => {
           <a href="/blog/tivimate">configurer TiviMate</a> et <a href="/blog/iptv-smarters-pro">configurer IPTV Smarters Pro</a>.
           Avant de commencer, vérifiez que votre connexion suffit avec le <a href="/test-debit-iptv">test de débit IPTV</a>.
         </p>
+
+        <h3>Installer l'IPTV sur Fire Stick : les 3 méthodes</h3>
+        <ol>
+          <li><strong>Depuis l'Appstore Amazon</strong> : cherchez le nom du lecteur (IPTV Smarters, par exemple). C'est la méthode la plus simple quand l'application y figure.</li>
+          <li><strong>Avec l'application Downloader</strong> : si le lecteur n'est pas dans l'Appstore, installez « Downloader » depuis l'Appstore, puis téléchargez le lecteur depuis son site officiel. Activez au préalable « Applications de sources inconnues » pour Downloader (Paramètres → Ma Fire TV → Options pour les développeurs).</li>
+          <li><strong>Activation par adresse MAC</strong> : certains lecteurs affichent une adresse MAC à nous transmettre. Voir <a href="/blog/m3u-xtream-codes-mac">M3U, Xtream Codes ou MAC</a>.</li>
+        </ol>
+        <p>N'installez jamais une application « modifiée » ou trouvée sur un site inconnu : c'est la première source de virus et de pannes sur Fire Stick.</p>
+
+        <h3>Meilleure appli IPTV pour Fire Stick</h3>
+        <p>
+          Pour la TV en direct au quotidien, <strong>TiviMate</strong> offre la grille de programmes la plus proche d'un décodeur. Pour une
+          interface simple qui regroupe chaînes, films et séries, <strong>IPTV Smarters Pro</strong> est le plus facile à prendre en main. Le
+          comparatif complet est dans notre article sur les <a href="/blog/meilleures-applications-iptv">meilleures applications IPTV</a>.
+        </p>
+
+        <h3>Fire Stick 4K Max, 4K ou Lite : lequel pour l'IPTV ?</h3>
+        <p>
+          Le <strong>Fire TV Stick 4K Max</strong> est le plus fluide, grâce à plus de mémoire et au Wi-Fi 6 : c'est le meilleur choix pour
+          l'IPTV, surtout pour le sport. Le <strong>4K</strong> convient très bien à un usage normal. Le <strong>Lite</strong> et le modèle
+          « Select » fonctionnent, mais peuvent ralentir avec les grandes listes de chaînes. Plus de détails : <a href="/blog/meilleure-box-iptv">quelle box IPTV choisir</a>.
+        </p>
+
+        <h3>L'IPTV ne fonctionne plus sur Fire Stick : que faire ?</h3>
+        <ol>
+          <li>Vérifiez que votre abonnement ou votre test est toujours actif.</li>
+          <li>Fermez l'application de force : Paramètres → Applications → Gérer les applications → votre lecteur → Forcer l'arrêt, puis Vider le cache.</li>
+          <li>Redémarrez le Fire Stick en le débranchant 30 secondes.</li>
+          <li>Mettez à jour le lecteur et le Fire Stick (Paramètres → Ma Fire TV → À propos → Rechercher des mises à jour).</li>
+          <li>Si seules certaines chaînes coupent, suivez <a href="/blog/iptv-qui-coupe">IPTV qui coupe : 8 solutions</a> ; si un code d'erreur s'affiche, voir les <a href="/blog/codes-erreur-iptv">codes d'erreur IPTV</a>.</li>
+        </ol>
       </SeoGuideSection>
 
       <section className="py-20 bg-white">

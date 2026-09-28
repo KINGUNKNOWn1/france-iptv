@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 
 import LightweightBackground from "../../components/LightweightBackground";
+import SeoGuideSection from '../../components/SeoGuideSection';
 
 const LGTV = () => {
   const [openFaq, setOpenFaq] = useState(null);
@@ -322,6 +323,35 @@ const LGTV = () => {
           </motion.div>
         </div>
       </section>
+
+      <SeoGuideSection title="IPTV sur LG TV (webOS) : quelle application ?">
+        <p>
+          Les téléviseurs LG récents fonctionnent sous <strong>webOS</strong>, avec leur propre magasin : le <strong>LG Content Store</strong>.
+          On y trouve moins de lecteurs IPTV que sur Android, et la liste change selon l'année et le pays du téléviseur.
+        </p>
+        <h3>Application IPTV pour LG TV</h3>
+        <p>
+          Cherchez « IPTV » dans le LG Content Store : selon votre modèle, vous trouverez <strong>IPTV Smarters</strong>, Smart IPTV ou
+          d'autres lecteurs qui s'activent par adresse MAC. Les applications à activation MAC affichent un code à l'ouverture : envoyez-le-nous
+          sur WhatsApp et nous l'activons. Voir <a href="/blog/m3u-xtream-codes-mac">M3U, Xtream Codes ou adresse MAC</a>.
+        </p>
+        <h3>IPTV Smarters sur TV LG</h3>
+        <p>
+          Si IPTV Smarters est proposé pour votre téléviseur, choisissez la connexion <strong>Xtream Codes</strong> et saisissez vos accès
+          exactement comme reçus (avec <em>http://</em> et le port). Le guide complet : <a href="/blog/iptv-smarters-pro">configurer IPTV Smarters Pro</a>.
+        </p>
+        <h3>IPTV sur LG OLED</h3>
+        <p>
+          Les LG OLED récents gèrent très bien la 4K : comptez environ 25 Mbit/s et, si possible, un câble Ethernet plutôt que le Wi-Fi.
+          Activez le mode d'image « Cinéma » ou « Filmmaker » pour les films, et le mode « Sport » pour les matchs.
+        </p>
+        <h3>Aucune application IPTV sur votre LG ?</h3>
+        <p>
+          C'est fréquent sur les modèles anciens. La solution la plus simple est un <a href="/appareils/fire-stick">Fire TV Stick</a> ou une{' '}
+          <a href="/appareils/android-tv">box Android TV</a> branchés en HDMI : vous accédez alors à TiviMate et à tous les lecteurs Android.
+          Pour tester vos accès en attendant, utilisez votre <a href="/appareils/pc-mac">ordinateur</a> ou votre téléphone.
+        </p>
+      </SeoGuideSection>
 
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">

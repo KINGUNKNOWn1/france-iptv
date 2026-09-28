@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 
 import LightweightBackground from "../../components/LightweightBackground";
+import SeoGuideSection from '../../components/SeoGuideSection';
 
 const BboxBouygues = () => {
   const [openFaq, setOpenFaq] = useState(null);
@@ -319,6 +320,35 @@ const BboxBouygues = () => {
           </motion.div>
         </div>
       </section>
+
+      <SeoGuideSection title="Installer l'IPTV sur Bbox : Ultym, 4K, Must et Miami">
+        <p>
+          Tout dépend du décodeur TV fourni avec votre Bbox. Regardez l'écran d'accueil : si vous voyez le <strong>Google Play Store</strong>,
+          votre décodeur tourne sous Android TV et l'application IPTV s'installe directement dessus.
+        </p>
+        <h3>IPTV sur Bbox Ultym</h3>
+        <p>
+          Le décodeur de la Bbox Ultym est sous <strong>Android TV</strong> : ouvrez le Play Store, cherchez IPTV Smarters Pro ou TiviMate,
+          installez-le puis ajoutez vos accès Xtream Codes. Guides : <a href="/blog/iptv-smarters-pro">IPTV Smarters Pro</a> et{' '}
+          <a href="/blog/tivimate">TiviMate</a>.
+        </p>
+        <h3>IPTV sur Bbox 4K</h3>
+        <p>
+          Le décodeur Bbox 4K fonctionne lui aussi sous Android TV : même méthode que sur l'Ultym, via le Play Store. Si l'application
+          cherchée n'apparaît pas, un <a href="/appareils/fire-stick">Fire TV Stick</a> branché sur la télévision fait l'affaire.
+        </p>
+        <h3>Bbox Must et Miami</h3>
+        <p>
+          Ces décodeurs n'ont pas de magasin d'applications ouvert : branchez un Fire TV Stick ou une{' '}
+          <a href="/appareils/android-tv">box Android TV</a> sur un port HDMI libre du téléviseur. La Bbox fournit simplement la connexion internet.
+        </p>
+        <h3>L'IPTV ne fonctionne plus avec Bouygues : que faire ?</h3>
+        <p>
+          Redémarrez la Bbox et votre appareil, vérifiez que votre abonnement est actif, et testez vos accès sur un autre appareil (téléphone,{' '}
+          <a href="/appareils/pc-mac">ordinateur</a>) pour savoir si le problème vient de l'application ou de la connexion. Si l'image coupe
+          le soir, branchez l'appareil en Ethernet. Voir aussi <a href="/blog/iptv-ne-fonctionne-plus">IPTV ne fonctionne plus</a>.
+        </p>
+      </SeoGuideSection>
 
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
