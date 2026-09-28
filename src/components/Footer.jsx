@@ -23,6 +23,8 @@ const Footer = () => {
     { name: 'IPTV Belgique', href: '/iptv-belgique' },
     { name: 'IPTV sur Freebox', href: '/appareils/freebox' },
     { name: 'IPTV ne fonctionne plus', href: '/blog/iptv-ne-fonctionne-plus' },
+    { name: 'Test IPTV gratuit', href: '/blog/test-iptv-gratuit' },
+    { name: 'France IPTV avis', href: '/blog/france-iptv-avis' },
     { name: 'Test de débit IPTV', href: '/test-debit-iptv' },
     { name: 'Blog IPTV', href: '/blog' },
   ];

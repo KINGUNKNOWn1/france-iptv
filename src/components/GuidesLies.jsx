@@ -36,6 +36,9 @@ const TITLES = {
   '/blog/iptv-ne-fonctionne-plus': 'IPTV ne fonctionne plus : que faire',
   '/blog/iptv-c-est-quoi': "IPTV c'est quoi : définition et lexique",
   '/blog/test-iptv-gratuit': 'Test IPTV gratuit 24 h',
+  '/blog/abonnement-iptv-12-mois': 'Abonnement IPTV 12 mois',
+  '/blog/iptv-sans-boitier': 'IPTV sans boîtier',
+  '/blog/france-iptv-avis': 'France IPTV : avis et conditions',
 };
 
 const RELATED = {
@@ -68,7 +71,10 @@ const RELATED = {
   '/blog/meilleur-iptv-france': ['/blog/prix-iptv-france', '/blog/iptv-legal-en-france', '/blog/iptv-foot', '/blog/meilleures-applications-iptv'],
   '/blog/iptv-ne-fonctionne-plus': ['/blog/codes-erreur-iptv', '/appareils/erreur-lecture-iptv', '/blog/iptv-qui-coupe', '/appareils/orange'],
   '/blog/iptv-c-est-quoi': ['/blog/test-iptv-gratuit', '/blog/meilleures-applications-iptv', '/blog/meilleure-box-iptv', '/appareils/activer-code-iptv'],
-  '/blog/test-iptv-gratuit': ['/blog/iptv-c-est-quoi', '/blog/iptv-qui-coupe', '/appareils/fire-stick', '/appareils/samsung-tv'],
+  '/blog/test-iptv-gratuit': ['/blog/france-iptv-avis', '/blog/abonnement-iptv-12-mois', '/blog/iptv-c-est-quoi', '/blog/iptv-sans-boitier'],
+  '/blog/abonnement-iptv-12-mois': ['/blog/prix-iptv-france', '/blog/test-iptv-gratuit', '/blog/france-iptv-avis', '/blog/meilleur-iptv-france'],
+  '/blog/iptv-sans-boitier': ['/appareils/samsung-tv', '/appareils/lg-tv', '/appareils/pc-mac', '/blog/meilleure-box-iptv'],
+  '/blog/france-iptv-avis': ['/blog/test-iptv-gratuit', '/blog/abonnement-iptv-12-mois', '/blog/meilleur-iptv-france', '/blog/prix-iptv-france'],
 };
 
 export const GUIDES_LIES = RELATED;

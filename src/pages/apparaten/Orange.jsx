@@ -86,7 +86,7 @@ const Orange = () => {
         name: 'Orange bloque-t-il vraiment l\'IPTV ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: "Orange ne bloque pas l'IPTV de façon générale. Ce qui ressemble à un « blocage » est presque toujours un problème de bande passante, de DNS ou de congestion réseau aux heures de pointe. La Livebox applique parfois une priorité de trafic (QoS) qui favorise son propre décodeur TV au détriment du reste du réseau, ce qui peut donner l'impression que l'IPTV est bloqué alors qu'il s'agit d'un partage de bande passante."
+          text: "Orange ne bloque pas la technologie IPTV elle-même, mais les fournisseurs d'accès français doivent bloquer certains services sur décision de justice. Le plus souvent, ce qui ressemble à un « blocage » est un problème de bande passante, de Wi-Fi ou de congestion réseau aux heures de pointe : testez toujours sur votre ligne avant d'acheter. La Livebox applique parfois une priorité de trafic (QoS) qui favorise son propre décodeur TV au détriment du reste du réseau, ce qui peut donner l'impression que l'IPTV est bloqué alors qu'il s'agit d'un partage de bande passante."
         }
       },
       {

@@ -4,6 +4,39 @@ export const SITE_URL = 'https://franceiptv.stream';
 
 export const blogPosts = [
   {
+    title: 'Abonnement IPTV 12 Mois : Prix, Avantages et Pièges à Éviter',
+    shortTitle: 'Abonnement IPTV 12 mois',
+    excerpt: "Prix d'un abonnement IPTV d'un an en France, à qui il convient, les pièges des offres « à vie » et la checklist avant de payer 12 mois.",
+    image: 'https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=800&q=80',
+    datePublished: '2026-09-28',
+    dateModified: '2026-09-28',
+    readTime: '6 min',
+    category: 'Tarifs',
+    link: '/blog/abonnement-iptv-12-mois'
+  },
+  {
+    title: 'IPTV Sans Boîtier : Regarder sur Smart TV, Mobile ou PC',
+    shortTitle: 'IPTV sans boîtier',
+    excerpt: "Regarder l'IPTV sans boîtier sur Smart TV, téléphone ou ordinateur : applications, compatibilité, et quand un boîtier devient utile.",
+    image: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=800&q=80',
+    datePublished: '2026-09-28',
+    dateModified: '2026-09-28',
+    readTime: '6 min',
+    category: 'Guide',
+    link: '/blog/iptv-sans-boitier'
+  },
+  {
+    title: "France IPTV Avis : Ce Qu'il Faut Savoir Avant de Commander",
+    shortTitle: 'France IPTV avis',
+    excerpt: "Offre, prix, paiement, test gratuit, support et conditions de France IPTV expliqués sans détour, et comment vérifier la qualité vous-même.",
+    image: 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&q=80',
+    datePublished: '2026-09-28',
+    dateModified: '2026-09-28',
+    readTime: '5 min',
+    category: 'Guide',
+    link: '/blog/france-iptv-avis'
+  },
+  {
     title: "IPTV C'est Quoi ? Définition, Fonctionnement et Lexique (2026)",
     shortTitle: "IPTV c'est quoi",
     excerpt: "L'IPTV expliquée simplement : comment ça marche, ce qu'il faut pour regarder, combien ça coûte, et le sens de M3U, EPG, Xtream Codes, adresse MAC et panel.",
@@ -171,11 +204,11 @@ export const blogPosts = [
   {
     title: 'IPTV Ne Fonctionne Plus : Guide Complet des Pannes',
     shortTitle: 'IPTV Ne Fonctionne Plus',
-    excerpt: '6 causes fréquentes de coupures ou de pannes IPTV, et comment les résoudre en quelques minutes.',
+    excerpt: "IPTV qui ne marche plus du jour au lendemain, en Wi-Fi, sur Orange, SFR ou Bouygues : diagnostic en 2 minutes et les 8 causes les plus fréquentes.",
     image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80',
     datePublished: '2026-09-19',
-    dateModified: '2026-09-19',
-    readTime: '6 min',
+    dateModified: '2026-09-28',
+    readTime: '9 min',
     category: 'Dépannage',
     link: '/blog/iptv-ne-fonctionne-plus'
   }

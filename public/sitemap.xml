@@ -96,7 +96,7 @@
   <!-- Orange Box Device Page -->
   <url>
     <loc>https://franceiptv.stream/appareils/orange</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -192,6 +192,30 @@
   <!-- Blog: Test IPTV gratuit -->
   <url>
     <loc>https://franceiptv.stream/blog/test-iptv-gratuit</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog: Abonnement IPTV 12 mois -->
+  <url>
+    <loc>https://franceiptv.stream/blog/abonnement-iptv-12-mois</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog: IPTV sans boitier -->
+  <url>
+    <loc>https://franceiptv.stream/blog/iptv-sans-boitier</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog: France IPTV avis -->
+  <url>
+    <loc>https://franceiptv.stream/blog/france-iptv-avis</loc>
     <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -368,7 +392,7 @@
 
   <url>
     <loc>https://franceiptv.stream/blog/iptv-ne-fonctionne-plus</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

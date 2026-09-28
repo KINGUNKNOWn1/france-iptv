@@ -62,6 +62,9 @@ const MeilleurIPTVFrance = lazy(() => import('./pages/blog/MeilleurIPTVFrance'))
 const IPTVNeFonctionnePlus = lazy(() => import('./pages/blog/IPTVNeFonctionnePlus'));
 const IPTVCestQuoi = lazy(() => import('./pages/blog/IPTVCestQuoi'));
 const TestIPTVGratuit = lazy(() => import('./pages/blog/TestIPTVGratuit'));
+const AbonnementIPTV12Mois = lazy(() => import('./pages/blog/AbonnementIPTV12Mois'));
+const IPTVSansBoitier = lazy(() => import('./pages/blog/IPTVSansBoitier'));
+const FranceIPTVAvis = lazy(() => import('./pages/blog/FranceIPTVAvis'));
 
 // Lazy load legal pages
 const Privacybeleid = lazy(() => import('./pages/Privacybeleid'));
@@ -194,6 +197,9 @@ function AppContent() {
             <Route path="/blog/iptv-ne-fonctionne-plus" element={<IPTVNeFonctionnePlus />} />
             <Route path="/blog/iptv-c-est-quoi" element={<IPTVCestQuoi />} />
             <Route path="/blog/test-iptv-gratuit" element={<TestIPTVGratuit />} />
+            <Route path="/blog/abonnement-iptv-12-mois" element={<AbonnementIPTV12Mois />} />
+            <Route path="/blog/iptv-sans-boitier" element={<IPTVSansBoitier />} />
+            <Route path="/blog/france-iptv-avis" element={<FranceIPTVAvis />} />
             {/* Legal Routes */}
             <Route path="/politique-de-confidentialite" element={<Privacybeleid />} />
             <Route path="/cgv" element={<AlgemeneVoorwaarden />} />

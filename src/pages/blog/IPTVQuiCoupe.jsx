@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: 'Un VPN peut-il résoudre les coupures IPTV ?',
-    a: "Parfois, si votre fournisseur d'accès ralentit certains flux. Mais un VPN ajoute aussi un intermédiaire qui peut lui-même ralentir la connexion. Essayez d'abord les solutions gratuites (Ethernet, redémarrage, lecteur vidéo) avant d'en ajouter un.",
+    a: "Non, en général il les aggrave : un VPN ajoute un intermédiaire et de la latence entre vous et le serveur. Si un VPN est actif sur votre appareil ou votre box, désactivez-le pour tester. Les vraies solutions sont gratuites : Ethernet, redémarrage de la box, changement de lecteur vidéo.",
   },
   {
     q: 'Mon IPTV coupe sur toutes les chaînes, que faire ?',
@@ -25,7 +25,7 @@ const IPTVQuiCoupe = () => (
   <BlogArticle
     link="/blog/iptv-qui-coupe"
     seoTitle="IPTV qui Coupe ou qui Freeze : 8 Solutions Efficaces (2026)"
-    description="Votre IPTV coupe, freeze ou charge en boucle ? Les 8 causes les plus fréquentes (Wi-Fi, débit, lecteur, DNS, serveur) et comment régler chacune en quelques minutes."
+    description="Votre IPTV coupe, freeze ou charge en boucle ? Les 8 causes les plus fréquentes (Wi-Fi, débit, lecteur, box, serveur) et comment régler chacune en quelques minutes."
     keywords="iptv qui coupe, iptv qui coupe souvent, iptv qui coupe tout le temps, iptv qui se coupe, iptv qui ne coupe pas, iptv freeze, iptv qui saccade, iptv buffering, iptv charge en boucle, iptv coupe pendant match"
     quickAnswer={
       <p>
