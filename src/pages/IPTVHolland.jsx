@@ -1,800 +1,349 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import SeoGuideSection from '../components/SeoGuideSection';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import {
-  MapPin,
-  Globe,
-  Tv,
-  Check,
-  Star,
-  Users,
-  Shield,
-  Zap,
-  Award,
-  TrendingUp,
-  Heart,
-  Phone
-} from 'lucide-react';
+import { FaCheckCircle, FaTv, FaFootballBall, FaFilm, FaFlag } from 'react-icons/fa';
+import SEO from '../components/SEO';
 
-import LightweightBackground from "../components/LightweightBackground";
+// /iptv-belgique, laid out like /iptv-france (IPTVNederland.jsx).
+
+const iptvBelgiqueFaqs = [
+  { q: "Pourquoi choisir France IPTV pour l'IPTV en Belgique ?", a: "France IPTV dessert aussi la Belgique francophone. Nous proposons les chaînes belges, le paiement par Binance Pay ou PayPal, un support francophone et un test gratuit de 24 h sur demande." },
+  { q: 'Quelles chaînes belges ai-je avec IPTV Belgique ?', a: "Vous recevez les chaînes belges populaires comme La Une, Tipik, La Trois, RTL-TVI, Club RTL, Plug RTL et LN24, ainsi que TV5 Monde. Les chaînes françaises et internationales sont également disponibles. Au total, plus de 30 500 chaînes incluant tout le contenu francophone." },
+  { q: 'IPTV Belgique fonctionne-t-il partout en Belgique ?', a: "Oui, le service fonctionne partout en Belgique dès que vous avez une connexion internet, que vous soyez à Bruxelles, Liège, Charleroi, Namur ou dans une petite commune. Le test gratuit de 24 h vous permet de vérifier la lecture sur votre connexion avant de payer." },
+  { q: 'Comment payer depuis la Belgique ?', a: "Le paiement se fait en euros, en une seule fois, par Binance Pay ou PayPal, sans reconduction automatique. Bancontact n'est pas accepté pour le moment. Les prix sont les mêmes qu'en France : 1 mois 8 €, 3 mois 19,99 €, 6 mois 30 €, 12 mois 45 €." },
+  { q: "L'IPTV est-il légal en Belgique ?", a: "L'utilisation de la technologie IPTV elle-même est parfaitement légale en Belgique. La légalité d'une offre dépend des droits de diffusion des contenus proposés ; nos conditions sont détaillées dans nos conditions générales de vente." },
+];
 
 const IPTVHolland = () => {
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Pourquoi choisir France IPTV pour l\'IPTV en Belgique ?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: "France IPTV dessert aussi la Belgique francophone. Nous proposons les chaînes belges, le paiement par Bancontact, un support francophone et des serveurs optimisés pour la Belgique. Un test gratuit de 24 h est possible sur demande."
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'Quelles chaînes belges ai-je avec IPTV Belgique ?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Vous recevez toutes les chaînes belges populaires comme La Une, La Deux, La Trois, RTL-TVI, Club RTL, Plug RTL, AB3, AB4, et bien plus encore. Les chaînes françaises et internationales sont également disponibles. Au total, plus de 25 000 chaînes incluant tout le contenu francophone.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'IPTV Belgique fonctionne-t-il partout en Belgique ?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: "Oui, notre service IPTV fonctionne partout en Belgique dès que vous avez une connexion internet. Que vous soyez à Bruxelles, Liège, Charleroi, Namur ou dans une petite commune - France IPTV fonctionne parfaitement. Nous avons des serveurs en Europe pour une vitesse optimale en Belgique."
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'Puis-je payer par Bancontact ?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: "Oui, France IPTV accepte Bancontact, le moyen de paiement le plus utilisé en Belgique. Nous acceptons également la carte bancaire et d'autres moyens de paiement européens. Le paiement est sécurisé et réglé en moins d'une minute."
-        }
-      },
-      {
-        '@type': 'Question',
-        name: "L'IPTV est-il légal en Belgique ?",
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: "L'utilisation de la technologie IPTV elle-même est parfaitement légale en Belgique. La légalité d'une offre dépend des droits de diffusion des contenus proposés ; nos conditions sont détaillées dans nos conditions générales de vente."
-        }
-      }
-    ]
-  };
-
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Accueil',
-        item: 'https://franceiptv.stream'
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'IPTV Belgique',
-        item: 'https://franceiptv.stream/iptv-belgique'
-      }
-    ]
-  };
-
-  const webPageSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: 'IPTV Belgique - Fournisseur IPTV Francophone | France IPTV',
-    description: "IPTV Belgique : Support francophone ✓ Chaînes belges ✓ Paiement Bancontact ✓ Serveurs en Europe ✓ Support francophone.",
-    url: 'https://franceiptv.stream/iptv-belgique'
-  };
-
-  const benefits = [
-    {
-      icon: MapPin,
-      title: 'Au Service de la Belgique',
-      description: 'Fournisseur francophone, service francophone, garanties francophones'
-    },
-    {
-      icon: Globe,
-      title: 'Serveurs en Europe',
-      description: 'Connexion ultra-rapide dans toute la Belgique, aucune coupure'
-    },
-    {
-      icon: Tv,
-      title: '25 000+ Chaînes',
-      description: 'Toutes les chaînes belges, françaises et internationales'
-    },
-    {
-      icon: Shield,
-      title: 'Paiement Bancontact',
-      description: 'Payez en toute sécurité avec le moyen de paiement le plus utilisé en Belgique'
-    },
-    {
-      icon: Users,
-      title: 'Support 100 % Francophone',
-      description: 'Un service de référence avec la plus haute satisfaction client'
-    },
-    {
-      icon: Zap,
-      title: '99,9 % de Disponibilité',
-      description: 'Un service fiable qui fonctionne toujours quand vous en avez besoin'
-    }
+  const channelCategories = [
+    { category: 'Chaînes Belges', count: '10+', icon: <FaFlag />, examples: 'La Une, Tipik, La Trois, RTL-TVI, Club RTL, Plug RTL, LN24' },
+    { category: 'Chaînes Françaises', count: '80+', icon: <FaTv />, examples: 'TF1, France 2, France 3, M6, Canal+, W9, TMC, C8' },
+    { category: 'Chaînes Sportives', count: '250+', icon: <FaFootballBall />, examples: 'beIN Sports, Canal+ Sport, ESPN, Eurosport' },
+    { category: 'Films & Séries', count: '150+', icon: <FaFilm />, examples: 'Cinéma, séries, documentaires, films famille' },
   ];
 
-  const belgianCities = [
-    'Bruxelles', 'Liège', 'Charleroi', 'Namur', 'Mons',
-    'Tournai', 'La Louvière', 'Verviers', 'Mouscron', 'Wavre',
-    'Arlon', 'Ottignies', 'Nivelles', 'Huy', 'Dinant'
+  const features = [
+    'Chaînes belges et françaises en qualité HD',
+    'Guide EPG complet en français',
+    'Films et séries en français à la demande',
+    'Chaînes sportives (football, Formule 1, tennis)',
+    '4 écrans simultanés',
+    'Support client francophone 24/7',
+    'Compatible Smart TV, Fire Stick, box Android, téléphone',
+    'Paiement par Binance Pay ou PayPal',
+    'Sans reconduction automatique',
+    'Test gratuit 24 h pour vérifier votre connexion',
   ];
 
-  const belgianChannels = [
-    { name: 'La Une', category: 'Chaîne publique' },
-    { name: 'La Deux', category: 'Chaîne publique' },
-    { name: 'La Trois', category: 'Chaîne publique' },
-    { name: 'RTL-TVI', category: 'Commerciale' },
-    { name: 'Club RTL', category: 'Commerciale' },
-    { name: 'Plug RTL', category: 'Commerciale' },
-    { name: 'AB3', category: 'Commerciale' },
-    { name: 'AB4', category: 'Commerciale' },
-    { name: 'La Trois', category: 'Culture' },
-    { name: 'BX1', category: 'Régionale' },
-    { name: 'Fox', category: 'Commerciale' },
-    { name: 'Comedy Central', category: 'Divertissement' },
-    { name: 'beIN Sports', category: 'Sport' },
-    { name: 'ESPN', category: 'Sport' },
-    { name: 'Discovery Channel', category: 'Documentaire' },
-    { name: 'National Geographic', category: 'Documentaire' }
+  const popularChannels = [
+    'La Une', 'Tipik', 'La Trois', 'RTL-TVI', 'Club RTL', 'Plug RTL',
+    'LN24', 'TV5 Monde', 'TF1', 'France 2', 'France 3', 'M6',
+    'Canal+', 'W9', 'TMC', 'beIN Sports 1', 'Canal+ Sport', 'RMC Sport 1',
+    'Eurosport 1', 'Eurosport 2', 'Discovery Channel', 'National Geographic', 'Comedy Central', 'Ciné+ Premier',
   ];
 
-  const pricingOptions = [
-    {
-      duration: '1 Mois',
-      price: '8 €',
-      features: [
-        'Toutes les 25 000+ chaînes',
-        'Chaînes belges en HD/4K',
-        'Paiement Bancontact',
-        'Sans engagement',
-        '99,9 % de disponibilité garantie',
-        'Support francophone 24/7'
-      ],
-      popular: false
-    },
-    {
-      duration: '3 Mois',
-      price: '19,99 €',
-      features: [
-        'Toutes les 25 000+ chaînes',
-        'Chaînes belges en HD/4K',
-        'Paiement Bancontact',
-        'Sans engagement',
-        '99,9 % de disponibilité garantie',
-        'Support francophone 24/7',
-        'Support prioritaire'
-      ],
-      popular: true
-    },
-    {
-      duration: '12 Mois',
-      price: '45 €',
-      features: [
-        'Toutes les 25 000+ chaînes',
-        'Chaînes belges en HD/4K',
-        'Paiement Bancontact',
-        'Sans engagement',
-        '99,9 % de disponibilité garantie',
-        'Support francophone 24/7',
-        'Support VIP',
-        'Appareil supplémentaire offert'
-      ],
-      popular: false
-    }
+  const plans = [
+    { name: '1 mois', price: '8 €' },
+    { name: '3 mois', price: '19,99 €' },
+    { name: '6 mois', price: '30 €' },
+    { name: '12 mois', price: '45 €', featured: true },
   ];
-
-  const whyChooseHolland = [
-    {
-      icon: Award,
-      title: 'Référence chez les Francophones',
-      description: "Nous servons le public francophone de France et de Belgique. Notre expérience garantit le meilleur service."
-    },
-    {
-      icon: TrendingUp,
-      title: 'Optimal pour les Opérateurs Belges',
-      description: "Nos serveurs sont optimisés pour Proximus, Telenet, VOO et tous les autres fournisseurs internet belges. Cela signifie un streaming plus rapide et moins de coupures."
-    },
-    {
-      icon: Heart,
-      title: 'Contenu Francophone en Priorité',
-      description: "Nous comprenons ce que veulent les téléspectateurs francophones : football, Formule 1, films et séries francophones, chaînes régionales - tout est disponible en qualité optimale."
-    },
-    {
-      icon: Shield,
-      title: 'Conforme à la Réglementation',
-      description: "Nous respectons l'ensemble de la réglementation européenne applicable. Vous achetez auprès d'un fournisseur fiable et légal."
-    }
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5
-      }
-    }
-  };
 
   return (
     <>
+      <SEO
+        title="IPTV Belgique : Fournisseur IPTV Francophone | France IPTV"
+        description="IPTV Belgique : chaînes belges (La Une, RTL-TVI, Club RTL) ✓ Support francophone ✓ Test gratuit 24 h ✓ Dès 8 € sans engagement, Binance Pay ou PayPal."
+        keywords="iptv belgique, iptv belge, iptv bruxelles, iptv liege, iptv wallonie, iptv francophone"
+        canonicalPath="/iptv-belgique"
+      />
       <Helmet>
-        <title>IPTV Belgique : Fournisseur IPTV Francophone | France IPTV</title>
-        <meta
-          name="description"
-          content="IPTV Belgique : Support francophone ✓ Chaînes belges (La Une, RTL-TVI, Club RTL) ✓ Paiement Bancontact ✓ Serveurs en Europe ✓ Support francophone."
-        />
-        <meta
-          name="keywords"
-          content="iptv belgique, iptv belge, iptv bruxelles, iptv liege, iptv wallonie, iptv francophone, iptv bancontact"
-        />
-        <link rel="canonical" href="https://franceiptv.stream/iptv-belgique" />
-
-        {/* Open Graph */}
-        <meta property="og:title" content="IPTV Belgique - Fournisseur IPTV Francophone | France IPTV" />
-        <meta property="og:description" content="Support francophone ✓ Toutes les chaînes belges ✓ Paiement Bancontact ✓ 99,9 % de disponibilité. Dès 8 €." />
-        <meta property="og:url" content="https://franceiptv.stream/iptv-belgique" />
-        <meta property="og:type" content="website" />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="IPTV Belgique - Fournisseur IPTV Francophone" />
-        <meta name="twitter:description" content="Support francophone ✓ Chaînes belges ✓ Paiement Bancontact ✓ 99,9 % de disponibilité" />
-
-        {/* Schema.org structured data */}
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(webPageSchema)}
-        </script>
+        <script type="application/ld+json">{JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: iptvBelgiqueFaqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })}</script>
+        <script type="application/ld+json">{JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://franceiptv.stream' }, { '@type': 'ListItem', position: 2, name: 'IPTV Belgique', item: 'https://franceiptv.stream/iptv-belgique' }] })}</script>
       </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#090B0B] via-[#090B0B] to-[#090B0B]">
-        {/* Animated Background */}
-        <Suspense fallback={null}>
-          <LightweightBackground variant="hero" />
-        </Suspense>
-
-        <div className="absolute inset-0 bg-black/30" />
-
-        {/* Animated background pattern */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }} />
-        </div>
-
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center text-white max-w-5xl mx-auto"
-          >
-            {/* Badge */}
+      <div className="min-h-screen bg-white text-brand-black pt-20">
+        {/* Hero Section */}
+        <section className="py-20 bg-gradient-to-br from-[#1E3314] via-[#090B0B] to-[#090B0B] text-white">
+          <div className="container mx-auto px-4 max-w-6xl">
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-2 mb-8"
-            >
-              <MapPin className="w-5 h-5 text-brand-gold" />
-              <span className="font-medium">Au service de la Belgique francophone</span>
-            </motion.div>
-
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              IPTV Belgique{' '}
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#7B9FD9] to-purple-400 mt-2">
-                Fournisseur Francophone
-              </span>
-            </h1>
-
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed">
-              Au service de l'espace francophone. Toutes les chaînes belges, paiement Bancontact,
-              serveurs en Europe et service client francophone 24/7. Dès 8 €.
-            </p>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6"
-              >
-                <Users className="w-8 h-8 text-brand-gold mx-auto mb-2" />
-                <div className="text-3xl font-bold">4</div>
-                <div className="text-sm text-gray-300">Écrans simultanés</div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6"
-              >
-                <Tv className="w-8 h-8 text-brand-gold mx-auto mb-2" />
-                <div className="text-3xl font-bold">25 000+</div>
-                <div className="text-sm text-gray-300">Chaînes</div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6"
-              >
-                <Zap className="w-8 h-8 text-brand-gold mx-auto mb-2" />
-                <div className="text-3xl font-bold">99,9 %</div>
-                <div className="text-sm text-gray-300">Disponibilité</div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6"
-              >
-                <Star className="w-8 h-8 text-brand-gold mx-auto mb-2" />
-                <div className="text-3xl font-bold">24 h</div>
-                <div className="text-sm text-gray-300">Test gratuit</div>
-              </motion.div>
-            </div>
-
-            {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              transition={{ duration: 0.6 }}
+              className="text-center"
             >
-              <a
-                href="https://wa.me/18653169315?text=Bonjour%2C%20je%20souhaite%20commander%20IPTV%20Belgique"
-                className="group bg-brand-gold text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 flex items-center gap-2"
-              >
-                <Phone className="w-5 h-5" />
-                Commander via WhatsApp
-              </a>
-              <a
-                href="/tarifs"
-                className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all duration-300"
-              >
-                Voir les Tarifs
-              </a>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-brand-black">
-              Pourquoi <span className="text-brand-gold">France IPTV</span> ?
-            </h2>
-            <p className="text-xl text-brand-gray max-w-2xl mx-auto">
-              Le fournisseur IPTV francophone, en France et en Belgique
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {benefits.map((benefit, index) => {
-              const Icon = benefit.icon;
-              return (
-                <motion.div
-                  key={index}
-                  variants={itemVariants}
-                  className="bg-brand-offwhite border border-brand-gray-border rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              <div className="text-6xl mb-6">🇧🇪</div>
+              <h1 className="text-5xl md:text-6xl font-heading font-bold mb-6">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-500">
+                  IPTV Belgique
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Le <strong>fournisseur IPTV francophone</strong> pour la Belgique. Chaînes belges et françaises, sport,
+                films et séries, de Bruxelles à Liège.
+              </p>
+              <div className="flex flex-wrap gap-4 justify-center">
+                <a
+                  href="#channels"
+                  className="px-8 py-4 bg-brand-gold hover:bg-[#C4FF86] text-white font-semibold rounded-lg transition-all transform hover:scale-105"
                 >
-                  <div className="w-16 h-16 bg-surface border border-brand-gold/40 rounded-2xl flex items-center justify-center mb-6">
-                    <Icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-brand-black">{benefit.title}</h3>
-                  <p className="text-brand-gray leading-relaxed">{benefit.description}</p>
-                </motion.div>
-              );
-            })}
-          </motion.div>
-        </div>
-      </section>
+                  Voir les Chaînes Belges
+                </a>
+                <a
+                  href="#tarifs"
+                  className="px-8 py-4 bg-white/10 border border-white/30 hover:bg-white/20 text-white font-semibold rounded-lg transition-all transform hover:scale-105"
+                >
+                  Voir les Tarifs
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
-      {/* Why Choose Section */}
-      <section className="py-20 bg-brand-offwhite">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-brand-black">
-              L'IPTV pensé pour la <span className="text-brand-gold">Belgique</span>
+        {/* Channel Categories */}
+        <section className="py-20 bg-brand-offwhite" id="channels">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-12 text-brand-black">
+              Chaînes <span className="text-brand-gold">IPTV Belgique</span>
             </h2>
-            <p className="text-xl text-brand-gray max-w-3xl mx-auto">
-              En tant que fournisseur francophone, nous comprenons le mieux ce marché.
-              Notre service est entièrement pensé pour les téléspectateurs francophones.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {whyChooseHolland.map((item, index) => {
-              const Icon = item.icon;
-              return (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {channelCategories.map((channel, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-2xl p-8 border border-brand-gray-border"
+                  className="bg-white border border-brand-gray-border p-6 rounded-lg hover:border-brand-gold transition-all"
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-surface border border-brand-gold/40 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-3 text-brand-black">{item.title}</h3>
-                      <p className="text-brand-gray leading-relaxed">{item.description}</p>
-                    </div>
-                  </div>
+                  <div className="text-4xl text-brand-gold mb-4">{channel.icon}</div>
+                  <h3 className="text-xl font-bold mb-2 text-brand-black">{channel.category}</h3>
+                  <div className="text-3xl font-bold text-brand-gold mb-3">{channel.count}</div>
+                  <p className="text-sm text-brand-gray">{channel.examples}</p>
                 </motion.div>
-              );
-            })}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Belgian Channels Section */}
-      <section className="py-20 bg-gradient-to-br from-[#090B0B] to-[#111413] text-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Toutes les <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7B9FD9] to-purple-400">Chaînes Belges</span>
+        {/* Popular Channels */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4 text-brand-black">
+              Chaînes <span className="text-brand-gold">Populaires en Belgique</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              La Une, RTL-TVI, Club RTL et plus - toutes les chaînes que vous connaissez et appréciez
+            <p className="text-center text-brand-gray mb-12 text-lg">
+              Les chaînes belges et françaises en qualité HD
             </p>
-          </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto mb-12">
-            {belgianChannels.map((channel, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 flex items-center justify-between"
-              >
-                <div>
-                  <div className="font-semibold">{channel.name}</div>
-                  <div className="text-sm text-gray-400">{channel.category}</div>
-                </div>
-                <Check className="w-5 h-5 text-green-400" />
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <p className="text-gray-300 mb-6">
-              + 25 000 chaînes supplémentaires de Belgique, France, Europe et du monde entier
-            </p>
-            <a
-              href="/chaines"
-              className="inline-block bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-3 rounded-full font-semibold hover:bg-white/20 transition-all duration-300"
-            >
-              Voir la Liste Complète des Chaînes
-            </a>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Coverage Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-brand-black">
-              Disponible dans <span className="text-brand-gold">toute la Belgique</span>
-            </h2>
-            <p className="text-xl text-brand-gray max-w-2xl mx-auto">
-              Des grandes villes aux petites communes - France IPTV fonctionne partout où vous avez internet
-            </p>
-          </motion.div>
-
-          <div className="flex flex-wrap justify-center gap-3 max-w-5xl mx-auto">
-            {belgianCities.map((city, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="bg-surface border border-brand-gold/40 text-white px-6 py-3 rounded-full font-medium shadow-lg"
-              >
-                {city}
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-center text-brand-gray mt-8 text-lg"
-          >
-            Et bien d'autres villes et communes dans toute la Belgique
-          </motion.p>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 bg-brand-offwhite">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-brand-black">
-              Des Prix <span className="text-brand-gold">Justes et Transparents</span>
-            </h2>
-            <p className="text-xl text-brand-gray max-w-2xl mx-auto">
-              Aucun frais caché, payez en toute sécurité par Bancontact
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingOptions.map((option, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className={`relative bg-white border border-brand-gray-border rounded-2xl p-8 shadow-lg ${
-                  option.popular ? 'ring-4 ring-brand-gold scale-105' : ''
-                }`}
-              >
-                {option.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-gold text-white px-6 py-2 rounded-full font-semibold text-sm">
-                    Le Plus Choisi
-                  </div>
-                )}
-
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold mb-2 text-brand-black">{option.duration}</h3>
-                  <div className="text-5xl font-bold text-brand-gold mb-2">
-                    {option.price}
-                  </div>
-                  {option.pricePerMonth && (
-                    <div className="text-brand-gray">{option.pricePerMonth}</div>
-                  )}
-                  {option.savings && (
-                    <div className="inline-block bg-green-100 text-green-700 px-4 py-1 rounded-full text-sm font-semibold mt-2">
-                      {option.savings}
-                    </div>
-                  )}
-                </div>
-
-                <ul className="space-y-3 mb-8">
-                  {option.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-brand-gray">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <a
-                  href={`https://wa.me/18653169315?text=Bonjour%2C%20je%20souhaite%20commander%20le%20forfait%20${option.duration}`}
-                  className={`block text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
-                    option.popular
-                      ? 'bg-brand-gold text-white hover:shadow-xl'
-                      : 'bg-surface-2 text-white hover:bg-surface-2/80'
-                  }`}
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-12">
+              {popularChannels.map((channel, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.02 }}
+                  className="bg-brand-offwhite border border-brand-gray-border p-4 rounded-lg text-center hover:bg-brand-gold hover:text-white hover:border-brand-gold transition-all cursor-pointer"
                 >
-                  Commander via WhatsApp
-                </a>
-              </motion.div>
-            ))}
+                  <span className="text-sm font-semibold">{channel}</span>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="text-center bg-surface border border-lime/30 p-6 rounded-xl">
+              <p className="text-xl font-semibold mb-2 text-brand-black">
+                + plus de 30 000 chaînes internationales
+              </p>
+              <p className="text-brand-gray">
+                Y compris des chaînes suisses, arabes, turques, anglaises, allemandes, espagnoles et bien plus.{' '}
+                <Link to="/chaines" className="text-brand-gold underline">Voir la liste des chaînes</Link>
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-brand-black">
-              Questions <span className="text-brand-gold">Fréquentes</span>
+        {/* Features */}
+        <section className="py-20 bg-brand-offwhite">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-12 text-brand-black">
+              Pourquoi Choisir France IPTV <span className="text-brand-gold">en Belgique</span>
             </h2>
-            <p className="text-xl text-brand-gray">
-              Tout ce que vous devez savoir sur l'IPTV en Belgique
-            </p>
-          </motion.div>
 
-          <div className="space-y-6">
-            {faqSchema.mainEntity.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-brand-offwhite rounded-2xl p-8 border border-brand-gray-border"
-              >
-                <h3 className="text-xl font-bold mb-4 flex items-start gap-3 text-brand-black">
-                  <span className="text-brand-gold flex-shrink-0">Q :</span>
-                  {faq.name}
-                </h3>
-                <p className="text-brand-gray leading-relaxed pl-8">
-                  {faq.acceptedAnswer.text}
+            <div className="grid md:grid-cols-2 gap-6">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.05 }}
+                  className="flex items-start gap-4 bg-white border border-brand-gray-border p-4 rounded-lg"
+                >
+                  <FaCheckCircle className="text-green-500 text-xl flex-shrink-0 mt-1" />
+                  <span className="text-brand-gray">{feature}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Sport Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-12 text-brand-black">
+              <span className="text-brand-gold">Sport</span> en HD
+            </h2>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <div className="bg-brand-offwhite border border-brand-gray-border p-6 rounded-lg">
+                <h3 className="text-2xl font-bold mb-4 text-brand-gold">⚽ Football</h3>
+                <ul className="space-y-2 text-brand-gray">
+                  <li>• Ligue des Champions</li>
+                  <li>• Ligue 1</li>
+                  <li>• Premier League</li>
+                  <li>• Liga, Serie A, Bundesliga</li>
+                  <li>• Compétitions internationales</li>
+                </ul>
+              </div>
+
+              <div className="bg-brand-offwhite border border-brand-gray-border p-6 rounded-lg">
+                <h3 className="text-2xl font-bold mb-4 text-brand-gold">🏎️ Formule 1</h3>
+                <ul className="space-y-2 text-brand-gray">
+                  <li>• Toutes les courses de F1 en direct</li>
+                  <li>• Qualifications et essais libres</li>
+                  <li>• Le Grand Prix de Belgique à Spa</li>
+                  <li>• Formule 2 & Formule 3</li>
+                  <li>• Courses de MotoGP</li>
+                </ul>
+              </div>
+
+              <div className="bg-brand-offwhite border border-brand-gray-border p-6 rounded-lg">
+                <h3 className="text-2xl font-bold mb-4 text-brand-gold">🚴 Autres Sports</h3>
+                <ul className="space-y-2 text-brand-gray">
+                  <li>• Cyclisme (Tour de France, classiques)</li>
+                  <li>• Tennis (Grand Chelem)</li>
+                  <li>• Hockey sur gazon & sur glace</li>
+                  <li>• Golf, Fléchettes, Boxe</li>
+                  <li>• Jeux Olympiques</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Local Benefits */}
+        <section className="py-20 bg-brand-offwhite">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-12 text-brand-black">
+              Pensé pour la <span className="text-brand-gold">Belgique Francophone</span>
+            </h2>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-surface border border-brand-gold/40 p-8 rounded-xl text-center">
+                <div className="text-4xl mb-4">💳</div>
+                <h3 className="text-2xl font-bold mb-3 text-white">Paiement Sécurisé</h3>
+                <p className="text-white/90">
+                  Payez en euros par Binance Pay ou PayPal, en une seule fois
                 </p>
-              </motion.div>
-            ))}
+              </div>
+
+              <div className="bg-gradient-to-br from-[#090B0B] to-[#111413] p-8 rounded-xl text-center">
+                <div className="text-4xl mb-4">🇧🇪</div>
+                <h3 className="text-2xl font-bold mb-3 text-white">Support Francophone</h3>
+                <p className="text-white/90">
+                  Service client francophone 24/7 via WhatsApp et e-mail
+                </p>
+              </div>
+
+              <div className="bg-surface border border-lime/30 p-8 rounded-xl text-center">
+                <div className="text-4xl mb-4">🎁</div>
+                <h3 className="text-2xl font-bold mb-3 text-white">Test Gratuit 24 h</h3>
+                <p className="text-white/90">
+                  Vérifiez la lecture sur votre connexion Proximus, VOO, Orange ou Telenet avant de payer
+                </p>
+              </div>
+            </div>
           </div>
+        </section>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-center mt-12"
-          >
-            <p className="text-brand-gray mb-6">Vous avez d'autres questions ?</p>
-            <a
-              href="/faq"
-              className="inline-block bg-brand-gold text-white px-8 py-3 rounded-full font-semibold hover:shadow-xl transition-all duration-300"
-            >
-              Voir Toutes les Questions Fréquentes
-            </a>
-          </motion.div>
-        </div>
-      </section>
+        <SeoGuideSection title="IPTV Belgique : tout savoir avant de commencer">
+          <p>
+            L'<strong>IPTV en Belgique</strong>, c'est la télévision reçue par internet plutôt que par le décodeur de votre
+            opérateur. Vous installez une application sur l'écran de votre choix, vous y ajoutez les accès de votre abonnement,
+            et vous retrouvez les chaînes belges et françaises en direct, le guide des programmes et un catalogue de films et
+            séries à la demande, en Wallonie comme à Bruxelles.
+          </p>
+          <h3>Quelle connexion internet en Belgique ?</h3>
+          <p>
+            La <strong>fibre</strong> ou une bonne connexion <strong>VDSL / câble</strong> (Proximus, VOO, Orange Belgium,
+            Telenet, Scarlet) convient très bien. Les repères : environ 7 Mbit/s par écran en HD, 15 Mbit/s en Full HD et
+            25 Mbit/s en 4K. Vérifiez la vôtre avec notre <a href="/test-debit-iptv">test de débit IPTV</a>.
+          </p>
+          <h3>Sur quel appareil regarder ?</h3>
+          <p>
+            Votre box internet fournit la connexion ; la lecture se fait sur un appareil compatible : une Smart TV
+            (<a href="/appareils/samsung-tv">Samsung</a>, <a href="/appareils/lg-tv">LG</a>), un{' '}
+            <a href="/appareils/fire-stick">Fire TV Stick</a>, une <a href="/appareils/android-tv">box Android TV</a>, un
+            téléphone ou un ordinateur. Tous nos guides sont sur la page <a href="/appareils">appareils</a>.
+          </p>
+          <h3>Prix d'un IPTV en Belgique</h3>
+          <p>
+            Les prix sont les mêmes qu'en France : 8 € pour 1 mois, 19,99 € pour 3 mois, 30 € pour 6 mois et 45 € pour 12 mois,
+            payés en une fois par Binance Pay ou PayPal. Détails sur la page <a href="/tarifs">tarifs</a>.
+          </p>
+          <h3>Questions fréquentes</h3>
+          {iptvBelgiqueFaqs.map(({ q, a }) => (
+            <div key={q}>
+              <p><strong>{q}</strong></p>
+              <p>{a}</p>
+            </div>
+          ))}
+        </SeoGuideSection>
 
-      {/* Final CTA Section */}
-      <section className="py-20 bg-surface border border-lime/30 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              Rejoignez Support 100 % francophone
+        {/* Pricing CTA */}
+        <section id="tarifs" className="py-20 bg-gradient-to-br from-surface to-brand-offwhite scroll-mt-24">
+          <div className="container mx-auto px-4 max-w-4xl text-center">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-brand-black">
+              Démarrez avec France IPTV <span className="text-brand-gold">en Belgique</span>
             </h2>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Démarrez dès aujourd'hui avec le meilleur service IPTV francophone.
-              Commandez en 1 minute via WhatsApp avec paiement Bancontact.
+            <p className="text-xl text-brand-gray mb-8">
+              Chaînes belges et françaises + 30 500+ chaînes internationales. Sans reconduction automatique. Actif en 5 minutes.
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="https://wa.me/18653169315?text=Bonjour%2C%20je%20souhaite%20commander%20IPTV%20Belgique"
-                className="group bg-white text-brand-gold px-8 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all duration-300 flex items-center gap-2"
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+              {plans.map((plan) => (
+                <a
+                  key={plan.name}
+                  href={`https://wa.me/18653169315?text=${encodeURIComponent(`Bonjour ! Je suis en Belgique et je souhaite l'abonnement IPTV ${plan.name} à ${plan.price}.`)}`}
+                  className={`p-5 rounded-xl border transition-all hover:border-brand-gold ${plan.featured ? 'border-brand-gold bg-lime/[0.06]' : 'border-brand-gray-border bg-white'}`}
+                >
+                  <div className="text-brand-gray text-sm mb-1">{plan.name}</div>
+                  <div className="text-3xl font-bold text-brand-black">{plan.price}</div>
+                  {plan.featured && <div className="text-xs text-brand-gold mt-1 font-semibold">Meilleur prix</div>}
+                </a>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link
+                to="/abonnement-iptv"
+                className="px-10 py-4 bg-brand-gold hover:bg-[#C4FF86] text-white text-lg font-semibold rounded-lg transition-all transform hover:scale-105"
               >
-                <Phone className="w-5 h-5" />
-                Commander via WhatsApp
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
-              </a>
+                Voir les Abonnements
+              </Link>
               <a
-                href="/tarifs"
-                className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all duration-300"
+                href="https://wa.me/18653169315?text=Bonjour%20!%20Je%20suis%20en%20Belgique%20et%20je%20souhaite%20un%20test%20gratuit%20de%2024%20h."
+                className="px-10 py-4 bg-green-600 hover:bg-green-700 text-white text-lg font-semibold rounded-lg transition-all transform hover:scale-105"
               >
-                Voir les Tarifs
+                Test gratuit via WhatsApp
               </a>
             </div>
-
-            <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm">
-              <div className="flex items-center gap-2">
-                <Check className="w-5 h-5" />
-                <span>Paiement Bancontact</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check className="w-5 h-5" />
-                <span>Sans engagement</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check className="w-5 h-5" />
-                <span>Actif immédiatement</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check className="w-5 h-5" />
-                <span>Support francophone 24/7</span>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Trust Footer */}
-      <section className="py-12 bg-[#090B0B] text-white">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center items-center gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-brand-gold">30 500+</div>
-              <div className="text-sm text-gray-400">Chaînes en direct</div>
-            </div>
-            <div className="hidden md:block w-px h-12 bg-gray-700" />
-            <div>
-              <div className="text-3xl font-bold text-brand-gold">99,9 %</div>
-              <div className="text-sm text-gray-400">Disponibilité garantie</div>
-            </div>
-            <div className="hidden md:block w-px h-12 bg-gray-700" />
-            <div>
-              <div className="text-3xl font-bold text-brand-gold">24/7</div>
-              <div className="text-sm text-gray-400">Support francophone</div>
-            </div>
-            <div className="hidden md:block w-px h-12 bg-gray-700" />
-            <div>
-              <div className="text-3xl font-bold text-brand-gold">24 h</div>
-              <div className="text-sm text-gray-400">Test gratuit</div>
-            </div>
+            <p className="text-sm text-brand-gray mt-6">
+              🇧🇪 Belgique francophone • ✅ Chaînes belges et françaises • ⚡ Actif en 5 min
+            </p>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </>
   );
 };
