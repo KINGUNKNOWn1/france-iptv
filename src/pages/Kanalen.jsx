@@ -339,7 +339,7 @@ const Kanalen = () => {
                 Voir les Abonnements
               </Link>
               <a
-                href="https://wa.me/18653169315?text=Je%20souhaite%20plus%20d%27infos%20sur%20les%20cha%C3%AEnes"
+                href="https://wa.me/212627370646?text=Je%20souhaite%20plus%20d%27infos%20sur%20les%20cha%C3%AEnes"
                 className="px-10 py-4 bg-green-600 hover:bg-green-700 text-white text-lg font-semibold rounded-lg transition-all transform hover:scale-105"
               >
                 Des Questions ? Contactez-Nous

@@ -203,7 +203,7 @@ const IPTVAbonnement = () => {
                   Voir les Abonnements
                 </a>
                 <a
-                  href="https://wa.me/18653169315"
+                  href="https://wa.me/212627370646"
                   className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all transform hover:scale-105"
                 >
                   Commander Directement via WhatsApp
@@ -312,7 +312,7 @@ const IPTVAbonnement = () => {
                     )}
 
                     <a
-                      href="https://wa.me/18653169315"
+                      href="https://wa.me/212627370646"
                       className={`block w-full py-3 rounded-lg font-semibold transition-all ${
                         plan.popular
                           ? 'bg-brand-gold hover:bg-[#C4FF86] text-white'
@@ -587,7 +587,7 @@ const IPTVAbonnement = () => {
               payez par Binance Pay ou PayPal, et commencez à regarder sous 5 minutes.
             </p>
             <a
-              href="https://wa.me/18653169315?text=Je%20souhaite%20commander%20un%20abonnement%20IPTV"
+              href="https://wa.me/212627370646?text=Je%20souhaite%20commander%20un%20abonnement%20IPTV"
               className="inline-block px-10 py-4 bg-green-600 hover:bg-green-700 text-white text-lg font-semibold rounded-lg transition-all transform hover:scale-105"
             >
               Commander Maintenant via WhatsApp

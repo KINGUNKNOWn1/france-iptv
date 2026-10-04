@@ -206,7 +206,7 @@ const Pricing = () => {
               🎁 Pas encore convaincu ? <span className="text-green-700 font-bold">Demandez un test gratuit de 24 h</span>.
             </p>
             <a
-              href="https://wa.me/18653169315?text=Bonjour%20!%20Je%20souhaite%20un%20test%20gratuit%20de%2024%20h."
+              href="https://wa.me/212627370646?text=Bonjour%20!%20Je%20souhaite%20un%20test%20gratuit%20de%2024%20h."
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-2.5 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl transition-colors whitespace-nowrap"

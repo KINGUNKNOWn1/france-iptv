@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Logo from './Logo';
+import NumberChangeBar from './NumberChangeBar';
 
 // Hash links to homepage sections need a full <a>; real pages use client-side routing.
 const NavLink = ({ href, ...props }) =>
@@ -47,6 +48,7 @@ const Navigation = () => {
         solid ? 'bg-ink/85 backdrop-blur-lg border-b border-white/10' : 'bg-transparent'
       }`}
     >
+      <NumberChangeBar />
       <div className="container-custom px-4 md:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}

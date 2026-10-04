@@ -2,7 +2,7 @@
 // Meta Pixel and GA4 are loaded from index.html; both calls are no-ops if a
 // script is blocked (ad blockers, prerender).
 
-export const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || '18653169315';
+export const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || '212627370646';
 
 // Remember for the whole visit whether it started from an ad click, so the
 // WhatsApp message can say where the customer came from.

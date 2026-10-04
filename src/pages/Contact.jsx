@@ -12,7 +12,7 @@ const Contact = () => {
       title: 'WhatsApp',
       description: '+1 (865) 316-9315',
       detail: 'Le moyen le plus rapide de commander',
-      link: 'https://wa.me/18653169315',
+      link: 'https://wa.me/212627370646',
       primary: true
     },
     {
@@ -143,7 +143,7 @@ const Contact = () => {
                 Envoyez-nous un message et nous vous aidons immédiatement.
               </p>
               <a
-                href="https://wa.me/18653169315"
+                href="https://wa.me/212627370646"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-green-700 font-bold rounded-xl hover:bg-green-50 transition-all shadow-lg text-lg"

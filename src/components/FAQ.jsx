@@ -128,7 +128,7 @@ const FAQ = () => {
               Notre équipe est disponible 24/7 via WhatsApp
             </p>
             <a
-              href="https://wa.me/18653169315?text=J%27ai%20une%20question%20sur%20France%20IPTV"
+              href="https://wa.me/212627370646?text=J%27ai%20une%20question%20sur%20France%20IPTV"
               className="btn-primary inline-flex items-center gap-2"
             >
               <FaWhatsapp className="text-xl" />

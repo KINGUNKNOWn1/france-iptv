@@ -131,7 +131,7 @@ const IPTVKopen = () => {
                   Voir les Tarifs de l'Abonnement IPTV
                 </Link>
                 <a
-                  href="https://wa.me/18653169315?text=Bonjour%20!%20Je%20souhaite%20acheter%20un%20abonnement%20IPTV."
+                  href="https://wa.me/212627370646?text=Bonjour%20!%20Je%20souhaite%20acheter%20un%20abonnement%20IPTV."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-8 py-3 bg-transparent border-2 border-white/40 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-200 text-center"

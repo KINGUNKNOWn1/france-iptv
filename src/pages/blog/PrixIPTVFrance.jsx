@@ -243,7 +243,7 @@ const PrixIPTVFrance = () => {
                 <Link to="/tarifs" className="px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-all">
                   Voir les Tarifs
                 </Link>
-                <a href="https://wa.me/18653169315?text=Bonjour%2C%20je%20voudrais%20des%20informations%20sur%20les%20prix%20IPTV" className="px-8 py-4 bg-blue-800 hover:bg-blue-900 text-white font-bold rounded-lg transition-all">
+                <a href="https://wa.me/212627370646?text=Bonjour%2C%20je%20voudrais%20des%20informations%20sur%20les%20prix%20IPTV" className="px-8 py-4 bg-blue-800 hover:bg-blue-900 text-white font-bold rounded-lg transition-all">
                   <FaWhatsapp className="inline mr-2" /> Demander un Devis
                 </a>
               </div>

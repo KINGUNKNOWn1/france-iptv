@@ -163,7 +163,7 @@ const PCMac = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://wa.me/18653169315?text=Bonjour%2C%20je%20souhaite%20un%20test%20gratuit%20sur%20mon%20ordinateur" className="bg-brand-gold text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-2">
+              <a href="https://wa.me/212627370646?text=Bonjour%2C%20je%20souhaite%20un%20test%20gratuit%20sur%20mon%20ordinateur" className="bg-brand-gold text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-2">
                 <Phone className="w-5 h-5" />Test gratuit 24 h sur PC
               </a>
               <a href="/tarifs" className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all">Voir les Tarifs</a>
@@ -296,7 +296,7 @@ const PCMac = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Testez sur votre ordinateur</h2>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Test gratuit de 24 h, puis dès 8 € le mois, sans engagement.</p>
-          <a href="https://wa.me/18653169315?text=Bonjour%2C%20je%20souhaite%20un%20test%20gratuit%20sur%20mon%20ordinateur" className="inline-flex items-center gap-2 bg-lime text-lime-on px-10 py-5 rounded-full font-bold text-xl hover:shadow-2xl transition-all">
+          <a href="https://wa.me/212627370646?text=Bonjour%2C%20je%20souhaite%20un%20test%20gratuit%20sur%20mon%20ordinateur" className="inline-flex items-center gap-2 bg-lime text-lime-on px-10 py-5 rounded-full font-bold text-xl hover:shadow-2xl transition-all">
             <Phone className="w-6 h-6" />Demander mon test gratuit
           </a>
           <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm">

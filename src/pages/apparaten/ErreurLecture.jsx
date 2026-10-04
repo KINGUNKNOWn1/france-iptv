@@ -250,7 +250,7 @@ const ErreurLecture = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <a
-                href="https://wa.me/18653169315?text=Bonjour%2C%20mon%20IPTV%20affiche%20une%20erreur%20de%20lecture"
+                href="https://wa.me/212627370646?text=Bonjour%2C%20mon%20IPTV%20affiche%20une%20erreur%20de%20lecture"
                 className="bg-brand-gold text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Phone className="w-5 h-5" />
@@ -395,7 +395,7 @@ const ErreurLecture = () => {
               Toujours bloqué après ces 5 étapes ? Notre support francophone prend le relais.
             </p>
             <a
-              href="https://wa.me/18653169315?text=Bonjour%2C%20j%27ai%20suivi%20les%205%20%C3%A9tapes%20mais%20mon%20IPTV%20affiche%20toujours%20une%20erreur"
+              href="https://wa.me/212627370646?text=Bonjour%2C%20j%27ai%20suivi%20les%205%20%C3%A9tapes%20mais%20mon%20IPTV%20affiche%20toujours%20une%20erreur"
               className="inline-flex items-center gap-2 bg-brand-gold text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transition-all"
             >
               <Phone className="w-5 h-5" />
@@ -530,7 +530,7 @@ const ErreurLecture = () => {
               Rejoignez France IPTV pour un service stable et un support toujours disponible.
             </p>
             <a
-              href="https://wa.me/18653169315?text=Bonjour%2C%20je%20souhaite%20commander%20un%20abonnement%20IPTV"
+              href="https://wa.me/212627370646?text=Bonjour%2C%20je%20souhaite%20commander%20un%20abonnement%20IPTV"
               className="inline-flex items-center gap-2 bg-white text-blue-600 px-10 py-5 rounded-full font-bold text-xl hover:shadow-2xl transition-all"
             >
               <Phone className="w-6 h-6" />

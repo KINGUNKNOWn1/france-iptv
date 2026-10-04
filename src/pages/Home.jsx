@@ -106,7 +106,7 @@ const Home = () => {
                 Voir les offres <ArrowRight size={18} />
               </a>
               <a
-                href="https://wa.me/18653169315?text=Bonjour%20!%20J%27ai%20une%20question%20sur%20l%27abonnement%20France%20IPTV."
+                href="https://wa.me/212627370646?text=Bonjour%20!%20J%27ai%20une%20question%20sur%20l%27abonnement%20France%20IPTV."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 py-2.5 text-green-400 hover:text-green-300 font-semibold"

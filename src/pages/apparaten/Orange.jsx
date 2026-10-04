@@ -310,7 +310,7 @@ const Orange = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <a
-                href="https://wa.me/18653169315?text=Bonjour%2C%20je%20souhaite%20installer%20l%27IPTV%20sur%20ma%20box%20Orange"
+                href="https://wa.me/212627370646?text=Bonjour%2C%20je%20souhaite%20installer%20l%27IPTV%20sur%20ma%20box%20Orange"
                 className="bg-brand-gold text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Phone className="w-5 h-5" />
@@ -414,7 +414,7 @@ const Orange = () => {
               Prêt à commencer ? Commandez votre abonnement France IPTV et démarrez immédiatement !
             </p>
             <a
-              href="https://wa.me/18653169315?text=Bonjour%2C%20je%20souhaite%20commander%20IPTV%20pour%20ma%20box%20Orange"
+              href="https://wa.me/212627370646?text=Bonjour%2C%20je%20souhaite%20commander%20IPTV%20pour%20ma%20box%20Orange"
               className="inline-flex items-center gap-2 bg-brand-gold text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transition-all"
             >
               <Phone className="w-5 h-5" />
@@ -469,7 +469,7 @@ const Orange = () => {
             viewport={{ once: true }}
             className="text-center text-gray-400 mt-8"
           >
-            Pas sûr de votre configuration ? <a href="https://wa.me/18653169315" className="text-blue-400 underline">Demandez-nous via WhatsApp</a>
+            Pas sûr de votre configuration ? <a href="https://wa.me/212627370646" className="text-blue-400 underline">Demandez-nous via WhatsApp</a>
           </motion.p>
         </div>
       </section>
@@ -530,7 +530,7 @@ const Orange = () => {
           >
             <p className="text-brand-gray mb-4">Votre problème n'est pas dans la liste ?</p>
             <a
-              href="https://wa.me/18653169315?text=Bonjour%2C%20j%27ai%20un%20probl%C3%A8me%20avec%20l%27IPTV%20sur%20ma%20box%20Orange"
+              href="https://wa.me/212627370646?text=Bonjour%2C%20j%27ai%20un%20probl%C3%A8me%20avec%20l%27IPTV%20sur%20ma%20box%20Orange"
               className="inline-flex items-center gap-2 bg-brand-gold text-white px-8 py-3 rounded-full font-semibold hover:shadow-xl transition-all"
             >
               <Phone className="w-5 h-5" />
@@ -665,7 +665,7 @@ const Orange = () => {
               Installez l'IPTV France IPTV avec votre box Orange en 5 minutes.
             </p>
             <a
-              href="https://wa.me/18653169315?text=Bonjour%2C%20je%20souhaite%20commander%20IPTV%20pour%20ma%20box%20Orange"
+              href="https://wa.me/212627370646?text=Bonjour%2C%20je%20souhaite%20commander%20IPTV%20pour%20ma%20box%20Orange"
               className="inline-flex items-center gap-2 bg-white text-blue-600 px-10 py-5 rounded-full font-bold text-xl hover:shadow-2xl transition-all"
             >
               <Phone className="w-6 h-6" />

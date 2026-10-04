@@ -191,7 +191,7 @@ const VeelgesteldeVragen = () => {
                 Contactez-nous via WhatsApp !
               </p>
               <a
-                href="https://wa.me/18653169315?text=J%27ai%20une%20question%20sur%20l%27IPTV"
+                href="https://wa.me/212627370646?text=J%27ai%20une%20question%20sur%20l%27IPTV"
                 className="inline-block px-8 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all"
               >
                 Posez Votre Question via WhatsApp
@@ -312,7 +312,7 @@ const VeelgesteldeVragen = () => {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a
-                href="https://wa.me/18653169315?text=J%27ai%20une%20question%20sur%20France%20IPTV"
+                href="https://wa.me/212627370646?text=J%27ai%20une%20question%20sur%20France%20IPTV"
                 className="px-10 py-4 bg-green-600 hover:bg-green-700 text-white text-lg font-semibold rounded-lg transition-all transform hover:scale-105"
               >
                 Contactez-Nous sur WhatsApp

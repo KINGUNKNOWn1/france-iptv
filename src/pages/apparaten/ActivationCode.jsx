@@ -271,7 +271,7 @@ const ActivationCode = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <a
-                href="https://wa.me/18653169315?text=Bonjour%2C%20j%27ai%20besoin%20d%27aide%20pour%20activer%20mon%20abonnement%20IPTV"
+                href="https://wa.me/212627370646?text=Bonjour%2C%20j%27ai%20besoin%20d%27aide%20pour%20activer%20mon%20abonnement%20IPTV"
                 className="bg-brand-gold text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Phone className="w-5 h-5" />
@@ -389,7 +389,7 @@ const ActivationCode = () => {
               Pas encore d'abonnement ? Commandez maintenant et recevez vos identifiants immédiatement.
             </p>
             <a
-              href="https://wa.me/18653169315?text=Bonjour%2C%20je%20souhaite%20commander%20un%20abonnement%20IPTV"
+              href="https://wa.me/212627370646?text=Bonjour%2C%20je%20souhaite%20commander%20un%20abonnement%20IPTV"
               className="inline-flex items-center gap-2 bg-brand-gold text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transition-all"
             >
               <Phone className="w-5 h-5" />
@@ -455,7 +455,7 @@ const ActivationCode = () => {
           >
             <p className="text-brand-gray mb-4">Votre problème n'est pas dans la liste ?</p>
             <a
-              href="https://wa.me/18653169315?text=Bonjour%2C%20j%27ai%20un%20probl%C3%A8me%20d%27activation%20IPTV"
+              href="https://wa.me/212627370646?text=Bonjour%2C%20j%27ai%20un%20probl%C3%A8me%20d%27activation%20IPTV"
               className="inline-flex items-center gap-2 bg-brand-gold text-white px-8 py-3 rounded-full font-semibold hover:shadow-xl transition-all"
             >
               <Phone className="w-5 h-5" />
@@ -572,7 +572,7 @@ const ActivationCode = () => {
               Commandez votre abonnement France IPTV et recevez vos identifiants en 5 minutes.
             </p>
             <a
-              href="https://wa.me/18653169315?text=Bonjour%2C%20je%20souhaite%20commander%20un%20abonnement%20IPTV"
+              href="https://wa.me/212627370646?text=Bonjour%2C%20je%20souhaite%20commander%20un%20abonnement%20IPTV"
               className="inline-flex items-center gap-2 bg-white text-blue-600 px-10 py-5 rounded-full font-bold text-xl hover:shadow-2xl transition-all"
             >
               <Phone className="w-6 h-6" />

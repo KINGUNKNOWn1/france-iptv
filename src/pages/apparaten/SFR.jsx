@@ -227,7 +227,7 @@ const SFR = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <a
-                href="https://wa.me/18653169315?text=Bonjour%2C%20mon%20IPTV%20coupe%20sur%20ma%20ligne%20SFR"
+                href="https://wa.me/212627370646?text=Bonjour%2C%20mon%20IPTV%20coupe%20sur%20ma%20ligne%20SFR"
                 className="bg-brand-gold text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Phone className="w-5 h-5" />
@@ -372,7 +372,7 @@ const SFR = () => {
               Toujours un problème ? Notre support francophone est là pour vous aider.
             </p>
             <a
-              href="https://wa.me/18653169315?text=Bonjour%2C%20j%27ai%20essay%C3%A9%20les%20solutions%20mais%20mon%20IPTV%20coupe%20toujours%20sur%20SFR"
+              href="https://wa.me/212627370646?text=Bonjour%2C%20j%27ai%20essay%C3%A9%20les%20solutions%20mais%20mon%20IPTV%20coupe%20toujours%20sur%20SFR"
               className="inline-flex items-center gap-2 bg-brand-gold text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transition-all"
             >
               <Phone className="w-5 h-5" />
@@ -500,7 +500,7 @@ const SFR = () => {
               Rejoignez France IPTV pour un service stable, quel que soit votre opérateur.
             </p>
             <a
-              href="https://wa.me/18653169315?text=Bonjour%2C%20je%20souhaite%20commander%20un%20abonnement%20IPTV"
+              href="https://wa.me/212627370646?text=Bonjour%2C%20je%20souhaite%20commander%20un%20abonnement%20IPTV"
               className="inline-flex items-center gap-2 bg-white text-blue-600 px-10 py-5 rounded-full font-bold text-xl hover:shadow-2xl transition-all"
             >
               <Phone className="w-6 h-6" />

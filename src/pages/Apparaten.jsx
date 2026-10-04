@@ -371,7 +371,7 @@ const Apparaten = () => {
                 Notre support francophone est là pour vous aider. Actif en 5 minutes !
               </p>
               <a
-                href="https://wa.me/18653169315?text=J%27ai%20besoin%20d%27aide%20pour%20l%27installation"
+                href="https://wa.me/212627370646?text=J%27ai%20besoin%20d%27aide%20pour%20l%27installation"
                 className="inline-block px-8 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:bg-purple-50 transition-all"
               >
                 Support WhatsApp
@@ -458,7 +458,7 @@ const Apparaten = () => {
                 Voir les Abonnements
               </Link>
               <a
-                href="https://wa.me/18653169315?text=Quels%20appareils%20sont%20compatibles%20%3F"
+                href="https://wa.me/212627370646?text=Quels%20appareils%20sont%20compatibles%20%3F"
                 className="px-10 py-4 bg-green-600 hover:bg-green-700 text-white text-lg font-semibold rounded-lg transition-all transform hover:scale-105"
               >
                 Des Questions ? Contactez-Nous

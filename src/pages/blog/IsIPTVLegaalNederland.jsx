@@ -284,7 +284,7 @@ const IsIPTVLegaalNederland = () => {
                 <Link to="/abonnement-iptv" className="px-8 py-4 bg-white text-green-600 font-bold rounded-lg hover:bg-green-50 transition-all">
                   Voir les Abonnements
                 </Link>
-                <a href="https://wa.me/18653169315" className="px-8 py-4 bg-green-800 hover:bg-green-900 text-white font-bold rounded-lg transition-all">
+                <a href="https://wa.me/212627370646" className="px-8 py-4 bg-green-800 hover:bg-green-900 text-white font-bold rounded-lg transition-all">
                   <FaWhatsapp className="inline mr-2" /> Posez Votre Question
                 </a>
               </div>

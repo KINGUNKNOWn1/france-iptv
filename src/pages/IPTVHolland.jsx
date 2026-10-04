@@ -315,7 +315,7 @@ const IPTVHolland = () => {
               {plans.map((plan) => (
                 <a
                   key={plan.name}
-                  href={`https://wa.me/18653169315?text=${encodeURIComponent(`Bonjour ! Je suis en Belgique et je souhaite l'abonnement IPTV ${plan.name} à ${plan.price}.`)}`}
+                  href={`https://wa.me/212627370646?text=${encodeURIComponent(`Bonjour ! Je suis en Belgique et je souhaite l'abonnement IPTV ${plan.name} à ${plan.price}.`)}`}
                   className={`p-5 rounded-xl border transition-all hover:border-brand-gold ${plan.featured ? 'border-brand-gold bg-lime/[0.06]' : 'border-brand-gray-border bg-white'}`}
                 >
                   <div className="text-brand-gray text-sm mb-1">{plan.name}</div>
@@ -332,7 +332,7 @@ const IPTVHolland = () => {
                 Voir les Abonnements
               </Link>
               <a
-                href="https://wa.me/18653169315?text=Bonjour%20!%20Je%20suis%20en%20Belgique%20et%20je%20souhaite%20un%20test%20gratuit%20de%2024%20h."
+                href="https://wa.me/212627370646?text=Bonjour%20!%20Je%20suis%20en%20Belgique%20et%20je%20souhaite%20un%20test%20gratuit%20de%2024%20h."
                 className="px-10 py-4 bg-green-600 hover:bg-green-700 text-white text-lg font-semibold rounded-lg transition-all transform hover:scale-105"
               >
                 Test gratuit via WhatsApp

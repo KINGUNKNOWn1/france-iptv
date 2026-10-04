@@ -189,7 +189,7 @@ const IphoneIpad = () => {
             </div>
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://wa.me/18653169315?text=Bonjour%2C%20je%20souhaite%20installer%20l%27IPTV%20sur%20mon%20iPhone" className="bg-brand-gold text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 flex items-center justify-center gap-2">
+              <a href="https://wa.me/212627370646?text=Bonjour%2C%20je%20souhaite%20installer%20l%27IPTV%20sur%20mon%20iPhone" className="bg-brand-gold text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 flex items-center justify-center gap-2">
                 <Phone className="w-5 h-5" />Aide Immédiate via WhatsApp
               </a>
               <a href="/tarifs" className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all">Voir les Tarifs</a>
@@ -245,7 +245,7 @@ const IphoneIpad = () => {
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mt-12">
             <p className="text-brand-gray mb-6 text-lg">Prêt à commencer ? Commandez votre abonnement France IPTV et démarrez immédiatement !</p>
-            <a href="https://wa.me/18653169315?text=Bonjour%2C%20je%20souhaite%20commander%20IPTV%20pour%20mon%20iPhone" className="inline-flex items-center gap-2 bg-brand-gold text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transition-all">
+            <a href="https://wa.me/212627370646?text=Bonjour%2C%20je%20souhaite%20commander%20IPTV%20pour%20mon%20iPhone" className="inline-flex items-center gap-2 bg-brand-gold text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transition-all">
               <Phone className="w-5 h-5" />Commander via WhatsApp
             </a>
           </motion.div>
@@ -281,7 +281,7 @@ const IphoneIpad = () => {
 
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center mt-12">
             <p className="text-brand-gray mb-4">Votre problème n'est pas dans la liste ?</p>
-            <a href="https://wa.me/18653169315?text=Bonjour%2C%20j%27ai%20un%20probl%C3%A8me%20avec%20l%27IPTV%20sur%20mon%20iPhone" className="inline-flex items-center gap-2 bg-brand-gold text-white px-8 py-3 rounded-full font-semibold hover:shadow-xl transition-all">
+            <a href="https://wa.me/212627370646?text=Bonjour%2C%20j%27ai%20un%20probl%C3%A8me%20avec%20l%27IPTV%20sur%20mon%20iPhone" className="inline-flex items-center gap-2 bg-brand-gold text-white px-8 py-3 rounded-full font-semibold hover:shadow-xl transition-all">
               <Phone className="w-5 h-5" />Contactez-Nous via WhatsApp
             </a>
           </motion.div>
@@ -365,7 +365,7 @@ const IphoneIpad = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Prêt à Commencer ?</h2>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Installez l'IPTV France IPTV sur votre iPhone ou iPad en 5 minutes.</p>
-            <a href="https://wa.me/18653169315?text=Bonjour%2C%20je%20souhaite%20commander%20IPTV%20pour%20iPhone" className="inline-flex items-center gap-2 bg-white text-blue-600 px-10 py-5 rounded-full font-bold text-xl hover:shadow-2xl transition-all">
+            <a href="https://wa.me/212627370646?text=Bonjour%2C%20je%20souhaite%20commander%20IPTV%20pour%20iPhone" className="inline-flex items-center gap-2 bg-white text-blue-600 px-10 py-5 rounded-full font-bold text-xl hover:shadow-2xl transition-all">
               <Phone className="w-6 h-6" />Commander via WhatsApp
             </a>
             <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm">

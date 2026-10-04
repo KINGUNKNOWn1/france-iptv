@@ -318,7 +318,7 @@ const IPTVNederland = () => {
                 Voir les Abonnements
               </Link>
               <a
-                href="https://wa.me/18653169315?text=Je%20souhaite%20commander%20IPTV%20France"
+                href="https://wa.me/212627370646?text=Je%20souhaite%20commander%20IPTV%20France"
                 className="px-10 py-4 bg-green-600 hover:bg-green-700 text-white text-lg font-semibold rounded-lg transition-all transform hover:scale-105"
               >
                 Commander via WhatsApp

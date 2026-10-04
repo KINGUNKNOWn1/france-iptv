@@ -397,7 +397,7 @@ const Retourbeleid = () => {
                     E-mail au Support
                   </a>
                   <a
-                    href="https://wa.me/18653169315"
+                    href="https://wa.me/212627370646"
                     className="bg-white hover:bg-blue-50 text-brand-black px-8 py-3 rounded-full font-semibold transition-colors border border-brand-gray-border"
                   >
                     Contact WhatsApp

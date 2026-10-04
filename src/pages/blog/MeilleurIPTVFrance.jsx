@@ -289,7 +289,7 @@ const MeilleurIPTVFrance = () => {
                 <Link to="/abonnement-iptv" className="px-8 py-4 bg-white text-brand-gold font-bold rounded-lg hover:bg-yellow-50 transition-all">
                   Voir les Abonnements
                 </Link>
-                <a href="https://wa.me/18653169315?text=Bonjour%2C%20je%20voudrais%20tester%20France%20IPTV" className="px-8 py-4 bg-black/30 hover:bg-black/40 text-white font-bold rounded-lg transition-all">
+                <a href="https://wa.me/212627370646?text=Bonjour%2C%20je%20voudrais%20tester%20France%20IPTV" className="px-8 py-4 bg-black/30 hover:bg-black/40 text-white font-bold rounded-lg transition-all">
                   <FaWhatsapp className="inline mr-2" /> Demander un test gratuit
                 </a>
               </div>
